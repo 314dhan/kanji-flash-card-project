@@ -23,7 +23,7 @@ document.addEventListener('DOMContentLoaded', () => {
     playBtn.disabled = true;
 
     // Fetch Kanji data once
-    fetch('data/kanji-n4.json')
+    fetch('assets/data/kanji-n4.json')
         .then(response => response.json())
         .then(data => {
             kanjiData = data;
