@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kanji Flashcards</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="start-screen">
+        <h1>Kanji Flashcard Quiz</h1>
+        <button id="play-btn">Play</button>
+    </div>
+
+    <div id="game-container" style="display: none;">
+        <div id="score">Score: 0</div>
+        <div id="flashcard-container">
+            <div id="kanji-card"></div>
+        </div>
+        <div id="input-container">
+            <input type="text" id="answer-input" placeholder="Enter reading...">
+            <button id="submit-btn">Submit</button>
+        </div>
+        <button id="next-btn">Next</button>
+        <div id="result"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
