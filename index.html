@@ -1,30 +1,99 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kanji Flashcards</title>
+    <title>Kanji Master - Flashcard Quiz</title>
     <link rel="stylesheet" href="assets/css/style.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
 </head>
+
 <body>
-    <div id="start-screen">
-        <h1>Kanji Flashcard Quiz</h1>
-        <button id="play-btn">Play</button>
+    <!-- Background Elements -->
+    <div class="bg-elements">
+        <div class="bg-circle circle-1"></div>
+        <div class="bg-circle circle-2"></div>
+        <div class="bg-circle circle-3"></div>
     </div>
 
-    <div id="game-container" style="display: none;">
-        <div id="score">Score: 0</div>
-        <div id="flashcard-container">
-            <div id="kanji-card"></div>
+    <div id="start-screen" class="screen active">
+        <div class="container">
+            <div class="header">
+                <h1 class="title">Kanji Master</h1>
+                <div class="subtitle">Flashcard Quiz</div>
+            </div>
+
+            <div class="content">
+                <div class="feature-card">
+                    <div class="feature-icon">🎯</div>
+                    <h3>Test Your Knowledge</h3>
+                    <p>Guess the correct reading for each Kanji character and master Japanese characters through
+                        practice.</p>
+                </div>
+
+                <div class="instructions">
+                    <h3>How to Play:</h3>
+                    <ul>
+                        <li>Type the reading (hiragana/romaji) of the displayed Kanji</li>
+                        <li>Get instant feedback on your answers</li>
+                        <li>Aim for the maximum score of 10</li>
+                        <li>Challenge yourself and improve!</li>
+                    </ul>
+                </div>
+
+                <button id="play-btn" class="btn-primary">
+                    <span>Start Learning</span>
+                    <div class="btn-icon">→</div>
+                </button>
+            </div>
         </div>
-        <div id="input-container">
-            <input type="text" id="answer-input" placeholder="Enter reading...">
-            <button id="submit-btn">Submit</button>
+    </div>
+
+    <div id="game-container" class="screen">
+        <div class="game-header">
+            <div id="score" class="score-display">
+                <span class="score-label">Score</span>
+                <span class="score-value">0</span>
+                <span class="score-max">/10</span>
+            </div>
+            <div class="progress-bar">
+                <div class="progress-fill" style="width: 0%"></div>
+            </div>
         </div>
-        <button id="next-btn">Next</button>
-        <div id="result"></div>
+
+        <div class="game-content">
+            <div id="flashcard-container" class="flashcard-wrapper">
+                <div id="kanji-card" class="kanji-card">
+                    <div class="kanji-character">字</div>
+                </div>
+                <div class="card-shine"></div>
+            </div>
+
+            <div id="input-container" class="input-wrapper">
+                <div class="input-group">
+                    <input type="text" id="answer-input" placeholder="Enter reading in romaji"
+                        autocomplete="off">
+                    <button id="submit-btn" class="btn-submit">
+                        <span>Check</span>
+                    </button>
+                </div>
+            </div>
+
+            <div id="result" class="result-message"></div>
+
+            <div class="game-controls">
+                <button id="next-btn" class="btn-secondary" disabled>
+                    <span>Next Kanji</span>
+                    <div class="btn-icon">→</div>
+                </button>
+            </div>
+        </div>
     </div>
 
     <script src="assets/js/script.js"></script>
 </body>
+
 </html>

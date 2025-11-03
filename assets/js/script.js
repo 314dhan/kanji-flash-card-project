@@ -1,15 +1,23 @@
 document.addEventListener('DOMContentLoaded', () => {
-    // Game Elements
+    // Screens
     const startScreen = document.getElementById('start-screen');
     const gameContainer = document.getElementById('game-container');
+
+    // Buttons
     const playBtn = document.getElementById('play-btn');
-    const scoreEl = document.getElementById('score');
-    const kanjiCardEl = document.getElementById('kanji-card');
-    const answerInputEl = document.getElementById('answer-input');
     const submitBtn = document.getElementById('submit-btn');
     const nextBtn = document.getElementById('next-btn');
+
+    // Game Display Elements
+    const scoreValueEl = document.querySelector('.score-value');
+    const progressFillEl = document.querySelector('.progress-fill');
+    const kanjiCharacterEl = document.querySelector('.kanji-character');
     const resultEl = document.getElementById('result');
-    const startScreenTitle = startScreen.querySelector('h1');
+    const answerInputEl = document.getElementById('answer-input');
+
+    // Start/End Screen Elements
+    const startScreenTitle = startScreen.querySelector('.title');
+    const startScreenSubtitle = startScreen.querySelector('.subtitle');
 
     // Game State
     let kanjiData = [];
@@ -18,31 +26,29 @@ document.addEventListener('DOMContentLoaded', () => {
     let seenIndices = [];
     const QUIZ_LENGTH = 10;
 
-    // Initial setup
-    gameContainer.style.display = 'none';
-    playBtn.disabled = true;
-
-    // Fetch Kanji data once
+    // --- Data Loading ---
     fetch('assets/data/kanji-n4.json')
         .then(response => response.json())
         .then(data => {
             kanjiData = data;
-            playBtn.disabled = false; // Enable play button after data is loaded
+            playBtn.disabled = false;
+            playBtn.querySelector('span').textContent = 'Start Learning';
         })
         .catch(error => {
             console.error("Error fetching kanji data:", error);
-            startScreenTitle.textContent = 'Error loading data.';
+            startScreenTitle.textContent = 'Error';
+            startScreenSubtitle.textContent = 'Could not load Kanji data.';
         });
 
+    // --- Game Flow Functions ---
     function startGame() {
         score = 0;
         seenIndices = [];
-        scoreEl.textContent = `Score: ${score}`;
-        startScreenTitle.textContent = 'Kanji Flashcard Quiz'; // Reset title
-        playBtn.textContent = 'Play';
-        
-        startScreen.style.display = 'none';
-        gameContainer.style.display = 'flex';
+        scoreValueEl.textContent = score;
+        progressFillEl.style.width = '0%';
+
+        startScreen.classList.remove('active');
+        gameContainer.classList.add('active');
 
         displayNewKanji();
     }
@@ -53,6 +59,13 @@ document.addEventListener('DOMContentLoaded', () => {
             return;
         }
 
+        // Update progress
+        const progressPercent = (seenIndices.length / QUIZ_LENGTH) * 100;
+        progressFillEl.style.width = `${progressPercent}%`;
+
+        // Reset result message
+        resultEl.classList.remove('show', 'correct', 'incorrect');
+
         let randomIndex;
         do {
             randomIndex = Math.floor(Math.random() * kanjiData.length);
@@ -61,12 +74,15 @@ document.addEventListener('DOMContentLoaded', () => {
         seenIndices.push(randomIndex);
         currentKanji = kanjiData[randomIndex];
         
-        kanjiCardEl.textContent = currentKanji.kanji;
-        resultEl.textContent = '';
+        kanjiCharacterEl.textContent = currentKanji.kanji;
+        kanjiCharacterEl.parentElement.style.animation = 'none';
+        void kanjiCharacterEl.parentElement.offsetWidth; // Trigger reflow
+        kanjiCharacterEl.parentElement.style.animation = 'flipIn 0.6s ease-out';
+
         answerInputEl.value = '';
         answerInputEl.disabled = false;
         submitBtn.disabled = false;
-        nextBtn.style.display = 'none';
+        nextBtn.disabled = true;
         answerInputEl.focus();
     }
 
@@ -77,31 +93,36 @@ document.addEventListener('DOMContentLoaded', () => {
         const correctReadings = currentKanji.reading.split(',').map(r => r.trim().toLowerCase());
         const isCorrect = correctReadings.includes(userAnswer);
 
+        resultEl.classList.add('show');
         if (isCorrect) {
             score++;
-            scoreEl.textContent = `Score: ${score}`;
+            scoreValueEl.textContent = score;
             resultEl.textContent = `Correct! Meaning: ${currentKanji.meaning}`;
-            resultEl.style.color = 'green';
+            resultEl.classList.add('correct');
         } else {
             const feedback = `Reading: ${currentKanji.reading}, Meaning: ${currentKanji.meaning}`;
             resultEl.textContent = `Wrong! ${feedback}`;
-            resultEl.style.color = 'red';
+            resultEl.classList.add('incorrect');
         }
         
         answerInputEl.disabled = true;
         submitBtn.disabled = true;
-        nextBtn.style.display = 'inline-block';
+        nextBtn.disabled = false;
     }
 
     function endGame() {
-        gameContainer.style.display = 'none';
-        startScreen.style.display = 'block';
+        const finalProgress = (seenIndices.length / QUIZ_LENGTH) * 100;
+        progressFillEl.style.width = `${finalProgress}%`;
+
+        gameContainer.classList.remove('active');
+        startScreen.classList.add('active');
         
-        startScreenTitle.textContent = `Quiz Complete! Your score: ${score}/${QUIZ_LENGTH}`;
-        playBtn.textContent = 'Play Again';
+        startScreenTitle.textContent = 'Quiz Complete!';
+        startScreenSubtitle.textContent = `Your final score is ${score} out of ${QUIZ_LENGTH}`;
+        playBtn.querySelector('span').textContent = 'Play Again';
     }
 
-    // Event Listeners
+    // --- Event Listeners ---
     playBtn.addEventListener('click', startGame);
     submitBtn.addEventListener('click', checkAnswer);
     nextBtn.addEventListener('click', displayNewKanji);
@@ -110,4 +131,8 @@ document.addEventListener('DOMContentLoaded', () => {
             checkAnswer();
         }
     });
+
+    // --- Initial State ---
+    playBtn.disabled = true;
+    playBtn.querySelector('span').textContent = 'Loading...';
 });
