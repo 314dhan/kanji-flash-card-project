@@ -37,3 +37,5 @@ JLPT N4の漢字学習を支援するシンプルなウェブベースのゲー�
 4.  「Submit」をクリックするか、Enterキーを押します。
 5.  「Next」をクリックして次の漢字に進みます。
 6.  10問終了後、最終スコアが表示されます。
+
+you can visit the page at: https://314dhan.github.io/kanji-flash-card-project/
