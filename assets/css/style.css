@@ -201,6 +201,45 @@ body {
     font-weight: bold;
 }
 
+/* Quiz Length Input */
+.quiz-length-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    background: var(--bg-white);
+    padding: 20px;
+    border-radius: 16px;
+    box-shadow: var(--shadow);
+    margin: 0 auto;
+    max-width: 400px;
+}
+
+.quiz-length-container label {
+    font-size: 1.1em;
+    color: var(--text-dark);
+    font-weight: 500;
+}
+
+#quiz-length-input {
+    width: 80px;
+    padding: 10px 15px;
+    border: 2px solid #e2e8f0;
+    border-radius: 10px;
+    font-size: 1.1em;
+    text-align: center;
+    font-weight: 600;
+    color: var(--primary-dark);
+    transition: all 0.3s ease;
+}
+
+#quiz-length-input:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.2);
+}
+
+
 /* Button Styles */
 .btn-primary,
 .btn-secondary,

@@ -14,6 +14,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const kanjiCharacterEl = document.querySelector('.kanji-character');
     const resultEl = document.getElementById('result');
     const answerInputEl = document.getElementById('answer-input');
+    const quizLengthInput = document.getElementById('quiz-length-input');
 
     // Start/End Screen Elements
     const startScreenTitle = startScreen.querySelector('.title');
@@ -24,13 +25,14 @@ document.addEventListener('DOMContentLoaded', () => {
     let currentKanji = null;
     let score = 0;
     let seenIndices = [];
-    const QUIZ_LENGTH = 10;
+    let quizLength = 10;
 
     // --- Data Loading ---
     fetch('assets/data/kanji-n4.json')
         .then(response => response.json())
         .then(data => {
             kanjiData = data;
+            quizLengthInput.max = kanjiData.length;
             playBtn.disabled = false;
             playBtn.querySelector('span').textContent = 'Start Learning';
         })
@@ -42,9 +44,15 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // --- Game Flow Functions ---
     function startGame() {
+        const desiredLength = parseInt(quizLengthInput.value, 10);
+        if (!isNaN(desiredLength) && desiredLength > 0) {
+            quizLength = desiredLength;
+        }
+
         score = 0;
         seenIndices = [];
         scoreValueEl.textContent = score;
+        document.getElementById('score-max').textContent = `/ ${quizLength}`;
         progressFillEl.style.width = '0%';
 
         startScreen.classList.remove('active');
@@ -54,13 +62,13 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     function displayNewKanji() {
-        if (seenIndices.length >= QUIZ_LENGTH || kanjiData.length === 0) {
+        if (seenIndices.length >= quizLength || kanjiData.length === 0) {
             endGame();
             return;
         }
 
         // Update progress
-        const progressPercent = (seenIndices.length / QUIZ_LENGTH) * 100;
+        const progressPercent = (seenIndices.length / quizLength) * 100;
         progressFillEl.style.width = `${progressPercent}%`;
 
         // Reset result message
@@ -111,14 +119,14 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     function endGame() {
-        const finalProgress = (seenIndices.length / QUIZ_LENGTH) * 100;
+        const finalProgress = (seenIndices.length / quizLength) * 100;
         progressFillEl.style.width = `${finalProgress}%`;
 
         gameContainer.classList.remove('active');
         startScreen.classList.add('active');
         
         startScreenTitle.textContent = 'Quiz Complete!';
-        startScreenSubtitle.textContent = `Your final score is ${score} out of ${QUIZ_LENGTH}`;
+        startScreenSubtitle.textContent = `Your final score is ${score} out of ${quizLength}`;
         playBtn.querySelector('span').textContent = 'Play Again';
     }
 

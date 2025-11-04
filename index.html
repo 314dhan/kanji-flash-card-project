@@ -39,9 +39,14 @@
                     <ul>
                         <li>Type the reading (hiragana/romaji) of the displayed Kanji</li>
                         <li>Get instant feedback on your answers</li>
-                        <li>Aim for the maximum score of 10</li>
+                        <li>Aim for a high score!</li>
                         <li>Challenge yourself and improve!</li>
                     </ul>
+                </div>
+
+                <div class="quiz-length-container">
+                    <label for="quiz-length-input">Number of Questions:</label>
+                    <input type="number" id="quiz-length-input" value="10" min="1" max="50">
                 </div>
 
                 <button id="play-btn" class="btn-primary">
@@ -57,7 +62,7 @@
             <div id="score" class="score-display">
                 <span class="score-label">Score</span>
                 <span class="score-value">0</span>
-                <span class="score-max">/10</span>
+                <span id="score-max" class="score-max"></span>
             </div>
             <div class="progress-bar">
                 <div class="progress-fill" style="width: 0%"></div>
