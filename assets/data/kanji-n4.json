@@ -2,7 +2,7 @@
   {
   "id": 1,
   "kanji": "会",
-  "meaning": "Meet",
+  "meaning": "Meet, Bertemu",
   "onyomi": "カイ",
   "kunyomi": "あ.う",
   "reading": "kai, au"
@@ -10,7 +10,7 @@
   {
   "id": 2,
   "kanji": "同",
-  "meaning": "Same",
+  "meaning": "Same, Sama",
   "onyomi": "ドウ",
   "kunyomi": "おな.じ",
   "reading": "do, onaji"
@@ -18,7 +18,7 @@
   {
   "id": 3,
   "kanji": "事",
-  "meaning": "Thing",
+  "meaning": "Thing, Hal",
   "onyomi": "ジ",
   "kunyomi": "こと",
   "reading": "ji, koto"
@@ -26,7 +26,7 @@
   {
   "id": 4,
   "kanji": "自",
-  "meaning": "Oneself",
+  "meaning": "Oneself, Diri Sendiri",
   "onyomi": "ジ",
   "kunyomi": "みずか.ら",
   "reading": "ji, mizukara"
@@ -34,7 +34,7 @@
   {
   "id": 5,
   "kanji": "社",
-  "meaning": "Company",
+  "meaning": "Company, Perusahaan",
   "onyomi": "シャ",
   "kunyomi": "やしろ",
   "reading": "sha, yashiro"
@@ -42,7 +42,7 @@
   {
   "id": 6,
   "kanji": "駅",
-  "meaning": "Stasiun",
+  "meaning": "Station, Stasiun",
   "onyomi": "エキ",
   "kunyomi": "",
   "reading": "eki"
@@ -50,7 +50,7 @@
   {
   "id": 7,
   "kanji": "円",
-  "meaning": "Yen, Bulat",
+  "meaning": "Yen, Round, Yen, Bulat",
   "onyomi": "エン",
   "kunyomi": "まる.い",
   "reading": "en, marui"
@@ -58,7 +58,7 @@
   {
   "id": 8,
   "kanji": "員",
-  "meaning": "Anggota, Staf",
+  "meaning": "Member, Staff, Anggota, Staf",
   "onyomi": "イン",
   "kunyomi": "",
   "reading": "in"
@@ -66,7 +66,7 @@
   {
   "id": 9,
   "kanji": "案内",
-  "meaning": "Pemandu, Informasi",
+  "meaning": "Guidance, Information, Pemandu, Informasi",
   "onyomi": "アンナイ",
   "kunyomi": "",
   "reading": "annai"
@@ -74,7 +74,7 @@
   {
   "id": 10,
   "kanji": "映画",
-  "meaning": "Film",
+  "meaning": "Movie, Film",
   "onyomi": "エイガ",
   "kunyomi": "",
   "reading": "eiga"
@@ -82,7 +82,7 @@
   {
   "id": 11,
   "kanji": "屋",
-  "meaning": "Toko, Rumah",
+  "meaning": "Shop, House, Toko, Rumah",
   "onyomi": "オク",
   "kunyomi": "や",
   "reading": "oku, ya"
@@ -90,7 +90,7 @@
   {
   "id": 12,
   "kanji": "音",
-  "meaning": "Suara, Bunyi",
+  "meaning": "Sound, Bunyi",
   "onyomi": "オン",
   "kunyomi": "おと",
   "reading": "on, oto"
@@ -98,7 +98,7 @@
   {
   "id": 13,
   "kanji": "歌",
-  "meaning": "Lagu",
+  "meaning": "Song, Lagu",
   "onyomi": "カ",
   "kunyomi": "うた",
   "reading": "ka, uta"
@@ -106,7 +106,7 @@
   {
   "id": 14,
   "kanji": "家",
-  "meaning": "Rumah, Keluarga",
+  "meaning": "House, Family, Rumah, Keluarga",
   "onyomi": "カ",
   "kunyomi": "いえ",
   "reading": "ka, ie"
@@ -114,7 +114,7 @@
   {
   "id": 15,
   "kanji": "買",
-  "meaning": "Membeli",
+  "meaning": "Buy, Membeli",
   "onyomi": "カイ",
   "kunyomi": "か.う",
   "reading": "kai, kau"
@@ -122,7 +122,7 @@
   {
   "id": 16,
   "kanji": "牛",
-  "meaning": "Sapi",
+  "meaning": "Cow, Sapi",
   "onyomi": "ギュウ",
   "kunyomi": "うし",
   "reading": "gyu, ushi"
@@ -130,7 +130,7 @@
   {
   "id": 17,
   "kanji": "魚",
-  "meaning": "Ikan",
+  "meaning": "Fish, Ikan",
   "onyomi": "ギョ",
   "kunyomi": "さかな",
   "reading": "gyo, sakana"
@@ -138,7 +138,7 @@
   {
   "id": 18,
   "kanji": "京",
-  "meaning": "Ibukota",
+  "meaning": "Capital, Ibukota",
   "onyomi": "キョウ",
   "kunyomi": "",
   "reading": "kyo"
@@ -146,7 +146,7 @@
   {
   "id": 19,
   "kanji": "聞",
-  "meaning": "Mendengar, Bertanya",
+  "meaning": "Hear, Ask, Mendengar, Bertanya",
   "onyomi": "ブン",
   "kunyomi": "き.く",
   "reading": "bun, kiku"
@@ -154,7 +154,7 @@
   {
   "id": 20,
   "kanji": "工場",
-  "meaning": "Pabrik",
+  "meaning": "Factory, Pabrik",
   "onyomi": "コウジョウ",
   "kunyomi": "",
   "reading": "kojō"
@@ -162,7 +162,7 @@
   {
   "id": 21,
   "kanji": "広",
-  "meaning": "Luas",
+  "meaning": "Wide, Luas",
   "onyomi": "コウ",
   "kunyomi": "ひろ.い",
   "reading": "ko, hiroi"
@@ -170,7 +170,7 @@
   {
   "id": 22,
   "kanji": "旅行",
-  "meaning": "Perjalanan",
+  "meaning": "Travel, Perjalanan",
   "onyomi": "リョコウ",
   "kunyomi": "",
   "reading": "ryoko"
@@ -178,7 +178,7 @@
   {
   "id": 23,
   "kanji": "漢字",
-  "meaning": "Kanji",
+  "meaning": "Kanji, Kanji",
   "onyomi": "カンジ",
   "kunyomi": "",
   "reading": "kanji"
@@ -186,7 +186,7 @@
   {
   "id": 24,
   "kanji": "先生",
-  "meaning": "Guru",
+  "meaning": "Teacher, Guru",
   "onyomi": "センセイ",
   "kunyomi": "",
   "reading": "sensei"
@@ -194,7 +194,7 @@
   {
   "id": 25,
   "kanji": "外国",
-  "meaning": "Luar Negeri",
+  "meaning": "Foreign Country, Luar Negeri",
   "onyomi": "ガイコク",
   "kunyomi": "",
   "reading": "gaikoku"
@@ -202,7 +202,7 @@
   {
   "id": 26,
   "kanji": "学",
-  "meaning": "Belajar, Sekolah",
+  "meaning": "Study, School, Belajar, Sekolah",
   "onyomi": "ガク",
   "kunyomi": "まな.ぶ",
   "reading": "gaku, manabu"
@@ -210,7 +210,7 @@
   {
   "id": 27,
   "kanji": "校",
-  "meaning": "Sekolah",
+  "meaning": "School, Sekolah",
   "onyomi": "コウ",
   "kunyomi": "",
   "reading": "ko"
@@ -218,7 +218,7 @@
   {
   "id": 28,
   "kanji": "生",
-  "meaning": "Hidup, Lahir",
+  "meaning": "Life, Birth, Hidup, Lahir",
   "onyomi": "セイ",
   "kunyomi": "い.きる, う.まれる",
   "reading": "sei, ikiru, umareru"
@@ -226,7 +226,7 @@
   {
   "id": 29,
   "kanji": "年",
-  "meaning": "Tahun",
+  "meaning": "Year, Tahun",
   "onyomi": "ネン",
   "kunyomi": "とし",
   "reading": "nen, toshi"
@@ -234,7 +234,7 @@
   {
   "id": 30,
   "kanji": "時",
-  "meaning": "Waktu, Jam",
+  "meaning": "Time, Hour, Waktu, Jam",
   "onyomi": "ジ",
   "kunyomi": "とき",
   "reading": "ji, toki"
@@ -242,7 +242,7 @@
   {
   "id": 31,
   "kanji": "分",
-  "meaning": "Bagian, Menit",
+  "meaning": "Part, Minute, Bagian, Menit",
   "onyomi": "ブン",
   "kunyomi": "わ.ける, わ.かる",
   "reading": "bun, wakeru, wakaru"
@@ -250,7 +250,7 @@
   {
   "id": 32,
   "kanji": "前",
-  "meaning": "Sebelum, Depan",
+  "meaning": "Before, Front, Sebelum, Depan",
   "onyomi": "ゼン",
   "kunyomi": "まえ",
   "reading": "zen, mae"
@@ -258,7 +258,7 @@
   {
   "id": 33,
   "kanji": "後",
-  "meaning": "Setelah, Belakang",
+  "meaning": "After, Behind, Setelah, Belakang",
   "onyomi": "ゴ",
   "kunyomi": "のち, うし.ろ",
   "reading": "go, nochi, ushiro"
@@ -266,7 +266,7 @@
   {
   "id": 34,
   "kanji": "来",
-  "meaning": "Datang",
+  "meaning": "Come, Datang",
   "onyomi": "ライ",
   "kunyomi": "く.る, く.る",
   "reading": "rai, kuru"
@@ -274,7 +274,7 @@
   {
   "id": 35,
   "kanji": "行",
-  "meaning": "Pergi",
+  "meaning": "Go, Perform, Pergi",
   "onyomi": "コウ, ギョウ",
   "kunyomi": "い.く, おこな.う",
   "reading": "ko, iku, okonau"
@@ -282,7 +282,7 @@
   {
   "id": 36,
   "kanji": "帰",
-  "meaning": "Kembali",
+  "meaning": "Return, Kembali",
   "onyomi": "キ",
   "kunyomi": "かえ.る",
   "reading": "ki, kaeru"
@@ -290,7 +290,7 @@
   {
   "id": 37,
   "kanji": "来年",
-  "meaning": "Tahun depan",
+  "meaning": "Next Year, Tahun depan",
   "onyomi": "ライネン",
   "kunyomi": "",
   "reading": "rainen"
@@ -298,7 +298,7 @@
   {
   "id": 38,
   "kanji": "車",
-  "meaning": "Mobil, Kendaraan",
+  "meaning": "Car, Vehicle, Mobil, Kendaraan",
   "onyomi": "シャ",
   "kunyomi": "くるま",
   "reading": "sha, kuruma"
@@ -306,7 +306,7 @@
   {
   "id": 39,
   "kanji": "電車",
-  "meaning": "Kereta listrik",
+  "meaning": "Electric Train, Kereta listrik",
   "onyomi": "デンシャ",
   "kunyomi": "",
   "reading": "densha"
@@ -314,7 +314,7 @@
   {
   "id": 40,
   "kanji": "道",
-  "meaning": "Jalan, Cara",
+  "meaning": "Road, Way, Jalan, Cara",
   "onyomi": "ドウ",
   "kunyomi": "みち",
   "reading": "do, michi"
@@ -322,7 +322,7 @@
   {
   "id": 41,
   "kanji": "店",
-  "meaning": "Toko",
+  "meaning": "Shop, Toko",
   "onyomi": "テン",
   "kunyomi": "みせ",
   "reading": "ten, mise"
@@ -330,7 +330,7 @@
   {
   "id": 42,
   "kanji": "買物",
-  "meaning": "Berbelanja",
+  "meaning": "Shopping, Berbelanja",
   "onyomi": "カイモノ",
   "kunyomi": "",
   "reading": "kaimono"
@@ -338,7 +338,7 @@
   {
   "id": 43,
   "kanji": "飲",
-  "meaning": "Minum",
+  "meaning": "Drink, Minum",
   "onyomi": "イン",
   "kunyomi": "の.む",
   "reading": "in, nomu"
@@ -346,7 +346,7 @@
   {
   "id": 44,
   "kanji": "食",
-  "meaning": "Makan",
+  "meaning": "Eat, Makanan",
   "onyomi": "ショク",
   "kunyomi": "た.べる",
   "reading": "shoku, taberu"
@@ -354,7 +354,7 @@
   {
   "id": 45,
   "kanji": "立",
-  "meaning": "Berdiri",
+  "meaning": "Stand, Berdiri",
   "onyomi": "リツ",
   "kunyomi": "た.つ",
   "reading": "ritsu, tatsu"
@@ -362,7 +362,7 @@
   {
   "id": 46,
   "kanji": "休",
-  "meaning": "Istirahat",
+  "meaning": "Rest, Istirahat",
   "onyomi": "キュウ",
   "kunyomi": "やす.む",
   "reading": "kyu, yasumu"
@@ -370,7 +370,7 @@
   {
   "id": 47,
   "kanji": "会話",
-  "meaning": "Percakapan",
+  "meaning": "Conversation, Percakapan",
   "onyomi": "カイワ",
   "kunyomi": "",
   "reading": "kaiwa"
@@ -378,7 +378,7 @@
   {
   "id": 48,
   "kanji": "話",
-  "meaning": "Bicara, Cerita",
+  "meaning": "Speak, Talk, Bicara, Cerita",
   "onyomi": "ワ",
   "kunyomi": "はな.す",
   "reading": "wa, hanasu"
@@ -386,7 +386,7 @@
   {
   "id": 49,
   "kanji": "語",
-  "meaning": "Bahasa, Kata",
+  "meaning": "Language, Word, Bahasa, Kata",
   "onyomi": "ゴ",
   "kunyomi": "かた.る",
   "reading": "go, kataru"
@@ -394,7 +394,7 @@
   {
   "id": 50,
   "kanji": "読",
-  "meaning": "Membaca",
+  "meaning": "Read, Membaca",
   "onyomi": "ドク",
   "kunyomi": "よ.む",
   "reading": "doku, yomu"
@@ -402,7 +402,7 @@
   {
   "id": 51,
   "kanji": "書",
-  "meaning": "Menulis, Buku",
+  "meaning": "Write, Book, Menulis, Buku",
   "onyomi": "ショ",
   "kunyomi": "か.く",
   "reading": "sho, kaku"
@@ -410,7 +410,7 @@
   {
   "id": 52,
   "kanji": "入",
-  "meaning": "Masuk",
+  "meaning": "Enter, Masuk",
   "onyomi": "ニュウ",
   "kunyomi": "はい.る, い.れる",
   "reading": "nyu, hairu, ireru, iri"
@@ -418,7 +418,7 @@
   {
   "id": 53,
   "kanji": "出",
-  "meaning": "Keluar",
+  "meaning": "Exit, Leave, Keluar",
   "onyomi": "シュツ",
   "kunyomi": "で.る, だ.す",
   "reading": "shutsu, deru, dasu"
@@ -426,7 +426,7 @@
   {
   "id": 54,
   "kanji": "友",
-  "meaning": "Teman",
+  "meaning": "Friend, Teman",
   "onyomi": "ユウ",
   "kunyomi": "とも",
   "reading": "yu, tomo"
@@ -434,7 +434,7 @@
   {
   "id": 55,
   "kanji": "毎",
-  "meaning": "Setiap",
+  "meaning": "Every, Setiap",
   "onyomi": "マイ",
   "kunyomi": "ごと",
   "reading": "mai, goto"
@@ -442,7 +442,7 @@
   {
   "id": 56,
   "kanji": "時々",
-  "meaning": "Kadang-kadang",
+  "meaning": "Sometimes, Kadang-kadang",
   "onyomi": "ジジ",
   "kunyomi": "",
   "reading": "tokidoki"
@@ -450,7 +450,7 @@
   {
   "id": 57,
   "kanji": "白",
-  "meaning": "Putih",
+  "meaning": "White, Putih",
   "onyomi": "ハク",
   "kunyomi": "しろ",
   "reading": "haku, shiro"
@@ -458,7 +458,7 @@
   {
   "id": 58,
   "kanji": "黒",
-  "meaning": "Hitam",
+  "meaning": "Black, Hitam",
   "onyomi": "コク",
   "kunyomi": "くろ",
   "reading": "koku, kuro"
@@ -466,7 +466,7 @@
   {
   "id": 59,
   "kanji": "赤",
-  "meaning": "Merah",
+  "meaning": "Red, Merah",
   "onyomi": "セキ",
   "kunyomi": "あか",
   "reading": "seki, aka"
@@ -474,7 +474,7 @@
   {
   "id": 60,
   "kanji": "青",
-  "meaning": "Biru",
+  "meaning": "Blue, Biru",
   "onyomi": "セイ",
   "kunyomi": "あお",
   "reading": "sei, ao"
@@ -482,7 +482,7 @@
   {
   "id": 61,
   "kanji": "色",
-  "meaning": "Warna",
+  "meaning": "Color, Warna",
   "onyomi": "ショク",
   "kunyomi": "いろ",
   "reading": "shoku, iro"
@@ -490,7 +490,7 @@
   {
   "id": 62,
   "kanji": "花",
-  "meaning": "Bunga",
+  "meaning": "Flower, Bunga",
   "onyomi": "カ",
   "kunyomi": "はな",
   "reading": "ka, hana"
@@ -498,7 +498,7 @@
   {
   "id": 63,
   "kanji": "草",
-  "meaning": "Rumput",
+  "meaning": "Grass, Rumput",
   "onyomi": "ソウ",
   "kunyomi": "くさ",
   "reading": "so, kusa"
@@ -506,7 +506,7 @@
   {
   "id": 64,
   "kanji": "森",
-  "meaning": "Hutan",
+  "meaning": "Forest, Hutan",
   "onyomi": "シン",
   "kunyomi": "もり",
   "reading": "shin, mori"
@@ -514,7 +514,7 @@
   {
   "id": 65,
   "kanji": "駅前",
-  "meaning": "Depan stasiun",
+  "meaning": "In front of the station, Depan stasiun",
   "onyomi": "エキマエ",
   "kunyomi": "",
   "reading": "ekimae"
@@ -522,7 +522,7 @@
   {
   "id": 66,
   "kanji": "天気",
-  "meaning": "Cuaca",
+  "meaning": "Weather, Cuaca",
   "onyomi": "テンキ",
   "kunyomi": "",
   "reading": "tenki"
@@ -530,7 +530,7 @@
   {
   "id": 67,
   "kanji": "雨",
-  "meaning": "Hujan",
+  "meaning": "Rain, Hujan",
   "onyomi": "ウ",
   "kunyomi": "あめ",
   "reading": "u, ame"
@@ -538,7 +538,7 @@
   {
   "id": 68,
   "kanji": "雪",
-  "meaning": "Salju",
+  "meaning": "Snow, Salju",
   "onyomi": "セツ",
   "kunyomi": "ゆき",
   "reading": "setsu, yuki"
@@ -546,7 +546,7 @@
   {
   "id": 69,
   "kanji": "食品",
-  "meaning": "Makanan (barang)",
+  "meaning": "Food products, Makanan (barang)",
   "onyomi": "ショクヒン",
   "kunyomi": "",
   "reading": "shokuhin"
@@ -554,7 +554,7 @@
   {
   "id": 70,
   "kanji": "病院",
-  "meaning": "Rumah sakit",
+  "meaning": "Hospital, Rumah sakit",
   "onyomi": "ビョウイン",
   "kunyomi": "",
   "reading": "byoin"
@@ -562,7 +562,7 @@
   {
   "id": 71,
   "kanji": "医者",
-  "meaning": "Dokter",
+  "meaning": "Doctor, Dokter",
   "onyomi": "イシャ",
   "kunyomi": "",
   "reading": "isha"
@@ -570,7 +570,7 @@
   {
   "id": 72,
   "kanji": "店員",
-  "meaning": "Pramuniaga",
+  "meaning": "Shop assistant, Pramuniaga",
   "onyomi": "テンイン",
   "kunyomi": "",
   "reading": "ten'in, tenin"
@@ -578,7 +578,7 @@
   {
   "id": 73,
   "kanji": "会社",
-  "meaning": "Perusahaan",
+  "meaning": "Company, Perusahaan",
   "onyomi": "カイシャ",
   "kunyomi": "",
   "reading": "kaisha"
@@ -586,7 +586,7 @@
   {
   "id": 74,
   "kanji": "社長",
-  "meaning": "Presdir",
+  "meaning": "Company president, Presdir",
   "onyomi": "シャチョウ",
   "kunyomi": "",
   "reading": "shacho"
@@ -594,7 +594,7 @@
   {
   "id": 75,
   "kanji": "店長",
-  "meaning": "Manajer toko",
+  "meaning": "Store manager, Manajer toko",
   "onyomi": "テンチョウ",
   "kunyomi": "",
   "reading": "tencho"
@@ -602,7 +602,7 @@
   {
   "id": 76,
   "kanji": "住所",
-  "meaning": "Alamat",
+  "meaning": "Address, Alamat",
   "onyomi": "ジュウショ",
   "kunyomi": "",
   "reading": "jusho"
@@ -610,7 +610,7 @@
   {
   "id": 77,
   "kanji": "電話",
-  "meaning": "Telepon",
+  "meaning": "Telephone, Telepon",
   "onyomi": "デンワ",
   "kunyomi": "",
   "reading": "denwa"
@@ -618,7 +618,7 @@
   {
   "id": 78,
   "kanji": "番号",
-  "meaning": "Nomor",
+  "meaning": "Number, Nomor",
   "onyomi": "バンゴウ",
   "kunyomi": "",
   "reading": "bango"
@@ -626,7 +626,7 @@
   {
   "id": 79,
   "kanji": "紙",
-  "meaning": "Kertas",
+  "meaning": "Paper, Kertas",
   "onyomi": "シ",
   "kunyomi": "かみ",
   "reading": "shi, kami"
@@ -634,7 +634,7 @@
   {
   "id": 80,
   "kanji": "財布",
-  "meaning": "Dompet",
+  "meaning": "Wallet, Dompet",
   "onyomi": "サイフ",
   "kunyomi": "",
   "reading": "saifu"
@@ -642,7 +642,7 @@
   {
   "id": 81,
   "kanji": "足",
-  "meaning": "Kaki",
+  "meaning": "Leg, Foot, Kaki",
   "onyomi": "ソク",
   "kunyomi": "あし",
   "reading": "soku, ashi"
@@ -650,7 +650,7 @@
   {
   "id": 82,
   "kanji": "手",
-  "meaning": "Tangan",
+  "meaning": "Hand, Tangan",
   "onyomi": "シュ",
   "kunyomi": "て",
   "reading": "shu, te"
@@ -658,7 +658,7 @@
   {
   "id": 83,
   "kanji": "目",
-  "meaning": "Mata",
+  "meaning": "Eye, Mata",
   "onyomi": "モク",
   "kunyomi": "め",
   "reading": "moku, me"
@@ -666,7 +666,7 @@
   {
   "id": 84,
   "kanji": "耳",
-  "meaning": "Telinga",
+  "meaning": "Ear, Telinga",
   "onyomi": "ジ",
   "kunyomi": "みみ",
   "reading": "ji, mimi"
@@ -674,7 +674,7 @@
   {
   "id": 85,
   "kanji": "体",
-  "meaning": "Badan",
+  "meaning": "Body, Badan",
   "onyomi": "タイ",
   "kunyomi": "からだ",
   "reading": "tai, karada"
@@ -682,7 +682,7 @@
   {
   "id": 86,
   "kanji": "病気",
-  "meaning": "Sakit (penyakit)",
+  "meaning": "Illness, Sickness, Sakit (penyakit)",
   "onyomi": "ビョウキ",
   "kunyomi": "",
   "reading": "byoki"
@@ -690,7 +690,7 @@
   {
   "id": 87,
   "kanji": "熱",
-  "meaning": "Demam, Panas",
+  "meaning": "Fever, Heat, Demam, Panas",
   "onyomi": "ネツ",
   "kunyomi": "あつ.い",
   "reading": "netsu, atsui"
@@ -698,7 +698,7 @@
   {
   "id": 88,
   "kanji": "痛",
-  "meaning": "Sakit (nyeri)",
+  "meaning": "Pain, Sore, Sakit (nyeri)",
   "onyomi": "ツウ",
   "kunyomi": "いた.い",
   "reading": "tsu, itai"
@@ -706,7 +706,7 @@
   {
   "id": 89,
   "kanji": "歩",
-  "meaning": "Berjalan",
+  "meaning": "Walk, Berjalan",
   "onyomi": "ホ",
   "kunyomi": "ある.く",
   "reading": "ho, aruku"
@@ -714,7 +714,7 @@
   {
   "id": 90,
   "kanji": "買収",
-  "meaning": "Pembelian (merger)",
+  "meaning": "Acquisition, Pembelian (merger)",
   "onyomi": "バイシュウ",
   "kunyomi": "",
   "reading": "baishū"
@@ -722,7 +722,7 @@
   {
   "id": 91,
   "kanji": "話題",
-  "meaning": "Topik pembicaraan",
+  "meaning": "Topic of conversation, Topik pembicaraan",
   "onyomi": "ワダイ",
   "kunyomi": "",
   "reading": "wadai"
@@ -730,7 +730,7 @@
   {
   "id": 92,
   "kanji": "勉強",
-  "meaning": "Belajar, Studi",
+  "meaning": "Study, Belajar, Studi",
   "onyomi": "ベンキョウ",
   "kunyomi": "",
   "reading": "benkyo"
@@ -738,7 +738,7 @@
   {
   "id": 93,
   "kanji": "宿題",
-  "meaning": "Pekerjaan rumah",
+  "meaning": "Homework, Pekerjaan rumah",
   "onyomi": "シュクダイ",
   "kunyomi": "",
   "reading": "shukudai"
@@ -746,7 +746,7 @@
   {
   "id": 94,
   "kanji": "運転",
-  "meaning": "Mengemudi, Operasi",
+  "meaning": "Driving, Operation, Mengemudi, Operasi",
   "onyomi": "ウンテン",
   "kunyomi": "",
   "reading": "unten"
@@ -754,7 +754,7 @@
   {
   "id": 95,
   "kanji": "泳",
-  "meaning": "Berenang",
+  "meaning": "Swim, Berenang",
   "onyomi": "エイ",
   "kunyomi": "およ.ぐ",
   "reading": "ei, oyogu"
@@ -762,7 +762,7 @@
   {
   "id": 96,
   "kanji": "遊",
-  "meaning": "Bermain",
+  "meaning": "Play, Bermain",
   "onyomi": "ユウ",
   "kunyomi": "あそ.ぶ",
   "reading": "yo, asobu"
@@ -770,7 +770,7 @@
   {
   "id": 97,
   "kanji": "作",
-  "meaning": "Membuat, Kerja",
+  "meaning": "Make, Work, Membuat, Kerja",
   "onyomi": "サク, サ",
   "kunyomi": "つく.る",
   "reading": "saku, tsukuru"
@@ -778,7 +778,7 @@
   {
   "id": 98,
   "kanji": "料理",
-  "meaning": "Memasak, Masakan",
+  "meaning": "Cooking, Cuisine, Memasak, Masakan",
   "onyomi": "リョウリ",
   "kunyomi": "",
   "reading": "ryōri"
@@ -786,7 +786,7 @@
   {
   "id": 99,
   "kanji": "案",
-  "meaning": "Rencana, Usulan",
+  "meaning": "Plan, Proposal, Rencana, Usulan",
   "onyomi": "アン",
   "kunyomi": "",
   "reading": "an"
@@ -794,7 +794,7 @@
   {
   "id": 100,
   "kanji": "意味",
-  "meaning": "Makna, Arti",
+  "meaning": "Meaning, Sense, Makna, Arti",
   "onyomi": "イミ",
   "kunyomi": "",
   "reading": "imi"
