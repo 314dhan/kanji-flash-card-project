@@ -375,6 +375,54 @@ button:disabled {
     margin: 0 auto; /* Center the block itself */
 }
 
+/* Hint Styles */
+.hint-wrapper {
+    position: relative;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 30px; /* Ensure space for content */
+    cursor: pointer;
+    font-size: 1.2em;
+    color: var(--text-light);
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.hint-wrapper:hover {
+    color: var(--primary-color);
+}
+
+#hint-icon {
+    font-size: 2em;
+    transition: opacity 0.3s ease;
+}
+
+#hint-icon.active {
+    opacity: 1;
+}
+
+#hint-icon:not(.active) {
+    opacity: 0;
+    position: absolute; /* Hide without taking space */
+}
+
+#hint-text {
+    opacity: 0;
+    position: absolute; /* Hide without taking space */
+    transition: opacity 0.3s ease;
+    padding: 5px 10px;
+    border-radius: 8px;
+    background: rgba(0, 0, 0, 0.05);
+}
+
+#hint-text.active {
+    opacity: 1;
+    position: static; /* Show and take space */
+}
+
+
 /* Flashcard Styles */
 .flashcard-wrapper {
     position: relative;

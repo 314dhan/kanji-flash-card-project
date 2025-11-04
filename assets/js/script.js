@@ -15,6 +15,9 @@ document.addEventListener('DOMContentLoaded', () => {
     const resultEl = document.getElementById('result');
     const answerInputEl = document.getElementById('answer-input');
     const quizLengthInput = document.getElementById('quiz-length-input');
+    const hintDisplay = document.getElementById('hint-display');
+    const hintIcon = document.getElementById('hint-icon');
+    const hintText = document.getElementById('hint-text');
 
     // Start/End Screen Elements
     const startScreenTitle = startScreen.querySelector('.title');
@@ -71,8 +74,10 @@ document.addEventListener('DOMContentLoaded', () => {
         const progressPercent = (seenIndices.length / quizLength) * 100;
         progressFillEl.style.width = `${progressPercent}%`;
 
-        // Reset result message
+        // Reset result message and hint
         resultEl.classList.remove('show', 'correct', 'incorrect');
+        hintIcon.classList.add('active');
+        hintText.classList.remove('active');
 
         let randomIndex;
         do {
@@ -134,6 +139,18 @@ document.addEventListener('DOMContentLoaded', () => {
     playBtn.addEventListener('click', startGame);
     submitBtn.addEventListener('click', checkAnswer);
     nextBtn.addEventListener('click', displayNewKanji);
+    hintDisplay.addEventListener('click', () => {
+        if (currentKanji) {
+            if (hintIcon.classList.contains('active')) {
+                hintIcon.classList.remove('active');
+                hintText.textContent = `Meaning: ${currentKanji.meaning}`;
+                hintText.classList.add('active');
+            } else {
+                hintText.classList.remove('active');
+                hintIcon.classList.add('active');
+            }
+        }
+    });
     answerInputEl.addEventListener('keyup', (event) => {
         if (event.key === 'Enter' && !submitBtn.disabled) {
             checkAnswer();
