@@ -799,4 +799,1604 @@
   "kunyomi": "",
   "reading": "imi"
   }
+  {
+    "id": 101,
+    "kanji": "始",
+    "meaning": "Begin, Start, Memulai",
+    "onyomi": "シ",
+    "kunyomi": "はじ.める, はじ.まる",
+    "reading": "shi, hajimeru, hajimaru"
+  },
+  {
+    "id": 102,
+    "kanji": "終",
+    "meaning": "End, Finish, Selesai",
+    "onyomi": "シュウ",
+    "kunyomi": "お.わる, お.える",
+    "reading": "shu, owaru, oeru"
+  },
+  {
+    "id": 103,
+    "kanji": "開",
+    "meaning": "Open, Membuka",
+    "onyomi": "カイ",
+    "kunyomi": "あ.く, ひら.く",
+    "reading": "kai, aku, hiraku"
+  },
+  {
+    "id": 104,
+    "kanji": "閉",
+    "meaning": "Close, Menutup",
+    "onyomi": "ヘイ",
+    "kunyomi": "し.める, と.じる",
+    "reading": "hei, shimeru, tojiru"
+  },
+  {
+    "id": 105,
+    "kanji": "始発",
+    "meaning": "First train, Kereta pertama",
+    "onyomi": "シハツ",
+    "kunyomi": "",
+    "reading": "shihatsu"
+  },
+  {
+    "id": 106,
+    "kanji": "終電",
+    "meaning": "Last train, Kereta terakhir",
+    "onyomi": "シュウデン",
+    "kunyomi": "",
+    "reading": "shuden"
+  },
+  {
+    "id": 107,
+    "kanji": "急",
+    "meaning": "Hurry, Emergency, Mendesak, Cepat",
+    "onyomi": "キュウ",
+    "kunyomi": "いそ.ぐ",
+    "reading": "kyu, isogu"
+  },
+  {
+    "id": 108,
+    "kanji": "便",
+    "meaning": "Convenience, Flight, Layanan, Penerbangan",
+    "onyomi": "ベン, ビン",
+    "kunyomi": "",
+    "reading": "ben, bin"
+  },
+  {
+    "id": 109,
+    "kanji": "利",
+    "meaning": "Benefit, Profit, Manfaat",
+    "onyomi": "リ",
+    "kunyomi": "き.く",
+    "reading": "ri, kiku"
+  },
+  {
+    "id": 110,
+    "kanji": "不",
+    "meaning": "Not, Un-, Tidak, Bukan",
+    "onyomi": "フ",
+    "kunyomi": "",
+    "reading": "fu"
+  },
+  {
+    "id": 111,
+    "kanji": "特",
+    "meaning": "Special, Khusus",
+    "onyomi": "トク",
+    "kunyomi": "",
+    "reading": "toku"
+  },
+  {
+    "id": 112,
+    "kanji": "別",
+    "meaning": "Separate, Different, Terpisah, Lain",
+    "onyomi": "ベツ",
+    "kunyomi": "わか.れる",
+    "reading": "betsu, wakareru"
+  },
+  {
+    "id": 113,
+    "kanji": "用",
+    "meaning": "Use, Usage, Kegunaan",
+    "onyomi": "ヨウ",
+    "kunyomi": "もち.いる",
+    "reading": "yo, mochiiru"
+  },
+  {
+    "id": 114,
+    "kanji": "仕",
+    "meaning": "Serve, Work, Melayani, Bekerja",
+    "onyomi": "シ",
+    "kunyomi": "つか.える",
+    "reading": "shi, tsukaeru"
+  },
+  {
+    "id": 115,
+    "kanji": "事務所",
+    "meaning": "Office, Kantor",
+    "onyomi": "ジムショ",
+    "kunyomi": "",
+    "reading": "jimusho"
+  },
+  {
+    "id": 116,
+    "kanji": "仕事",
+    "meaning": "Work, Job, Pekerjaan",
+    "onyomi": "シゴト",
+    "kunyomi": "",
+    "reading": "shigoto"
+  },
+  {
+    "id": 117,
+    "kanji": "重",
+    "meaning": "Heavy, Berat",
+    "onyomi": "ジュウ",
+    "kunyomi": "おも.い",
+    "reading": "ju, omoi"
+  },
+  {
+    "id": 118,
+    "kanji": "軽",
+    "meaning": "Light, Ringan",
+    "onyomi": "ケイ",
+    "kunyomi": "かる.い",
+    "reading": "kei, karui"
+  },
+  {
+    "id": 119,
+    "kanji": "短",
+    "meaning": "Short, Pendek",
+    "onyomi": "タン",
+    "kunyomi": "みじか.い",
+    "reading": "tan, mijikai"
+  },
+  {
+    "id": 120,
+    "kanji": "長",
+    "meaning": "Long, Leader, Panjang, Pemimpin",
+    "onyomi": "チョウ",
+    "kunyomi": "なが.い",
+    "reading": "cho, nagai"
+  },
+  {
+    "id": 121,
+    "kanji": "明",
+    "meaning": "Bright, Clear, Terang, Jelas",
+    "onyomi": "メイ",
+    "kunyomi": "あか.るい",
+    "reading": "mei, akarui"
+  },
+  {
+    "id": 122,
+    "kanji": "暗",
+    "meaning": "Dark, Gelap",
+    "onyomi": "アン",
+    "kunyomi": "くら.い",
+    "reading": "an, kurai"
+  },
+  {
+    "id": 123,
+    "kanji": "寒",
+    "meaning": "Cold, Dingin",
+    "onyomi": "カン",
+    "kunyomi": "さむ.い",
+    "reading": "kan, samui"
+  },
+  {
+    "id": 124,
+    "kanji": "暑",
+    "meaning": "Hot (weather), Panas (cuaca)",
+    "onyomi": "ショ",
+    "kunyomi": "あつ.い",
+    "reading": "sho, atsui"
+  },
+  {
+    "id": 125,
+    "kanji": "強",
+    "meaning": "Strong, Kuat",
+    "onyomi": "キョウ",
+    "kunyomi": "つよ.い",
+    "reading": "kyo, tsuyoi"
+  },
+  {
+    "id": 126,
+    "kanji": "弱",
+    "meaning": "Weak, Lemah",
+    "onyomi": "ジャク",
+    "kunyomi": "よわ.い",
+    "reading": "jaku, yowai"
+  },
+  {
+    "id": 127,
+    "kanji": "忙",
+    "meaning": "Busy, Sibuk",
+    "onyomi": "ボウ",
+    "kunyomi": "いそが.しい",
+    "reading": "bo, isogashii"
+  },
+  {
+    "id": 128,
+    "kanji": "静",
+    "meaning": "Quiet, Tenang",
+    "onyomi": "セイ",
+    "kunyomi": "しず.か",
+    "reading": "sei, shizuka"
+  },
+  {
+    "id": 129,
+    "kanji": "有名",
+    "meaning": "Famous, Terkenal",
+    "onyomi": "ユウメイ",
+    "kunyomi": "",
+    "reading": "yumei"
+  },
+  {
+    "id": 130,
+    "kanji": "近",
+    "meaning": "Near, Dekat",
+    "onyomi": "キン",
+    "kunyomi": "ちか.い",
+    "reading": "kin, chikai"
+  },
+  {
+    "id": 131,
+    "kanji": "遠",
+    "meaning": "Far, Jauh",
+    "onyomi": "エン",
+    "kunyomi": "とお.い",
+    "reading": "en, tooi"
+  },
+  {
+    "id": 132,
+    "kanji": "早",
+    "meaning": "Early, Cepat, Dini",
+    "onyomi": "ソウ",
+    "kunyomi": "はや.い",
+    "reading": "so, hayai"
+  },
+  {
+    "id": 133,
+    "kanji": "遅",
+    "meaning": "Late, Lambat",
+    "onyomi": "チ",
+    "kunyomi": "おそ.い, おく.れる",
+    "reading": "chi, osoi, okureru"
+  },
+  {
+    "id": 134,
+    "kanji": "朝",
+    "meaning": "Morning, Pagi",
+    "onyomi": "チョウ",
+    "kunyomi": "あさ",
+    "reading": "cho, asa"
+  },
+  {
+    "id": 135,
+    "kanji": "昼",
+    "meaning": "Noon, Siang",
+    "onyomi": "チュウ",
+    "kunyomi": "ひる",
+    "reading": "chu, hiru"
+  },
+  {
+    "id": 136,
+    "kanji": "夜",
+    "meaning": "Night, Malam",
+    "onyomi": "ヤ",
+    "kunyomi": "よる",
+    "reading": "ya, yoru"
+  },
+  {
+    "id": 137,
+    "kanji": "今夜",
+    "meaning": "Tonight, Malam ini",
+    "onyomi": "コンヤ",
+    "kunyomi": "",
+    "reading": "konya"
+  },
+  {
+    "id": 138,
+    "kanji": "去年",
+    "meaning": "Last year, Tahun lalu",
+    "onyomi": "キョネン",
+    "kunyomi": "",
+    "reading": "kyonen"
+  },
+  {
+    "id": 139,
+    "kanji": "今週",
+    "meaning": "This week, Minggu ini",
+    "onyomi": "コンシュウ",
+    "kunyomi": "",
+    "reading": "konshuu"
+  },
+  {
+    "id": 140,
+    "kanji": "来週",
+    "meaning": "Next week, Minggu depan",
+    "onyomi": "ライシュウ",
+    "kunyomi": "",
+    "reading": "raishuu"
+  },
+  {
+    "id": 141,
+    "kanji": "先週",
+    "meaning": "Last week, Minggu lalu",
+    "onyomi": "センシュウ",
+    "kunyomi": "",
+    "reading": "senshuu"
+  },
+  {
+    "id": 142,
+    "kanji": "来月",
+    "meaning": "Next month, Bulan depan",
+    "onyomi": "ライゲツ",
+    "kunyomi": "",
+    "reading": "raigetsu"
+  },
+  {
+    "id": 143,
+    "kanji": "今月",
+    "meaning": "This month, Bulan ini",
+    "onyomi": "コンゲツ",
+    "kunyomi": "",
+    "reading": "kongetsu"
+  },
+  {
+    "id": 144,
+    "kanji": "先月",
+    "meaning": "Last month, Bulan lalu",
+    "onyomi": "センゲツ",
+    "kunyomi": "",
+    "reading": "sengetsu"
+  },
+  {
+    "id": 145,
+    "kanji": "週末",
+    "meaning": "Weekend, Akhir pekan",
+    "onyomi": "シュウマツ",
+    "kunyomi": "",
+    "reading": "shuumatsu"
+  },
+  {
+    "id": 146,
+    "kanji": "昨",
+    "meaning": "Yesterday, Kemarin",
+    "onyomi": "サク",
+    "kunyomi": "",
+    "reading": "saku"
+  },
+  {
+    "id": 147,
+    "kanji": "昼食",
+    "meaning": "Lunch, Makan siang",
+    "onyomi": "チュウショク",
+    "kunyomi": "",
+    "reading": "chuushoku"
+  },
+  {
+    "id": 148,
+    "kanji": "夕",
+    "meaning": "Evening, Sore",
+    "onyomi": "セキ",
+    "kunyomi": "ゆう",
+    "reading": "seki, yuu"
+  },
+  {
+    "id": 149,
+    "kanji": "方",
+    "meaning": "Direction, Person, Arah, Orang (hormat)",
+    "onyomi": "ホウ",
+    "kunyomi": "かた",
+    "reading": "ho, kata"
+  },
+  {
+    "id": 150,
+    "kanji": "北",
+    "meaning": "North, Utara",
+    "onyomi": "ホク",
+    "kunyomi": "きた",
+    "reading": "hoku, kita"
+  },
+  {
+    "id": 151,
+    "kanji": "南",
+    "meaning": "South, Selatan",
+    "onyomi": "ナン",
+    "kunyomi": "みなみ",
+    "reading": "nan, minami"
+  },
+  {
+    "id": 152,
+    "kanji": "東",
+    "meaning": "East, Timur",
+    "onyomi": "トウ",
+    "kunyomi": "ひがし",
+    "reading": "tou, higashi"
+  },
+  {
+    "id": 153,
+    "kanji": "西",
+    "meaning": "West, Barat",
+    "onyomi": "セイ, サイ",
+    "kunyomi": "にし",
+    "reading": "sei, nishi"
+  },
+  {
+    "id": 154,
+    "kanji": "地方",
+    "meaning": "Region, Daerah",
+    "onyomi": "チホウ",
+    "kunyomi": "",
+    "reading": "chihou"
+  },
+  {
+    "id": 155,
+    "kanji": "世界",
+    "meaning": "World, Dunia",
+    "onyomi": "セカイ",
+    "kunyomi": "",
+    "reading": "sekai"
+  },
+  {
+    "id": 156,
+    "kanji": "国",
+    "meaning": "Country, Negara",
+    "onyomi": "コク",
+    "kunyomi": "くに",
+    "reading": "koku, kuni"
+  },
+  {
+    "id": 157,
+    "kanji": "県",
+    "meaning": "Prefecture, Provinsi",
+    "onyomi": "ケン",
+    "kunyomi": "",
+    "reading": "ken"
+  },
+  {
+    "id": 158,
+    "kanji": "都",
+    "meaning": "Capital, Kota besar",
+    "onyomi": "ト",
+    "kunyomi": "みやこ",
+    "reading": "to, miyako"
+  },
+  {
+    "id": 159,
+    "kanji": "市",
+    "meaning": "City, Kota",
+    "onyomi": "シ",
+    "kunyomi": "いち",
+    "reading": "shi, ichi"
+  },
+  {
+    "id": 160,
+    "kanji": "区",
+    "meaning": "Ward, Distrik",
+    "onyomi": "ク",
+    "kunyomi": "",
+    "reading": "ku"
+  },
+  {
+    "id": 161,
+    "kanji": "町",
+    "meaning": "Town, Kota kecil",
+    "onyomi": "チョウ",
+    "kunyomi": "まち",
+    "reading": "cho, machi"
+  },
+  {
+    "id": 162,
+    "kanji": "村",
+    "meaning": "Village, Desa",
+    "onyomi": "ソン",
+    "kunyomi": "むら",
+    "reading": "son, mura"
+  },
+  {
+    "id": 163,
+    "kanji": "港",
+    "meaning": "Port, Pelabuhan",
+    "onyomi": "コウ",
+    "kunyomi": "みなと",
+    "reading": "ko, minato"
+  },
+  {
+    "id": 164,
+    "kanji": "空港",
+    "meaning": "Airport, Bandara",
+    "onyomi": "クウコウ",
+    "kunyomi": "",
+    "reading": "kuukou"
+  },
+  {
+    "id": 165,
+    "kanji": "飛行機",
+    "meaning": "Airplane, Pesawat",
+    "onyomi": "ヒコウキ",
+    "kunyomi": "",
+    "reading": "hikouki"
+  },
+  {
+    "id": 166,
+    "kanji": "船",
+    "meaning": "Ship, Kapal",
+    "onyomi": "セン",
+    "kunyomi": "ふね",
+    "reading": "sen, fune"
+  },
+  {
+    "id": 167,
+    "kanji": "旅館",
+    "meaning": "Inn, Penginapan",
+    "onyomi": "リョカン",
+    "kunyomi": "",
+    "reading": "ryokan"
+  },
+  {
+    "id": 168,
+    "kanji": "乗",
+    "meaning": "Ride, Naik (kendaraan)",
+    "onyomi": "ジョウ",
+    "kunyomi": "の.る, の.せる",
+    "reading": "jou, noru, noseru"
+  },
+  {
+    "id": 169,
+    "kanji": "降",
+    "meaning": "Get off, Descend, Turun",
+    "onyomi": "コウ",
+    "kunyomi": "お.りる, ふ.る",
+    "reading": "kou, oriru, furu"
+  },
+  {
+    "id": 170,
+    "kanji": "切",
+    "meaning": "Cut, Potong",
+    "onyomi": "セツ",
+    "kunyomi": "き.る, き.れる",
+    "reading": "setsu, kiru, kireru"
+  },
+  {
+    "id": 171,
+    "kanji": "切符",
+    "meaning": "Ticket, Tiket",
+    "onyomi": "キップ",
+    "kunyomi": "",
+    "reading": "kippu"
+  },
+  {
+    "id": 172,
+    "kanji": "改札",
+    "meaning": "Ticket gate, Pintu tiket",
+    "onyomi": "カイサツ",
+    "kunyomi": "",
+    "reading": "kaisatsu"
+  },
+  {
+    "id": 173,
+    "kanji": "信号",
+    "meaning": "Traffic signal, Lampu lalu lintas",
+    "onyomi": "シンゴウ",
+    "kunyomi": "",
+    "reading": "shingou"
+  },
+  {
+    "id": 174,
+    "kanji": "歩道",
+    "meaning": "Sidewalk, Trotoar",
+    "onyomi": "ホドウ",
+    "kunyomi": "",
+    "reading": "hodou"
+  },
+  {
+    "id": 175,
+    "kanji": "自転車",
+    "meaning": "Bicycle, Sepeda",
+    "onyomi": "ジテンシャ",
+    "kunyomi": "",
+    "reading": "jitensha"
+  },
+  {
+    "id": 176,
+    "kanji": "駐車場",
+    "meaning": "Parking lot, Tempat parkir",
+    "onyomi": "チュウシャジョウ",
+    "kunyomi": "",
+    "reading": "chuushajou"
+  },
+  {
+    "id": 177,
+    "kanji": "鉄道",
+    "meaning": "Railway, Rel kereta",
+    "onyomi": "テツドウ",
+    "kunyomi": "",
+    "reading": "tetsudou"
+  },
+  {
+    "id": 178,
+    "kanji": "地下鉄",
+    "meaning": "Subway, Kereta bawah tanah",
+    "onyomi": "チカテツ",
+    "kunyomi": "",
+    "reading": "chikatetsu"
+  },
+  {
+    "id": 179,
+    "kanji": "乗り換え",
+    "meaning": "Transfer (trains), Ganti kereta",
+    "onyomi": "",
+    "kunyomi": "の.りかえ",
+    "reading": "norikae"
+  },
+  {
+    "id": 180,
+    "kanji": "郵便局",
+    "meaning": "Post office, Kantor pos",
+    "onyomi": "ユウビンキョク",
+    "kunyomi": "",
+    "reading": "yuubinkyoku"
+  },
+  {
+    "id": 181,
+    "kanji": "郵便",
+    "meaning": "Mail, Pos",
+    "onyomi": "ユウビン",
+    "kunyomi": "",
+    "reading": "yuubin"
+  },
+  {
+    "id": 182,
+    "kanji": "申",
+    "meaning": "Say humbly, Apply, Mengajukan",
+    "onyomi": "シン",
+    "kunyomi": "もう.す",
+    "reading": "shin, mousu"
+  },
+  {
+    "id": 183,
+    "kanji": "申込",
+    "meaning": "Application, Pendaftaran",
+    "onyomi": "モウシコミ",
+    "kunyomi": "",
+    "reading": "moushikomi"
+  },
+  {
+    "id": 184,
+    "kanji": "消",
+    "meaning": "Erase, Extinguish, Menghilangkan",
+    "onyomi": "ショウ",
+    "kunyomi": "け.す, き.える",
+    "reading": "shou, kesu, kieru"
+  },
+  {
+    "id": 185,
+    "kanji": "決",
+    "meaning": "Decide, Determine",
+    "onyomi": "ケツ",
+    "kunyomi": "き.める, き.まる",
+    "reading": "ketsu, kimeru, kimaru"
+  },
+  {
+    "id": 186,
+    "kanji": "必要",
+    "meaning": "Necessary, Perlu",
+    "onyomi": "ヒツヨウ",
+    "kunyomi": "",
+    "reading": "hitsuyou"
+  },
+  {
+    "id": 187,
+    "kanji": "準備",
+    "meaning": "Preparation, Persiapan",
+    "onyomi": "ジュンビ",
+    "kunyomi": "",
+    "reading": "junbi"
+  },
+  {
+    "id": 188,
+    "kanji": "注意",
+    "meaning": "Attention, Caution, Hati-hati",
+    "onyomi": "チュウイ",
+    "kunyomi": "",
+    "reading": "chuui"
+  },
+  {
+    "id": 189,
+    "kanji": "危険",
+    "meaning": "Danger, Berbahaya",
+    "onyomi": "キケン",
+    "kunyomi": "",
+    "reading": "kiken"
+  },
+  {
+    "id": 190,
+    "kanji": "安全",
+    "meaning": "Safety, Aman",
+    "onyomi": "アンゼン",
+    "kunyomi": "",
+    "reading": "anzen"
+  },
+  {
+    "id": 191,
+    "kanji": "失敗",
+    "meaning": "Failure, Gagal",
+    "onyomi": "シッパイ",
+    "kunyomi": "",
+    "reading": "shippai"
+  },
+  {
+    "id": 192,
+    "kanji": "成功",
+    "meaning": "Success, Berhasil",
+    "onyomi": "セイコウ",
+    "kunyomi": "",
+    "reading": "seikou"
+  },
+  {
+    "id": 193,
+    "kanji": "結婚",
+    "meaning": "Marriage, Menikah",
+    "onyomi": "ケッコン",
+    "kunyomi": "",
+    "reading": "kekkon"
+  },
+  {
+    "id": 194,
+    "kanji": "離婚",
+    "meaning": "Divorce, Cerai",
+    "onyomi": "リコン",
+    "kunyomi": "",
+    "reading": "rikon"
+  },
+  {
+    "id": 195,
+    "kanji": "子",
+    "meaning": "Child, Anak",
+    "onyomi": "シ, ス",
+    "kunyomi": "こ",
+    "reading": "shi, su, ko"
+  },
+  {
+    "id": 196,
+    "kanji": "親",
+    "meaning": "Parent, Orang tua",
+    "onyomi": "シン",
+    "kunyomi": "おや",
+    "reading": "shin, oya"
+  },
+  {
+    "id": 197,
+    "kanji": "兄",
+    "meaning": "Older brother, Kakak laki-laki",
+    "onyomi": "ケイ, キョウ",
+    "kunyomi": "あに",
+    "reading": "kei, kyou, ani"
+  },
+  {
+    "id": 198,
+    "kanji": "妹",
+    "meaning": "Younger sister, Adik perempuan",
+    "onyomi": "マイ",
+    "kunyomi": "いもうと",
+    "reading": "mai, imouto"
+  },
+  {
+    "id": 199,
+    "kanji": "弟",
+    "meaning": "Younger brother, Adik laki-laki",
+    "onyomi": "テイ, ダイ",
+    "kunyomi": "おとうと",
+    "reading": "tei, dai, otouto"
+  },
+  {
+    "id": 200,
+    "kanji": "家族",
+    "meaning": "Family, Keluarga",
+    "onyomi": "カゾク",
+    "kunyomi": "",
+    "reading": "kazoku"
+  },
+  {
+    "id": 201,
+    "kanji": "兄弟",
+    "meaning": "Siblings, Saudara kandung",
+    "onyomi": "キョウダイ",
+    "kunyomi": "",
+    "reading": "kyoudai"
+  },
+  {
+    "id": 202,
+    "kanji": "夫",
+    "meaning": "Husband, Suami",
+    "onyomi": "フ",
+    "kunyomi": "おっと",
+    "reading": "fu, otto"
+  },
+  {
+    "id": 203,
+    "kanji": "妻",
+    "meaning": "Wife, Istri",
+    "onyomi": "サイ",
+    "kunyomi": "つま",
+    "reading": "sai, tsuma"
+  },
+  {
+    "id": 204,
+    "kanji": "夫婦",
+    "meaning": "Married couple, Suami istri",
+    "onyomi": "フウフ",
+    "kunyomi": "",
+    "reading": "fuufu"
+  },
+  {
+    "id": 205,
+    "kanji": "友達",
+    "meaning": "Friend, Teman",
+    "onyomi": "ユウダチ",
+    "kunyomi": "",
+    "reading": "tomodachi"
+  },
+  {
+    "id": 206,
+    "kanji": "彼",
+    "meaning": "He, Him, Dia (laki-laki)",
+    "onyomi": "ヒ",
+    "kunyomi": "かれ",
+    "reading": "hi, kare"
+  },
+  {
+    "id": 207,
+    "kanji": "彼女",
+    "meaning": "She, Her, Dia (perempuan)",
+    "onyomi": "ヒジョ",
+    "kunyomi": "",
+    "reading": "kanojo"
+  },
+  {
+    "id": 208,
+    "kanji": "自分",
+    "meaning": "Myself, Diri sendiri",
+    "onyomi": "ジブン",
+    "kunyomi": "",
+    "reading": "jibun"
+  },
+  {
+    "id": 209,
+    "kanji": "心",
+    "meaning": "Heart, Mind, Hati, Pikiran",
+    "onyomi": "シン",
+    "kunyomi": "こころ",
+    "reading": "shin, kokoro"
+  },
+  {
+    "id": 210,
+    "kanji": "思",
+    "meaning": "Think, Berpikir",
+    "onyomi": "シ",
+    "kunyomi": "おも.う",
+    "reading": "shi, omou"
+  },
+  {
+    "id": 211,
+    "kanji": "考",
+    "meaning": "Consider, Memikirkan",
+    "onyomi": "コウ",
+    "kunyomi": "かんが.える",
+    "reading": "kou, kangaeru"
+  },
+  {
+    "id": 212,
+    "kanji": "知",
+    "meaning": "Know, Mengetahui",
+    "onyomi": "チ",
+    "kunyomi": "し.る",
+    "reading": "chi, shiru"
+  },
+  {
+    "id": 213,
+    "kanji": "意見",
+    "meaning": "Opinion, Pendapat",
+    "onyomi": "イケン",
+    "kunyomi": "",
+    "reading": "iken"
+  },
+  {
+    "id": 214,
+    "kanji": "覚",
+    "meaning": "Remember, Mengingat",
+    "onyomi": "カク",
+    "kunyomi": "おぼ.える",
+    "reading": "kaku, oboeru"
+  },
+  {
+    "id": 215,
+    "kanji": "忘",
+    "meaning": "Forget, Lupa",
+    "onyomi": "ボウ",
+    "kunyomi": "わす.れる",
+    "reading": "bou, wasureru"
+  },
+  {
+    "id": 216,
+    "kanji": "習",
+    "meaning": "Learn, Belajar (berlatih)",
+    "onyomi": "シュウ",
+    "kunyomi": "なら.う",
+    "reading": "shuu, narau"
+  },
+  {
+    "id": 217,
+    "kanji": "練習",
+    "meaning": "Practice, Latihan",
+    "onyomi": "レンシュウ",
+    "kunyomi": "",
+    "reading": "renshuu"
+  },
+  {
+    "id": 218,
+    "kanji": "説明",
+    "meaning": "Explanation, Penjelasan",
+    "onyomi": "セツメイ",
+    "kunyomi": "",
+    "reading": "setsumei"
+  },
+  {
+    "id": 219,
+    "kanji": "意味",
+    "meaning": "Meaning, Arti",
+    "onyomi": "イミ",
+    "kunyomi": "",
+    "reading": "imi"
+  },
+  {
+    "id": 220,
+    "kanji": "発",
+    "meaning": "Departure, Emit, Berangkat, Mengeluarkan",
+    "onyomi": "ハツ",
+    "kunyomi": "",
+    "reading": "hatsu"
+  },
+  {
+    "id": 221,
+    "kanji": "発音",
+    "meaning": "Pronunciation, Pengucapan",
+    "onyomi": "ハツオン",
+    "kunyomi": "",
+    "reading": "hatsuon"
+  },
+  {
+    "id": 222,
+    "kanji": "出発",
+    "meaning": "Departure, Keberangkatan",
+    "onyomi": "シュッパツ",
+    "kunyomi": "",
+    "reading": "shuppatsu"
+  },
+  {
+    "id": 223,
+    "kanji": "到着",
+    "meaning": "Arrival, Kedatangan",
+    "onyomi": "トウチャク",
+    "kunyomi": "",
+    "reading": "touchaku"
+  },
+  {
+    "id": 224,
+    "kanji": "通",
+    "meaning": "Pass through, Lewat, Melalui",
+    "onyomi": "ツウ",
+    "kunyomi": "とお.る, かよ.う",
+    "reading": "tsuu, tooru, kayou"
+  },
+  {
+    "id": 225,
+    "kanji": "通学",
+    "meaning": "Commuting to school, Pergi ke sekolah",
+    "onyomi": "ツウガク",
+    "kunyomi": "",
+    "reading": "tsuugaku"
+  },
+  {
+    "id": 226,
+    "kanji": "交通",
+    "meaning": "Traffic, Transportasi",
+    "onyomi": "コウツウ",
+    "kunyomi": "",
+    "reading": "koutsuu"
+  },
+  {
+    "id": 227,
+    "kanji": "動",
+    "meaning": "Move, Bergerak",
+    "onyomi": "ドウ",
+    "kunyomi": "うご.く",
+    "reading": "dou, ugoku"
+  },
+  {
+    "id": 228,
+    "kanji": "動物",
+    "meaning": "Animal, Hewan",
+    "onyomi": "ドウブツ",
+    "kunyomi": "",
+    "reading": "doubutsu"
+  },
+  {
+    "id": 229,
+    "kanji": "運動",
+    "meaning": "Exercise, Olahraga",
+    "onyomi": "ウンドウ",
+    "kunyomi": "",
+    "reading": "undou"
+  },
+  {
+    "id": 230,
+    "kanji": "働",
+    "meaning": "Work, Bekerja",
+    "onyomi": "ドウ",
+    "kunyomi": "はたら.く",
+    "reading": "dou, hataraku"
+  },
+  {
+    "id": 231,
+    "kanji": "仕事場",
+    "meaning": "Workplace, Tempat kerja",
+    "onyomi": "シゴトバ",
+    "kunyomi": "",
+    "reading": "shigotoba"
+  },
+  {
+    "id": 232,
+    "kanji": "工事",
+    "meaning": "Construction work, Pekerjaan konstruksi",
+    "onyomi": "コウジ",
+    "kunyomi": "",
+    "reading": "kouji"
+  },
+  {
+    "id": 233,
+    "kanji": "産業",
+    "meaning": "Industry, Industri",
+    "onyomi": "サンギョウ",
+    "kunyomi": "",
+    "reading": "sangyou"
+  },
+  {
+    "id": 234,
+    "kanji": "農業",
+    "meaning": "Agriculture, Pertanian",
+    "onyomi": "ノウギョウ",
+    "kunyomi": "",
+    "reading": "nougyou"
+  },
+  {
+    "id": 235,
+    "kanji": "商店",
+    "meaning": "Shop, Store, Toko dagang",
+    "onyomi": "ショウテン",
+    "kunyomi": "",
+    "reading": "shouten"
+  },
+  {
+    "id": 236,
+    "kanji": "商品",
+    "meaning": "Goods, Produk dagangan",
+    "onyomi": "ショウヒン",
+    "kunyomi": "",
+    "reading": "shouhin"
+  },
+  {
+    "id": 237,
+    "kanji": "売店",
+    "meaning": "Kiosk, Warung kecil",
+    "onyomi": "バイテン",
+    "kunyomi": "",
+    "reading": "baiten"
+  },
+  {
+    "id": 238,
+    "kanji": "営業",
+    "meaning": "Business, Operasi (bisnis)",
+    "onyomi": "エイギョウ",
+    "kunyomi": "",
+    "reading": "eigyou"
+  },
+  {
+    "id": 239,
+    "kanji": "銀行",
+    "meaning": "Bank",
+    "onyomi": "ギンコウ",
+    "kunyomi": "",
+    "reading": "ginkou"
+  },
+  {
+    "id": 240,
+    "kanji": "利用",
+    "meaning": "Use, Pemanfaatan",
+    "onyomi": "リヨウ",
+    "kunyomi": "",
+    "reading": "riyou"
+  },
+  {
+    "id": 241,
+    "kanji": "便利",
+    "meaning": "Convenient, Praktis",
+    "onyomi": "ベンリ",
+    "kunyomi": "",
+    "reading": "benri"
+  },
+  {
+    "id": 242,
+    "kanji": "自由",
+    "meaning": "Freedom, Kebebasan",
+    "onyomi": "ジユウ",
+    "kunyomi": "",
+    "reading": "jiyuu"
+  },
+  {
+    "id": 243,
+    "kanji": "必要品",
+    "meaning": "Necessities, Barang penting",
+    "onyomi": "ヒツヨウヒン",
+    "kunyomi": "",
+    "reading": "hitsuyouhin"
+  },
+  {
+    "id": 244,
+    "kanji": "温泉",
+    "meaning": "Hot spring, Pemandian air panas",
+    "onyomi": "オンセン",
+    "kunyomi": "",
+    "reading": "onsen"
+  },
+  {
+    "id": 245,
+    "kanji": "観光",
+    "meaning": "Sightseeing, Pariwisata",
+    "onyomi": "カンコウ",
+    "kunyomi": "",
+    "reading": "kankou"
+  },
+  {
+    "id": 246,
+    "kanji": "公園",
+    "meaning": "Park, Taman",
+    "onyomi": "コウエン",
+    "kunyomi": "",
+    "reading": "kouen"
+  },
+  {
+    "id": 247,
+    "kanji": "動物園",
+    "meaning": "Zoo, Kebun binatang",
+    "onyomi": "ドウブツエン",
+    "kunyomi": "",
+    "reading": "doubutsuen"
+  },
+  {
+    "id": 248,
+    "kanji": "図書館",
+    "meaning": "Library, Perpustakaan",
+    "onyomi": "トショカン",
+    "kunyomi": "",
+    "reading": "toshokan"
+  },
+  {
+    "id": 249,
+    "kanji": "美術館",
+    "meaning": "Art museum, Museum seni",
+    "onyomi": "ビジュツカン",
+    "kunyomi": "",
+    "reading": "bijutsukan"
+  },
+  {
+    "id": 250,
+    "kanji": "映画館",
+    "meaning": "Movie theater, Bioskop",
+    "onyomi": "エイガカン",
+    "kunyomi": "",
+    "reading": "eigakan"
+  },
+  {
+    "id": 251,
+    "kanji": "駅員",
+    "meaning": "Station staff, Petugas stasiun",
+    "onyomi": "エキイン",
+    "kunyomi": "",
+    "reading": "ekiin"
+  },
+  {
+    "id": 252,
+    "kanji": "医薬品",
+    "meaning": "Medicine, Obat-obatan",
+    "onyomi": "イヤクヒン",
+    "kunyomi": "",
+    "reading": "iyakuhin"
+  },
+  {
+    "id": 253,
+    "kanji": "薬",
+    "meaning": "Medicine, Obat",
+    "onyomi": "ヤク",
+    "kunyomi": "くすり",
+    "reading": "yaku, kusuri"
+  },
+  {
+    "id": 254,
+    "kanji": "歯医者",
+    "meaning": "Dentist, Dokter gigi",
+    "onyomi": "ハイシャ",
+    "kunyomi": "",
+    "reading": "haisha"
+  },
+  {
+    "id": 255,
+    "kanji": "耳鼻科",
+    "meaning": "ENT department, THT",
+    "onyomi": "ジビカ",
+    "kunyomi": "",
+    "reading": "jibika"
+  },
+  {
+    "id": 256,
+    "kanji": "心配",
+    "meaning": "Worry, Khawatir",
+    "onyomi": "シンパイ",
+    "kunyomi": "",
+    "reading": "shinpai"
+  },
+  {
+    "id": 257,
+    "kanji": "安心",
+    "meaning": "Relief, Lega",
+    "onyomi": "アンシン",
+    "kunyomi": "",
+    "reading": "anshin"
+  },
+  {
+    "id": 258,
+    "kanji": "薬局",
+    "meaning": "Pharmacy, Apotek",
+    "onyomi": "ヤッキョク",
+    "kunyomi": "",
+    "reading": "yakkyoku"
+  },
+  {
+    "id": 259,
+    "kanji": "頭",
+    "meaning": "Head, Kepala",
+    "onyomi": "トウ",
+    "kunyomi": "あたま",
+    "reading": "tou, atama"
+  },
+  {
+    "id": 260,
+    "kanji": "顔",
+    "meaning": "Face, Wajah",
+    "onyomi": "ガン",
+    "kunyomi": "かお",
+    "reading": "gan, kao"
+  },
+  {
+    "id": 261,
+    "kanji": "体重",
+    "meaning": "Body weight, Berat badan",
+    "onyomi": "タイジュウ",
+    "kunyomi": "",
+    "reading": "taijuu"
+  },
+  {
+    "id": 262,
+    "kanji": "健康",
+    "meaning": "Health, Kesehatan",
+    "onyomi": "ケンコウ",
+    "kunyomi": "",
+    "reading": "kenkou"
+  },
+  {
+    "id": 263,
+    "kanji": "体温",
+    "meaning": "Body temperature, Suhu tubuh",
+    "onyomi": "タイオン",
+    "kunyomi": "",
+    "reading": "taion"
+  },
+  {
+    "id": 264,
+    "kanji": "入院",
+    "meaning": "Hospitalization, Masuk rumah sakit",
+    "onyomi": "ニュウイン",
+    "kunyomi": "",
+    "reading": "nyuuin"
+  },
+  {
+    "id": 265,
+    "kanji": "退院",
+    "meaning": "Discharge from hospital, Keluar rumah sakit",
+    "onyomi": "タイイン",
+    "kunyomi": "",
+    "reading": "taiin"
+  },
+  {
+    "id": 266,
+    "kanji": "診察",
+    "meaning": "Medical examination, Pemeriksaan dokter",
+    "onyomi": "シンサツ",
+    "kunyomi": "",
+    "reading": "shinsatsu"
+  },
+  {
+    "id": 267,
+    "kanji": "手術",
+    "meaning": "Surgery, Operasi",
+    "onyomi": "シュジュツ",
+    "kunyomi": "",
+    "reading": "shujutsu"
+  },
+  {
+    "id": 268,
+    "kanji": "事故",
+    "meaning": "Accident, Kecelakaan",
+    "onyomi": "ジコ",
+    "kunyomi": "",
+    "reading": "jiko"
+  },
+  {
+    "id": 269,
+    "kanji": "問題",
+    "meaning": "Problem, Masalah",
+    "onyomi": "モンダイ",
+    "kunyomi": "",
+    "reading": "mondai"
+  },
+  {
+    "id": 270,
+    "kanji": "質問",
+    "meaning": "Question, Pertanyaan",
+    "onyomi": "シツモン",
+    "kunyomi": "",
+    "reading": "shitsumon"
+  },
+  {
+    "id": 271,
+    "kanji": "答",
+    "meaning": "Answer, Jawaban",
+    "onyomi": "トウ",
+    "kunyomi": "こた.える",
+    "reading": "tou, kotaeru"
+  },
+  {
+    "id": 272,
+    "kanji": "返",
+    "meaning": "Return, Mengembalikan",
+    "onyomi": "ヘン",
+    "kunyomi": "かえ.す",
+    "reading": "hen, kaesu"
+  },
+  {
+    "id": 273,
+    "kanji": "送",
+    "meaning": "Send, Mengirim",
+    "onyomi": "ソウ",
+    "kunyomi": "おく.る",
+    "reading": "sou, okuru"
+  },
+  {
+    "id": 274,
+    "kanji": "荷物",
+    "meaning": "Luggage, Barang bawaan",
+    "onyomi": "ニモツ",
+    "kunyomi": "",
+    "reading": "nimotsu"
+  },
+  {
+    "id": 275,
+    "kanji": "受",
+    "meaning": "Receive, Menerima",
+    "onyomi": "ジュ",
+    "kunyomi": "う.ける",
+    "reading": "ju, ukeru"
+  },
+  {
+    "id": 276,
+    "kanji": "受付",
+    "meaning": "Reception, Penerimaan",
+    "onyomi": "ウケツケ",
+    "kunyomi": "",
+    "reading": "uketsuke"
+  },
+  {
+    "id": 277,
+    "kanji": "払",
+    "meaning": "Pay, Membayar",
+    "onyomi": "フツ",
+    "kunyomi": "はら.う",
+    "reading": "futsu, harau"
+  },
+  {
+    "id": 278,
+    "kanji": "支払",
+    "meaning": "Payment, Pembayaran",
+    "onyomi": "シハライ",
+    "kunyomi": "",
+    "reading": "shiharai"
+  },
+  {
+    "id": 279,
+    "kanji": "会議",
+    "meaning": "Meeting, Rapat",
+    "onyomi": "カイギ",
+    "kunyomi": "",
+    "reading": "kaigi"
+  },
+  {
+    "id": 280,
+    "kanji": "資料",
+    "meaning": "Materials, Data, Dokumen",
+    "onyomi": "シリョウ",
+    "kunyomi": "",
+    "reading": "shiryou"
+  },
+  {
+    "id": 281,
+    "kanji": "報告",
+    "meaning": "Report, Laporan",
+    "onyomi": "ホウコク",
+    "kunyomi": "",
+    "reading": "houkoku"
+  },
+  {
+    "id": 282,
+    "kanji": "連絡",
+    "meaning": "Contact, Hubungan, Menghubungi",
+    "onyomi": "レンラク",
+    "kunyomi": "",
+    "reading": "renraku"
+  },
+  {
+    "id": 283,
+    "kanji": "約束",
+    "meaning": "Promise, Janji",
+    "onyomi": "ヤクソク",
+    "kunyomi": "",
+    "reading": "yakusoku"
+  },
+  {
+    "id": 284,
+    "kanji": "予約",
+    "meaning": "Reservation, Pemesanan",
+    "onyomi": "ヨヤク",
+    "kunyomi": "",
+    "reading": "yoyaku"
+  },
+  {
+    "id": 285,
+    "kanji": "記",
+    "meaning": "Record, Catatan",
+    "onyomi": "キ",
+    "kunyomi": "しる.す",
+    "reading": "ki, shirusu"
+  },
+  {
+    "id": 286,
+    "kanji": "日記",
+    "meaning": "Diary, Buku harian",
+    "onyomi": "ニッキ",
+    "kunyomi": "",
+    "reading": "nikki"
+  },
+  {
+    "id": 287,
+    "kanji": "記事",
+    "meaning": "Article, Artikel",
+    "onyomi": "キジ",
+    "kunyomi": "",
+    "reading": "kiji"
+  },
+  {
+    "id": 288,
+    "kanji": "新聞",
+    "meaning": "Newspaper, Koran",
+    "onyomi": "シンブン",
+    "kunyomi": "",
+    "reading": "shinbun"
+  },
+  {
+    "id": 289,
+    "kanji": "放送",
+    "meaning": "Broadcast, Siaran",
+    "onyomi": "ホウソウ",
+    "kunyomi": "",
+    "reading": "housou"
+  },
+  {
+    "id": 290,
+    "kanji": "映像",
+    "meaning": "Image, Video, Gambar",
+    "onyomi": "エイゾウ",
+    "kunyomi": "",
+    "reading": "eizou"
+  },
+  {
+    "id": 291,
+    "kanji": "音楽",
+    "meaning": "Music, Musik",
+    "onyomi": "オンガク",
+    "kunyomi": "",
+    "reading": "ongaku"
+  },
+  {
+    "id": 292,
+    "kanji": "歌手",
+    "meaning": "Singer, Penyanyi",
+    "onyomi": "カシュ",
+    "kunyomi": "",
+    "reading": "kashu"
+  },
+  {
+    "id": 293,
+    "kanji": "絵",
+    "meaning": "Picture, Lukisan",
+    "onyomi": "カイ",
+    "kunyomi": "え",
+    "reading": "kai, e"
+  },
+  {
+    "id": 294,
+    "kanji": "映画館",
+    "meaning": "Movie theater, Bioskop",
+    "onyomi": "エイガカン",
+    "kunyomi": "",
+    "reading": "eigakan"
+  },
+  {
+    "id": 295,
+    "kanji": "写真",
+    "meaning": "Photograph, Foto",
+    "onyomi": "シャシン",
+    "kunyomi": "",
+    "reading": "shashin"
+  },
+  {
+    "id": 296,
+    "kanji": "写",
+    "meaning": "Copy, Menyalin",
+    "onyomi": "シャ",
+    "kunyomi": "うつ.す",
+    "reading": "sha, utsusu"
+  },
+  {
+    "id": 297,
+    "kanji": "真",
+    "meaning": "True, Nyata",
+    "onyomi": "シン",
+    "kunyomi": "ま",
+    "reading": "shin, ma"
+  },
+  {
+    "id": 298,
+    "kanji": "絵画",
+    "meaning": "Painting, Lukisan",
+    "onyomi": "カイガ",
+    "kunyomi": "",
+    "reading": "kaiga"
+  },
+  {
+    "id": 299,
+    "kanji": "写真館",
+    "meaning": "Photo studio, Studio foto",
+    "onyomi": "シャシンカン",
+    "kunyomi": "",
+    "reading": "shashinkan"
+  },
+  {
+    "id": 300,
+    "kanji": "番組",
+    "meaning": "TV program, Acara televisi",
+    "onyomi": "バングミ",
+    "kunyomi": "",
+    "reading": "bangumi"
+  }
 ]
