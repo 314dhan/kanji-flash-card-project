@@ -95,8 +95,8 @@ body {
 .screen {
     display: none;
     width: 100%;
-    min-height: 100vh;
     padding: 20px;
+    flex-grow: 1; /* Allow active screen to take available space */
 }
 
 .screen.active {
@@ -378,7 +378,7 @@ button:disabled {
 /* Hint Styles */
 .hint-wrapper {
     position: relative;
-    margin-bottom: 20px;
+    margin-bottom: 20px; /* Dikembalikan */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -388,10 +388,7 @@ button:disabled {
     color: var(--text-light);
     font-weight: 500;
     transition: all 0.3s ease;
-}
-
-.hint-wrapper:hover {
-    color: var(--primary-color);
+    z-index: 100; /* Tetap dengan z-index */
 }
 
 #hint-icon {
@@ -426,7 +423,19 @@ button:disabled {
 /* Flashcard Styles */
 .flashcard-wrapper {
     position: relative;
-    margin-bottom: 40px;
+    margin-bottom: 40px; /* Dikembalikan */
+}
+
+/* Game Content */
+.game-content {
+    margin-top: 150px; /* Diperbesar dari 120px menjadi 150px */
+    max-width: 500px;
+    width: 100%;
+    padding: 0 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 auto; /* Center the block itself */
 }
 
 .kanji-card {
@@ -602,10 +611,8 @@ button:disabled {
 
 /* Footer Styles */
 .main-footer {
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    right: 0;
+    position: relative; /* Changed from fixed */
+    margin-top: auto; /* Pushes footer to the bottom in a flex column layout */
     padding: 20px;
     text-align: center;
     z-index: 1000;

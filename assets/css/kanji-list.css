@@ -1,0 +1,89 @@
+#kanji-list-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); /* Default for smaller screens */
+    gap: 20px;
+    padding: 20px;
+}
+
+@media (min-width: 1200px) { /* For larger screens, 5 columns */
+    #kanji-list-container {
+        grid-template-columns: repeat(5, 1fr);
+    }
+}
+
+@media (max-width: 1199px) and (min-width: 992px) { /* For medium screens, 4 columns */
+    #kanji-list-container {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+@media (max-width: 991px) and (min-width: 768px) { /* For tablets, 3 columns */
+    #kanji-list-container {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 767px) and (min-width: 480px) { /* For smaller tablets/large phones, 2 columns */
+    #kanji-list-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+.kanji-item {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.3s ease;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.kanji-item:hover {
+    transform: translateY(-5px);
+    background-color: rgba(255, 255, 255, 0.15);
+}
+
+.kanji-item .kanji-char {
+    font-size: 48px;
+    font-weight: 700;
+    color: #fff;
+    line-height: 1.2;
+}
+
+.kanji-item .kanji-meaning {
+    font-size: 16px;
+    color: #ddd;
+    margin-top: 10px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.kanji-item .kanji-reading {
+    font-size: 14px;
+    color: #bbb;
+    margin-top: 5px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.back-button {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 10px 15px;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+    font-family: 'Poppins', sans-serif;
+}
+
+.back-button:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* Adjust header for back button */
+.container .header {
+    position: relative;
+    padding-top: 60px; /* Make space for back button */
+}
