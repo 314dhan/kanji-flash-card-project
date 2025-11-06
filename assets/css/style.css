@@ -314,15 +314,21 @@ button:disabled {
     background: var(--bg-light);
 }
 
+#game-container.active {
+    flex-direction: column;
+    justify-content: center;
+}
+
 .game-header {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
+    position: relative; /* Changed from fixed */
+    width: 100%;
+    max-width: 600px;
     background: var(--bg-white);
     padding: 20px;
     box-shadow: var(--shadow);
     z-index: 1000;
+    border-radius: 16px;
+    margin-bottom: 20px;
 }
 
 .score-display {
@@ -365,7 +371,6 @@ button:disabled {
 
 /* Game Content */
 .game-content {
-    margin-top: 120px;
     max-width: 500px;
     width: 100%;
     padding: 0 20px;
@@ -424,18 +429,6 @@ button:disabled {
 .flashcard-wrapper {
     position: relative;
     margin-bottom: 40px; /* Dikembalikan */
-}
-
-/* Game Content */
-.game-content {
-    margin-top: 150px; /* Diperbesar dari 120px menjadi 150px */
-    max-width: 500px;
-    width: 100%;
-    padding: 0 20px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin: 0 auto; /* Center the block itself */
 }
 
 .kanji-card {
@@ -579,10 +572,6 @@ button:disabled {
     .input-group {
         flex-direction: column;
     }
-
-    .game-content {
-        margin-top: 100px; /* Adjusted for smaller screens */
-    }
 }
 
 @media (max-width: 480px) {
@@ -611,21 +600,21 @@ button:disabled {
 
 /* Footer Styles */
 .main-footer {
-    position: relative; /* Changed from fixed */
-    margin-top: auto; /* Pushes footer to the bottom in a flex column layout */
+    position: relative;
+    margin-top: auto; /* Pushes footer to the bottom */
+    width: 100%;
     padding: 20px;
     text-align: center;
     z-index: 1000;
+    background: rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
 }
 
 .footer-content {
-    background: rgba(255, 255, 255, 0.9);
-    backdrop-filter: blur(10px);
-    padding: 15px 30px;
-    border-radius: 25px;
-    display: inline-block;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-    border: 1px solid rgba(255, 255, 255, 0.3);
+    /* This container is now just for the text content */
+    padding: 0;
 }
 
 .footer-content p {
@@ -664,8 +653,7 @@ button:disabled {
         padding: 15px;
     }
 
-    .footer-content {
-        padding: 10px 20px;
+    .footer-content p {
         font-size: 0.8em;
     }
 }
@@ -673,10 +661,6 @@ button:disabled {
 @media (max-width: 480px) {
     .main-footer {
         padding: 10px;
-    }
-
-    .footer-content {
-        padding: 10px 15px;
     }
 }
 
