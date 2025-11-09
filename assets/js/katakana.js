@@ -11,38 +11,35 @@ document.addEventListener('DOMContentLoaded', () => {
     // Game Display Elements
     const scoreValueEl = document.querySelector('.score-value');
     const progressFillEl = document.querySelector('.progress-fill');
-    const kanjiCharacterEl = document.querySelector('.kanji-character');
+    const kanaCharacterEl = document.querySelector('.kanji-character');
     const resultEl = document.getElementById('result');
     const answerInputEl = document.getElementById('answer-input');
     const quizLengthInput = document.getElementById('quiz-length-input');
-    const hintDisplay = document.getElementById('hint-display');
-    const hintIcon = document.getElementById('hint-icon');
-    const hintText = document.getElementById('hint-text');
-
+    
     // Start/End Screen Elements
     const startScreenTitle = startScreen.querySelector('.title');
     const startScreenSubtitle = startScreen.querySelector('.subtitle');
 
     // Game State
-    let kanjiData = [];
-    let currentKanji = null;
+    let kanaData = [];
+    let currentKana = null;
     let score = 0;
     let seenIndices = [];
     let quizLength = 10;
 
     // --- Data Loading ---
-    fetch('assets/data/kanji-n4.json')
+    fetch('assets/data/katakana.json')
         .then(response => response.json())
         .then(data => {
-            kanjiData = data;
-            quizLengthInput.max = kanjiData.length;
+            kanaData = data;
+            quizLengthInput.max = kanaData.length;
             playBtn.disabled = false;
             playBtn.querySelector('span').textContent = 'Start Learning';
         })
         .catch(error => {
-            console.error("Error fetching kanji data:", error);
+            console.error("Error fetching katakana data:", error);
             startScreenTitle.textContent = 'Error';
-            startScreenSubtitle.textContent = 'Could not load Kanji data.';
+            startScreenSubtitle.textContent = 'Could not load Katakana data.';
         });
 
     // --- Game Flow Functions ---
@@ -61,11 +58,11 @@ document.addEventListener('DOMContentLoaded', () => {
         startScreen.classList.remove('active');
         gameContainer.classList.add('active');
 
-        displayNewKanji();
+        displayNewKana();
     }
 
-    function displayNewKanji() {
-        if (seenIndices.length >= quizLength || kanjiData.length === 0) {
+    function displayNewKana() {
+        if (seenIndices.length >= quizLength || kanaData.length === 0) {
             endGame();
             return;
         }
@@ -74,23 +71,21 @@ document.addEventListener('DOMContentLoaded', () => {
         const progressPercent = (seenIndices.length / quizLength) * 100;
         progressFillEl.style.width = `${progressPercent}%`;
 
-        // Reset result message and hint
+        // Reset result message
         resultEl.classList.remove('show', 'correct', 'incorrect');
-        hintIcon.classList.add('active');
-        hintText.classList.remove('active');
 
         let randomIndex;
         do {
-            randomIndex = Math.floor(Math.random() * kanjiData.length);
+            randomIndex = Math.floor(Math.random() * kanaData.length);
         } while (seenIndices.includes(randomIndex));
         
         seenIndices.push(randomIndex);
-        currentKanji = kanjiData[randomIndex];
+        currentKana = kanaData[randomIndex];
         
-        kanjiCharacterEl.textContent = currentKanji.kanji;
-        kanjiCharacterEl.parentElement.style.animation = 'none';
-        void kanjiCharacterEl.parentElement.offsetWidth; // Trigger reflow
-        kanjiCharacterEl.parentElement.style.animation = 'flipIn 0.6s ease-out';
+        kanaCharacterEl.textContent = currentKana.kana;
+        kanaCharacterEl.parentElement.style.animation = 'none';
+        void kanaCharacterEl.parentElement.offsetWidth; // Trigger reflow
+        kanaCharacterEl.parentElement.style.animation = 'flipIn 0.6s ease-out';
 
         answerInputEl.value = '';
         answerInputEl.disabled = false;
@@ -101,20 +96,18 @@ document.addEventListener('DOMContentLoaded', () => {
 
     function checkAnswer() {
         const userAnswer = answerInputEl.value.trim().toLowerCase();
-        if (!userAnswer || !currentKanji) return;
+        if (!userAnswer || !currentKana) return;
 
-        const correctReadings = currentKanji.reading.split(',').map(r => r.trim().toLowerCase());
-        const isCorrect = correctReadings.includes(userAnswer);
+        const isCorrect = userAnswer === currentKana.romaji.toLowerCase();
 
         resultEl.classList.add('show');
         if (isCorrect) {
             score++;
             scoreValueEl.textContent = score;
-            resultEl.textContent = `Correct! Meaning: ${currentKanji.meaning}`;
+            resultEl.textContent = 'Correct!';
             resultEl.classList.add('correct');
         } else {
-            const feedback = `Reading: ${currentKanji.reading}, Meaning: ${currentKanji.meaning}`;
-            resultEl.textContent = `Wrong! ${feedback}`;
+            resultEl.textContent = `Wrong! The correct answer is ${currentKana.romaji}`;
             resultEl.classList.add('incorrect');
         }
         
@@ -138,19 +131,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // --- Event Listeners ---
     playBtn.addEventListener('click', startGame);
     submitBtn.addEventListener('click', checkAnswer);
-    nextBtn.addEventListener('click', displayNewKanji);
-    hintDisplay.addEventListener('click', () => {
-        if (currentKanji) {
-            if (hintIcon.classList.contains('active')) {
-                hintIcon.classList.remove('active');
-                hintText.textContent = `Meaning: ${currentKanji.meaning}`;
-                hintText.classList.add('active');
-            } else {
-                hintText.classList.remove('active');
-                hintIcon.classList.add('active');
-            }
-        }
-    });
+    nextBtn.addEventListener('click', displayNewKana);
     answerInputEl.addEventListener('keyup', (event) => {
         if (event.key === 'Enter' && !submitBtn.disabled) {
             checkAnswer();

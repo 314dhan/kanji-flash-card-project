@@ -1,0 +1,144 @@
+document.addEventListener('DOMContentLoaded', () => {
+    // Screens
+    const startScreen = document.getElementById('start-screen');
+    const gameContainer = document.getElementById('game-container');
+
+    // Buttons
+    const playBtn = document.getElementById('play-btn');
+    const submitBtn = document.getElementById('submit-btn');
+    const nextBtn = document.getElementById('next-btn');
+
+    // Game Display Elements
+    const scoreValueEl = document.querySelector('.score-value');
+    const progressFillEl = document.querySelector('.progress-fill');
+    const kanaCharacterEl = document.querySelector('.kanji-character');
+    const resultEl = document.getElementById('result');
+    const answerInputEl = document.getElementById('answer-input');
+    const quizLengthInput = document.getElementById('quiz-length-input');
+    
+    // Start/End Screen Elements
+    const startScreenTitle = startScreen.querySelector('.title');
+    const startScreenSubtitle = startScreen.querySelector('.subtitle');
+
+    // Game State
+    let kanaData = [];
+    let currentKana = null;
+    let score = 0;
+    let seenIndices = [];
+    let quizLength = 10;
+
+    // --- Data Loading ---
+    fetch('assets/data/hiragana.json')
+        .then(response => response.json())
+        .then(data => {
+            kanaData = data;
+            quizLengthInput.max = kanaData.length;
+            playBtn.disabled = false;
+            playBtn.querySelector('span').textContent = 'Start Learning';
+        })
+        .catch(error => {
+            console.error("Error fetching hiragana data:", error);
+            startScreenTitle.textContent = 'Error';
+            startScreenSubtitle.textContent = 'Could not load Hiragana data.';
+        });
+
+    // --- Game Flow Functions ---
+    function startGame() {
+        const desiredLength = parseInt(quizLengthInput.value, 10);
+        if (!isNaN(desiredLength) && desiredLength > 0) {
+            quizLength = desiredLength;
+        }
+
+        score = 0;
+        seenIndices = [];
+        scoreValueEl.textContent = score;
+        document.getElementById('score-max').textContent = `/ ${quizLength}`;
+        progressFillEl.style.width = '0%';
+
+        startScreen.classList.remove('active');
+        gameContainer.classList.add('active');
+
+        displayNewKana();
+    }
+
+    function displayNewKana() {
+        if (seenIndices.length >= quizLength || kanaData.length === 0) {
+            endGame();
+            return;
+        }
+
+        // Update progress
+        const progressPercent = (seenIndices.length / quizLength) * 100;
+        progressFillEl.style.width = `${progressPercent}%`;
+
+        // Reset result message
+        resultEl.classList.remove('show', 'correct', 'incorrect');
+
+        let randomIndex;
+        do {
+            randomIndex = Math.floor(Math.random() * kanaData.length);
+        } while (seenIndices.includes(randomIndex));
+        
+        seenIndices.push(randomIndex);
+        currentKana = kanaData[randomIndex];
+        
+        kanaCharacterEl.textContent = currentKana.kana;
+        kanaCharacterEl.parentElement.style.animation = 'none';
+        void kanaCharacterEl.parentElement.offsetWidth; // Trigger reflow
+        kanaCharacterEl.parentElement.style.animation = 'flipIn 0.6s ease-out';
+
+        answerInputEl.value = '';
+        answerInputEl.disabled = false;
+        submitBtn.disabled = false;
+        nextBtn.disabled = true;
+        answerInputEl.focus();
+    }
+
+    function checkAnswer() {
+        const userAnswer = answerInputEl.value.trim().toLowerCase();
+        if (!userAnswer || !currentKana) return;
+
+        const isCorrect = userAnswer === currentKana.romaji.toLowerCase();
+
+        resultEl.classList.add('show');
+        if (isCorrect) {
+            score++;
+            scoreValueEl.textContent = score;
+            resultEl.textContent = 'Correct!';
+            resultEl.classList.add('correct');
+        } else {
+            resultEl.textContent = `Wrong! The correct answer is ${currentKana.romaji}`;
+            resultEl.classList.add('incorrect');
+        }
+        
+        answerInputEl.disabled = true;
+        submitBtn.disabled = true;
+        nextBtn.disabled = false;
+    }
+
+    function endGame() {
+        const finalProgress = (seenIndices.length / quizLength) * 100;
+        progressFillEl.style.width = `${finalProgress}%`;
+
+        gameContainer.classList.remove('active');
+        startScreen.classList.add('active');
+        
+        startScreenTitle.textContent = 'Quiz Complete!';
+        startScreenSubtitle.textContent = `Your final score is ${score} out of ${quizLength}`;
+        playBtn.querySelector('span').textContent = 'Play Again';
+    }
+
+    // --- Event Listeners ---
+    playBtn.addEventListener('click', startGame);
+    submitBtn.addEventListener('click', checkAnswer);
+    nextBtn.addEventListener('click', displayNewKana);
+    answerInputEl.addEventListener('keyup', (event) => {
+        if (event.key === 'Enter' && !submitBtn.disabled) {
+            checkAnswer();
+        }
+    });
+
+    // --- Initial State ---
+    playBtn.disabled = true;
+    playBtn.querySelector('span').textContent = 'Loading...';
+});
