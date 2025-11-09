@@ -116,10 +116,12 @@ document.addEventListener('DOMContentLoaded', () => {
             scoreValueEl.textContent = score;
             resultEl.textContent = `Correct! Meaning: ${currentKanji.meaning}`;
             resultEl.classList.add('correct');
+            new Audio('assets/sound/correct.mp3').play();
         } else {
             const feedback = `Reading: ${currentKanji.reading}, Meaning: ${currentKanji.meaning}`;
             resultEl.textContent = `Wrong! ${feedback}`;
             resultEl.classList.add('incorrect');
+            new Audio('assets/sound/wrong.mp3').play();
         }
         
         answerInputEl.disabled = true;

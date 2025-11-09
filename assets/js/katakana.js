@@ -106,9 +106,11 @@ document.addEventListener('DOMContentLoaded', () => {
             scoreValueEl.textContent = score;
             resultEl.textContent = 'Correct!';
             resultEl.classList.add('correct');
+            new Audio('assets/sound/correct.mp3').play();
         } else {
             resultEl.textContent = `Wrong! The correct answer is ${currentKana.romaji}`;
             resultEl.classList.add('incorrect');
+            new Audio('assets/sound/wrong.mp3').play();
         }
         
         answerInputEl.disabled = true;
