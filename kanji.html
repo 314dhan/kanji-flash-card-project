@@ -49,6 +49,45 @@
                     <input type="number" id="quiz-length-input" value="10" min="1" max="50">
                 </div>
 
+                <!-- Tambahkan di kanji.html setelah quiz-length-container -->
+                <div class="learning-options">
+                    <h3>Learning Mode:</h3>
+                
+                    <div class="option-group">
+                        <label class="option-label">
+                            <input type="radio" name="learning-mode" value="sequential" checked>
+                            <span class="option-text">Sequential (Easy to Hard)</span>
+                        </label>
+                
+                        <label class="option-label">
+                            <input type="radio" name="learning-mode" value="by-category">
+                            <span class="option-text">By Category</span>
+                        </label>
+                
+                        <label class="option-label">
+                            <input type="radio" name="learning-mode" value="weak-first">
+                            <span class="option-text">Focus on Weak Points</span>
+                        </label>
+                
+                        <label class="option-label">
+                            <input type="radio" name="learning-mode" value="random">
+                            <span class="option-text">Random (Original)</span>
+                        </label>
+                    </div>
+                
+                    <div id="category-selector" class="category-selector" style="display: none;">
+                        <label for="category-select">Choose Category:</label>
+                        <select id="category-select">
+                            <option value="basic">Basic (First 50 Kanji)</option>
+                            <option value="numbers-time">Numbers & Time</option>
+                            <option value="places">Places & Locations</option>
+                            <option value="family">Family & People</option>
+                            <option value="activities">Daily Activities</option>
+                            <option value="nature">Nature & Environment</option>
+                        </select>
+                    </div>
+                </div>
+
                 <button id="play-btn" class="btn-primary">
                     <span>Start Learning</span>
                     <div class="btn-icon">→</div>
