@@ -144,12 +144,12 @@
   "reading": "kyo"
   },
   {
-  "id": 19,
-  "kanji": "聞",
-  "meaning": "Hear, Ask, Mendengar, Bertanya",
-  "onyomi": "ブン",
-  "kunyomi": "き.く",
-  "reading": "bun, kiku"
+    "id": 19,
+    "kanji": "聞",
+    "meaning": "Hear, Ask, Mendengar, Bertanya",
+    "onyomi": "ブン",
+    "kunyomi": "き.く",
+    "reading": "bun, kiku"
   },
   {
   "id": 20,
@@ -277,7 +277,7 @@
   "meaning": "Go, Perform, Pergi",
   "onyomi": "コウ, ギョウ",
   "kunyomi": "い.く, おこな.う",
-  "reading": "ko, iku, okonau"
+  "reading": "ko, iku, okonau, gyo"
   },
   {
   "id": 36,
