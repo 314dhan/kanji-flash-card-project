@@ -68,4 +68,22 @@ document.addEventListener('DOMContentLoaded', () => {
             console.error('Error fetching or processing kanji data:', error);
             kanjiListContainer.innerHTML = '<p style="color: #ff6b6b; text-align: center;">Failed to load Kanji list. Please check the console for more details.</p>';
         });
+
+    // Scroll to top button logic
+    const scrollToTopBtn = document.getElementById("scrollToTopBtn");
+
+    if (scrollToTopBtn) {
+        window.addEventListener('scroll', () => {
+            if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+                scrollToTopBtn.style.display = "block";
+            } else {
+                scrollToTopBtn.style.display = "none";
+            }
+        });
+
+        scrollToTopBtn.addEventListener("click", () => {
+            document.body.scrollTop = 0; // For Safari
+            document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+        });
+    }
 });
