@@ -185,7 +185,7 @@ body.kanji-list-page .subtitle {
         padding: 15px;
     }
     #kanji-list-container, #hiragana-list-container, #katakana-list-container {
-        grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); /* Adjust minmax for smaller screens */
+        grid-template-columns: repeat(2, 1fr); /* Adjust minmax for smaller screens */
         gap: 15px;
     }
     .kanji-char {
@@ -216,7 +216,7 @@ body.kanji-list-page .subtitle {
         padding: 10px;
     }
     #kanji-list-container, #hiragana-list-container, #katakana-list-container {
-        grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
+        grid-template-columns: repeat(2, 1fr);
         gap: 10px;
     }
     .kanji-char {
