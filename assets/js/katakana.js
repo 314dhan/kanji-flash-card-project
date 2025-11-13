@@ -24,7 +24,8 @@ document.addEventListener('DOMContentLoaded', () => {
     let kanaData = [];
     let currentKana = null;
     let score = 0;
-    let seenIndices = [];
+    let questionsAnswered = 0;
+    let quizIndices = [];
     let quizLength = 10;
 
     // --- Data Loading ---
@@ -46,14 +47,23 @@ document.addEventListener('DOMContentLoaded', () => {
     function startGame() {
         const desiredLength = parseInt(quizLengthInput.value, 10);
         if (!isNaN(desiredLength) && desiredLength > 0) {
-            quizLength = desiredLength;
+            quizLength = Math.min(desiredLength, kanaData.length); // Ensure quiz length doesn't exceed available data
         }
 
         score = 0;
-        seenIndices = [];
+        questionsAnswered = 0;
         scoreValueEl.textContent = score;
         document.getElementById('score-max').textContent = `/ ${quizLength}`;
         progressFillEl.style.width = '0%';
+
+        // Create and shuffle indices for the quiz
+        quizIndices = [...Array(kanaData.length).keys()];
+        for (let i = quizIndices.length - 1; i > 0; i--) {
+            const j = Math.floor(Math.random() * (i + 1));
+            [quizIndices[i], quizIndices[j]] = [quizIndices[j], quizIndices[i]];
+        }
+        // Trim the shuffled list to the desired quiz length
+        quizIndices = quizIndices.slice(0, quizLength);
 
         startScreen.classList.remove('active');
         gameContainer.classList.add('active');
@@ -62,25 +72,20 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     function displayNewKana() {
-        if (seenIndices.length >= quizLength || kanaData.length === 0) {
+        if (questionsAnswered >= quizLength || kanaData.length === 0) {
             endGame();
             return;
         }
 
         // Update progress
-        const progressPercent = (seenIndices.length / quizLength) * 100;
+        const progressPercent = (questionsAnswered / quizLength) * 100;
         progressFillEl.style.width = `${progressPercent}%`;
 
         // Reset result message
         resultEl.classList.remove('show', 'correct', 'incorrect');
 
-        let randomIndex;
-        do {
-            randomIndex = Math.floor(Math.random() * kanaData.length);
-        } while (seenIndices.includes(randomIndex));
-        
-        seenIndices.push(randomIndex);
-        currentKana = kanaData[randomIndex];
+        const currentIndex = quizIndices[questionsAnswered];
+        currentKana = kanaData[currentIndex];
         
         kanaCharacterEl.textContent = currentKana.kana;
         kanaCharacterEl.parentElement.style.animation = 'none';
@@ -113,13 +118,14 @@ document.addEventListener('DOMContentLoaded', () => {
             new Audio('assets/sound/wrong.mp3').play();
         }
         
+        questionsAnswered++; // Increment after answering
         answerInputEl.disabled = true;
         submitBtn.disabled = true;
         nextBtn.disabled = false;
     }
 
     function endGame() {
-        const finalProgress = (seenIndices.length / quizLength) * 100;
+        const finalProgress = (questionsAnswered / quizLength) * 100;
         progressFillEl.style.width = `${finalProgress}%`;
 
         gameContainer.classList.remove('active');

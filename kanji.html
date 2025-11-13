@@ -19,22 +19,22 @@
         <div class="bg-circle circle-3"></div>
     </div>
 
+    <!-- Start Screen -->
     <div id="start-screen" class="screen active">
         <div class="container">
-            <div class="header">
+            <header class="header">
                 <h1 class="title">Kanji Master</h1>
-                <div class="subtitle">Flashcard Quiz</div>
-            </div>
+                <p class="subtitle">Flashcard Quiz</p>
+            </header>
 
-            <div class="content">
-                <div class="feature-card">
+            <main class="content">
+                <section class="feature-card">
                     <div class="feature-icon">🎯</div>
                     <h3>Test Your Knowledge</h3>
-                    <p>Guess the correct reading for each Kanji character and master Japanese characters through
-                        practice.</p>
-                </div>
+                    <p>Guess the correct reading for each Kanji character and master Japanese characters through practice.</p>
+                </section>
 
-                <div class="instructions">
+                <section class="instructions">
                     <h3>How to Play:</h3>
                     <ul>
                         <li>Type the reading (romaji) of the displayed Kanji</li>
@@ -42,39 +42,38 @@
                         <li>Aim for a high score!</li>
                         <li>Challenge yourself and improve!</li>
                     </ul>
-                </div>
+                </section>
 
                 <div class="quiz-length-container">
                     <label for="quiz-length-input">Number of Questions:</label>
                     <input type="number" id="quiz-length-input" value="10" min="1" max="50">
                 </div>
 
-                <!-- Tambahkan di kanji.html setelah quiz-length-container -->
+                <!-- Learning Mode Options -->
                 <div class="learning-options">
                     <h3>Learning Mode:</h3>
-                
                     <div class="option-group">
                         <label class="option-label">
                             <input type="radio" name="learning-mode" value="sequential" checked>
-                            <span class="option-text">Sequential (Easy to Hard)</span>
+                            <span class="option-text">Sequential (From Beginning To Hard)</span>
                         </label>
-                
                         <label class="option-label">
                             <input type="radio" name="learning-mode" value="by-category">
                             <span class="option-text">By Category</span>
                         </label>
-                
                         <label class="option-label">
                             <input type="radio" name="learning-mode" value="weak-first">
                             <span class="option-text">Focus on Weak Points</span>
                         </label>
-                
                         <label class="option-label">
                             <input type="radio" name="learning-mode" value="random">
-                            <span class="option-text">Random (Original)</span>
+                            <span class="option-text">Random</span>
+                        </label>
+                        <label class="option-label">
+                            <input type="radio" name="learning-mode" value="specific">
+                            <span class="option-text">From Specific Kanji</span>
                         </label>
                     </div>
-                
                     <div id="category-selector" class="category-selector" style="display: none;">
                         <label for="category-select">Choose Category:</label>
                         <select id="category-select">
@@ -86,54 +85,59 @@
                             <option value="nature">Nature & Environment</option>
                         </select>
                     </div>
+                    <div id="specific-kanji-selector" class="specific-kanji-selector" style="display: none;">
+                        <label for="start-kanji-input">Start from Kanji Number:</label>
+                        <input type="number" id="start-kanji-input" min="1" value="1">
+                        <small>Current range: 1 - <span id="max-kanji-number">300</span></small>
+                    </div>
                 </div>
 
+                <!-- Action Buttons -->
                 <button id="play-btn" class="btn-primary">
                     <span>Start Learning</span>
-                    <div class="btn-icon">→</div>
+                    <i class="btn-icon">→</i>
                 </button>
-
-                <a href="kanji-list.html" class="btn-secondary" style="text-decoration: none; margin-top: 15px;">
+                <a href="kanji-list.html" class="btn-secondary">
                     <span>View Kanji List</span>
-                    <div class="btn-icon">≡</div>
+                    <i class="btn-icon">≡</i>
                 </a>
-
-                <a href="index.html" class="btn-secondary" style="text-decoration: none; margin-top: 15px;">
+                <a href="index.html" class="btn-secondary">
                     <span>Back to Main Menu</span>
-                    <div class="btn-icon">←</div>
+                    <i class="btn-icon">←</i>
                 </a>
-            </div>
+            </main>
         </div>
     </div>
 
+    <!-- Game Container -->
     <div id="game-container" class="screen">
-        <div class="game-header">
-            <div id="score" class="score-display">
+        <header class="game-header">
+            <div class="score-display">
                 <span class="score-label">Score</span>
                 <span class="score-value">0</span>
-                <span id="score-max" class="score-max"></span>
+                <span id="score-max" class="score-max">/ 10</span>
             </div>
             <div class="progress-bar">
-                <div class="progress-fill" style="width: 0%"></div>
+                <div class="progress-fill"></div>
             </div>
-        </div>
+        </header>
 
-        <div class="game-content">
-            <div id="hint-display" class="hint-wrapper">
+        <main class="game-content">
+            <div id="hint-display" class="hint-wrapper" title="Click to reveal hint">
                 <div id="hint-icon" class="active">👁️</div>
                 <div id="hint-text"></div>
             </div>
-            <div id="flashcard-container" class="flashcard-wrapper">
-                <div id="kanji-card" class="kanji-card">
-                    <div class="kanji-character">字</div>
+
+            <div class="flashcard-wrapper">
+                <div class="kanji-card">
+                    <p class="kanji-character">字</p>
                 </div>
                 <div class="card-shine"></div>
             </div>
 
-            <div id="input-container" class="input-wrapper">
+            <div class="input-wrapper">
                 <div class="input-group">
-                    <input type="text" id="answer-input" placeholder="Enter reading in romaji"
-                        autocomplete="off">
+                    <input type="text" id="answer-input" placeholder="Enter reading in romaji" autocomplete="off">
                     <button id="submit-btn" class="btn-submit">
                         <span>Check</span>
                     </button>
@@ -145,19 +149,20 @@
             <div class="game-controls">
                 <button id="next-btn" class="btn-secondary" disabled>
                     <span>Next Kanji</span>
-                    <div class="btn-icon">→</div>
+                    <i class="btn-icon">→</i>
                 </button>
             </div>
-        </div>
+        </main>
     </div>
+
+    <!-- Footer -->
+    <footer class="main-footer">
+        <div class="footer-content">
+            <p>Made with <span class="heart">♥</span> by <span class="author">Ramadhan</span></p>
+        </div>
+    </footer>
 
     <script src="assets/js/kanji.js"></script>
 </body>
-
-<footer class="main-footer">
-    <div class="footer-content">
-        <p>Made with <span class="heart">♥</span> by <span class="author">Ramadhan</span></p>
-    </div>
-</footer>
 
 </html>

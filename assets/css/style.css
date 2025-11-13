@@ -1,10 +1,6 @@
-/* Reset and Base Styles */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
+/* =================================
+   Base Styles & Variables
+   ================================= */
 :root {
     --primary-color: #667eea;
     --primary-dark: #5a6fd8;
@@ -23,6 +19,12 @@
     --gradient-light: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
 }
 
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body {
     font-family: 'Poppins', 'Noto Sans JP', sans-serif;
     display: flex;
@@ -30,14 +32,16 @@ body {
     align-items: center;
     justify-content: center;
     min-height: 100vh;
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    background: var(--gradient);
     color: var(--text-dark);
     text-align: center;
     position: relative;
     overflow-x: hidden;
 }
 
-/* Background Elements */
+/* =================================
+   Background Animations
+   ================================= */
 .bg-elements {
     position: fixed;
     top: 0;
@@ -55,48 +59,23 @@ body {
     animation: float 6s ease-in-out infinite;
 }
 
-.circle-1 {
-    width: 200px;
-    height: 200px;
-    top: 10%;
-    left: 10%;
-    animation-delay: 0s;
-}
-
-.circle-2 {
-    width: 150px;
-    height: 150px;
-    top: 60%;
-    right: 10%;
-    animation-delay: 2s;
-}
-
-.circle-3 {
-    width: 100px;
-    height: 100px;
-    bottom: 20%;
-    left: 20%;
-    animation-delay: 4s;
-}
+.circle-1 { width: 200px; height: 200px; top: 10%; left: 10%; animation-delay: 0s; }
+.circle-2 { width: 150px; height: 150px; top: 60%; right: 10%; animation-delay: 2s; }
+.circle-3 { width: 100px; height: 100px; bottom: 20%; left: 20%; animation-delay: 4s; }
 
 @keyframes float {
-
-    0%,
-    100% {
-        transform: translateY(0px) scale(1);
-    }
-
-    50% {
-        transform: translateY(-20px) scale(1.05);
-    }
+    0%, 100% { transform: translateY(0px) scale(1); }
+    50% { transform: translateY(-20px) scale(1.05); }
 }
 
-/* Screen Management */
+/* =================================
+   Screen & Layout
+   ================================= */
 .screen {
     display: none;
     width: 100%;
     padding: 20px;
-    flex-grow: 1; /* Allow active screen to take available space */
+    flex-grow: 1;
 }
 
 .screen.active {
@@ -105,8 +84,8 @@ body {
     justify-content: center;
 }
 
-/* Start Screen Styles */
-#start-screen .container {
+.container {
+    width: 100%;
     max-width: 800px;
     background: rgba(255, 255, 255, 0.95);
     backdrop-filter: blur(10px);
@@ -116,6 +95,9 @@ body {
     border: 1px solid rgba(255, 255, 255, 0.2);
 }
 
+/* =================================
+   Header & Typography
+   ================================= */
 .header {
     margin-bottom: 40px;
 }
@@ -137,17 +119,24 @@ body {
     font-weight: 400;
 }
 
-.content {
+/* =================================
+   Start Screen Content
+   ================================= */
+#start-screen .content {
     display: flex;
     flex-direction: column;
-    gap: 30px;
+    gap: 25px;
 }
 
-.feature-card {
+.feature-card, .instructions {
     background: var(--bg-white);
     padding: 30px;
     border-radius: 16px;
     box-shadow: var(--shadow);
+    text-align: left;
+}
+
+.feature-card {
     border-left: 4px solid var(--primary-color);
 }
 
@@ -167,14 +156,6 @@ body {
     line-height: 1.6;
 }
 
-.instructions {
-    text-align: left;
-    background: var(--bg-white);
-    padding: 25px;
-    border-radius: 16px;
-    box-shadow: var(--shadow);
-}
-
 .instructions h3 {
     color: var(--text-dark);
     margin-bottom: 15px;
@@ -187,10 +168,9 @@ body {
 }
 
 .instructions li {
-    padding: 8px 0;
+    padding: 8px 0 8px 25px;
     color: var(--text-light);
     position: relative;
-    padding-left: 25px;
 }
 
 .instructions li:before {
@@ -201,49 +181,10 @@ body {
     font-weight: bold;
 }
 
-/* Quiz Length Input */
-.quiz-length-container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 15px;
-    background: var(--bg-white);
-    padding: 20px;
-    border-radius: 16px;
-    box-shadow: var(--shadow);
-    margin: 0 auto;
-    max-width: 400px;
-}
-
-.quiz-length-container label {
-    font-size: 1.1em;
-    color: var(--text-dark);
-    font-weight: 500;
-}
-
-#quiz-length-input {
-    width: 80px;
-    padding: 10px 15px;
-    border: 2px solid #e2e8f0;
-    border-radius: 10px;
-    font-size: 1.1em;
-    text-align: center;
-    font-weight: 600;
-    color: var(--primary-dark);
-    transition: all 0.3s ease;
-}
-
-#quiz-length-input:focus {
-    outline: none;
-    border-color: var(--primary-color);
-    box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.2);
-}
-
-
-/* Button Styles */
-.btn-primary,
-.btn-secondary,
-.btn-submit {
+/* =================================
+   Buttons
+   ================================= */
+.btn-primary, .btn-secondary, .btn-submit {
     padding: 16px 32px;
     border: none;
     border-radius: 12px;
@@ -255,8 +196,7 @@ body {
     align-items: center;
     justify-content: center;
     gap: 10px;
-    position: relative;
-    overflow: hidden;
+    text-decoration: none;
 }
 
 .btn-primary {
@@ -294,185 +234,63 @@ body {
     transform: translateY(-1px);
 }
 
-button:disabled {
+button:disabled, a:disabled {
     opacity: 0.6;
     cursor: not-allowed;
     transform: none !important;
+    box-shadow: none !important;
 }
 
 .btn-icon {
     font-size: 1.2em;
     transition: transform 0.3s ease;
+    font-style: normal;
 }
 
 .btn-primary:hover .btn-icon {
     transform: translateX(3px);
 }
 
-/* Game Container Styles */
-#game-container {
-    background: var(--bg-light);
-}
-
-#game-container.active {
-    flex-direction: column;
+/* =================================
+   Inputs & Forms
+   ================================= */
+.quiz-length-container {
+    display: flex;
+    align-items: center;
     justify-content: center;
-}
-
-.game-header {
-    position: relative; /* Changed from fixed */
-    width: 100%;
-    max-width: 600px;
+    gap: 15px;
     background: var(--bg-white);
     padding: 20px;
-    box-shadow: var(--shadow);
-    z-index: 1000;
     border-radius: 16px;
-    margin-bottom: 20px;
-}
-
-.score-display {
-    font-size: 1.4em;
-    font-weight: 600;
-    color: var(--text-dark);
-    margin-bottom: 10px;
-}
-
-.score-label {
-    color: var(--text-light);
-    margin-right: 8px;
-}
-
-.score-value {
-    color: var(--primary-color);
-    font-size: 1.6em;
-}
-
-.score-max {
-    color: var(--text-light);
-}
-
-.progress-bar {
-    width: 100%;
-    max-width: 400px;
-    height: 6px;
-    background: #e2e8f0;
-    border-radius: 3px;
+    box-shadow: var(--shadow);
     margin: 0 auto;
-    overflow: hidden;
+    max-width: 400px;
 }
 
-.progress-fill {
-    height: 100%;
-    background: var(--gradient);
-    border-radius: 3px;
-    transition: width 0.5s ease;
-}
-
-/* Game Content */
-.game-content {
-    max-width: 500px;
-    width: 100%;
-    padding: 0 20px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin: 0 auto; /* Center the block itself */
-}
-
-/* Hint Styles */
-.hint-wrapper {
-    position: relative;
-    margin-bottom: 20px; /* Dikembalikan */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 30px; /* Ensure space for content */
-    cursor: pointer;
-    font-size: 1.2em;
-    color: var(--text-light);
-    font-weight: 500;
-    transition: all 0.3s ease;
-    z-index: 100; /* Tetap dengan z-index */
-}
-
-#hint-icon {
-    font-size: 2em;
-    transition: opacity 0.3s ease;
-}
-
-#hint-icon.active {
-    opacity: 1;
-}
-
-#hint-icon:not(.active) {
-    opacity: 0;
-    position: absolute; /* Hide without taking space */
-}
-
-#hint-text {
-    opacity: 0;
-    position: absolute; /* Hide without taking space */
-    transition: opacity 0.3s ease;
-    padding: 5px 10px;
-    border-radius: 8px;
-    background: rgba(0, 0, 0, 0.05);
-}
-
-#hint-text.active {
-    opacity: 1;
-    position: static; /* Show and take space */
-}
-
-
-/* Flashcard Styles */
-.flashcard-wrapper {
-    position: relative;
-    margin-bottom: 40px; /* Dikembalikan */
-}
-
-.kanji-card {
-    width: 280px;
-    height: 280px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: var(--bg-white);
-    border-radius: 20px;
-    box-shadow: var(--shadow-lg);
-    position: relative;
-    z-index: 2;
-    transition: all 0.3s ease;
-    border: 1px solid rgba(255, 255, 255, 0.2);
-}
-
-.kanji-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.2);
-}
-
-.kanji-character {
-    font-size: 6em;
-    font-weight: 700;
-    font-family: 'Noto Sans JP', sans-serif;
+.quiz-length-container label {
+    font-size: 1.1em;
     color: var(--text-dark);
+    font-weight: 500;
 }
 
-.card-shine {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 300px;
-    height: 300px;
-    background: var(--gradient-light);
-    border-radius: 24px;
-    opacity: 0.1;
-    filter: blur(20px);
-    z-index: 1;
+#quiz-length-input {
+    width: 80px;
+    padding: 10px 15px;
+    border: 2px solid #e2e8f0;
+    border-radius: 10px;
+    font-size: 1.1em;
+    text-align: center;
+    font-weight: 600;
+    color: var(--primary-dark);
+    transition: all 0.3s ease;
 }
 
-/* Input Styles */
+#quiz-length-input:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.2);
+}
+
 .input-wrapper {
     width: 100%;
     max-width: 400px;
@@ -506,14 +324,174 @@ button:disabled {
     color: #a0aec0;
 }
 
-/* Result Message */
+/* =================================
+   Game Screen
+   ================================= */
+#game-container {
+    background: var(--bg-light);
+}
+
+#game-container.active {
+    flex-direction: column;
+    justify-content: flex-start; /* Align content to the top */
+    padding-top: 40px;
+}
+
+.game-header {
+    width: 100%;
+    max-width: 600px;
+    background: var(--bg-white);
+    padding: 20px;
+    box-shadow: var(--shadow);
+    z-index: 1000;
+    border-radius: 16px;
+    margin-bottom: 30px;
+}
+
+.score-display {
+    font-size: 1.4em;
+    font-weight: 600;
+    color: var(--text-dark);
+    margin-bottom: 10px;
+}
+
+.score-label { color: var(--text-light); margin-right: 8px; }
+.score-value { color: var(--primary-color); font-size: 1.6em; }
+.score-max { color: var(--text-light); }
+
+.progress-bar {
+    width: 100%;
+    height: 6px;
+    background: #e2e8f0;
+    border-radius: 3px;
+    overflow: hidden;
+}
+
+.progress-fill {
+    height: 100%;
+    background: var(--gradient);
+    border-radius: 3px;
+    transition: width 0.5s ease;
+    width: 0%;
+}
+
+.game-content {
+    max-width: 500px;
+    width: 100%;
+    padding: 0 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* =================================
+   Flashcard & Hint
+   ================================= */
+.hint-wrapper {
+    position: relative;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 30px;
+    cursor: pointer;
+    font-size: 1.2em;
+    color: var(--text-light);
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+#hint-icon {
+    font-size: 2em;
+    transition: opacity 0.3s ease;
+    opacity: 0;
+    position: absolute;
+}
+
+#hint-icon.active {
+    opacity: 1;
+    position: static;
+}
+
+#hint-text {
+    opacity: 0;
+    position: absolute;
+    transition: opacity 0.3s ease;
+    padding: 5px 10px;
+    border-radius: 8px;
+    background: rgba(0, 0, 0, 0.05);
+}
+
+#hint-text.active {
+    opacity: 1;
+    position: static;
+}
+
+.flashcard-wrapper {
+    position: relative;
+    margin-bottom: 40px;
+}
+
+.kanji-card {
+    width: 280px;
+    height: 280px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--bg-white);
+    border-radius: 20px;
+    box-shadow: var(--shadow-lg);
+    position: relative;
+    z-index: 2;
+    transition: all 0.3s ease;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    animation: flipIn 0.6s ease-out;
+}
+
+.kanji-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.2);
+}
+
+.kanji-character {
+    font-size: 6em;
+    font-weight: 700;
+    font-family: 'Noto Sans JP', sans-serif;
+    color: var(--text-dark);
+}
+
+.card-shine {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 300px;
+    height: 300px;
+    background: var(--gradient-light);
+    border-radius: 24px;
+    opacity: 0.1;
+    filter: blur(20px);
+    z-index: 1;
+}
+
+@keyframes flipIn {
+    from { transform: rotateY(90deg); opacity: 0; }
+    to { transform: rotateY(0deg); opacity: 1; }
+}
+
+/* =================================
+   Result Message & Game Controls
+   ================================= */
 .result-message {
     margin: 20px 0;
     padding: 15px 20px;
     border-radius: 12px;
     font-size: 1.1em;
     font-weight: 500;
-    min-height: auto;
+    min-height: 50px; /* Reserve space */
+    display: flex;
+    align-items: center;
+    justify-content: center;
     transition: all 0.3s ease;
     opacity: 0;
     transform: translateY(10px);
@@ -536,148 +514,28 @@ button:disabled {
     border: 1px solid rgba(244, 67, 54, 0.2);
 }
 
-/* Game Controls */
 .game-controls {
     margin-top: 20px;
 }
 
-/* Responsive Design */
-@media (max-width: 768px) {
-    body {
-        padding-bottom: 100px; /* Space for fixed footer */
-    }
-
-    .screen.active {
-        padding: 10px;
-    }
-
-    #start-screen .container {
-        padding: 40px 20px;
-        margin: 10px;
-    }
-
-    .title {
-        font-size: 2.5em;
-    }
-
-    .kanji-card {
-        width: 240px;
-        height: 240px;
-    }
-
-    .kanji-character {
-        font-size: 5em;
-    }
-
-    .input-group {
-        flex-direction: column;
-    }
-}
-
-@media (max-width: 480px) {
-    body {
-        padding-bottom: 90px; /* Space for fixed footer on very small screens */
-    }
-
-    .title {
-        font-size: 2em;
-    }
-
-    .kanji-card {
-        width: 200px;
-        height: 200px;
-    }
-
-    .kanji-character {
-        font-size: 4em;
-    }
-
-    .feature-card,
-    .instructions {
-        padding: 20px;
-    }
-}
-
-/* Footer Styles */
-.main-footer {
-    position: relative;
-    margin-top: auto; /* Pushes footer to the bottom */
-    width: 100%;
-    padding: 20px;
-    text-align: center;
-    z-index: 1000;
-    background: rgba(0, 0, 0, 0.1);
-    backdrop-filter: blur(5px);
-    border-top: 1px solid rgba(255, 255, 255, 0.1);
-    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
-}
-
-.footer-content {
-    /* This container is now just for the text content */
-    padding: 0;
-}
-
-.footer-content p {
-    margin: 0;
-    color: var(--text-dark);
-    font-size: 0.9em;
-    font-weight: 500;
-}
-
-.heart {
-    color: #e91e63;
-    animation: heartbeat 2s ease-in-out infinite;
-    display: inline-block;
-}
-
-.author {
-    color: var(--primary-color);
-    font-weight: 600;
-}
-
-@keyframes heartbeat {
-
-    0%,
-    100% {
-        transform: scale(1);
-    }
-
-    50% {
-        transform: scale(1.2);
-    }
-}
-
-/* Responsive Footer */
-@media (max-width: 768px) {
-    .main-footer {
-        padding: 15px;
-    }
-
-    .footer-content p {
-        font-size: 0.8em;
-    }
-}
-
-@media (max-width: 480px) {
-    .main-footer {
-        padding: 10px;
-    }
-}
-
-/* Learning Options Styles */
-.learning-options {
+/* =================================
+   Learning Mode Options (Kanji Page)
+   ================================= */
+.learning-options, .start-from-container {
     background: rgba(255, 255, 255, 0.1);
     backdrop-filter: blur(10px);
     border-radius: 12px;
     padding: 20px;
     margin: 20px 0;
     border: 1px solid rgba(255, 255, 255, 0.2);
+    text-align: left;
 }
 
-.learning-options h3 {
+.learning-options h3, .start-from-container h3 {
     margin: 0 0 15px 0;
-    color: var(--text-primary);
+    color: var(--text-dark);
     font-size: 1.1em;
+    font-weight: 500;
 }
 
 .option-group {
@@ -705,14 +563,15 @@ button:disabled {
 .option-label input[type="radio"] {
     margin-right: 12px;
     transform: scale(1.2);
+    accent-color: var(--primary-color);
 }
 
 .option-text {
-    color: var(--text-primary);
+    color: var(--text-dark);
     font-weight: 500;
 }
 
-.category-selector {
+.category-selector, .specific-kanji-selector {
     margin-top: 15px;
     padding: 15px;
     background: rgba(0, 0, 0, 0.2);
@@ -720,53 +579,126 @@ button:disabled {
     animation: fadeIn 0.3s ease;
 }
 
-.category-selector label {
+.category-selector label, .specific-kanji-selector label {
     display: block;
     margin-bottom: 8px;
-    color: var(--text-primary);
+    color: var(--text-dark);
     font-weight: 500;
 }
 
-.category-selector select {
+.category-selector select, .specific-kanji-selector input {
     width: 100%;
     padding: 10px 12px;
     border-radius: 6px;
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    background: rgba(255, 255, 255, 0.1);
-    color: var(--text-primary);
+    border: 1px solid #e2e8f0;
+    background: var(--bg-white);
+    color: var(--text-dark);
     font-size: 14px;
 }
 
-.category-selector select:focus {
+.specific-kanji-selector input {
+    width: 80px;
+    margin-left: 10px;
+}
+
+.specific-kanji-selector small {
+    display: block;
+    margin-top: 5px;
+    color: var(--text-light);
+}
+
+.category-selector select:focus, .specific-kanji-selector input:focus {
     outline: none;
-    border-color: var(--accent-primary);
+    border-color: var(--primary-color);
 }
 
 @keyframes fadeIn {
-    from {
-        opacity: 0;
-        transform: translateY(-10px);
-    }
-
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
 }
 
-/* Animation for card flip (optional enhancement) */
-@keyframes flipIn {
-    0% {
-        transform: rotateY(90deg);
-        opacity: 0;
-    }
-
-    100% {
-        transform: rotateY(0deg);
-        opacity: 1;
-    }
+/* =================================
+   Footer
+   ================================= */
+.main-footer {
+    margin-top: auto; /* Pushes footer to the bottom */
+    width: 100%;
+    padding: 20px;
+    text-align: center;
+    z-index: 1000;
+    background: rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
+    position: relative;
 }
 
-.kanji-card {
-    animation: flipIn 0.6s ease-out;
+.footer-content p {
+    margin: 0;
+    color: var(--bg-light);
+    font-size: 0.9em;
+    font-weight: 500;
+}
+
+.heart {
+    color: #e91e63;
+    animation: heartbeat 1.5s ease-in-out infinite;
+    display: inline-block;
+}
+
+.author {
+    color: var(--primary-color);
+    font-weight: 600;
+}
+
+@keyframes heartbeat {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.2); }
+}
+
+/* =================================
+   Responsive Design
+   ================================= */
+@media (max-width: 768px) {
+    .container {
+        padding: 40px 20px;
+        margin: 10px;
+    }
+
+    .title { font-size: 2.5em; }
+    .kanji-card { width: 240px; height: 240px; }
+    .kanji-character { font-size: 5em; }
+    .input-group { flex-direction: column; }
+    .main-footer { padding: 15px; }
+    .footer-content p { font-size: 0.8em; }
+}
+
+@media (max-width: 480px) {
+    .title { font-size: 2.2em; }
+    .kanji-card { width: 200px; height: 200px; }
+    .kanji-character { font-size: 4em; }
+    .feature-card, .instructions { padding: 20px; }
+    .main-footer { padding: 10px; }
+}
+
+.category-selector select option {
+    background: var(--bg-white);
+    color: var(--text-dark);
+}
+
+/* Kanji List Page Layout Override */
+body.kanji-list-page {
+    display: block;
+    justify-content: flex-start;
+    align-items: stretch;
+    text-align: left;
+}
+
+body.kanji-list-page main {
+    margin: 0 auto;
+    padding: 20px;
+}
+
+body.kanji-list-page .header {
+    text-align: center;
 }
