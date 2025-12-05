@@ -2398,5 +2398,701 @@
     "onyomi": "バングミ",
     "kunyomi": "",
     "reading": "bangumi"
+  },
+  {
+    "id": 301,
+    "kanji": "春",
+    "meaning": "Spring, Musim Semi",
+    "onyomi": "シュン",
+    "kunyomi": "はる",
+    "reading": "shun, haru"
+  },
+  {
+    "id": 302,
+    "kanji": "夏",
+    "meaning": "Summer, Musim Panas",
+    "onyomi": "カ",
+    "kunyomi": "なつ",
+    "reading": "ka, natsu"
+  },
+  {
+    "id": 303,
+    "kanji": "秋",
+    "meaning": "Autumn, Musim Gugur",
+    "onyomi": "シュウ",
+    "kunyomi": "あき",
+    "reading": "shu, aki"
+  },
+  {
+    "id": 304,
+    "kanji": "冬",
+    "meaning": "Winter, Musim Dingin",
+    "onyomi": "トウ",
+    "kunyomi": "ふゆ",
+    "reading": "tou, fuyu"
+  },
+  {
+    "id": 305,
+    "kanji": "海",
+    "meaning": "Sea, Laut",
+    "onyomi": "カイ",
+    "kunyomi": "うみ",
+    "reading": "kai, umi"
+  },
+  {
+    "id": 306,
+    "kanji": "空",
+    "meaning": "Sky, Empty, Langit, Kosong",
+    "onyomi": "クウ",
+    "kunyomi": "そら, あ.く",
+    "reading": "ku, sora, aku"
+  },
+  {
+    "id": 307,
+    "kanji": "風",
+    "meaning": "Wind, Angin",
+    "onyomi": "フウ",
+    "kunyomi": "かぜ",
+    "reading": "fu, kaze"
+  },
+  {
+    "id": 308,
+    "kanji": "山",
+    "meaning": "Mountain, Gunung",
+    "onyomi": "サン",
+    "kunyomi": "やま",
+    "reading": "san, yama"
+  },
+  {
+    "id": 309,
+    "kanji": "川",
+    "meaning": "River, Sungai",
+    "onyomi": "セン",
+    "kunyomi": "かわ",
+    "reading": "sen, kawa"
+  },
+  {
+    "id": 310,
+    "kanji": "田",
+    "meaning": "Rice field, Sawah",
+    "onyomi": "デン",
+    "kunyomi": "た",
+    "reading": "den, ta"
+  },
+  {
+    "id": 311,
+    "kanji": "石",
+    "meaning": "Stone, Batu",
+    "onyomi": "セキ",
+    "kunyomi": "いし",
+    "reading": "seki, ishi"
+  },
+  {
+    "id": 312,
+    "kanji": "竹",
+    "meaning": "Bamboo, Bambu",
+    "onyomi": "チク",
+    "kunyomi": "たけ",
+    "reading": "chiku, take"
+  },
+  {
+    "id": 313,
+    "kanji": "茶",
+    "meaning": "Tea, Teh",
+    "onyomi": "チャ, サ",
+    "kunyomi": "",
+    "reading": "cha, sa"
+  },
+  {
+    "id": 314,
+    "kanji": "肉",
+    "meaning": "Meat, Daging",
+    "onyomi": "ニク",
+    "kunyomi": "",
+    "reading": "niku"
+  },
+  {
+    "id": 315,
+    "kanji": "鳥",
+    "meaning": "Bird, Burung",
+    "onyomi": "チョウ",
+    "kunyomi": "とり",
+    "reading": "cho, tori"
+  },
+  {
+    "id": 316,
+    "kanji": "犬",
+    "meaning": "Dog, Anjing",
+    "onyomi": "ケン",
+    "kunyomi": "いぬ",
+    "reading": "ken, inu"
+  },
+  {
+    "id": 317,
+    "kanji": "猫",
+    "meaning": "Cat, Kucing",
+    "onyomi": "ビョウ",
+    "kunyomi": "ねこ",
+    "reading": "byou, neko"
+  },
+  {
+    "id": 318,
+    "kanji": "米",
+    "meaning": "Rice, Beras",
+    "onyomi": "ベイ, マイ",
+    "kunyomi": "こめ",
+    "reading": "bei, mai, kome"
+  },
+  {
+    "id": 319,
+    "kanji": "野菜",
+    "meaning": "Vegetable, Sayuran",
+    "onyomi": "ヤサイ",
+    "kunyomi": "",
+    "reading": "yasai"
+  },
+  {
+    "id": 320,
+    "kanji": "果物",
+    "meaning": "Fruit, Buah-buahan",
+    "onyomi": "クダモノ",
+    "kunyomi": "",
+    "reading": "kudamono"
+  },
+  {
+    "id": 321,
+    "kanji": "味",
+    "meaning": "Taste, Rasa",
+    "onyomi": "ミ",
+    "kunyomi": "あじ",
+    "reading": "mi, aji"
+  },
+  {
+    "id": 322,
+    "kanji": "服",
+    "meaning": "Clothes, Pakaian",
+    "onyomi": "フク",
+    "kunyomi": "",
+    "reading": "fuku"
+  },
+  {
+    "id": 323,
+    "kanji": "靴",
+    "meaning": "Shoes, Sepatu",
+    "onyomi": "カ",
+    "kunyomi": "くつ",
+    "reading": "ka, kutsu"
+  },
+  {
+    "id": 324,
+    "kanji": "窓",
+    "meaning": "Window, Jendela",
+    "onyomi": "ソウ",
+    "kunyomi": "まど",
+    "reading": "sou, mado"
+  },
+  {
+    "id": 325,
+    "kanji": "門",
+    "meaning": "Gate, Gerbang",
+    "onyomi": "モン",
+    "kunyomi": "かど",
+    "reading": "mon, kado"
+  },
+  {
+    "id": 326,
+    "kanji": "上",
+    "meaning": "Up, Above, Atas",
+    "onyomi": "ジョウ",
+    "kunyomi": "うえ, あ.がる",
+    "reading": "jou, ue, agaru"
+  },
+  {
+    "id": 327,
+    "kanji": "下",
+    "meaning": "Down, Below, Bawah",
+    "onyomi": "カ, ゲ",
+    "kunyomi": "した, さ.がる",
+    "reading": "ka, ge, shita, sagaru"
+  },
+  {
+    "id": 328,
+    "kanji": "中",
+    "meaning": "Middle, Inside, Tengah, Dalam",
+    "onyomi": "チュウ",
+    "kunyomi": "なか",
+    "reading": "chu, naka"
+  },
+  {
+    "id": 329,
+    "kanji": "外",
+    "meaning": "Outside, Luar",
+    "onyomi": "ガイ",
+    "kunyomi": "そと",
+    "reading": "gai, soto"
+  },
+  {
+    "id": 330,
+    "kanji": "右",
+    "meaning": "Right, Kanan",
+    "onyomi": "ウ",
+    "kunyomi": "みぎ",
+    "reading": "u, migi"
+  },
+  {
+    "id": 331,
+    "kanji": "左",
+    "meaning": "Left, Kiri",
+    "onyomi": "サ",
+    "kunyomi": "ひだり",
+    "reading": "sa, hidari"
+  },
+  {
+    "id": 332,
+    "kanji": "大",
+    "meaning": "Big, Besar",
+    "onyomi": "ダイ, タイ",
+    "kunyomi": "おお.きい",
+    "reading": "dai, tai, ookii"
+  },
+  {
+    "id": 333,
+    "kanji": "小",
+    "meaning": "Small, Kecil",
+    "onyomi": "ショウ",
+    "kunyomi": "ちい.さい",
+    "reading": "shou, chiisai"
+  },
+  {
+    "id": 334,
+    "kanji": "高",
+    "meaning": "High, Expensive, Tinggi, Mahal",
+    "onyomi": "コウ",
+    "kunyomi": "たか.い",
+    "reading": "kou, takai"
+  },
+  {
+    "id": 335,
+    "kanji": "低",
+    "meaning": "Low, Rendah",
+    "onyomi": "テイ",
+    "kunyomi": "ひく.い",
+    "reading": "tei, hikui"
+  },
+  {
+    "id": 336,
+    "kanji": "新",
+    "meaning": "New, Baru",
+    "onyomi": "シン",
+    "kunyomi": "あたら.しい",
+    "reading": "shin, atarashii"
+  },
+  {
+    "id": 337,
+    "kanji": "古",
+    "meaning": "Old, Lama, Kuno",
+    "onyomi": "コ",
+    "kunyomi": "ふる.い",
+    "reading": "ko, furui"
+  },
+  {
+    "id": 338,
+    "kanji": "多",
+    "meaning": "Many, Much, Banyak",
+    "onyomi": "タ",
+    "kunyomi": "おお.い",
+    "reading": "ta, ooi"
+  },
+  {
+    "id": 339,
+    "kanji": "少",
+    "meaning": "Few, Little, Sedikit",
+    "onyomi": "ショウ",
+    "kunyomi": "すく.ない, すこ.し",
+    "reading": "shou, sukunai, sukoshi"
+  },
+  {
+    "id": 340,
+    "kanji": "楽",
+    "meaning": "Fun, Comfort, Menyenangkan, Nyaman",
+    "onyomi": "ラク, ガク",
+    "kunyomi": "たの.しい",
+    "reading": "raku, gaku, tanoshii"
+  },
+  {
+    "id": 341,
+    "kanji": "走",
+    "meaning": "Run, Berlari",
+    "onyomi": "ソウ",
+    "kunyomi": "はし.る",
+    "reading": "sou, hashiru"
+  },
+  {
+    "id": 342,
+    "kanji": "起",
+    "meaning": "Wake up, Bangun",
+    "onyomi": "キ",
+    "kunyomi": "お.きる",
+    "reading": "ki, okiru"
+  },
+  {
+    "id": 343,
+    "kanji": "寝",
+    "meaning": "Sleep, Tidur",
+    "onyomi": "シン",
+    "kunyomi": "ね.る",
+    "reading": "shin, neru"
+  },
+  {
+    "id": 344,
+    "kanji": "貸",
+    "meaning": "Lend, Meminjamkan",
+    "onyomi": "タイ",
+    "kunyomi": "か.す",
+    "reading": "tai, kasu"
+  },
+  {
+    "id": 345,
+    "kanji": "借",
+    "meaning": "Borrow, Meminjam",
+    "onyomi": "シャク",
+    "kunyomi": "か.りる",
+    "reading": "shaku, kariru"
+  },
+  {
+    "id": 346,
+    "kanji": "待",
+    "meaning": "Wait, Menunggu",
+    "onyomi": "タイ",
+    "kunyomi": "ま.つ",
+    "reading": "tai, matsu"
+  },
+  {
+    "id": 347,
+    "kanji": "持",
+    "meaning": "Hold, Have, Memegang, Mempunyai",
+    "onyomi": "ジ",
+    "kunyomi": "も.つ",
+    "reading": "ji, motsu"
+  },
+  {
+    "id": 348,
+    "kanji": "取",
+    "meaning": "Take, Mengambil",
+    "onyomi": "シュ",
+    "kunyomi": "と.る",
+    "reading": "shu, toru"
+  },
+  {
+    "id": 349,
+    "kanji": "洗",
+    "meaning": "Wash, Mencuci",
+    "onyomi": "セン",
+    "kunyomi": "あら.う",
+    "reading": "sen, arau"
+  },
+  {
+    "id": 350,
+    "kanji": "建",
+    "meaning": "Build, Membangun",
+    "onyomi": "ケン",
+    "kunyomi": "た.てる",
+    "reading": "ken, tateru"
+  },
+  {
+    "id": 351,
+    "kanji": "日",
+    "meaning": "Day, Sun, Hari, Matahari",
+    "onyomi": "ニチ, ジツ",
+    "kunyomi": "ひ, か",
+    "reading": "nichi, jitsu, hi, ka"
+  },
+  {
+    "id": 352,
+    "kanji": "月",
+    "meaning": "Month, Moon, Bulan",
+    "onyomi": "ゲツ, ガツ",
+    "kunyomi": "つき",
+    "reading": "getsu, gatsu, tsuki"
+  },
+  {
+    "id": 353,
+    "kanji": "火",
+    "meaning": "Fire, Api",
+    "onyomi": "カ",
+    "kunyomi": "ひ",
+    "reading": "ka, hi"
+  },
+  {
+    "id": 354,
+    "kanji": "水",
+    "meaning": "Water, Air",
+    "onyomi": "スイ",
+    "kunyomi": "みず",
+    "reading": "sui, mizu"
+  },
+  {
+    "id": 355,
+    "kanji": "木",
+    "meaning": "Tree, Wood, Pohon, Kayu",
+    "onyomi": "モク, ボク",
+    "kunyomi": "き",
+    "reading": "moku, ki"
+  },
+  {
+    "id": 356,
+    "kanji": "金",
+    "meaning": "Gold, Money, Emas, Uang",
+    "onyomi": "キン, コン",
+    "kunyomi": "かね",
+    "reading": "kin, kane"
+  },
+  {
+    "id": 357,
+    "kanji": "土",
+    "meaning": "Soil, Earth, Tanah",
+    "onyomi": "ド, ト",
+    "kunyomi": "つち",
+    "reading": "do, tsuchi"
+  },
+  {
+    "id": 358,
+    "kanji": "人",
+    "meaning": "Person, Orang",
+    "onyomi": "ジン, ニン",
+    "kunyomi": "ひと",
+    "reading": "jin, nin, hito"
+  },
+  {
+    "id": 359,
+    "kanji": "男",
+    "meaning": "Man, Male, Laki-laki",
+    "onyomi": "ダン, ナン",
+    "kunyomi": "おとこ",
+    "reading": "dan, otoko"
+  },
+  {
+    "id": 360,
+    "kanji": "女",
+    "meaning": "Woman, Female, Perempuan",
+    "onyomi": "ジョ",
+    "kunyomi": "おんな",
+    "reading": "jo, onna"
+  },
+  {
+    "id": 361,
+    "kanji": "父",
+    "meaning": "Father, Ayah (sendiri)",
+    "onyomi": "フ",
+    "kunyomi": "ちち",
+    "reading": "fu, chichi"
+  },
+  {
+    "id": 362,
+    "kanji": "母",
+    "meaning": "Mother, Ibu (sendiri)",
+    "onyomi": "ボ",
+    "kunyomi": "はは",
+    "reading": "bo, haha"
+  },
+  {
+    "id": 363,
+    "kanji": "本",
+    "meaning": "Book, Origin, Buku, Asal",
+    "onyomi": "ホン",
+    "kunyomi": "もと",
+    "reading": "hon, moto"
+  },
+  {
+    "id": 364,
+    "kanji": "好",
+    "meaning": "Like, Suka",
+    "onyomi": "コウ",
+    "kunyomi": "す.き, この.む",
+    "reading": "kou, suki"
+  },
+  {
+    "id": 365,
+    "kanji": "嫌",
+    "meaning": "Dislike, Hate, Tidak suka, Benci",
+    "onyomi": "ケン",
+    "kunyomi": "きら.い, いや",
+    "reading": "ken, kirai, iya"
+  },
+  {
+    "id": 366,
+    "kanji": "悪",
+    "meaning": "Bad, Evil, Buruk, Jahat",
+    "onyomi": "アク",
+    "kunyomi": "わる.い",
+    "reading": "aku, warui"
+  },
+  {
+    "id": 367,
+    "kanji": "冷",
+    "meaning": "Cold (object), Dingin (benda)",
+    "onyomi": "レイ",
+    "kunyomi": "つめ.たい, ひ.える",
+    "reading": "rei, tsumetai"
+  },
+  {
+    "id": 368,
+    "kanji": "暖",
+    "meaning": "Warm (weather), Hangat (cuaca)",
+    "onyomi": "ダン",
+    "kunyomi": "あたた.かい",
+    "reading": "dan, atatakai"
+  },
+  {
+    "id": 369,
+    "kanji": "狭",
+    "meaning": "Narrow, Sempit",
+    "onyomi": "キョウ",
+    "kunyomi": "せま.い",
+    "reading": "kyou, semai"
+  },
+  {
+    "id": 370,
+    "kanji": "甘",
+    "meaning": "Sweet, Manis",
+    "onyomi": "カン",
+    "kunyomi": "あま.い",
+    "reading": "kan, amai"
+  },
+  {
+    "id": 371,
+    "kanji": "辛",
+    "meaning": "Spicy, Pedas",
+    "onyomi": "シン",
+    "kunyomi": "から.い",
+    "reading": "shin, karai"
+  },
+  {
+    "id": 372,
+    "kanji": "苦",
+    "meaning": "Bitter, Painful, Pahit, Menderita",
+    "onyomi": "ク",
+    "kunyomi": "にが.い, くる.しい",
+    "reading": "ku, nigai, kurushii"
+  },
+  {
+    "id": 373,
+    "kanji": "若",
+    "meaning": "Young, Muda",
+    "onyomi": "ジャク",
+    "kunyomi": "わか.い",
+    "reading": "jaku, wakai"
+  },
+  {
+    "id": 374,
+    "kanji": "暇",
+    "meaning": "Free time, Senggang",
+    "onyomi": "カ",
+    "kunyomi": "ひま",
+    "reading": "ka, hima"
+  },
+  {
+    "id": 375,
+    "kanji": "眠",
+    "meaning": "Sleepy, Mengantuk",
+    "onyomi": "ミン",
+    "kunyomi": "ねむ.い, ねむ.る",
+    "reading": "min, nemui"
+  },
+  {
+    "id": 376,
+    "kanji": "疲",
+    "meaning": "Tired, Lelah",
+    "onyomi": "ヒ",
+    "kunyomi": "つか.れる",
+    "reading": "hi, tsukareru"
+  },
+  {
+    "id": 377,
+    "kanji": "困",
+    "meaning": "Trouble, Distress, Susah, Masalah",
+    "onyomi": "コン",
+    "kunyomi": "こま.る",
+    "reading": "kon, komaru"
+  },
+  {
+    "id": 378,
+    "kanji": "押",
+    "meaning": "Push, Mendorong",
+    "onyomi": "オウ",
+    "kunyomi": "お.す",
+    "reading": "ou, osu"
+  },
+  {
+    "id": 379,
+    "kanji": "引",
+    "meaning": "Pull, Menarik",
+    "onyomi": "イン",
+    "kunyomi": "ひ.く",
+    "reading": "in, hiku"
+  },
+  {
+    "id": 380,
+    "kanji": "呼",
+    "meaning": "Call, Memanggil",
+    "onyomi": "コ",
+    "kunyomi": "よ.ぶ",
+    "reading": "ko, yobu"
+  },
+  {
+    "id": 381,
+    "kanji": "止",
+    "meaning": "Stop, Berhenti",
+    "onyomi": "シ",
+    "kunyomi": "と.まる, と.める",
+    "reading": "shi, tome"
+  },
+  {
+    "id": 382,
+    "kanji": "住",
+    "meaning": "Live, Reside, Tinggal",
+    "onyomi": "ジュウ",
+    "kunyomi": "す.む",
+    "reading": "ju, sumu"
+  },
+  {
+    "id": 383,
+    "kanji": "泊",
+    "meaning": "Stay overnight, Menginap",
+    "onyomi": "ハク",
+    "kunyomi": "と.まる",
+    "reading": "haku, tomaru"
+  },
+  {
+    "id": 384,
+    "kanji": "死",
+    "meaning": "Death, Die, Mati",
+    "onyomi": "シ",
+    "kunyomi": "し.ぬ",
+    "reading": "shi, shinu"
+  },
+  {
+    "id": 385,
+    "kanji": "洋",
+    "meaning": "Ocean, Western, Barat (Gaya)",
+    "onyomi": "ヨウ",
+    "kunyomi": "",
+    "reading": "you"
+  },
+  {
+    "id": 386,
+    "kanji": "和",
+    "meaning": "Peace, Japanese style, Damai, Jepang (Gaya)",
+    "onyomi": "ワ",
+    "kunyomi": "やわ.らぐ",
+    "reading": "wa"
+  },
+  {
+    "id": 387,
+    "kanji": "服",
+    "meaning": "Clothes, Pakaian",
+    "onyomi": "フク",
+    "kunyomi": "",
+    "reading": "fuku"
   }
 ]
