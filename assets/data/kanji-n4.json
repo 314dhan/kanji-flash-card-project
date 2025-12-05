@@ -3110,5 +3110,253 @@
     "onyomi": "カンゴシ",
     "kunyomi": "",
     "reading": "kangoshi"
+  },
+    {
+    "id": 390,
+    "kanji": "気",
+    "meaning": "Spirit, Mood, Energy, Semangat, Suasana hati, Energi",
+    "onyomi": "キ, ケ",
+    "kunyomi": "",
+    "reading": "ki, ke"
+  },
+  {
+    "id": 391,
+    "kanji": "番",
+    "meaning": "Turn, Number, Giliran, Nomor",
+    "onyomi": "バン",
+    "kunyomi": "",
+    "reading": "ban"
+  },
+  {
+    "id": 392,
+    "kanji": "毎日",
+    "meaning": "Every day, Setiap hari",
+    "onyomi": "マイニチ",
+    "kunyomi": "",
+    "reading": "mainichi"
+  },
+  {
+    "id": 393,
+    "kanji": "朝ご飯",
+    "meaning": "Breakfast, Sarapan",
+    "onyomi": "アサゴハン",
+    "kunyomi": "",
+    "reading": "asagohan"
+  },
+  {
+    "id": 394,
+    "kanji": "晩ご飯",
+    "meaning": "Dinner, Makan malam",
+    "onyomi": "バンゴハン",
+    "kunyomi": "",
+    "reading": "bangohan"
+  },
+  {
+    "id": 395,
+    "kanji": "働き者",
+    "meaning": "Hard worker, Pekerja keras",
+    "onyomi": "ハタラキモノ",
+    "kunyomi": "",
+    "reading": "hatarakimono"
+  },
+  {
+    "id": 396,
+    "kanji": "研",
+    "meaning": "Sharpen, Research, Mengasah, Penelitian",
+    "onyomi": "ケン",
+    "kunyomi": "と.ぐ",
+    "reading": "ken, togu"
+  },
+  {
+    "id": 397,
+    "kanji": "研究室",
+    "meaning": "Laboratory, Lab",
+    "onyomi": "ケンキュウシツ",
+    "kunyomi": "",
+    "reading": "kenkyuushitsu"
+  },
+  {
+    "id": 398,
+    "kanji": "予",
+    "meaning": "Beforehand, In advance, Sebelumnya, Ramalan",
+    "onyomi": "ヨ",
+    "kunyomi": "",
+    "reading": "yo"
+  },
+  {
+    "id": 399,
+    "kanji": "定",
+    "meaning": "Determine, Fixed, Menetapkan, Tetap",
+    "onyomi": "テイ, ジョウ",
+    "kunyomi": "さだ.める",
+    "reading": "tei, jou, sadameru"
+  },
+  {
+    "id": 400,
+    "kanji": "定期券",
+    "meaning": "Commuter pass, Tiket langganan",
+    "onyomi": "テイキケン",
+    "kunyomi": "",
+    "reading": "teikiken"
+  },
+  {
+    "id": 401,
+    "kanji": "実",
+    "meaning": "Reality, Fruit, Kenyataan, Buah (hasil)",
+    "onyomi": "ジツ",
+    "kunyomi": "み",
+    "reading": "jitsu, mi"
+  },
+  {
+    "id": 402,
+    "kanji": "現",
+    "meaning": "Present, Current, Sekarang, Saat ini",
+    "onyomi": "ゲン",
+    "kunyomi": "あらわ.れる",
+    "reading": "gen, arawareru"
+  },
+  {
+    "id": 403,
+    "kanji": "現金",
+    "meaning": "Cash, Uang tunai",
+    "onyomi": "ゲンキン",
+    "kunyomi": "",
+    "reading": "genkin"
+  },
+  {
+    "id": 404,
+    "kanji": "株",
+    "meaning": "Stocks, Shares, Saham",
+    "onyomi": "カブ",
+    "kunyomi": "",
+    "reading": "kabu"
+  },
+  {
+    "id": 405,
+    "kanji": "式",
+    "meaning": "Style, Ceremony, Model, Upacara",
+    "onyomi": "シキ",
+    "kunyomi": "",
+    "reading": "shiki"
+  },
+  {
+    "id": 406,
+    "kanji": "試",
+    "meaning": "Try, Test, Mencoba, Ujian",
+    "onyomi": "シ",
+    "kunyomi": "こころ.みる",
+    "reading": "shi, kokoromiru"
+  },
+  {
+    "id": 407,
+    "kanji": "試験",
+    "meaning": "Exam, Test, Ujian",
+    "onyomi": "シケン",
+    "kunyomi": "",
+    "reading": "shiken"
+  },
+    {
+    "id": 408,
+    "kanji": "場",
+    "meaning": "Place, Location, Tempat, Lokasi",
+    "onyomi": "ジョウ",
+    "kunyomi": "ば",
+    "reading": "jou, ba"
+  },
+  {
+    "id": 409,
+    "kanji": "室",
+    "meaning": "Room, Ruangan",
+    "onyomi": "シツ",
+    "kunyomi": "むろ",
+    "reading": "shitsu, muro"
+  },
+  {
+    "id": 410,
+    "kanji": "台",
+    "meaning": "Stand, Platform, Counter for machines, Alas, Meja, Platform",
+    "onyomi": "ダイ, タイ",
+    "kunyomi": "",
+    "reading": "dai, tai"
+  },
+  {
+    "id": 411,
+    "kanji": "験",
+    "meaning": "Test, Effect, Uji, Efek, pengalaman",
+    "onyomi": "ケン",
+    "kunyomi": "",
+    "reading": "ken"
+  },
+  {
+    "id": 412,
+    "kanji": "昔",
+    "meaning": "Long ago, Ancient times, Dahulu kala, Zaman dulu",
+    "onyomi": "セキ, シャク",
+    "kunyomi": "むかし",
+    "reading": "seki, shaku, mukashi"
+  },
+  {
+    "id": 413,
+    "kanji": "以",
+    "meaning": "By means of, Compared to, Dengan, Dibandingkan",
+    "onyomi": "イ",
+    "kunyomi": "",
+    "reading": "i"
+  },
+  {
+    "id": 414,
+    "kanji": "以て",
+    "meaning": "By means of, With, Dengan",
+    "onyomi": "モッ",
+    "kunyomi": "",
+    "reading": "motte"
+  },
+  {
+    "id": 415,
+    "kanji": "民",
+    "meaning": "People, Nation, Rakyat, Bangsa",
+    "onyomi": "ミン",
+    "kunyomi": "たみ",
+    "reading": "min, tami"
+  },
+  {
+    "id": 416,
+    "kanji": "主",
+    "meaning": "Main, Master, Principal, Utama, Tuan",
+    "onyomi": "シュ",
+    "kunyomi": "おも, ぬし",
+    "reading": "shu, omo, nushi"
+  },
+  {
+    "id": 417,
+    "kanji": "題",
+    "meaning": "Topic, Subject, Topik, Subjek",
+    "onyomi": "ダイ",
+    "kunyomi": "",
+    "reading": "dai"
+  },
+  {
+    "id": 418,
+    "kanji": "英",
+    "meaning": "Excellent, English, Unggul, Inggris",
+    "onyomi": "エイ",
+    "kunyomi": "",
+    "reading": "ei"
+  },
+  {
+    "id": 419,
+    "kanji": "卒",
+    "meaning": "Graduate, Graduate, Lulus",
+    "onyomi": "ソツ",
+    "kunyomi": "",
+    "reading": "sotsu"
+  },
+  {
+    "id": 420,
+    "kanji": "業",
+    "meaning": "Business, Vocation, Pekerjaan, Usaha, bisnis",
+    "onyomi": "ギョウ",
+    "kunyomi": "わざ",
+    "reading": "gyou, waza"
   }
 ]
