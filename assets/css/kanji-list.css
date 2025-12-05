@@ -38,7 +38,7 @@ body.kanji-list-page .title {
 
 body.kanji-list-page .subtitle {
     font-size: 1.2em;
-    color: var(--text-light);
+    color: black;
 }
 
 .back-button {
