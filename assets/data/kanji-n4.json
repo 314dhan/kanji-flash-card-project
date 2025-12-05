@@ -3070,5 +3070,45 @@
     "onyomi": "シ",
     "kunyomi": "し.ぬ",
     "reading": "shi, shinu"
+  },
+  {
+    "id": 385,
+    "kanji": "着",
+    "meaning": "Wear, Arrive, Memakai, Tiba",
+    "onyomi": "チャク",
+    "kunyomi": "き.る, つ.く",
+    "reading": "chaku, kiru, tsuku"
+  },
+  {
+    "id": 386,
+    "kanji": "待合室",
+    "meaning": "Waiting room, Ruang tunggu",
+    "onyomi": "マチアイシツ",
+    "kunyomi": "",
+    "reading": "machiaishitsu"
+  },
+  {
+    "id": 387,
+    "kanji": "頭痛",
+    "meaning": "Headache, Sakit kepala",
+    "onyomi": "ズツウ",
+    "kunyomi": "",
+    "reading": "zutsuu"
+  },
+  {
+    "id": 388,
+    "kanji": "風邪",
+    "meaning": "Cold (illness), Pilek",
+    "onyomi": "フウジャ",
+    "kunyomi": "",
+    "reading": "fuja"
+  },
+  {
+    "id": 389,
+    "kanji": "看護師",
+    "meaning": "Nurse, Perawat",
+    "onyomi": "カンゴシ",
+    "kunyomi": "",
+    "reading": "kangoshi"
   }
 ]
