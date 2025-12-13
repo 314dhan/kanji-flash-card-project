@@ -7,9 +7,11 @@
     <title>Japanese Language Learning</title>
     <link rel="icon" type="image/png" href="assets/images/favicon.png">
     <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/chatbot.css">
     <link
         href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&family=Poppins:wght@300;400;500;600;700&display=swap"
         rel="stylesheet">
+    
 </head>
 
 <body>
@@ -43,7 +45,28 @@
             </div>
         </div>
     </div>
+
+    <!-- Chatbot -->
+    <button id="chatbot-toggle-button">🤖</button>
+    <div id="chatbot-container" class="chatbot-container">
+        <div class="chatbot-header">
+            <h3>AI Assistant</h3>
+            <button id="chatbot-close-button">×</button>
+        </div>
+        <div class="api-key-settings">
+            <input type="password" id="api-key-input" placeholder="Enter your API Key...">
+            <button id="save-api-key">Save Key</button>
+        </div>
+        <div class="chatbot-messages" id="chatbot-messages">
+            <!-- Messages will be appended here -->
+        </div>
+        <div class="chatbot-input">
+            <input type="text" id="user-input" placeholder="Ask a question...">
+            <button id="send-button">➤</button>
+        </div>
+    </div>
     
+    <script type="module" src="assets/js/chatbot.js"></script>
 </body>
 
 <footer class="main-footer">
