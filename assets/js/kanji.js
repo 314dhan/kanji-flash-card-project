@@ -49,7 +49,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // --- Data Loading ---
     async function loadKanjiData() {
         try {
-            const response = await fetch('assets/data/kanji-n4.json');
+            const response = await fetch('assets/data/kanji.json');
             if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
             kanjiData = await response.json();
             

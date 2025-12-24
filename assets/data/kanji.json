@@ -3358,5 +3358,677 @@
     "onyomi": "ギョウ",
     "kunyomi": "わざ",
     "reading": "gyou, waza"
+  },
+  {
+    "id": 421,
+    "kanji": "言語",
+    "meaning": "Language, Bahasa",
+    "onyomi": "ゲンゴ",
+    "kunyomi": "",
+    "reading": "gengo"
+  },
+  {
+    "id": 422,
+    "kanji": "原因",
+    "meaning": "Cause, Reason, Sebab",
+    "onyomi": "ゲンイン",
+    "kunyomi": "",
+    "reading": "genin"
+  },
+  {
+    "id": 423,
+    "kanji": "芸術",
+    "meaning": "Art, Kesenian",
+    "onyomi": "ゲイジュツ",
+    "kunyomi": "",
+    "reading": "geijutsu"
+  },
+  {
+    "id": 424,
+    "kanji": "劇",
+    "meaning": "Drama, Play, Sandiwara",
+    "onyomi": "ゲキ",
+    "kunyomi": "",
+    "reading": "geki"
+  },
+  {
+    "id": 425,
+    "kanji": "劇場",
+    "meaning": "Theater, Panggung sandiwara",
+    "onyomi": "ゲキジョウ",
+    "kunyomi": "",
+    "reading": "gekijou"
+  },
+  {
+    "id": 426,
+    "kanji": "現代",
+    "meaning": "Modern times, Present era, Jaman sekarang",
+    "onyomi": "ゲンダイ",
+    "kunyomi": "",
+    "reading": "gendai"
+  },
+  {
+    "id": 427,
+    "kanji": "言語学",
+    "meaning": "Linguistics, Ilmu sastra",
+    "onyomi": "ゲンゴガク",
+    "kunyomi": "",
+    "reading": "gengogaku"
+  },
+  {
+    "id": 428,
+    "kanji": "玄関",
+    "meaning": "Entrance, Gerbang",
+    "onyomi": "ゲンカン",
+    "kunyomi": "",
+    "reading": "genkan"
+  },
+  {
+    "id": 429,
+    "kanji": "銀行員",
+    "meaning": "Bank employee, Pegawai bank",
+    "onyomi": "ギンコウイン",
+    "kunyomi": "",
+    "reading": "ginkouin"
+  },
+  {
+    "id": 430,
+    "kanji": "現金",
+    "meaning": "Cash, Uang tunai",
+    "onyomi": "ゲンキン",
+    "kunyomi": "",
+    "reading": "genkin"
+  },
+  {
+    "id": 431,
+    "kanji": "具合",
+    "meaning": "Condition, State, Kondisi",
+    "onyomi": "グアイ",
+    "kunyomi": "",
+    "reading": "guai"
+  },
+  {
+    "id": 432,
+    "kanji": "月末",
+    "meaning": "End of month, Akhir bulan",
+    "onyomi": "ゲツマツ",
+    "kunyomi": "",
+    "reading": "getsumatsu"
+  },
+  {
+    "id": 433,
+    "kanji": "幼稚園",
+    "meaning": "Kindergarten, Tk",
+    "onyomi": "ヨウチエン",
+    "kunyomi": "",
+    "reading": "youchien"
+  },
+  {
+    "id": 434,
+    "kanji": "小学校",
+    "meaning": "Elementary school, SD",
+    "onyomi": "ショウガッコウ",
+    "kunyomi": "",
+    "reading": "shougakkou"
+  },
+  {
+    "id": 435,
+    "kanji": "小学生",
+    "meaning": "Elementary school student, Murid SD",
+    "onyomi": "ショウガクセイ",
+    "kunyomi": "",
+    "reading": "shougakusei"
+  },
+  {
+    "id": 436,
+    "kanji": "中学校",
+    "meaning": "Junior high school, SMP",
+    "onyomi": "チュウガッコウ",
+    "kunyomi": "",
+    "reading": "chuugaku"
+  },
+  {
+    "id": 437,
+    "kanji": "中学生",
+    "meaning": "Junior high school student, Murid SMP",
+    "onyomi": "チュウガクセイ",
+    "kunyomi": "",
+    "reading": "chuugakusei"
+  },
+  {
+    "id": 438,
+    "kanji": "高校",
+    "meaning": "High school, SMA",
+    "onyomi": "コウコウ",
+    "kunyomi": "",
+    "reading": "koukou"
+  },
+  {
+    "id": 439,
+    "kanji": "高校生",
+    "meaning": "High school student, Murid SMA",
+    "onyomi": "コウコウセイ",
+    "kunyomi": "",
+    "reading": "koukousei"
+  },
+  {
+    "id": 440,
+    "kanji": "種",
+    "meaning": "Seed, Biji",
+    "onyomi": "シュ",
+    "kunyomi": "たね",
+    "reading": "shu, tane"
+  },
+  {
+    "id": 441,
+    "kanji": "単語",
+    "meaning": "Word, Vocabulary, Kata",
+    "onyomi": "タンゴ",
+    "kunyomi": "",
+    "reading": "tango"
+  },
+  {
+    "id": 442,
+    "kanji": "睡眠",
+    "meaning": "Sleep, Tidur",
+    "onyomi": "スイミン",
+    "kunyomi": "",
+    "reading": "suimin"
+  },
+  {
+    "id": 443,
+    "kanji": "旅",
+    "meaning": "Travel, Trip, Berpergian",
+    "onyomi": "リョ",
+    "kunyomi": "たび",
+    "reading": "ryo, tabi"
+  },
+  {
+    "id": 444,
+    "kanji": "多分",
+    "meaning": "Probably, Mungkin",
+    "onyomi": "タブン",
+    "kunyomi": "",
+    "reading": "tabun"
+  },
+  {
+    "id": 445,
+    "kanji": "鋏",
+    "meaning": "Scissors, Gunting",
+    "onyomi": "キョウ",
+    "kunyomi": "はさみ",
+    "reading": "kyou, hasami"
+  },
+  {
+    "id": 446,
+    "kanji": "大陸",
+    "meaning": "Continent, Benua",
+    "onyomi": "タイリク",
+    "kunyomi": "",
+    "reading": "tairiku"
+  },
+  {
+    "id": 447,
+    "kanji": "馬",
+    "meaning": "Horse, Kuda",
+    "onyomi": "バ",
+    "kunyomi": "うま",
+    "reading": "ba, uma"
+  },
+  {
+    "id": 448,
+    "kanji": "宇宙",
+    "meaning": "Space, Universe, Luar angkasa",
+    "onyomi": "ウチュウ",
+    "kunyomi": "",
+    "reading": "uchuu"
+  },
+  {
+    "id": 449,
+    "kanji": "梅",
+    "meaning": "Plum, Buah plum",
+    "onyomi": "バイ",
+    "kunyomi": "うめ",
+    "reading": "bai, ume"
+  },
+  {
+    "id": 450,
+    "kanji": "運",
+    "meaning": "Luck, Fortune, Keberuntungan",
+    "onyomi": "ウン",
+    "kunyomi": "",
+    "reading": "un"
+  },
+  {
+    "id": 451,
+    "kanji": "噂",
+    "meaning": "Rumor, Gossip, Rumor",
+    "onyomi": "ソン",
+    "kunyomi": "うわさ",
+    "reading": "son, uwasa"
+  },
+  {
+    "id": 452,
+    "kanji": "兎",
+    "meaning": "Rabbit, Kelinci",
+    "onyomi": "ト",
+    "kunyomi": "うさぎ",
+    "reading": "to, usagi"
+  },
+  {
+    "id": 453,
+    "kanji": "若者",
+    "meaning": "Young people, Youth, Anak muda",
+    "onyomi": "ワカモノ",
+    "kunyomi": "",
+    "reading": "wakamono"
+  },
+  {
+    "id": 454,
+    "kanji": "宿",
+    "meaning": "Lodging, Inn, Penginapan",
+    "onyomi": "シュク",
+    "kunyomi": "やど",
+    "reading": "shuku, yado"
+  },
+  {
+    "id": 455,
+    "kanji": "野球",
+    "meaning": "Baseball, Baseball",
+    "onyomi": "ヤキュウ",
+    "kunyomi": "",
+    "reading": "yakyuu"
+  },
+  {
+    "id": 456,
+    "kanji": "屋根",
+    "meaning": "Roof, Atap",
+    "onyomi": "ヤネ",
+    "kunyomi": "",
+    "reading": "yane"
+  },
+  {
+    "id": 457,
+    "kanji": "床",
+    "meaning": "Floor, Lantai",
+    "onyomi": "ショウ",
+    "kunyomi": "ゆか",
+    "reading": "shou, yuka"
+  },
+  {
+    "id": 458,
+    "kanji": "勇気",
+    "meaning": "Courage, Keberanian",
+    "onyomi": "ユウキ",
+    "kunyomi": "",
+    "reading": "yuuki"
+  },
+  {
+    "id": 459,
+    "kanji": "全員",
+    "meaning": "All members, Everyone, Semuanya",
+    "onyomi": "ゼンイン",
+    "kunyomi": "",
+    "reading": "zenin"
+  },
+  {
+    "id": 460,
+    "kanji": "全身",
+    "meaning": "Whole body, Seluruh tubuh",
+    "onyomi": "ゼンシン",
+    "kunyomi": "",
+    "reading": "zenshin"
+  },
+  {
+    "id": 461,
+    "kanji": "下車します",
+    "meaning": "Get off (vehicle), Turun dari kendaraan",
+    "onyomi": "ゲシャシマス",
+    "kunyomi": "",
+    "reading": "geshashimasu"
+  },
+  {
+    "id": 462,
+    "kanji": "読書します",
+    "meaning": "Read books, Membaca",
+    "onyomi": "ドクショシマス",
+    "kunyomi": "",
+    "reading": "dokushoshimasu"
+  },
+  {
+    "id": 463,
+    "kanji": "諦めます",
+    "meaning": "Give up, Menyerah",
+    "onyomi": "アキラメマス",
+    "kunyomi": "",
+    "reading": "akiramemasu"
+  },
+  {
+    "id": 464,
+    "kanji": "握手します",
+    "meaning": "Shake hands, Berjabat tangan",
+    "onyomi": "アクシュシマス",
+    "kunyomi": "",
+    "reading": "akushushimasu"
+  },
+  {
+    "id": 465,
+    "kanji": "出会います",
+    "meaning": "Meet, Encounter, Bertemu",
+    "onyomi": "デアイマス",
+    "kunyomi": "",
+    "reading": "deaimasu"
+  },
+  {
+    "id": 466,
+    "kanji": "得ます",
+    "meaning": "Obtain, Get, Mendapatkan",
+    "onyomi": "エマス",
+    "kunyomi": "",
+    "reading": "emasu"
+  },
+  {
+    "id": 467,
+    "kanji": "震えます",
+    "meaning": "Shake, Tremble, Bergetar",
+    "onyomi": "フルエマス",
+    "kunyomi": "",
+    "reading": "furuemasu"
+  },
+  {
+    "id": 468,
+    "kanji": "履きます",
+    "meaning": "Wear (footwear), Mengenakan (alas kaki)",
+    "onyomi": "ハキマス",
+    "kunyomi": "",
+    "reading": "hakimasu"
+  },
+  {
+    "id": 469,
+    "kanji": "離れます",
+    "meaning": "Separate, Be apart, Terpisah",
+    "onyomi": "ハナレマス",
+    "kunyomi": "",
+    "reading": "hanaremasu"
+  },
+  {
+    "id": 470,
+    "kanji": "離します",
+    "meaning": "Separate (transitive), Berpisah",
+    "onyomi": "ハナシマス",
+    "kunyomi": "",
+    "reading": "hanashimasu"
+  },
+  {
+    "id": 471,
+    "kanji": "減ります",
+    "meaning": "Decrease, Berkurang",
+    "onyomi": "ヘリマス",
+    "kunyomi": "",
+    "reading": "herimasu"
+  },
+  {
+    "id": 472,
+    "kanji": "広がります",
+    "meaning": "Spread, Extend, Meluas",
+    "onyomi": "ヒロガリマス",
+    "kunyomi": "",
+    "reading": "hirogarimasu"
+  },
+  {
+    "id": 473,
+    "kanji": "引っ張ります",
+    "meaning": "Pull, Drag, Menarik",
+    "onyomi": "ヒッパリマス",
+    "kunyomi": "",
+    "reading": "hipparimasu"
+  },
+  {
+    "id": 474,
+    "kanji": "吠えます",
+    "meaning": "Bark, Howl, Menggongong",
+    "onyomi": "ホエマス",
+    "kunyomi": "",
+    "reading": "hoemasu"
+  },
+  {
+    "id": 475,
+    "kanji": "微笑みます",
+    "meaning": "Smile, Tersenyum",
+    "onyomi": "ビショウミマス",
+    "kunyomi": "",
+    "reading": "hohoemasu"
+  },
+  {
+    "id": 476,
+    "kanji": "掘ります",
+    "meaning": "Dig, Menggali",
+    "onyomi": "ホリマス",
+    "kunyomi": "",
+    "reading": "horimasu"
+  },
+  {
+    "id": 477,
+    "kanji": "被ります",
+    "meaning": "Put on (head), Wear on head, Memakai di kepala",
+    "onyomi": "カブリマス",
+    "kunyomi": "",
+    "reading": "kaburimasu"
+  },
+  {
+    "id": 478,
+    "kanji": "勝ちます",
+    "meaning": "Win, Menang",
+    "onyomi": "カチマス",
+    "kunyomi": "",
+    "reading": "kachimasu"
+  },
+  {
+    "id": 479,
+    "kanji": "輝きます",
+    "meaning": "Shine, Sparkle, Bersinar",
+    "onyomi": "カガヤキマス",
+    "kunyomi": "",
+    "reading": "kagayakimasu"
+  },
+  {
+    "id": 480,
+    "kanji": "限ります",
+    "meaning": "Limit, Restrict, Terbatas",
+    "onyomi": "カギリマス",
+    "kunyomi": "",
+    "reading": "kagirimasu"
+  },
+  {
+    "id": 481,
+    "kanji": "感じます",
+    "meaning": "Feel, Sense, Merasakan",
+    "onyomi": "カンジマス",
+    "kunyomi": "",
+    "reading": "kanjimasu"
+  },
+  {
+    "id": 482,
+    "kanji": "関します",
+    "meaning": "Relate to, Concern, Berhubungan",
+    "onyomi": "カンシマス",
+    "kunyomi": "",
+    "reading": "kanshimasu"
+  },
+  {
+    "id": 483,
+    "kanji": "重ねます",
+    "meaning": "Pile up, Stack, Menumpuk",
+    "onyomi": "カサネマス",
+    "kunyomi": "",
+    "reading": "kasanemasu"
+  },
+  {
+    "id": 484,
+    "kanji": "飼います",
+    "meaning": "Keep (animals), Raise, Memelihara",
+    "onyomi": "カイマス",
+    "kunyomi": "",
+    "reading": "kaimasu"
+  },
+  {
+    "id": 485,
+    "kanji": "素敵",
+    "meaning": "Lovely, Wonderful, Indah",
+    "onyomi": "ステキ",
+    "kunyomi": "",
+    "reading": "suteki"
+  },
+  {
+    "id": 486,
+    "kanji": "だるい",
+    "meaning": "Sluggish, Lethargic, Lelas, Lesu, Malas",
+    "onyomi": "",
+    "kunyomi": "だるい",
+    "reading": "darui"
+  },
+  {
+    "id": 487,
+    "kanji": "不安",
+    "meaning": "Anxiety, Worry, Khawatir",
+    "onyomi": "フアン",
+    "kunyomi": "",
+    "reading": "fuan"
+  },
+  {
+    "id": 488,
+    "kanji": "不正",
+    "meaning": "Unfair, Dishonest, Tidak adil, Curang",
+    "onyomi": "フセイ",
+    "kunyomi": "",
+    "reading": "fusei"
+  },
+  {
+    "id": 489,
+    "kanji": "不利",
+    "meaning": "Disadvantage, Unfavorable, Keadaan merugikan",
+    "onyomi": "フリ",
+    "kunyomi": "",
+    "reading": "furi"
+  },
+  {
+    "id": 490,
+    "kanji": "平和",
+    "meaning": "Peace, Damai",
+    "onyomi": "ヘイワ",
+    "kunyomi": "",
+    "reading": "heiwa"
+  },
+  {
+    "id": 491,
+    "kanji": "秘密",
+    "meaning": "Secret, Rahasia",
+    "onyomi": "ヒミツ",
+    "kunyomi": "",
+    "reading": "himitsu"
+  },
+  {
+    "id": 492,
+    "kanji": "本気",
+    "meaning": "Serious, Earnest, Serius",
+    "onyomi": "ホンキ",
+    "kunyomi": "",
+    "reading": "honki"
+  },
+  {
+    "id": 493,
+    "kanji": "上品",
+    "meaning": "Elegant, Refined, Elegan (barang)",
+    "onyomi": "ジョウヒン",
+    "kunyomi": "",
+    "reading": "jouhin"
+  },
+  {
+    "id": 494,
+    "kanji": "貴重",
+    "meaning": "Valuable, Precious, Berharga",
+    "onyomi": "キチョウ",
+    "kunyomi": "",
+    "reading": "kichou"
+  },
+  {
+    "id": 495,
+    "kanji": "幸福",
+    "meaning": "Happiness, Kebahagiaan",
+    "onyomi": "コウフク",
+    "kunyomi": "",
+    "reading": "koufuku"
+  },
+  {
+    "id": 496,
+    "kanji": "公平",
+    "meaning": "Fair, Just, Adil",
+    "onyomi": "コウヘイ",
+    "kunyomi": "",
+    "reading": "kouhei"
+  },
+  {
+    "id": 497,
+    "kanji": "苦しい",
+    "meaning": "Painful, Difficult, Menyakitkan",
+    "onyomi": "クルシイ",
+    "kunyomi": "",
+    "reading": "kurushii"
+  },
+  {
+    "id": 498,
+    "kanji": "眩しい",
+    "meaning": "Dazzling, Glaring, Menyilaukan",
+    "onyomi": "ゲンシイ",
+    "kunyomi": "まぶしい",
+    "reading": "genshii, mabushii"
+  },
+  {
+    "id": 499,
+    "kanji": "賢い",
+    "meaning": "Clever, Wise, Pandai",
+    "onyomi": "ケンイ",
+    "kunyomi": "かしこい",
+    "reading": "ken'i, kashikoi"
+  },
+  {
+    "id": 500,
+    "kanji": "ネガティブ",
+    "meaning": "Negative, Tidak suka",
+    "onyomi": "ネガティブ",
+    "kunyomi": "",
+    "reading": "negateibu"
+  },
+  {
+    "id": 501,
+    "kanji": "幼い",
+    "meaning": "Young, Infantile, Sangat muda",
+    "onyomi": "ヨウイ",
+    "kunyomi": "おさない",
+    "reading": "youi, osanai"
+  },
+  {
+    "id": 502,
+    "kanji": "恐ろしい",
+    "meaning": "Terrible, Frightening, Menyeramkan",
+    "onyomi": "キョウロシイ",
+    "kunyomi": "おそろしい",
+    "reading": "kyouroshii, osoroshii"
+  },
+  {
+    "id": 503,
+    "kanji": "大人しい",
+    "meaning": "Obedient, Quiet, Penurut",
+    "onyomi": "オトナシイ",
+    "kunyomi": "",
+    "reading": "otonashii"
+  },
+  {
+    "id": 504,
+    "kanji": "ペラペラ",
+    "meaning": "Fluent, Smoothly, Lancar berbicara",
+    "onyomi": "ペラペラ",
+    "kunyomi": "",
+    "reading": "perapera"
   }
 ]
