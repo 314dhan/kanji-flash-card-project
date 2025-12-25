@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', () => {
         return;
     }
 
-    fetch('assets/data/kanji-n4.json')
+    fetch('assets/data/kanji.json')
         .then(response => {
             if (!response.ok) {
                 throw new Error(`HTTP error! status: ${response.status}`);
