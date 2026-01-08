@@ -3681,51 +3681,51 @@
   },
   {
     "id": 461,
-    "kanji": "下車します",
-    "meaning": "Get off (vehicle), Turun dari kendaraan",
-    "onyomi": "ゲシャシマス",
+    "kanji": "下車",
+    "meaning": "Getting off (a vehicle), Turun dari kendaraan",
+    "onyomi": "ゲシャ",
     "kunyomi": "",
-    "reading": "geshashimasu"
+    "reading": "gesha"
   },
   {
     "id": 462,
-    "kanji": "読書します",
-    "meaning": "Read books, Membaca",
-    "onyomi": "ドクショシマス",
+    "kanji": "読書",
+    "meaning": "Reading (books), Membaca (buku)",
+    "onyomi": "ドクショ",
     "kunyomi": "",
-    "reading": "dokushoshimasu"
+    "reading": "dokusho"
   },
   {
     "id": 463,
-    "kanji": "諦めます",
-    "meaning": "Give up, Menyerah",
-    "onyomi": "アキラメマス",
-    "kunyomi": "",
-    "reading": "akiramemasu"
+    "kanji": "諦",
+    "meaning": "Give up, Abandon, Menyerah",
+    "onyomi": "テイ",
+    "kunyomi": "あきら.める",
+    "reading": "tei, akirameru"
   },
   {
     "id": 464,
-    "kanji": "握手します",
-    "meaning": "Shake hands, Berjabat tangan",
-    "onyomi": "アクシュシマス",
+    "kanji": "握手",
+    "meaning": "Handshake, Berjabat tangan",
+    "onyomi": "アクシュ",
     "kunyomi": "",
-    "reading": "akushushimasu"
+    "reading": "akushu"
   },
   {
     "id": 465,
-    "kanji": "出会います",
-    "meaning": "Meet, Encounter, Bertemu",
-    "onyomi": "デアイマス",
-    "kunyomi": "",
-    "reading": "deaimasu"
+    "kanji": "出会",
+    "meaning": "Meeting, Encounter, Pertemuan",
+    "onyomi": "シュツガイ",
+    "kunyomi": "であ.う",
+    "reading": "shutsugai, deau"
   },
   {
     "id": 466,
-    "kanji": "得ます",
-    "meaning": "Obtain, Get, Mendapatkan",
-    "onyomi": "エマス",
-    "kunyomi": "",
-    "reading": "emasu"
+    "kanji": "得",
+    "meaning": "Obtain, Gain, Mendapatkan",
+    "onyomi": "トク",
+    "kunyomi": "え.る",
+    "reading": "toku, eru, emasu"
   },
   {
     "id": 467,
@@ -3737,27 +3737,27 @@
   },
   {
     "id": 468,
-    "kanji": "履きます",
+    "kanji": "履",
     "meaning": "Wear (footwear), Mengenakan (alas kaki)",
-    "onyomi": "ハキマス",
-    "kunyomi": "",
-    "reading": "hakimasu"
+    "onyomi": "リ",
+    "kunyomi": "は.く",
+    "reading": "ri, haku"
   },
   {
     "id": 469,
-    "kanji": "離れます",
-    "meaning": "Separate, Be apart, Terpisah",
-    "onyomi": "ハナレマス",
-    "kunyomi": "",
-    "reading": "hanaremasu"
+    "kanji": "離",
+    "meaning": "Separate, Part, Terpisah",
+    "onyomi": "リ",
+    "kunyomi": "はな.れる",
+    "reading": "ri, hanareru"
   },
   {
     "id": 470,
-    "kanji": "離します",
-    "meaning": "Separate (transitive), Berpisah",
-    "onyomi": "ハナシマス",
-    "kunyomi": "",
-    "reading": "hanashimasu"
+    "kanji": "離",
+    "meaning": "Separate, Detach, Memisahkan",
+    "onyomi": "リ",
+    "kunyomi": "はな.す",
+    "reading": "ri, hanasu"
   },
   {
     "id": 471,
@@ -3801,11 +3801,11 @@
   },
   {
     "id": 476,
-    "kanji": "掘ります",
+    "kanji": "掘",
     "meaning": "Dig, Menggali",
-    "onyomi": "ホリマス",
-    "kunyomi": "",
-    "reading": "horimasu"
+    "onyomi": "クツ",
+    "kunyomi": "ほ.る",
+    "reading": "kutsu, horu"
   },
   {
     "id": 477,
