@@ -1,92 +1,5930 @@
-[
-  { "id": 1, "kanji": "並", "onyomi": "ヘイ", "kunyomi": "なmi, ならぶ, ならべる", "romaji": "hei; nami, narabu, naraberu", "arti": "Berbaris, rata-rata, sejajar" },
-  { "id": 2, "kanji": "乱", "onyomi": "ラン", "kunyomi": "みだれる, みだす", "romaji": "ran; midareru, midasu", "arti": "Kekacauan, kerusuhan" },
-  { "id": 3, "kanji": "乳", "onyomi": "ニュウ", "kunyomi": "ちち, ち", "romaji": "nyu; chichi, chi", "arti": "Susu, payudara" },
-  { "id": 4, "kanji": "乾", "onyomi": "カン", "kunyomi": "かわく, かわかす", "romaji": "kan; kawaku, kawakasu", "arti": "Kering" },
-  { "id": 5, "kanji": "了", "onyomi": "リョウ", "kunyomi": "-", "romaji": "ryo", "arti": "Selesai, memahami" },
-  { "id": 6, "kanji": "予", "onyomi": "ヨ", "kunyomi": "あらかじめ", "romaji": "yo; arakajime", "arti": "Sebelumnya, persiapan" },
-  { "id": 7, "kanji": "争", "onyomi": "ソウ", "kunyomi": "あらそう", "romaji": "so; arasou", "arti": "Konflik, pertengkaran" },
-  { "id": 8, "kanji": "互", "onyomi": "ゴ", "kunyomi": "たがい", "romaji": "go; tagai", "arti": "Saling, satu sama lain" },
-  { "id": 9, "kanji": "亡", "onyomi": "ボウ, モウ", "kunyomi": "なくす, なくなる", "romaji": "bo, mo; nakusu, nakunaru", "arti": "Meninggal, lenyap" },
-  { "id": 10, "kanji": "交", "onyomi": "コウ", "kunyomi": "まじわる, まぜる", "romaji": "ko; majiwaru, mazeru", "arti": "Persimpangan, pertukaran" },
-  { "id": 11, "kanji": "他", "onyomi": "タ", "kunyomi": "ほか", "romaji": "ta; hoka", "arti": "Lainnya" },
-  { "id": 12, "kanji": "付", "onyomi": "フ", "kunyomi": "つける, つく", "romaji": "fu; tsukeru, tsuku", "arti": "Menempel, melampirkan" },
-  { "id": 13, "kanji": "件", "onyomi": "ケン", "kunyomi": "-", "romaji": "ken", "arti": "Kasus, perkara, masalah" },
-  { "id": 14, "kanji": "任", "onyomi": "ニン", "kunyomi": "まかせる, まかす", "romaji": "nin; makaseru, makasu", "arti": "Tanggung jawab, mempercayakan" },
-  { "id": 15, "kanji": "伝", "onyomi": "デン", "kunyomi": "つたえる, つたわる", "romaji": "den; tsutaeru, tsutawaru", "arti": "Menyampaikan, tradisi" },
-  { "id": 16, "kanji": "似", "onyomi": "ジ", "kunyomi": "にる", "romaji": "ji; niru", "arti": "Mirip, menyerupai" },
-  { "id": 17, "kanji": "位", "onyomi": "イ", "kunyomi": "くらい", "romaji": "i; kurai", "arti": "Pangkat, posisi, tahta" },
-  { "id": 18, "kanji": "余", "onyomi": "ヨ", "kunyomi": "あまる, あます", "romaji": "yo; amaru, amasu", "arti": "Sisa, berlebih" },
-  { "id": 19, "kanji": "例", "onyomi": "レイ", "kunyomi": "たとえる", "romaji": "rei; tatoeru", "arti": "Contoh, kebiasaan" },
-  { "id": 20, "kanji": "供", "onyomi": "キョウ, ク", "kunyomi": "そなえる, とも", "romaji": "kyo, ku; sonaeru, tomo", "arti": "Menawarkan, pengikut, menyediakan" },
-  { "id": 21, "kanji": "便", "onyomi": "ベン, ビン", "kunyomi": "たより", "romaji": "ben, bin; tayori", "arti": "Nyaman, surat, kotoran" },
-  { "id": 22, "kanji": "係", "onyomi": "ケイ", "kunyomi": "かかり", "romaji": "kei; kakari", "arti": "Hubungan, orang yang bertugas" },
-  { "id": 23, "kanji": "保存", "onyomi": "ゾン, ソン", "kunyomi": "-", "romaji": "zon, son", "arti": "Eksis, menjaga, menyimpan" },
-  { "id": 24, "kanji": "修", "onyomi": "シュウ, シュ", "kunyomi": "おさめる", "romaji": "shu, shu; osameru", "arti": "Memperbaiki, studi, disiplin" },
-  { "id": 25, "kanji": "倍", "onyomi": "バイ", "kunyomi": "-", "romaji": "bai", "arti": "Lipat ganda" },
-  { "id": 26, "kanji": "倒", "onyomi": "トウ", "kunyomi": "たおれる, たおす", "romaji": "to; taoreru, taosu", "arti": "Tumbang, jatuh, merobohkan" },
-  { "id": 27, "kanji": "候", "onyomi": "コウ", "kunyomi": "-", "romaji": "ko", "arti": "Iklim, musim, kandidat" },
-  { "id": 28, "kanji": "借", "onyomi": "シャク", "kunyomi": "かりる", "romaji": "shaku; kariru", "arti": "Meminjam" },
-  { "id": 29, "kanji": "値", "onyomi": "チ", "kunyomi": "あたい, ね", "romaji": "chi; atai, ne", "arti": "Harga, nilai" },
-  { "id": 30, "kanji": "倫", "onyomi": "リン", "kunyomi": "-", "romaji": "rin", "arti": "Etika, moral" },
-  { "id": 31, "kanji": "側", "onyomi": "ソク", "kunyomi": "かわ, そば", "romaji": "soku; kawa, soba", "arti": "Sisi, pihak, sebelah" },
-  { "id": 32, "kanji": "偶", "onyomi": "グウ", "kunyomi": "-", "romaji": "gu", "arti": "Kebetulan, pasangan" },
-  { "id": 33, "kanji": "備", "onyomi": "ビ", "kunyomi": "そなえる", "romaji": "bi; sonaeru", "arti": "Menyediakan, persiapan" },
-  { "id": 34, "kanji": "催", "onyomi": "サイ", "kunyomi": "もよおす", "romaji": "sai; moyoosu", "arti": "Mengadakan, menyelenggarakan" },
-  { "id": 35, "kanji": "伝", "onyomi": "デン", "kunyomi": "つたえる", "romaji": "den; tsutaeru", "arti": "Menyampaikan, melaporkan" },
-  { "id": 36, "kanji": "債", "onyomi": "サイ", "kunyomi": "-", "romaji": "sai", "arti": "Hutang, obligasi" },
-  { "id": 37, "kanji": "傷", "onyomi": "ショウ", "kunyomi": "きず, いたむ", "romaji": "sho; kizu, itamu", "arti": "Luka, cedera" },
-  { "id": 38, "kanji": "傾", "onyomi": "ケイ", "kunyomi": "かたむく", "romaji": "kei; katamuku", "arti": "Miring, cenderung" },
-  { "id": 39, "kanji": "仅", "onyomi": "キン", "kunyomi": "わずか", "romaji": "kin; wazuka", "arti": "Sedikit, nyaris" },
-  { "id": 40, "kanji": "像", "onyomi": "ゾウ", "kunyomi": "-", "romaji": "zo", "arti": "Patung, gambar, citra" },
-  { "id": 41, "kanji": "僕", "onyomi": "ボク", "kunyomi": "-", "romaji": "boku", "arti": "Saya (laki-laki), pelayan" },
-  { "id": 42, "kanji": "僚", "onyomi": "リョウ", "kunyomi": "-", "romaji": "ryo", "arti": "Rekan kerja, teman sejawat" },
-  { "id": 43, "kanji": "伪", "onyomi": "ギ", "kunyomi": "にせ, いつわる", "romaji": "gi; nise, itsuwaru", "arti": "Palsu, bohong" },
-  { "id": 44, "kanji": "仪", "onyomi": "ギ", "kunyomi": "-", "romaji": "gi", "arti": "Upacara, etiket" },
-  { "id": 45, "kanji": "亿", "onyomi": "オク", "kunyomi": "-", "romaji": "oku", "arti": "Seratus juta" },
-  { "id": 46, "kanji": "儒", "onyomi": "ジュ", "kunyomi": "-", "romaji": "ju", "arti": "Konfusianisme" },
-  { "id": 47, "kanji": "偿", "onyomi": "ショウ", "kunyomi": "つぐなう", "romaji": "sho; tsugunau", "arti": "Kompensasi, ganti rugi" },
-  { "id": 48, "kanji": "优", "onyomi": "ユウ", "kunyomi": "やさしい, すぐれる", "romaji": "yu; yasashii, sugureru", "arti": "Baik hati, unggul, aktor" },
-  { "id": 49, "kanji": "储", "onyomi": "チョ", "kunyomi": "もうける", "romaji": "cho; mokeru", "arti": "Mendapat untung" },
-  { "id": 50, "kanji": "元", "onyomi": "ゲン, ガン", "kunyomi": "もと", "romaji": "gen, gan; moto", "arti": "Asal, sumber, mantan" },
-  { "id": 51, "kanji": "充", "onyomi": "ジュウ", "kunyomi": "あてる", "romaji": "ju; ateru", "arti": "Mengisi, mencukupi" },
-  { "id": 52, "kanji": "兆", "onyomi": "チョウ", "kunyomi": "きざし", "romaji": "cho; kizashi", "arti": "Triliun, tanda-tanda" },
-  { "id": 53, "kanji": "先", "onyomi": "セン", "kunyomi": "さき", "romaji": "sen; saki", "arti": "Dulu, depan, ujung" },
-  { "id": 54, "kanji": "光", "onyomi": "コウ", "kunyomi": "ひかり, ひかる", "romaji": "ko; hikari, hikaru", "arti": "Cahaya, sinar" },
-  { "id": 55, "kanji": "党", "onyomi": "トウ", "kunyomi": "-", "romaji": "to", "arti": "Partai politik, faksi" },
-  { "id": 56, "kanji": "全", "onyomi": "ゼン", "kunyomi": "すべて", "romaji": "zen; subete", "arti": "Seluruh, semua" },
-  { "id": 57, "kanji": "共", "onyomi": "キョウ", "kunyomi": "とも", "romaji": "kyo; tomo", "arti": "Bersama, keduanya" },
-  { "id": 58, "kanji": "兵", "onyomi": "ヘイ, ヒョウ", "kunyomi": "つわもの", "romaji": "hei, hyo; tsuwamono", "arti": "Prajurit, tentara" },
-  { "id": 59, "kanji": "具", "onyomi": "グ", "kunyomi": "-", "romaji": "gu", "arti": "Alat, bahan, perlengkapan" },
-  { "id": 60, "kanji": "典", "onyomi": "テン", "kunyomi": "-", "romaji": "ten", "arti": "Upacara, kanon, kode" },
-  { "id": 61, "kanji": "兼", "onyomi": "ケン", "kunyomi": "かねる", "romaji": "ken; kaneru", "arti": "Merangkap, sekaligus" },
-  { "id": 62, "kanji": "内", "onyomi": "ナイ, ダイ", "kunyomi": "うち", "romaji": "nai, dai; uchi", "arti": "Dalam, internal" },
-  { "id": 63, "kanji": "再", "onyomi": "サイ, サ", "kunyomi": "ふたたび", "romaji": "sai, sa; futatabi", "arti": "Lagi, kedua kalinya" },
-  { "id": 64, "kanji": "冒", "onyomi": "ボウ", "kunyomi": "おかす", "romaji": "bo; okasu", "arti": "Menanggung risiko, menantang" },
-  { "id": 65, "kanji": "冗", "onyomi": "ジョウ", "kunyomi": "-", "romaji": "jo", "arti": "Redundan, berlebihan" },
-  { "id": 66, "kanji": "冠", "onyomi": "カン", "kunyomi": "かんむり", "romaji": "kan; kanmuri", "arti": "Mahkota" },
-  { "id": 67, "kanji": "冬", "onyomi": "トウ", "kunyomi": "ふゆ", "romaji": "to; fuyu", "arti": "Musim dingin" },
-  { "id": 68, "kanji": "冷", "onyomi": "レイ", "kunyomi": "つめたい, ひえる", "romaji": "rei; tsumetai, hieru", "arti": "Dingin, mendinginkan" },
-  { "id": 69, "kanji": "冻", "onyomi": "トウ", "kunyomi": "こおる, こごえる", "romaji": "to; koru, kogoeru", "arti": "Membeku, es" },
-  { "id": 70, "kanji": "凝", "onyomi": "ギョウ", "kunyomi": "こる, こらす", "romaji": "gyo; koru, korasu", "arti": "Kaku, konsentrasi, membeku" },
-  { "id": 71, "kanji": "凡", "onyomi": "ボン, ハン", "kunyomi": "およそ", "romaji": "bon, han; oyoso", "arti": "Biasa, umum, medioker" },
-  { "id": 72, "kanji": "处", "onyomi": "ショ", "kunyomi": "-", "romaji": "sho", "arti": "Tindakan, hukuman, tempat" },
-  { "id": 73, "kanji": "凶", "onyomi": "キョウ", "kunyomi": "-", "romaji": "kyo", "arti": "Nasib buruk, jahat, bencana" },
-  { "id": 74, "kanji": "凸", "onyomi": "トツ", "kunyomi": "でこ", "romaji": "totsu; deko", "arti": "Cembung" },
-  { "id": 75, "kanji": "凹", "onyomi": "オウ", "kunyomi": "ぼこ", "romaji": "o; boko", "arti": "Cekung" },
-  { "id": 76, "kanji": "出", "onyomi": "シュツ, スイ", "kunyomi": "でる, だす", "romaji": "shutsu, sui; deru, dasu", "arti": "Keluar, mengeluarkan" },
-  { "id": 77, "kanji": "刀", "onyomi": "トウ", "kunyomi": "かたな", "romaji": "to; katana", "arti": "Pedang, pisau" },
-  { "id": 78, "kanji": "刃", "onyomi": "ジン, ニン", "kunyomi": "は", "romaji": "jin, nin; ha", "arti": "Mata pisau, pedang" },
-  { "id": 79, "kanji": "分", "onyomi": "ブン, フン, ブ", "kunyomi": "わける, わかる", "romaji": "bun, fun, bu; wakeru, wakaru", "arti": "Menit, bagian, mengerti" },
-  { "id": 80, "kanji": "切", "onyomi": "セツ, サイ", "kunyomi": "きる, きれる", "romaji": "setsu, sai; kiru, kireru", "arti": "Memotong" },
-  { "id": 81, "kanji": "刈", "onyomi": "ガイ, カイ", "kunyomi": "かる", "romaji": "gai, kai; karu", "arti": "Memangkas, menyabit" },
-  { "id": 82, "kanji": "刊", "onyomi": "カン", "kunyomi": "-", "romaji": "kan", "arti": "Terbitan, publikasi" },
-  { "id": 83, "kanji": "刑", "onyomi": "ケイ", "kunyomi": "-", "romaji": "kei", "arti": "Hukuman, vonis" },
-  { "id": 84, "kanji": "列", "onyomi": "レツ", "kunyomi": "-", "romaji": "retsu", "arti": "Baris, deret" },
-  { "id": 85, "kanji": "初", "onyomi": "ショ", "kunyomi": "はじめ, はじめて", "romaji": "sho; hajime, hajimete", "arti": "Pertama kali, awal" },
-  { "id": 86, "kanji": "判", "onyomi": "ハン, バン", "kunyomi": "わかれる", "romaji": "han, ban; wakareru", "arti": "Keputusan, penilaian, segel" },
-  { "id": 87, "kanji": "别", "onyomi": "ベツ", "kunyomi": "わかれる, わける", "romaji": "betsu; wakareru, wageru", "arti": "Berpisah, berbeda" },
-  { "id": 88, "kanji": "利", "onyomi": "リ", "kunyomi": "きく", "romaji": "ri; kiku", "arti": "Untung, manfaat, bekerja (efektif)" },
-  { "id": 89, "kanji": "到", "onyomi": "トウ", "kunyomi": "いたる", "romaji": "to; itaru", "arti": "Tiba, sampai" },
-  { "id": 90, "kanji": "制", "onyomi": "セイ", "kunyomi": "-", "romaji": "sei", "arti": "Sistem, kendali, peraturan" }
+﻿[
+  {
+    "id": 1,
+    "kanji": "腕",
+    "onyomi": "ワン",
+    "kunyomi": "うで",
+    "romaji": "wan; ude",
+    "arti": "Lengan, kemampuan, bakat"
+  },
+  {
+    "id": 2,
+    "kanji": "湾",
+    "onyomi": "ワン",
+    "kunyomi": "いりえ",
+    "romaji": "wan; irie",
+    "arti": "Teluk, saluran"
+  },
+  {
+    "id": 3,
+    "kanji": "和",
+    "onyomi": "ワ, オ, カ",
+    "kunyomi": "やわ.らぐ, なご.やか",
+    "romaji": "wa, o, ka; yawara.gu",
+    "arti": "Harmoni, damai, gaya Jepang"
+  },
+  {
+    "id": 4,
+    "kanji": "論",
+    "onyomi": "ロン",
+    "kunyomi": "",
+    "romaji": "ron",
+    "arti": "Teori, argumen, diskusi"
+  },
+  {
+    "id": 5,
+    "kanji": "録",
+    "onyomi": "ロク",
+    "kunyomi": "",
+    "romaji": "roku",
+    "arti": "Rekaman, catatan"
+  },
+  {
+    "id": 6,
+    "kanji": "老",
+    "onyomi": "ロウ",
+    "kunyomi": "お.いる, ふ.ける",
+    "romaji": "ro; o.iru",
+    "arti": "Tua, lanjut usia"
+  },
+  {
+    "id": 7,
+    "kanji": "労",
+    "onyomi": "ロウ",
+    "kunyomi": "ねぎら.う",
+    "romaji": "ro; negira.u",
+    "arti": "Buruh, usaha, kerja keras"
+  },
+  {
+    "id": 8,
+    "kanji": "路",
+    "onyomi": "ロ, -じ",
+    "kunyomi": "みち",
+    "romaji": "ro; michi",
+    "arti": "Jalan, rute"
+  },
+  {
+    "id": 9,
+    "kanji": "連",
+    "onyomi": "レン",
+    "kunyomi": "つら.なる, つ.れる",
+    "romaji": "ren; tsura.naru",
+    "arti": "Menghubungkan, membawa serta"
+  },
+  {
+    "id": 10,
+    "kanji": "練",
+    "onyomi": "レン",
+    "kunyomi": "ね.る",
+    "romaji": "ren; ne.ru",
+    "arti": "Latihan, mengasah, menguleni"
+  },
+  {
+    "id": 11,
+    "kanji": "恋",
+    "onyomi": "レン",
+    "kunyomi": "こい, こい.しい",
+    "romaji": "ren; koi",
+    "arti": "Cinta, asmara, rindu"
+  },
+  {
+    "id": 12,
+    "kanji": "列",
+    "onyomi": "レツ",
+    "kunyomi": "",
+    "romaji": "retsu",
+    "arti": "Baris, kolom, antrean"
+  },
+  {
+    "id": 13,
+    "kanji": "歴",
+    "onyomi": "レキ",
+    "kunyomi": "",
+    "romaji": "reki",
+    "arti": "Sejarah, kurikulum"
+  },
+  {
+    "id": 14,
+    "kanji": "齢",
+    "onyomi": "レイ",
+    "kunyomi": "よわい",
+    "romaji": "rei; yowai",
+    "arti": "Umur, usia"
+  },
+  {
+    "id": 15,
+    "kanji": "零",
+    "onyomi": "レイ",
+    "kunyomi": "こぼ.れる",
+    "romaji": "rei; kobo.reru",
+    "arti": "Nol, tumpah, nihil"
+  },
+  {
+    "id": 16,
+    "kanji": "礼",
+    "onyomi": "レイ, ライ",
+    "kunyomi": "",
+    "romaji": "rei, rai",
+    "arti": "Salam, hormat, rasa terima kasih"
+  },
+  {
+    "id": 17,
+    "kanji": "冷",
+    "onyomi": "レイ",
+    "kunyomi": "つめ.たい, ひ.える",
+    "romaji": "rei; tsume.tai",
+    "arti": "Dingin, mendinginkan"
+  },
+  {
+    "id": 18,
+    "kanji": "例",
+    "onyomi": "レイ",
+    "kunyomi": "たと.える",
+    "romaji": "rei; tato.eru",
+    "arti": "Contoh, kebiasaan"
+  },
+  {
+    "id": 19,
+    "kanji": "令",
+    "onyomi": "レイ",
+    "kunyomi": "",
+    "romaji": "rei",
+    "arti": "Perintah, instruksi, dekrit"
+  },
+  {
+    "id": 20,
+    "kanji": "類",
+    "onyomi": "ルイ",
+    "kunyomi": "たぐい",
+    "romaji": "rui; tagui",
+    "arti": "Jenis, macam, kategori"
+  },
+  {
+    "id": 21,
+    "kanji": "涙",
+    "onyomi": "ルイ",
+    "kunyomi": "なみだ",
+    "romaji": "rui; namida",
+    "arti": "Air mata"
+  },
+  {
+    "id": 22,
+    "kanji": "輪",
+    "onyomi": "リン",
+    "kunyomi": "わ",
+    "romaji": "rin; wa",
+    "arti": "Roda, cincin, lingkaran"
+  },
+  {
+    "id": 23,
+    "kanji": "緑",
+    "onyomi": "リョク, ロク",
+    "kunyomi": "みどり",
+    "romaji": "ryoku; midori",
+    "arti": "Hijau"
+  },
+  {
+    "id": 24,
+    "kanji": "領",
+    "onyomi": "リョウ",
+    "kunyomi": "",
+    "romaji": "ryo",
+    "arti": "Wilayah, yurisdiksi, kekuasaan"
+  },
+  {
+    "id": 25,
+    "kanji": "量",
+    "onyomi": "リョウ",
+    "kunyomi": "はか.る",
+    "romaji": "ryo; haka.ru",
+    "arti": "Jumlah, kuantitas, menimbang"
+  },
+  {
+    "id": 26,
+    "kanji": "良",
+    "onyomi": "リョウ",
+    "kunyomi": "よ.い",
+    "romaji": "ryo; yo.i",
+    "arti": "Baik, bagus"
+  },
+  {
+    "id": 27,
+    "kanji": "療",
+    "onyomi": "リョウ",
+    "kunyomi": "",
+    "romaji": "ryo",
+    "arti": "Pengobatan, medis"
+  },
+  {
+    "id": 28,
+    "kanji": "涼",
+    "onyomi": "リョウ",
+    "kunyomi": "すず.しい",
+    "romaji": "ryo; suzu.shii",
+    "arti": "Sejuk, menyegarkan"
+  },
+  {
+    "id": 29,
+    "kanji": "両",
+    "onyomi": "リョウ",
+    "kunyomi": "",
+    "romaji": "ryo",
+    "arti": "Kedua, dua-duanya"
+  },
+  {
+    "id": 30,
+    "kanji": "了",
+    "onyomi": "リョウ",
+    "kunyomi": "",
+    "romaji": "ryo",
+    "arti": "Selesai, tamat, memahami"
+  },
+  {
+    "id": 31,
+    "kanji": "粒",
+    "onyomi": "リュウ",
+    "kunyomi": "つぶ",
+    "romaji": "ryu; tsubu",
+    "arti": "Butir, biji"
+  },
+  {
+    "id": 32,
+    "kanji": "留",
+    "onyomi": "リュウ, ル",
+    "kunyomi": "と.める, と.まる",
+    "romaji": "ryu, ru; tomeru",
+    "arti": "Menahan, tinggal, berhenti"
+  },
+  {
+    "id": 33,
+    "kanji": "流",
+    "onyomi": "リュウ, ル",
+    "kunyomi": "なが.れる, なが.す",
+    "romaji": "ryu, ru; nagareru",
+    "arti": "Mengalir, arus, gaya"
+  },
+  {
+    "id": 34,
+    "kanji": "略",
+    "onyomi": "リャク",
+    "kunyomi": "ほぼ, はぶ.く",
+    "romaji": "ryaku; hobo",
+    "arti": "Singkatan, strategi, ringkasan"
+  },
+  {
+    "id": 35,
+    "kanji": "率",
+    "onyomi": "リツ, ソツ",
+    "kunyomi": "ひき.いる",
+    "romaji": "ritsu, sotsu; hikiiru",
+    "arti": "Rasio, tarif, memimpin"
+  },
+  {
+    "id": 36,
+    "kanji": "律",
+    "onyomi": "リツ, リチ",
+    "kunyomi": "",
+    "romaji": "ritsu, richi",
+    "arti": "Hukum, aturan, ritme"
+  },
+  {
+    "id": 37,
+    "kanji": "陸",
+    "onyomi": "リク, ロク",
+    "kunyomi": "おか",
+    "romaji": "riku; oka",
+    "arti": "Daratan, tanah"
+  },
+  {
+    "id": 38,
+    "kanji": "裏",
+    "onyomi": "リ",
+    "kunyomi": "うら",
+    "romaji": "ri; ura",
+    "arti": "Belakang, terbalik, sisi dalam"
+  },
+  {
+    "id": 39,
+    "kanji": "利",
+    "onyomi": "リ",
+    "kunyomi": "き.く",
+    "romaji": "ri; kiku",
+    "arti": "Keuntungan, manfaat, tajam"
+  },
+  {
+    "id": 40,
+    "kanji": "卵",
+    "onyomi": "ラン",
+    "kunyomi": "たまご",
+    "romaji": "ran; tamago",
+    "arti": "Telur"
+  },
+  {
+    "id": 41,
+    "kanji": "乱",
+    "onyomi": "ラン",
+    "kunyomi": "みだ.れる, みだ.す",
+    "romaji": "ran; midareru",
+    "arti": "Kekacauan, pemberontakan"
+  },
+  {
+    "id": 42,
+    "kanji": "落",
+    "onyomi": "ラク",
+    "kunyomi": "お.ちる, お.とす",
+    "romaji": "raku; ochiru",
+    "arti": "Jatuh, rontok"
+  },
+  {
+    "id": 43,
+    "kanji": "絡",
+    "onyomi": "ラク",
+    "kunyomi": "から.む, から.まる",
+    "romaji": "raku; karamu",
+    "arti": "Terjerat, terikat, kontak"
+  },
+  {
+    "id": 44,
+    "kanji": "頼",
+    "onyomi": "ライ",
+    "kunyomi": "たの.む, たよ.る",
+    "romaji": "rai; tanomu",
+    "arti": "Meminta tolong, percaya"
+  },
+  {
+    "id": 45,
+    "kanji": "翌",
+    "onyomi": "ヨク",
+    "kunyomi": "",
+    "romaji": "yoku",
+    "arti": "Berikutnya (hari/tahun)"
+  },
+  {
+    "id": 46,
+    "kanji": "浴",
+    "onyomi": "ヨク",
+    "kunyomi": "あ.びる, あ.びせる",
+    "romaji": "yoku; abiru",
+    "arti": "Mandi, berjemur, mengguyur"
+  },
+  {
+    "id": 47,
+    "kanji": "欲",
+    "onyomi": "ヨク",
+    "kunyomi": "ほ.しい, ほっ.する",
+    "romaji": "yoku; hoshii",
+    "arti": "Ingin, nafsu, keinginan"
+  },
+  {
+    "id": 48,
+    "kanji": "陽",
+    "onyomi": "ヨウ",
+    "kunyomi": "ひなた",
+    "romaji": "yo; hinata",
+    "arti": "Matahari, positif, terang"
+  },
+  {
+    "id": 49,
+    "kanji": "踊",
+    "onyomi": "ヨウ",
+    "kunyomi": "おど.る, おど.り",
+    "romaji": "yo; odoru",
+    "arti": "Menari, lompatan"
+  },
+  {
+    "id": 50,
+    "kanji": "要",
+    "onyomi": "ヨウ",
+    "kunyomi": "い.る, かなめ",
+    "romaji": "yo; iru",
+    "arti": "Perlu, poin penting, inti"
+  },
+  {
+    "id": 51,
+    "kanji": "葉",
+    "onyomi": "ヨウ",
+    "kunyomi": "は",
+    "romaji": "yo; ha",
+    "arti": "Daun, bidang, counter daun/kertas"
+  },
+  {
+    "id": 52,
+    "kanji": "溶",
+    "onyomi": "ヨウ",
+    "kunyomi": "と.ける, と.かす",
+    "romaji": "yo; tokeru",
+    "arti": "Larut, mencair, meleleh"
+  },
+  {
+    "id": 53,
+    "kanji": "様",
+    "onyomi": "ヨウ, ショウ",
+    "kunyomi": "さま",
+    "romaji": "yo; sama",
+    "arti": "Penampilan, cara, Tuan/Nyonya"
+  },
+  {
+    "id": 54,
+    "kanji": "容",
+    "onyomi": "ヨウ",
+    "kunyomi": "い.れる",
+    "romaji": "yo; ireru",
+    "arti": "Isi, wadah, bentuk"
+  },
+  {
+    "id": 55,
+    "kanji": "幼",
+    "onyomi": "ヨウ",
+    "kunyomi": "おさない",
+    "romaji": "yo; osanai",
+    "arti": "Muda, masa kecil"
+  },
+  {
+    "id": 56,
+    "kanji": "預",
+    "onyomi": "ヨ",
+    "kunyomi": "あず.ける, あず.かる",
+    "romaji": "yo; azukeru",
+    "arti": "Menitipkan, menyimpan"
+  },
+  {
+    "id": 57,
+    "kanji": "与",
+    "onyomi": "ヨ",
+    "kunyomi": "あた.える, あずか.る",
+    "romaji": "yo; ataeru",
+    "arti": "Memberi, hadiah, berpartisipasi"
+  },
+  {
+    "id": 58,
+    "kanji": "余",
+    "onyomi": "ヨ",
+    "kunyomi": "あま.る, あま.す",
+    "romaji": "yo; amaru",
+    "arti": "Sisa, kelebihan, terlalu banyak"
+  },
+  {
+    "id": 59,
+    "kanji": "予",
+    "onyomi": "ヨ, シャ",
+    "kunyomi": "あらかじ.め",
+    "romaji": "yo; arakajime",
+    "arti": "Sebelumnya, prediksi"
+  },
+  {
+    "id": 60,
+    "kanji": "郵",
+    "onyomi": "ユウ",
+    "kunyomi": "",
+    "romaji": "yu",
+    "arti": "Pos, surat"
+  },
+  {
+    "id": 61,
+    "kanji": "遊",
+    "onyomi": "ユウ, ユ",
+    "kunyomi": "あそ.ぶ",
+    "romaji": "yu; aso.bu",
+    "arti": "Bermain"
+  },
+  {
+    "id": 62,
+    "kanji": "由",
+    "onyomi": "ユ, ユウ, ユイ",
+    "kunyomi": "よし",
+    "romaji": "yu; yoshi",
+    "arti": "Alasan, penyebab"
+  },
+  {
+    "id": 63,
+    "kanji": "勇",
+    "onyomi": "ユウ",
+    "kunyomi": "いさ.む",
+    "romaji": "yu; isa.mu",
+    "arti": "Berani, keberanian"
+  },
+  {
+    "id": 64,
+    "kanji": "優",
+    "onyomi": "ユウ",
+    "kunyomi": "やさ.しい, すぐ.れる",
+    "romaji": "yu; yasa.shii",
+    "arti": "Lembut, unggul, aktor"
+  },
+  {
+    "id": 65,
+    "kanji": "輸",
+    "onyomi": "ユ, シュ",
+    "kunyomi": "",
+    "romaji": "yu, shu",
+    "arti": "Transportasi, kirim"
+  },
+  {
+    "id": 66,
+    "kanji": "油",
+    "onyomi": "ユ",
+    "kunyomi": "あぶら",
+    "romaji": "yu; abura",
+    "arti": "Minyak"
+  },
+  {
+    "id": 67,
+    "kanji": "約",
+    "onyomi": "ヤク",
+    "kunyomi": "",
+    "romaji": "yaku",
+    "arti": "Janji, sekitar, ringkasan"
+  },
+  {
+    "id": 68,
+    "kanji": "役",
+    "onyomi": "ヤク, エキ",
+    "kunyomi": "",
+    "romaji": "yaku, eki",
+    "arti": "Tugas, peran, layanan"
+  },
+  {
+    "id": 69,
+    "kanji": "戻",
+    "onyomi": "レイ",
+    "kunyomi": "もど.す, もど.る",
+    "romaji": "rei; modo.ru",
+    "arti": "Kembali, memulihkan"
+  },
+  {
+    "id": 70,
+    "kanji": "毛",
+    "onyomi": "モウ",
+    "kunyomi": "け",
+    "romaji": "mo; ke",
+    "arti": "Rambut, bulu"
+  },
+  {
+    "id": 71,
+    "kanji": "面",
+    "onyomi": "メン",
+    "kunyomi": "おも, おもて, つら",
+    "romaji": "men; omote",
+    "arti": "Wajah, permukaan, aspek"
+  },
+  {
+    "id": 72,
+    "kanji": "綿",
+    "onyomi": "メン",
+    "kunyomi": "わた",
+    "romaji": "men; wata",
+    "arti": "Kapas"
+  },
+  {
+    "id": 73,
+    "kanji": "鳴",
+    "onyomi": "メイ",
+    "kunyomi": "な.く, な.る, な.らす",
+    "romaji": "mei; na.ku",
+    "arti": "Berbunyi, berkicau"
+  },
+  {
+    "id": 74,
+    "kanji": "迷",
+    "onyomi": "メイ",
+    "kunyomi": "まよ.う",
+    "romaji": "mei; mayo.u",
+    "arti": "Tersesat, bingung"
+  },
+  {
+    "id": 75,
+    "kanji": "命",
+    "onyomi": "メイ, ミョウ",
+    "kunyomi": "いのち",
+    "romaji": "mei, myo; inochi",
+    "arti": "Kehidupan, nasib, perintah"
+  },
+  {
+    "id": 76,
+    "kanji": "娘",
+    "onyomi": "ジョウ",
+    "kunyomi": "むすめ",
+    "romaji": "jo; musume",
+    "arti": "Anak perempuan, gadis"
+  },
+  {
+    "id": 77,
+    "kanji": "無",
+    "onyomi": "ム, ブ",
+    "kunyomi": "な.い",
+    "romaji": "mu, bu; na.i",
+    "arti": "Tidak ada, ketiadaan"
+  },
+  {
+    "id": 78,
+    "kanji": "夢",
+    "onyomi": "ム",
+    "kunyomi": "ゆめ",
+    "romaji": "mu; yume",
+    "arti": "Mimpi"
+  },
+  {
+    "id": 79,
+    "kanji": "務",
+    "onyomi": "ム",
+    "kunyomi": "つと.める",
+    "romaji": "mu; tsuto.meru",
+    "arti": "Tugas, kewajiban"
+  },
+  {
+    "id": 80,
+    "kanji": "眠",
+    "onyomi": "ミン",
+    "kunyomi": "ねむ.る, ねむ.い",
+    "romaji": "min; nemu.ru",
+    "arti": "Tidur, mengantuk"
+  },
+  {
+    "id": 81,
+    "kanji": "未",
+    "onyomi": "ミ",
+    "kunyomi": "いま.だ",
+    "romaji": "mi; ima.da",
+    "arti": "Belum, masih"
+  },
+  {
+    "id": 82,
+    "kanji": "満",
+    "onyomi": "マン",
+    "kunyomi": "み.chiru, み.たす",
+    "romaji": "man; mi.chiru",
+    "arti": "Penuh, kepuasan"
+  },
+  {
+    "id": 83,
+    "kanji": "末",
+    "onyomi": "マツ, バツ",
+    "kunyomi": "すえ",
+    "romaji": "matsu; sue",
+    "arti": "Ujung, akhir"
+  },
+  {
+    "id": 84,
+    "kanji": "枚",
+    "onyomi": "マイ",
+    "kunyomi": "",
+    "romaji": "mai",
+    "arti": "Lembar (penghitung)"
+  },
+  {
+    "id": 85,
+    "kanji": "埋",
+    "onyomi": "マイ",
+    "kunyomi": "う.める, う.まる",
+    "romaji": "mai; u.meru",
+    "arti": "Mengubur, mengisi"
+  },
+  {
+    "id": 86,
+    "kanji": "磨",
+    "onyomi": "マ",
+    "kunyomi": "みが.く",
+    "romaji": "ma; miga.ku",
+    "arti": "Menggosok, mengasah"
+  },
+  {
+    "id": 87,
+    "kanji": "防",
+    "onyomi": "ボウ",
+    "kunyomi": "ふせ.ぐ",
+    "romaji": "bo; fuse.gu",
+    "arti": "Mencegah, pertahanan"
+  },
+  {
+    "id": 88,
+    "kanji": "貿",
+    "onyomi": "ボウ",
+    "kunyomi": "",
+    "romaji": "bo",
+    "arti": "Perdagangan"
+  },
+  {
+    "id": 89,
+    "kanji": "棒",
+    "onyomi": "ボウ",
+    "kunyomi": "",
+    "romaji": "bo",
+    "arti": "Tongkat, tiang"
+  },
+  {
+    "id": 90,
+    "kanji": "望",
+    "onyomi": "ボウ, モウ",
+    "kunyomi": "のぞ.む",
+    "romaji": "bo; nozo.mu",
+    "arti": "Harapan, keinginan"
+  },
+  {
+    "id": 91,
+    "kanji": "暴",
+    "onyomi": "ボウ, バク",
+    "kunyomi": "あば.れる, あば.く",
+    "romaji": "bo, baku; aba.reru",
+    "arti": "Kekerasan, mengamuk"
+  },
+  {
+    "id": 92,
+    "kanji": "忙",
+    "onyomi": "ボウ",
+    "kunyomi": "いそが.しい",
+    "romaji": "bo; isoga.shii",
+    "arti": "Sibuk"
+  },
+  {
+    "id": 93,
+    "kanji": "忘",
+    "onyomi": "ボウ",
+    "kunyomi": "わす.れる",
+    "romaji": "bo; wasu.reru",
+    "arti": "Lupa"
+  },
+  {
+    "id": 94,
+    "kanji": "帽",
+    "onyomi": "ボウ",
+    "kunyomi": "",
+    "romaji": "bo",
+    "arti": "Topi, tudung"
+  },
+  {
+    "id": 95,
+    "kanji": "坊",
+    "onyomi": "ボウ, ボッ",
+    "kunyomi": "",
+    "romaji": "bo, bottsu",
+    "arti": "Bhiksu, anak laki-laki"
+  },
+  {
+    "id": 96,
+    "kanji": "亡",
+    "onyomi": "ボウ, モウ",
+    "kunyomi": "な.い",
+    "romaji": "bo, mo; na.i",
+    "arti": "Meninggal, lenyap"
+  },
+  {
+    "id": 97,
+    "kanji": "豊",
+    "onyomi": "ホウ",
+    "kunyomi": "ゆた.か",
+    "romaji": "ho; yuta.ka",
+    "arti": "Berlimpah, kaya"
+  },
+  {
+    "id": 98,
+    "kanji": "訪",
+    "onyomi": "ホウ",
+    "kunyomi": "おとず.れる, たず.ねる",
+    "romaji": "ho; otozu.reru",
+    "arti": "Mengunjungi"
+  },
+  {
+    "id": 99,
+    "kanji": "法",
+    "onyomi": "ホウ, ハッ",
+    "kunyomi": "",
+    "romaji": "ho, hattsu",
+    "arti": "Hukum, metode, aturan"
+  },
+  {
+    "id": 100,
+    "kanji": "放",
+    "onyomi": "ホウ",
+    "kunyomi": "はな.す, はな.れる",
+    "romaji": "ho; hana.su",
+    "arti": "Melepaskan, membebaskan"
+  },
+  {
+    "id": 101,
+    "kanji": "抱",
+    "onyomi": "ホウ",
+    "kunyomi": "だ.く, いだ.く, かか.える",
+    "romaji": "ho; da.ku",
+    "arti": "Memeluk, mendekap, membawa"
+  },
+  {
+    "id": 102,
+    "kanji": "宝",
+    "onyomi": "ホウ",
+    "kunyomi": "たから",
+    "romaji": "ho; takara",
+    "arti": "Harta karun, berharga"
+  },
+  {
+    "id": 103,
+    "kanji": "報",
+    "onyomi": "ホウ",
+    "kunyomi": "むく.いる",
+    "romaji": "ho; muku.iru",
+    "arti": "Laporan, berita, balasan"
+  },
+  {
+    "id": 104,
+    "kanji": "包",
+    "onyomi": "ホウ",
+    "kunyomi": "つつ.む",
+    "romaji": "ho; tsutsu.mu",
+    "arti": "Membungkus, mengepak"
+  },
+  {
+    "id": 105,
+    "kanji": "暮",
+    "onyomi": "ボ",
+    "kunyomi": "く.らす, く.れる",
+    "romaji": "bo; ku.rasu",
+    "arti": "Hidup, senja"
+  },
+  {
+    "id": 106,
+    "kanji": "募",
+    "onyomi": "ボ",
+    "kunyomi": "つの.る",
+    "romaji": "bo; tsuno.ru",
+    "arti": "Rekrutmen, mengumpulkan"
+  },
+  {
+    "id": 107,
+    "kanji": "補",
+    "onyomi": "ホ",
+    "kunyomi": "おぎな.う",
+    "romaji": "ho; ogina.u",
+    "arti": "Suplemen, melengkapi"
+  },
+  {
+    "id": 108,
+    "kanji": "捕",
+    "onyomi": "ホ",
+    "kunyomi": "と.える, つか.まえる",
+    "romaji": "ho; tsuka.maeru",
+    "arti": "Menangkap, memburu"
+  },
+  {
+    "id": 109,
+    "kanji": "保",
+    "onyomi": "ホ",
+    "kunyomi": "たも.つ",
+    "romaji": "ho; tamo.tsu",
+    "arti": "Menjaga, memelihara"
+  },
+  {
+    "id": 110,
+    "kanji": "返",
+    "onyomi": "ヘン",
+    "kunyomi": "かえ.す, かえ.る",
+    "romaji": "hen; kae.su",
+    "arti": "Mengembalikan, balasan"
+  },
+  {
+    "id": 111,
+    "kanji": "辺",
+    "onyomi": "ヘン",
+    "kunyomi": "あた.り, べ",
+    "romaji": "hen; ata.ri",
+    "arti": "Sekitar, pinggiran"
+  },
+  {
+    "id": 112,
+    "kanji": "編",
+    "onyomi": "ヘン",
+    "kunyomi": "あ.む",
+    "romaji": "hen; a.mu",
+    "arti": "Menyusun, merajut, mengedit"
+  },
+  {
+    "id": 113,
+    "kanji": "片",
+    "onyomi": "ヘン",
+    "kunyomi": "かた",
+    "romaji": "hen; kata",
+    "arti": "Sepotong, satu sisi"
+  },
+  {
+    "id": 114,
+    "kanji": "変",
+    "onyomi": "ヘン",
+    "kunyomi": "か.わる, か.える",
+    "romaji": "hen; ka.waru",
+    "arti": "Berubah, aneh"
+  },
+  {
+    "id": 115,
+    "kanji": "壁",
+    "onyomi": "ヘキ",
+    "kunyomi": "かべ",
+    "romaji": "heki; kabe",
+    "arti": "Dinding, tembok"
+  },
+  {
+    "id": 116,
+    "kanji": "米",
+    "onyomi": "ベイ, マイ",
+    "kunyomi": "こめ",
+    "romaji": "bei, mai; kome",
+    "arti": "Beras, Amerika"
+  },
+  {
+    "id": 117,
+    "kanji": "閉",
+    "onyomi": "ヘイ",
+    "kunyomi": "と.じる, し.める",
+    "romaji": "hei; to.jiru",
+    "arti": "Menutup"
+  },
+  {
+    "id": 118,
+    "kanji": "並",
+    "onyomi": "ヘイ",
+    "kunyomi": "な.み, なら.ぶ",
+    "romaji": "hei; nara.bu",
+    "arti": "Berjajar, rata-rata, biasa"
+  },
+  {
+    "id": 119,
+    "kanji": "平",
+    "onyomi": "ヘイ, ビョウ",
+    "kunyomi": "たい.ら, ひら",
+    "romaji": "hei; tai.ra",
+    "arti": "Datar, tenang, damai"
+  },
+  {
+    "id": 120,
+    "kanji": "兵",
+    "onyomi": "ヘイ, ヒョウ",
+    "kunyomi": "",
+    "romaji": "hei, hyo",
+    "arti": "Tentara, prajurit"
+  },
+  {
+    "id": 121,
+    "kanji": "粉",
+    "onyomi": "フン",
+    "kunyomi": "こな, こ",
+    "romaji": "fun; kona",
+    "arti": "Tepung, bubuk"
+  },
+  {
+    "id": 122,
+    "kanji": "仏",
+    "onyomi": "ブツ, フツ",
+    "kunyomi": "ほとけ",
+    "romaji": "butsu; hotoke",
+    "arti": "Buddha, Prancis"
+  },
+  {
+    "id": 123,
+    "kanji": "沸",
+    "onyomi": "フツ",
+    "kunyomi": "わ.く, わ.かす",
+    "romaji": "futsu; waku",
+    "arti": "Mendidih"
+  },
+  {
+    "id": 124,
+    "kanji": "払",
+    "onyomi": "フツ",
+    "kunyomi": "はら.う",
+    "romaji": "futsu; harau",
+    "arti": "Membayar, menyapu"
+  },
+  {
+    "id": 125,
+    "kanji": "複",
+    "onyomi": "フク",
+    "kunyomi": "",
+    "romaji": "fuku",
+    "arti": "Ganda, majemuk"
+  },
+  {
+    "id": 126,
+    "kanji": "腹",
+    "onyomi": "フク",
+    "kunyomi": "はら",
+    "romaji": "fuku; hara",
+    "arti": "Perut"
+  },
+  {
+    "id": 127,
+    "kanji": "福",
+    "onyomi": "フク",
+    "kunyomi": "",
+    "romaji": "fuku",
+    "arti": "Keberuntungan, berkat"
+  },
+  {
+    "id": 128,
+    "kanji": "幅",
+    "onyomi": "フク",
+    "kunyomi": "はば",
+    "romaji": "fuku; haba",
+    "arti": "Lebar, jangkauan"
+  },
+  {
+    "id": 129,
+    "kanji": "復",
+    "onyomi": "フク",
+    "kunyomi": "",
+    "romaji": "fuku",
+    "arti": "Pulih, kembali, mengulang"
+  },
+  {
+    "id": 130,
+    "kanji": "副",
+    "onyomi": "フク",
+    "kunyomi": "",
+    "romaji": "fuku",
+    "arti": "Wakil, asisten, sekunder"
+  },
+  {
+    "id": 131,
+    "kanji": "封",
+    "onyomi": "フウ, ホウ",
+    "kunyomi": "",
+    "romaji": "fu, ho",
+    "arti": "Segel, penutup"
+  },
+  {
+    "id": 132,
+    "kanji": "部",
+    "onyomi": "ブ",
+    "kunyomi": "",
+    "romaji": "bu",
+    "arti": "Bagian, departemen, klub"
+  },
+  {
+    "id": 133,
+    "kanji": "舞",
+    "onyomi": "ブ",
+    "kunyomi": "ま.う, まい",
+    "romaji": "bu; mau",
+    "arti": "Menari, tarian"
+  },
+  {
+    "id": 134,
+    "kanji": "武",
+    "onyomi": "ブ, ム",
+    "kunyomi": "たけ",
+    "romaji": "bu, mu; take",
+    "arti": "Militer, prajurit"
+  },
+  {
+    "id": 135,
+    "kanji": "負",
+    "onyomi": "フ",
+    "kunyomi": "ま.ける, ま.かす, お.う",
+    "romaji": "fu; makeru",
+    "arti": "Kalah, memikul"
+  },
+  {
+    "id": 136,
+    "kanji": "膚",
+    "onyomi": "フ",
+    "kunyomi": "はだ",
+    "romaji": "fu; hada",
+    "arti": "Kulit"
+  },
+  {
+    "id": 137,
+    "kanji": "符",
+    "onyomi": "フ",
+    "kunyomi": "",
+    "romaji": "fu",
+    "arti": "Tanda, simbol, jimat"
+  },
+  {
+    "id": 138,
+    "kanji": "浮",
+    "onyomi": "フ",
+    "kunyomi": "う.く, う.かれる, う.かぶ",
+    "romaji": "fu; uku",
+    "arti": "Terapung, melayang"
+  },
+  {
+    "id": 139,
+    "kanji": "普",
+    "onyomi": "フ",
+    "kunyomi": "あまねく",
+    "romaji": "fu",
+    "arti": "Umum, universal, biasa"
+  },
+  {
+    "id": 140,
+    "kanji": "怖",
+    "onyomi": "フ",
+    "kunyomi": "こわ.イ",
+    "romaji": "fu; kowai",
+    "arti": "Takut, menyeramkan"
+  },
+  {
+    "id": 141,
+    "kanji": "府",
+    "onyomi": "フ",
+    "kunyomi": "",
+    "romaji": "fu",
+    "arti": "Prefektur, pusat pemerintahan"
+  },
+  {
+    "id": 142,
+    "kanji": "布",
+    "onyomi": "フ",
+    "kunyomi": "ぬの",
+    "romaji": "fu; nuno",
+    "arti": "Kain"
+  },
+  {
+    "id": 143,
+    "kanji": "富",
+    "onyomi": "フ, フウ",
+    "kunyomi": "とみ, と.む",
+    "romaji": "fu; tomi",
+    "arti": "Kaya, berlimpah"
+  },
+  {
+    "id": 144,
+    "kanji": "婦",
+    "onyomi": "フ",
+    "kunyomi": "",
+    "romaji": "fu",
+    "arti": "Wanita dewasa, istri"
+  },
+  {
+    "id": 145,
+    "kanji": "夫",
+    "onyomi": "フ, フウ",
+    "kunyomi": "おっと",
+    "romaji": "fu; otto",
+    "arti": "Suami"
+  },
+  {
+    "id": 146,
+    "kanji": "付",
+    "onyomi": "フ",
+    "kunyomi": "つ.ける, つ.く",
+    "romaji": "fu; tsukeru",
+    "arti": "Menempel, melampirkan"
+  },
+  {
+    "id": 147,
+    "kanji": "貧",
+    "onyomi": "ヒン, ビン",
+    "kunyomi": "まず.しい",
+    "romaji": "hin, bin; mazushii",
+    "arti": "Miskin"
+  },
+  {
+    "id": 148,
+    "kanji": "秒",
+    "onyomi": "ビョウ",
+    "kunyomi": "",
+    "romaji": "byou",
+    "arti": "Detik"
+  },
+  {
+    "id": 149,
+    "kanji": "評",
+    "onyomi": "ヒョウ",
+    "kunyomi": "",
+    "romaji": "hyou",
+    "arti": "Evaluasi, kritik"
+  },
+  {
+    "id": 150,
+    "kanji": "表",
+    "onyomi": "ヒョウ",
+    "kunyomi": "おもて, あらわ.す",
+    "romaji": "hyou; omote",
+    "arti": "Tabel, permukaan"
+  },
+  {
+    "id": 151,
+    "kanji": "氷",
+    "onyomi": "ヒョウ",
+    "kunyomi": "こおり, ひ",
+    "romaji": "hyou; koori",
+    "arti": "Es"
+  },
+  {
+    "id": 152,
+    "kanji": "標",
+    "onyomi": "ヒョウ",
+    "kunyomi": "しるべ, しるし",
+    "romaji": "hyou; shirushi",
+    "arti": "Tanda, target"
+  },
+  {
+    "id": 153,
+    "kanji": "筆",
+    "onyomi": "ヒツ",
+    "kunyomi": "ふで",
+    "romaji": "hitsu; fude",
+    "arti": "Kuas tulis, alat tulis"
+  },
+  {
+    "id": 154,
+    "kanji": "必",
+    "onyomi": "ヒツ",
+    "kunyomi": "かなら.ず",
+    "romaji": "hitsu; kanarazu",
+    "arti": "Pasti, harus"
+  },
+  {
+    "id": 155,
+    "kanji": "匹",
+    "onyomi": "ヒツ",
+    "kunyomi": "ひき",
+    "romaji": "hitsu; hiki",
+    "arti": "Counter hewan kecil"
+  },
+  {
+    "id": 156,
+    "kanji": "鼻",
+    "onyomi": "ビ",
+    "kunyomi": "はな",
+    "romaji": "bi; hana",
+    "arti": "Hidung"
+  },
+  {
+    "id": 157,
+    "kanji": "美",
+    "onyomi": "ビ",
+    "kunyomi": "うつく.しい",
+    "romaji": "bi; utsukushii",
+    "arti": "Cantik, indah"
+  },
+  {
+    "id": 158,
+    "kanji": "備",
+    "onyomi": "ビ",
+    "kunyomi": "そな.える, そな.わる",
+    "romaji": "bi; sonaeru",
+    "arti": "Persiapan"
+  },
+  {
+    "id": 159,
+    "kanji": "飛",
+    "onyomi": "ヒ",
+    "kunyomi": "と.ぶ, と.ばす",
+    "romaji": "hi; tobu",
+    "arti": "Terbang"
+  },
+  {
+    "id": 160,
+    "kanji": "非",
+    "onyomi": "ヒ",
+    "kunyomi": "あら.ず",
+    "romaji": "hi; arazu",
+    "arti": "Tidak, kesalahan"
+  },
+  {
+    "id": 161,
+    "kanji": "費",
+    "onyomi": "ヒ",
+    "kunyomi": "つい.やす,つい.える",
+    "romaji": "hi; tsuiyasu",
+    "arti": "Biaya, pengeluaran"
+  },
+  {
+    "id": 162,
+    "kanji": "被",
+    "onyomi": "ヒ",
+    "kunyomi": "こうむ.る, おお.う",
+    "romaji": "hi; koumuru",
+    "arti": "Menderita"
+  },
+  {
+    "id": 163,
+    "kanji": "皮",
+    "onyomi": "ヒ",
+    "kunyomi": "かわ",
+    "romaji": "hi; kawa",
+    "arti": "Kulit, kulit kayu"
+  },
+  {
+    "id": 164,
+    "kanji": "疲",
+    "onyomi": "ヒ",
+    "kunyomi": "つか.れる",
+    "romaji": "hi; tsukareru",
+    "arti": "Lelah"
+  },
+  {
+    "id": 165,
+    "kanji": "比",
+    "onyomi": "ヒ",
+    "kunyomi": "くら.べる",
+    "romaji": "hi; kuraberu",
+    "arti": "Membandingkan"
+  },
+  {
+    "id": 166,
+    "kanji": "批",
+    "onyomi": "ヒ",
+    "kunyomi": "",
+    "romaji": "hi",
+    "arti": "Kritik, kecaman"
+  },
+  {
+    "id": 167,
+    "kanji": "悲",
+    "onyomi": "ヒ",
+    "kunyomi": "かな.しい, かな.しむ",
+    "romaji": "hi; kanashii",
+    "arti": "Sedih, duka"
+  },
+  {
+    "id": 168,
+    "kanji": "彼",
+    "onyomi": "ヒ",
+    "kunyomi": "かれ, かの",
+    "romaji": "hi; kare",
+    "arti": "Dia (laki-laki)"
+  },
+  {
+    "id": 169,
+    "kanji": "否",
+    "onyomi": "ヒ",
+    "kunyomi": "いな, いや",
+    "romaji": "hi; ina",
+    "arti": "Negasi, tidak"
+  },
+  {
+    "id": 170,
+    "kanji": "番",
+    "onyomi": "バン",
+    "kunyomi": "",
+    "romaji": "ban",
+    "arti": "Nomor, giliran"
+  },
+  {
+    "id": 171,
+    "kanji": "晩",
+    "onyomi": "バン",
+    "kunyomi": "",
+    "romaji": "ban",
+    "arti": "Malam hari"
+  },
+  {
+    "id": 172,
+    "kanji": "販",
+    "onyomi": "ハン",
+    "kunyomi": "",
+    "romaji": "han",
+    "arti": "Pemasaran, penjualan"
+  },
+  {
+    "id": 173,
+    "kanji": "般",
+    "onyomi": "ハン",
+    "kunyomi": "",
+    "romaji": "han",
+    "arti": "Umum, universal"
+  },
+  {
+    "id": 174,
+    "kanji": "犯",
+    "onyomi": "ハン",
+    "kunyomi": "おか.す",
+    "romaji": "han; okasu",
+    "arti": "Kejahatan, melanggar"
+  },
+  {
+    "id": 175,
+    "kanji": "版",
+    "onyomi": "ハン",
+    "kunyomi": "",
+    "romaji": "han",
+    "arti": "Edisi, cetakan"
+  },
+  {
+    "id": 176,
+    "kanji": "板",
+    "onyomi": "ハン, バン",
+    "kunyomi": "いた",
+    "romaji": "han; ita",
+    "arti": "Papan"
+  },
+  {
+    "id": 177,
+    "kanji": "反",
+    "onyomi": "ハン, ホン",
+    "kunyomi": "そ.る, そ.らす",
+    "romaji": "han; soru",
+    "arti": "Anti, berlawanan"
+  },
+  {
+    "id": 178,
+    "kanji": "判",
+    "onyomi": "ハン, バン",
+    "kunyomi": "わか.る",
+    "romaji": "han; wakaru",
+    "arti": "Keputusan, menilai"
+  },
+  {
+    "id": 179,
+    "kanji": "抜",
+    "onyomi": "バツ",
+    "kunyomi": "ぬ.く, ぬ.ける",
+    "romaji": "batsu; nuku",
+    "arti": "Mencabut, mengeluarkan"
+  },
+  {
+    "id": 180,
+    "kanji": "髪",
+    "onyomi": "ハツ",
+    "kunyomi": "かみ",
+    "romaji": "hatsu; kami",
+    "arti": "Rambut"
+  },
+  {
+    "id": 181,
+    "kanji": "畑",
+    "onyomi": "",
+    "kunyomi": "はた, はたけ",
+    "romaji": "hata, hatake",
+    "arti": "Ladang, kebun"
+  },
+  {
+    "id": 182,
+    "kanji": "肌",
+    "onyomi": "キ",
+    "kunyomi": "はだ",
+    "romaji": "ki; hada",
+    "arti": "Kulit (tubuh), tekstur"
+  },
+  {
+    "id": 183,
+    "kanji": "箱",
+    "onyomi": "ソウ",
+    "kunyomi": "はこ",
+    "romaji": "sou; hako",
+    "arti": "Kotak, peti"
+  },
+  {
+    "id": 184,
+    "kanji": "麦",
+    "onyomi": "バク",
+    "kunyomi": "むぎ",
+    "romaji": "baku; mugi",
+    "arti": "Gandum, jelai"
+  },
+  {
+    "id": 185,
+    "kanji": "爆",
+    "onyomi": "バク",
+    "kunyomi": "は.ぜる",
+    "romaji": "baku; hazeru",
+    "arti": "Ledakan, bom"
+  },
+  {
+    "id": 186,
+    "kanji": "薄",
+    "onyomi": "ハク",
+    "kunyomi": "うす.い, うす.める",
+    "romaji": "haku; usui",
+    "arti": "Tipis, encer"
+  },
+  {
+    "id": 187,
+    "kanji": "泊",
+    "onyomi": "ハク",
+    "kunyomi": "と.まる, と.める",
+    "romaji": "haku; tomaru",
+    "arti": "Menginap"
+  },
+  {
+    "id": 188,
+    "kanji": "倍",
+    "onyomi": "バイ",
+    "kunyomi": "",
+    "romaji": "bai",
+    "arti": "Lipat ganda"
+  },
+  {
+    "id": 189,
+    "kanji": "配",
+    "onyomi": "ハイ",
+    "kunyomi": "くば.る",
+    "romaji": "hai; kubaru",
+    "arti": "Mendistribusikan"
+  },
+  {
+    "id": 190,
+    "kanji": "背",
+    "onyomi": "ハイ",
+    "kunyomi": "せ, せい, そむ.く",
+    "romaji": "hai; se",
+    "arti": "Punggung, tinggi"
+  },
+  {
+    "id": 191,
+    "kanji": "杯",
+    "onyomi": "ハイ",
+    "kunyomi": "さかずき",
+    "romaji": "hai; sakazuki",
+    "arti": "Gelas, cangkir"
+  },
+  {
+    "id": 192,
+    "kanji": "敗",
+    "onyomi": "ハイ",
+    "kunyomi": "やぶ.れる",
+    "romaji": "hai; yabureru",
+    "arti": "Kekalahan"
+  },
+  {
+    "id": 193,
+    "kanji": "拝",
+    "onyomi": "ハイ",
+    "kunyomi": "おが.む",
+    "romaji": "hai; ogamu",
+    "arti": "Menyembah, hormat"
+  },
+  {
+    "id": 194,
+    "kanji": "馬",
+    "onyomi": "バ",
+    "kunyomi": "うま, ま",
+    "romaji": "ba; uma",
+    "arti": "Kuda"
+  },
+  {
+    "id": 195,
+    "kanji": "破",
+    "onyomi": "ハ",
+    "kunyomi": "やぶ.る, やぶ.れる",
+    "romaji": "ha; yaburu",
+    "arti": "Robek, pecah"
+  },
+  {
+    "id": 196,
+    "kanji": "波",
+    "onyomi": "ハ",
+    "kunyomi": "なみ",
+    "romaji": "ha; nami",
+    "arti": "Gelombang, ombak"
+  },
+  {
+    "id": 197,
+    "kanji": "農",
+    "onyomi": "ノウ",
+    "kunyomi": "",
+    "romaji": "nou",
+    "arti": "Pertanian"
+  },
+  {
+    "id": 198,
+    "kanji": "脳",
+    "onyomi": "ノウ",
+    "kunyomi": "",
+    "romaji": "nou",
+    "arti": "Otak, memori"
+  },
+  {
+    "id": 199,
+    "kanji": "能",
+    "onyomi": "ノウ",
+    "kunyomi": "",
+    "romaji": "nou",
+    "arti": "Kemampuan, bakat"
+  },
+  {
+    "id": 200,
+    "kanji": "濃",
+    "onyomi": "ノウ",
+    "kunyomi": "こ.い",
+    "romaji": "nou; koi",
+    "arti": "Kental, gelap, pekat"
+  },
+  {
+    "id": 201,
+    "kanji": "悩",
+    "onyomi": "ノウ",
+    "kunyomi": "なや.む, なや.ます",
+    "romaji": "nou; nayamu",
+    "arti": "Khawatir"
+  },
+  {
+    "id": 202,
+    "kanji": "燃",
+    "onyomi": "ネン",
+    "kunyomi": "も.える, も.やす",
+    "romaji": "nen; moeru",
+    "arti": "Membakar"
+  },
+  {
+    "id": 203,
+    "kanji": "念",
+    "onyomi": "ネン",
+    "kunyomi": "",
+    "romaji": "nen",
+    "arti": "Pikiran, perasaan, keinginan"
+  },
+  {
+    "id": 204,
+    "kanji": "熱",
+    "onyomi": "ネツ",
+    "kunyomi": "あつ.い",
+    "romaji": "netsu; atsui",
+    "arti": "Panas, demam, gairah"
+  },
+  {
+    "id": 205,
+    "kanji": "猫",
+    "onyomi": "ビョウ",
+    "kunyomi": "ねこ",
+    "romaji": "byou; neko",
+    "arti": "Kucing"
+  },
+  {
+    "id": 206,
+    "kanji": "認",
+    "onyomi": "ニン",
+    "kunyomi": "みと.める, したた.める",
+    "romaji": "nin; mitomeru",
+    "arti": "Mengakui"
+  },
+  {
+    "id": 207,
+    "kanji": "任",
+    "onyomi": "ニン",
+    "kunyomi": "まか.せる, まか.す",
+    "romaji": "nin; makaseru",
+    "arti": "Tanggung jawab"
+  },
+  {
+    "id": 208,
+    "kanji": "乳",
+    "onyomi": "ニュウ",
+    "kunyomi": "ちち, ち",
+    "romaji": "nyuu; chichi",
+    "arti": "Susu, payudara"
+  },
+  {
+    "id": 209,
+    "kanji": "難",
+    "onyomi": "ナン",
+    "kunyomi": "むずか.しい, かた.い",
+    "romaji": "nan; muzukashii",
+    "arti": "Sulit"
+  },
+  {
+    "id": 210,
+    "kanji": "軟",
+    "onyomi": "ナン",
+    "kunyomi": "やわ.らか, やわ.らかい",
+    "romaji": "nan; yawarakai",
+    "arti": "Lunak"
+  },
+  {
+    "id": 211,
+    "kanji": "内",
+    "onyomi": "ナイ, ダイ",
+    "kunyomi": "うち",
+    "romaji": "nai; uchi",
+    "arti": "Dalam, interior"
+  },
+  {
+    "id": 212,
+    "kanji": "鈍",
+    "onyomi": "ドン",
+    "kunyomi": "にぶ.い, にぶ.る",
+    "romaji": "don; nibui",
+    "arti": "Tumpul, lambat"
+  },
+  {
+    "id": 213,
+    "kanji": "曇",
+    "onyomi": "ドン",
+    "kunyomi": "くも.る",
+    "romaji": "don; kumoru",
+    "arti": "Berawan, mendung"
+  },
+  {
+    "id": 214,
+    "kanji": "届",
+    "onyomi": "カイ",
+    "kunyomi": "とど.ける, とど.く",
+    "romaji": "kai; todokeru",
+    "arti": "Menyampaikan"
+  },
+  {
+    "id": 215,
+    "kanji": "突",
+    "onyomi": "トツ, カ",
+    "kunyomi": "つ.く",
+    "romaji": "totsu; tsuku",
+    "arti": "Menusuk, menabrak"
+  },
+  {
+    "id": 216,
+    "kanji": "独",
+    "onyomi": "ドク, トク",
+    "kunyomi": "ひと.り",
+    "romaji": "doku; hitori",
+    "arti": "Sendirian, Jerman"
+  },
+  {
+    "id": 217,
+    "kanji": "毒",
+    "onyomi": "ドク",
+    "kunyomi": "",
+    "romaji": "doku",
+    "arti": "Racun, bahaya"
+  },
+  {
+    "id": 218,
+    "kanji": "得",
+    "onyomi": "トク",
+    "kunyomi": "え.る, う.る",
+    "romaji": "toku; eru",
+    "arti": "Mendapatkan"
+  },
+  {
+    "id": 219,
+    "kanji": "銅",
+    "onyomi": "ドウ",
+    "kunyomi": "あかがね",
+    "romaji": "dou; akagane",
+    "arti": "Tembaga"
+  },
+  {
+    "id": 220,
+    "kanji": "童",
+    "onyomi": "ドウ",
+    "kunyomi": "わらべ",
+    "romaji": "dou; warabe",
+    "arti": "Anak-anak"
+  },
+  {
+    "id": 221,
+    "kanji": "導",
+    "onyomi": "ドウ",
+    "kunyomi": "みちび.く",
+    "romaji": "dou; michibiku",
+    "arti": "Membimbing"
+  },
+  {
+    "id": 222,
+    "kanji": "逃",
+    "onyomi": "トウ",
+    "kunyomi": "に.げる, に.がす, のが.れる",
+    "romaji": "tou; tigeru",
+    "arti": "Melarikan diri"
+  },
+  {
+    "id": 223,
+    "kanji": "到",
+    "onyomi": "トウ",
+    "kunyomi": "いた.る",
+    "romaji": "tou; itaru",
+    "arti": "Tiba, sampai"
+  },
+  {
+    "id": 224,
+    "kanji": "筒",
+    "onyomi": "トウ",
+    "kunyomi": "つつ",
+    "romaji": "tou; tsutsu",
+    "arti": "Tabung, silinder"
+  },
+  {
+    "id": 225,
+    "kanji": "等",
+    "onyomi": "トウ",
+    "kunyomi": "ひと.しい, など",
+    "romaji": "tou; hitoshii",
+    "arti": "Kelas, sama"
+  },
+  {
+    "id": 226,
+    "kanji": "当",
+    "onyomi": "トウ",
+    "kunyomi": "あ.たる, あ.てる",
+    "romaji": "tou; ataru",
+    "arti": "Tepat, mengenai"
+  },
+  {
+    "id": 227,
+    "kanji": "灯",
+    "onyomi": "トウ",
+    "kunyomi": "ひ, ほ-, ともしび",
+    "romaji": "tou; tomoshibi",
+    "arti": "Lampu, cahaya"
+  },
+  {
+    "id": 228,
+    "kanji": "湯",
+    "onyomi": "トウ",
+    "kunyomi": "ゆ",
+    "romaji": "tou; yu",
+    "arti": "Air panas, pemandian"
+  },
+  {
+    "id": 229,
+    "kanji": "盗",
+    "onyomi": "トウ",
+    "kunyomi": "ぬす.む",
+    "romaji": "tou; nusumu",
+    "arti": "Mencuri"
+  },
+  {
+    "id": 230,
+    "kanji": "投",
+    "onyomi": "トウ",
+    "kunyomi": "な.げる",
+    "romaji": "tou; nageru",
+    "arti": "Melempar, membuang"
+  },
+  {
+    "id": 231,
+    "kanji": "島",
+    "onyomi": "トウ",
+    "kunyomi": "しま",
+    "romaji": "tou; shima",
+    "arti": "Pulau"
+  },
+  {
+    "id": 232,
+    "kanji": "塔",
+    "onyomi": "トウ",
+    "kunyomi": "",
+    "romaji": "tou",
+    "arti": "Menara, pagoda"
+  },
+  {
+    "id": 233,
+    "kanji": "凍",
+    "onyomi": "トウ",
+    "kunyomi": "こお.る, こご.える",
+    "romaji": "tou; kooru",
+    "arti": "Membeku"
+  },
+  {
+    "id": 234,
+    "kanji": "党",
+    "onyomi": "トウ",
+    "kunyomi": "",
+    "romaji": "tou",
+    "arti": "Partai, kelompok"
+  },
+  {
+    "id": 235,
+    "kanji": "倒",
+    "onyomi": "トウ",
+    "kunyomi": "たお.れる, たお.す",
+    "romaji": "tou; taoreru",
+    "arti": "Tumbang, roboh"
+  },
+  {
+    "id": 236,
+    "kanji": "怒",
+    "onyomi": "ド",
+    "kunyomi": "いか.る, おこ.る",
+    "romaji": "do; okoru",
+    "arti": "Marah"
+  },
+  {
+    "id": 237,
+    "kanji": "努",
+    "onyomi": "ド",
+    "kunyomi": "つと.める",
+    "romaji": "do; tsutomeru",
+    "arti": "Berusaha keras"
+  },
+  {
+    "id": 238,
+    "kanji": "途",
+    "onyomi": "ト",
+    "kunyomi": "みち",
+    "romaji": "to; michi",
+    "arti": "Jalan, tengah-tengah"
+  },
+  {
+    "id": 239,
+    "kanji": "登",
+    "onyomi": "トウ, ト",
+    "kunyomi": "のぼ.る",
+    "romaji": "tou; noboru",
+    "arti": "Mendaki, memanjat"
+  },
+  {
+    "id": 240,
+    "kanji": "渡",
+    "onyomi": "ト",
+    "kunyomi": "わた.る, わた.す",
+    "romaji": "to; wataru",
+    "arti": "Menyeberang"
+  },
+  {
+    "id": 241,
+    "kanji": "徒",
+    "onyomi": "ト",
+    "kunyomi": "いたずら",
+    "romaji": "to; itazura",
+    "arti": "Pengikut, murid"
+  },
+  {
+    "id": 242,
+    "kanji": "塗",
+    "onyomi": "ト",
+    "kunyomi": "ぬ.る",
+    "romaji": "to; nuru",
+    "arti": "Mengecat, melumuri"
+  },
+  {
+    "id": 243,
+    "kanji": "殿",
+    "onyomi": "デン, テン",
+    "kunyomi": "との,どの",
+    "romaji": "den; tono",
+    "arti": "Istana, Tuan"
+  },
+  {
+    "id": 244,
+    "kanji": "伝",
+    "onyomi": "デン",
+    "kunyomi": "つた.わる, つた.える",
+    "romaji": "den; tsutaeru",
+    "arti": "Menyampaikan"
+  },
+  {
+    "id": 245,
+    "kanji": "点",
+    "onyomi": "テン",
+    "kunyomi": "つ.ける, つ.く",
+    "romaji": "ten; tsukeru",
+    "arti": "Titik, poin"
+  },
+  {
+    "id": 246,
+    "kanji": "展",
+    "onyomi": "テン",
+    "kunyomi": "",
+    "romaji": "ten",
+    "arti": "Pameran, membentangkan"
+  },
+  {
+    "id": 247,
+    "kanji": "鉄",
+    "onyomi": "テツ",
+    "kunyomi": "くろがね",
+    "romaji": "tetsu; kurogane",
+    "arti": "Besi"
+  },
+  {
+    "id": 248,
+    "kanji": "適",
+    "onyomi": "テキ",
+    "kunyomi": "かな.う",
+    "romaji": "teki; kanau",
+    "arti": "Cocok, sesuai"
+  },
+  {
+    "id": 249,
+    "kanji": "的",
+    "onyomi": "テキ",
+    "kunyomi": "まと",
+    "romaji": "teki; mato",
+    "arti": "Sasaran, target"
+  },
+  {
+    "id": 250,
+    "kanji": "的な",
+    "onyomi": "テキ",
+    "kunyomi": "まと",
+    "romaji": "teki; mato",
+    "arti": "Bersifat, target"
+  },
+  {
+    "id": 251,
+    "kanji": "滴",
+    "onyomi": "テキ",
+    "kunyomi": "しずく, したた.る",
+    "romaji": "teki; shizuku",
+    "arti": "Tetesan"
+  },
+  {
+    "id": 252,
+    "kanji": "泥",
+    "onyomi": "デイ",
+    "kunyomi": "どろ",
+    "romaji": "dei; doro",
+    "arti": "Lumpur"
+  },
+  {
+    "id": 253,
+    "kanji": "程",
+    "onyomi": "テイ",
+    "kunyomi": "ほど",
+    "romaji": "tei; hodo",
+    "arti": "Tingkat, batasan"
+  },
+  {
+    "id": 254,
+    "kanji": "庭",
+    "onyomi": "テイ",
+    "kunyomi": "にわ",
+    "romaji": "tei; niwa",
+    "arti": "Halaman, taman"
+  },
+  {
+    "id": 255,
+    "kanji": "底",
+    "onyomi": "テイ",
+    "kunyomi": "そこ",
+    "romaji": "tei; soko",
+    "arti": "Dasar, bagian bawah"
+  },
+  {
+    "id": 256,
+    "kanji": "定",
+    "onyomi": "テイ, ジョウ",
+    "kunyomi": "さだ.める, さだ.まる",
+    "romaji": "tei; sadameru",
+    "arti": "Menentukan"
+  },
+  {
+    "id": 257,
+    "kanji": "停",
+    "onyomi": "テイ",
+    "kunyomi": "と.まる, と.める",
+    "romaji": "tei; tomaru",
+    "arti": "Berhenti"
+  },
+  {
+    "id": 258,
+    "kanji": "痛",
+    "onyomi": "ツウ",
+    "kunyomi": "いた.イ, いた.む",
+    "romaji": "tsuu; itai",
+    "arti": "Sakit, nyeri"
+  },
+  {
+    "id": 259,
+    "kanji": "追",
+    "onyomi": "ツイ",
+    "kunyomi": "お.う",
+    "romaji": "tsui; ou",
+    "arti": "Mengejar, mengusir"
+  },
+  {
+    "id": 260,
+    "kanji": "賃",
+    "onyomi": "チン",
+    "kunyomi": "",
+    "romaji": "chin",
+    "arti": "Biaya, sewa, upah"
+  },
+  {
+    "id": 261,
+    "kanji": "珍",
+    "onyomi": "チン",
+    "kunyomi": "めずら.しい",
+    "romaji": "chin; mezurashii",
+    "arti": "Langka, aneh"
+  },
+  {
+    "id": 262,
+    "kanji": "沈",
+    "onyomi": "チン",
+    "kunyomi": "しず.む, しず.める",
+    "romaji": "chin; shizumu",
+    "arti": "Tenggelam"
+  },
+  {
+    "id": 263,
+    "kanji": "直",
+    "onyomi": "チョク, ジキ",
+    "kunyomi": "ただ.ちに, なお.す",
+    "romaji": "choku; naosu",
+    "arti": "Langsung"
+  },
+  {
+    "id": 264,
+    "kanji": "頂",
+    "onyomi": "チョウ",
+    "kunyomi": "いただ.く, いただき",
+    "romaji": "chou; itadaki",
+    "arti": "Puncak"
+  },
+  {
+    "id": 265,
+    "kanji": "超",
+    "onyomi": "チョウ",
+    "kunyomi": "こ.える, こ.す",
+    "romaji": "chou; koeru",
+    "arti": "Melampaui"
+  },
+  {
+    "id": 266,
+    "kanji": "調",
+    "onyomi": "チョウ",
+    "kunyomi": "しら.べる, ととの.う",
+    "romaji": "chou; shiraberu",
+    "arti": "Menyelidiki"
+  },
+  {
+    "id": 267,
+    "kanji": "張",
+    "onyomi": "チョウ",
+    "kunyomi": "は.る",
+    "romaji": "chou; haru",
+    "arti": "Meregangkan, memasang"
+  },
+  {
+    "id": 268,
+    "kanji": "庁",
+    "onyomi": "チョウ",
+    "kunyomi": "",
+    "romaji": "chou",
+    "arti": "Kantor pemerintah, agensi"
+  },
+  {
+    "id": 269,
+    "kanji": "兆",
+    "onyomi": "チョウ",
+    "kunyomi": "きざ.し, きざ.す",
+    "romaji": "chou; kizashi",
+    "arti": "Triliun"
+  },
+  {
+    "id": 270,
+    "kanji": "貯",
+    "onyomi": "チョ",
+    "kunyomi": "た.める, たくわ.える",
+    "romaji": "cho; tameru",
+    "arti": "Tabungan"
+  },
+  {
+    "id": 271,
+    "kanji": "著",
+    "onyomi": "チョ",
+    "kunyomi": "あらわ.す, いちじる.しい",
+    "romaji": "cho; arawasu",
+    "arti": "Menulis"
+  },
+  {
+    "id": 272,
+    "kanji": "駐",
+    "onyomi": "チュウ",
+    "kunyomi": "",
+    "romaji": "chuu",
+    "arti": "Parkir, menetap"
+  },
+  {
+    "id": 273,
+    "kanji": "虫",
+    "onyomi": "チュウ",
+    "kunyomi": "むし",
+    "romaji": "chuu; mushi",
+    "arti": "Serangga, ulat"
+  },
+  {
+    "id": 274,
+    "kanji": "柱",
+    "onyomi": "チュウ",
+    "kunyomi": "はしら",
+    "romaji": "chuu; hashira",
+    "arti": "Pilar, tiang"
+  },
+  {
+    "id": 275,
+    "kanji": "宙",
+    "onyomi": "チュウ",
+    "kunyomi": "",
+    "romaji": "chuu",
+    "arti": "Luar angkasa, udara"
+  },
+  {
+    "id": 276,
+    "kanji": "仲",
+    "onyomi": "チュウ",
+    "kunyomi": "なか",
+    "romaji": "chuu; naka",
+    "arti": "Hubungan, perantara"
+  },
+  {
+    "id": 277,
+    "kanji": "竹",
+    "onyomi": "チク",
+    "kunyomi": "たけ",
+    "romaji": "chiku; take",
+    "arti": "Bambu"
+  },
+  {
+    "id": 278,
+    "kanji": "畜",
+    "onyomi": "チク",
+    "kunyomi": "",
+    "romaji": "chiku",
+    "arti": "Ternak"
+  },
+  {
+    "id": 279,
+    "kanji": "築",
+    "onyomi": "チク",
+    "kunyomi": "きず.く",
+    "romaji": "chiku; kizuku",
+    "arti": "Membangun"
+  },
+  {
+    "id": 280,
+    "kanji": "遅",
+    "onyomi": "チ",
+    "kunyomi": "おく.れる, おそ.い",
+    "romaji": "chi; osoi",
+    "arti": "Lambat"
+  },
+  {
+    "id": 281,
+    "kanji": "置",
+    "onyomi": "チ",
+    "kunyomi": "お.く",
+    "romaji": "chi; oku",
+    "arti": "Meletakkan, menaruh"
+  },
+  {
+    "id": 282,
+    "kanji": "恥",
+    "onyomi": "チ",
+    "kunyomi": "はじ, はず.かしい",
+    "romaji": "chi; haji",
+    "arti": "Malu, rasa malu"
+  },
+  {
+    "id": 283,
+    "kanji": "値",
+    "onyomi": "チ",
+    "kunyomi": "あたい, ね",
+    "romaji": "chi; atai",
+    "arti": "Harga, nilai"
+  },
+  {
+    "id": 284,
+    "kanji": "談",
+    "onyomi": "ダン",
+    "kunyomi": "",
+    "romaji": "dan",
+    "arti": "Pembicaraan, diskusi"
+  },
+  {
+    "id": 285,
+    "kanji": "段",
+    "onyomi": "ダン",
+    "kunyomi": "",
+    "romaji": "dan",
+    "arti": "Tangga, tingkatan, langkah"
+  },
+  {
+    "id": 286,
+    "kanji": "暖",
+    "onyomi": "ダン",
+    "kunyomi": "あたた.かい",
+    "romaji": "dan; atatakai",
+    "arti": "Hangat (cuaca)"
+  },
+  {
+    "id": 287,
+    "kanji": "断",
+    "onyomi": "ダン",
+    "kunyomi": "た.つ, ことわ.る",
+    "romaji": "dan; kotowaru",
+    "arti": "Memutus"
+  },
+  {
+    "id": 288,
+    "kanji": "団",
+    "onyomi": "ダン, トン",
+    "kunyomi": "",
+    "romaji": "dan, ton",
+    "arti": "Kelompok, organisasi"
+  },
+  {
+    "id": 289,
+    "kanji": "炭",
+    "onyomi": "タン",
+    "kunyomi": "すみ",
+    "romaji": "tan; sumi",
+    "arti": "Arang, karbon"
+  },
+  {
+    "id": 290,
+    "kanji": "探",
+    "onyomi": "タン",
+    "kunyomi": "さが.す, さぐ.る",
+    "romaji": "tan; sagasu",
+    "arti": "Mencari"
+  },
+  {
+    "id": 291,
+    "kanji": "担",
+    "onyomi": "タン",
+    "kunyomi": "かつ.ぐ,にな.う",
+    "romaji": "tan; ninau",
+    "arti": "Memikul"
+  },
+  {
+    "id": 292,
+    "kanji": "単",
+    "onyomi": "タン",
+    "kunyomi": "",
+    "romaji": "tan",
+    "arti": "Tunggal, sederhana"
+  },
+  {
+    "id": 293,
+    "kanji": "谷",
+    "onyomi": "コク",
+    "kunyomi": "たに",
+    "romaji": "koku; tani",
+    "arti": "Lembah"
+  },
+  {
+    "id": 294,
+    "kanji": "達",
+    "onyomi": "タツ",
+    "kunyomi": "たち",
+    "romaji": "tatsu; tachi",
+    "arti": "Mencapai, jamak"
+  },
+  {
+    "id": 295,
+    "kanji": "濯",
+    "onyomi": "タク",
+    "kunyomi": "すす.ぐ, ゆす.ぐ",
+    "romaji": "taku; susugu",
+    "arti": "Mencuci"
+  },
+  {
+    "id": 296,
+    "kanji": "宅",
+    "onyomi": "タク",
+    "kunyomi": "",
+    "romaji": "taku",
+    "arti": "Rumah, kediaman"
+  },
+  {
+    "id": 297,
+    "kanji": "第",
+    "onyomi": "ダイ",
+    "kunyomi": "",
+    "romaji": "dai",
+    "arti": "Nomor urut, ke-"
+  },
+  {
+    "id": 298,
+    "kanji": "退",
+    "onyomi": "タイ",
+    "kunyomi": "しりぞ.く, しりぞ.ける",
+    "romaji": "tai; shirizoku",
+    "arti": "Mundur"
+  },
+  {
+    "id": 299,
+    "kanji": "袋",
+    "onyomi": "タイ",
+    "kunyomi": "ふくろ",
+    "romaji": "tai; fukuro",
+    "arti": "Tas, kantong"
+  },
+  {
+    "id": 300,
+    "kanji": "替",
+    "onyomi": "タイ",
+    "kunyomi": "か.える, か.わる",
+    "romaji": "tai; kaeru",
+    "arti": "Mengganti"
+  },
+  {
+    "id": 301,
+    "kanji": "帯",
+    "onyomi": "タイ",
+    "kunyomi": "おび.る, おび",
+    "romaji": "tai; obi",
+    "arti": "Sabuk, daerah"
+  },
+  {
+    "id": 302,
+    "kanji": "対",
+    "onyomi": "タイ, ツイ",
+    "kunyomi": "あいて, そろい",
+    "romaji": "tai, tsui; aite",
+    "arti": "Berlawanan"
+  },
+  {
+    "id": 303,
+    "kanji": "打",
+    "onyomi": "ダ, ダス",
+    "kunyomi": "う.つ, う.ち-, ぶ.つ",
+    "romaji": "da; utsu",
+    "arti": "Memukul"
+  },
+  {
+    "id": 304,
+    "kanji": "他",
+    "onyomi": "タ",
+    "kunyomi": "ほか",
+    "romaji": "ta; hoka",
+    "arti": "Lainnya"
+  },
+  {
+    "id": 305,
+    "kanji": "損",
+    "onyomi": "ソン",
+    "kunyomi": "そこ.なう, そこ.ねる",
+    "romaji": "son; sokonau",
+    "arti": "Rugi"
+  },
+  {
+    "id": 306,
+    "kanji": "尊",
+    "onyomi": "ソン",
+    "kunyomi": "tatto.い, touto.い",
+    "romaji": "son; tattoi",
+    "arti": "Hormat"
+  },
+  {
+    "id": 307,
+    "kanji": "孫",
+    "onyomi": "ソン",
+    "kunyomi": "まご",
+    "romaji": "son; mago",
+    "arti": "Cucu"
+  },
+  {
+    "id": 308,
+    "kanji": "存",
+    "onyomi": "ソン, ゾン",
+    "kunyomi": "",
+    "romaji": "son, zon",
+    "arti": "Ada, eksis"
+  },
+  {
+    "id": 309,
+    "kanji": "卒",
+    "onyomi": "ソツ, シュツ",
+    "kunyomi": "そっ.する, おわ.る",
+    "romaji": "sotsu; sossuru",
+    "arti": "Lulus"
+  },
+  {
+    "id": 310,
+    "kanji": "続",
+    "onyomi": "ゾク, ショク",
+    "kunyomi": "つづ.ける, つづ.く",
+    "romaji": "zoku; tsuduku",
+    "arti": "Lanjut"
+  },
+  {
+    "id": 311,
+    "kanji": "速",
+    "onyomi": "ソク",
+    "kunyomi": "はや.い, はや.める",
+    "romaji": "soku; hayai",
+    "arti": "Cepat"
+  },
+  {
+    "id": 312,
+    "kanji": "測",
+    "onyomi": "ソク",
+    "kunyomi": "はか.る",
+    "romaji": "soku; hakaru",
+    "arti": "Mengukur"
+  },
+  {
+    "id": 313,
+    "kanji": "束",
+    "onyomi": "ソク",
+    "kunyomi": "たば, たば.ねる",
+    "romaji": "soku; taba",
+    "arti": "Ikat, berkas"
+  },
+  {
+    "id": 314,
+    "kanji": "息",
+    "onyomi": "ソク",
+    "kunyomi": "いき",
+    "romaji": "soku; iki",
+    "arti": "Napas, putra"
+  },
+  {
+    "id": 315,
+    "kanji": "則",
+    "onyomi": "ソク",
+    "kunyomi": "のっと.る",
+    "romaji": "soku; nottoru",
+    "arti": "Aturan, hukum"
+  },
+  {
+    "id": 316,
+    "kanji": "側",
+    "onyomi": "ソク",
+    "kunyomi": "かわ, そば",
+    "romaji": "soku; kawa",
+    "arti": "Sisi, sebelah"
+  },
+  {
+    "id": 317,
+    "kanji": "造",
+    "onyomi": "ゾウ",
+    "kunyomi": "つく.る",
+    "romaji": "zou; tsukuru",
+    "arti": "Membuat, struktur"
+  },
+  {
+    "id": 318,
+    "kanji": "贈",
+    "onyomi": "ゾウ, ソウ",
+    "kunyomi": "おく.る",
+    "romaji": "zou; okuru",
+    "arti": "Memberi hadiah"
+  },
+  {
+    "id": 319,
+    "kanji": "蔵",
+    "onyomi": "ゾウ, ソウ",
+    "kunyomi": "くら, おさ.める",
+    "romaji": "zou; kura",
+    "arti": "Gudang"
+  },
+  {
+    "id": 320,
+    "kanji": "臓",
+    "onyomi": "ゾウ",
+    "kunyomi": "はらわた",
+    "romaji": "zou; harawata",
+    "arti": "Organ dalam"
+  },
+  {
+    "id": 321,
+    "kanji": "憎",
+    "onyomi": "ゾウ",
+    "kunyomi": "にく.む, にく.い",
+    "romaji": "zou; nikumu",
+    "arti": "Benci"
+  },
+  {
+    "id": 322,
+    "kanji": "増",
+    "onyomi": "ゾウ",
+    "kunyomi": "ま.す, ふ.える, ふ.やす",
+    "romaji": "zou; masu",
+    "arti": "Bertambah"
+  },
+  {
+    "id": 323,
+    "kanji": "像",
+    "onyomi": "ゾウ",
+    "kunyomi": "",
+    "romaji": "zou",
+    "arti": "Patung, gambar, citra"
+  },
+  {
+    "id": 324,
+    "kanji": "装",
+    "onyomi": "ソウ, ショウ",
+    "kunyomi": "よそお.う, よそお.い",
+    "romaji": "sou; yosoou",
+    "arti": "Pakaian"
+  },
+  {
+    "id": 325,
+    "kanji": "草",
+    "onyomi": "ソウ",
+    "kunyomi": "くさ",
+    "romaji": "sou; kusa",
+    "arti": "Rumput, draf"
+  },
+  {
+    "id": 326,
+    "kanji": "総",
+    "onyomi": "ソウ",
+    "kunyomi": "す.べて, すべ.て",
+    "romaji": "sou; subete",
+    "arti": "Total"
+  },
+  {
+    "id": 327,
+    "kanji": "窓",
+    "onyomi": "ソウ",
+    "kunyomi": "まど",
+    "romaji": "sou; mado",
+    "arti": "Jendela"
+  },
+  {
+    "id": 328,
+    "kanji": "相",
+    "onyomi": "ソウ, ショウ",
+    "kunyomi": "あい-",
+    "romaji": "sou; ai",
+    "arti": "Saling, menteri"
+  },
+  {
+    "id": 329,
+    "kanji": "争",
+    "onyomi": "ソウ",
+    "kunyomi": "あらそ.う, いか.でか",
+    "romaji": "sou; arasou",
+    "arti": "Konflik"
+  },
+  {
+    "id": 330,
+    "kanji": "燥",
+    "onyomi": "ソウ",
+    "kunyomi": "はしゃ.ぐ",
+    "romaji": "sou; hashyagu",
+    "arti": "Kering"
+  },
+  {
+    "id": 331,
+    "kanji": "操",
+    "onyomi": "ソウ, サン",
+    "kunyomi": "みさお, あやつ.る",
+    "romaji": "sou; ayatsuru",
+    "arti": "Mengoperasikan"
+  },
+  {
+    "id": 332,
+    "kanji": "早",
+    "onyomi": "ソウ, サッ",
+    "kunyomi": "はや.い, はや.まる",
+    "romaji": "sou; hayai",
+    "arti": "Cepat"
+  },
+  {
+    "id": 333,
+    "kanji": "掃",
+    "onyomi": "ソウ",
+    "kunyomi": "は.く",
+    "romaji": "sou; haku",
+    "arti": "Menyapu, membersihkan"
+  },
+  {
+    "id": 334,
+    "kanji": "想",
+    "onyomi": "ソウ, ソ",
+    "kunyomi": "おも.う",
+    "romaji": "sou; omou",
+    "arti": "Konsep, ide"
+  },
+  {
+    "id": 335,
+    "kanji": "層",
+    "onyomi": "ソウ",
+    "kunyomi": "",
+    "romaji": "sou",
+    "arti": "Lapisan, strata"
+  },
+  {
+    "id": 336,
+    "kanji": "捜",
+    "onyomi": "ソウ",
+    "kunyomi": "さが.す",
+    "romaji": "sou; sagasu",
+    "arti": "Mencari (barang hilang/tersangka)"
+  },
+  {
+    "id": 337,
+    "kanji": "双",
+    "onyomi": "ソウ",
+    "kunyomi": "ふた, なら.ぶ",
+    "romaji": "sou; futa",
+    "arti": "Sepasang"
+  },
+  {
+    "id": 338,
+    "kanji": "組",
+    "onyomi": "ソ",
+    "kunyomi": "く.む, くみ",
+    "romaji": "so; kumu",
+    "arti": "Kelompok, menyusun"
+  },
+  {
+    "id": 339,
+    "kanji": "祖",
+    "onyomi": "ソ",
+    "kunyomi": "",
+    "romaji": "so",
+    "arti": "Leluhur, nenek moyang"
+  },
+  {
+    "id": 340,
+    "kanji": "全",
+    "onyomi": "ゼン",
+    "kunyomi": "まった.く, すべ.て",
+    "romaji": "zen; subete",
+    "arti": "Seluruh"
+  },
+  {
+    "id": 341,
+    "kanji": "然",
+    "onyomi": "ゼン, ネン",
+    "kunyomi": "しか.り, しか.も",
+    "romaji": "zen; shikari",
+    "arti": "Kondisi"
+  },
+  {
+    "id": 342,
+    "kanji": "善",
+    "onyomi": "ゼン",
+    "kunyomi": "よ.い",
+    "romaji": "zen; yoi",
+    "arti": "Kebaikan, kebijakan"
+  },
+  {
+    "id": 343,
+    "kanji": "選",
+    "onyomi": "セン",
+    "kunyomi": "えら.ぶ",
+    "romaji": "sen; erabu",
+    "arti": "Memilih"
+  },
+  {
+    "id": 344,
+    "kanji": "船",
+    "onyomi": "セン",
+    "kunyomi": "ふね, ふな-",
+    "romaji": "sen; fune",
+    "arti": "Kapal"
+  },
+  {
+    "id": 345,
+    "kanji": "線",
+    "onyomi": "セン",
+    "kunyomi": "",
+    "romaji": "sen",
+    "arti": "Garis, jalur"
+  },
+  {
+    "id": 346,
+    "kanji": "浅",
+    "onyomi": "セン",
+    "kunyomi": "あさ.い",
+    "romaji": "sen; asai",
+    "arti": "Dangkal"
+  },
+  {
+    "id": 347,
+    "kanji": "泉",
+    "onyomi": "セン",
+    "kunyomi": "いずみ",
+    "romaji": "sen; izumi",
+    "arti": "Mata air, sumber"
+  },
+  {
+    "id": 348,
+    "kanji": "戦",
+    "onyomi": "セン",
+    "kunyomi": "いくさ, たたたか.う",
+    "romaji": "sen; tatakau",
+    "arti": "Perang"
+  },
+  {
+    "id": 349,
+    "kanji": "専",
+    "onyomi": "セン",
+    "kunyomi": "もっぱ.ら",
+    "romaji": "sen; moppara",
+    "arti": "Khusus"
+  },
+  {
+    "id": 350,
+    "kanji": "占",
+    "onyomi": "セン",
+    "kunyomi": "し.める, うらな.う",
+    "romaji": "sen; uranau",
+    "arti": "Meramal"
+  },
+  {
+    "id": 351,
+    "kanji": "絶",
+    "onyomi": "ゼツ",
+    "kunyomi": "た.える, た.つ",
+    "romaji": "zetsu; taeru",
+    "arti": "Putus, punah"
+  },
+  {
+    "id": 352,
+    "kanji": "雪",
+    "onyomi": "セツ",
+    "kunyomi": "ゆき",
+    "romaji": "setsu; yuki",
+    "arti": "Salju"
+  },
+  {
+    "id": 353,
+    "kanji": "節",
+    "onyomi": "セツ, セチ",
+    "kunyomi": "ふし",
+    "romaji": "setsu; fushi",
+    "arti": "Simpul, sendi"
+  },
+  {
+    "id": 354,
+    "kanji": "設",
+    "onyomi": "セツ",
+    "kunyomi": "もう.ける",
+    "romaji": "setsu; moukeru",
+    "arti": "Membangun"
+  },
+  {
+    "id": 355,
+    "kanji": "折",
+    "onyomi": "セツ",
+    "kunyomi": "お.る, お.り",
+    "romaji": "setsu; oru",
+    "arti": "Melipat"
+  },
+  {
+    "id": 356,
+    "kanji": "接",
+    "onyomi": "セツ",
+    "kunyomi": "つ.ぐ",
+    "romaji": "setsu; tsugu",
+    "arti": "Menghubungkan"
+  },
+  {
+    "id": 357,
+    "kanji": "責",
+    "onyomi": "セキ",
+    "kunyomi": "せ.める",
+    "romaji": "seki; semeru",
+    "arti": "Tanggung jawab"
+  },
+  {
+    "id": 358,
+    "kanji": "績",
+    "onyomi": "セキ",
+    "kunyomi": "",
+    "romaji": "seki",
+    "arti": "Prestasi, hasil kerja"
+  },
+  {
+    "id": 359,
+    "kanji": "積",
+    "onyomi": "セキ",
+    "kunyomi": "つ.む, つ.もる",
+    "romaji": "seki; tsumu",
+    "arti": "Menumpuk"
+  },
+  {
+    "id": 360,
+    "kanji": "石",
+    "onyomi": "セキ, シャク",
+    "kunyomi": "いし",
+    "romaji": "seki; ishi",
+    "arti": "Batu"
+  },
+  {
+    "id": 361,
+    "kanji": "昔",
+    "onyomi": "セキ, シャク",
+    "kunyomi": "むかし",
+    "romaji": "seki; mukashi",
+    "arti": "Masa lalu"
+  },
+  {
+    "id": 362,
+    "kanji": "席",
+    "onyomi": "セキ",
+    "kunyomi": "",
+    "romaji": "seki",
+    "arti": "Kursi, tempat duduk"
+  },
+  {
+    "id": 363,
+    "kanji": "税",
+    "onyomi": "ゼイ",
+    "kunyomi": "",
+    "romaji": "zei",
+    "arti": "Pajak"
+  },
+  {
+    "id": 364,
+    "kanji": "静",
+    "onyomi": "セイ, ジョウ",
+    "kunyomi": "しず.か",
+    "romaji": "sei; shizuka",
+    "arti": "Tenang"
+  },
+  {
+    "id": 365,
+    "kanji": "製",
+    "onyomi": "セイ",
+    "kunyomi": "",
+    "romaji": "sei",
+    "arti": "Buatan, manufaktur"
+  },
+  {
+    "id": 366,
+    "kanji": "精",
+    "onyomi": "セイ, ショウ",
+    "kunyomi": "",
+    "romaji": "sei",
+    "arti": "Semangat, energi"
+  },
+  {
+    "id": 367,
+    "kanji": "清",
+    "onyomi": "セイ, ショウ",
+    "kunyomi": "きよ.い",
+    "romaji": "sei; kiyoi",
+    "arti": "Murni"
+  },
+  {
+    "id": 368,
+    "kanji": "晴",
+    "onyomi": "セイ",
+    "kunyomi": "は.れる, は.れ",
+    "romaji": "sei; hareru",
+    "arti": "Cerah"
+  },
+  {
+    "id": 369,
+    "kanji": "星",
+    "onyomi": "セイ, ショウ",
+    "kunyomi": "ほし",
+    "romaji": "sei; hoshi",
+    "arti": "Bintang"
+  },
+  {
+    "id": 370,
+    "kanji": "整",
+    "onyomi": "セイ",
+    "kunyomi": "ととの.える",
+    "romaji": "sei; totonoeru",
+    "arti": "Mengatur"
+  },
+  {
+    "id": 371,
+    "kanji": "政",
+    "onyomi": "セイ, ショウ",
+    "kunyomi": "まつりごと",
+    "romaji": "sei; matsurigoto",
+    "arti": "Pemerintah"
+  },
+  {
+    "id": 372,
+    "kanji": "成",
+    "onyomi": "セイ, ジョウ",
+    "kunyomi": "なる, な.ス",
+    "romaji": "sei; naru",
+    "arti": "Menjadi"
+  },
+  {
+    "id": 373,
+    "kanji": "性",
+    "onyomi": "セイ, ショウ",
+    "kunyomi": "さが",
+    "romaji": "sei; saga",
+    "arti": "Sifat, jenis"
+  },
+  {
+    "id": 374,
+    "kanji": "姓",
+    "onyomi": "セイ, ショウ",
+    "kunyomi": "",
+    "romaji": "sei",
+    "arti": "Nama keluarga, marga"
+  },
+  {
+    "id": 375,
+    "kanji": "勢",
+    "onyomi": "セイ",
+    "kunyomi": "いきお.い",
+    "romaji": "sei; ikioi",
+    "arti": "Kekuatan, energi"
+  },
+  {
+    "id": 376,
+    "kanji": "制",
+    "onyomi": "セイ",
+    "kunyomi": "",
+    "romaji": "sei",
+    "arti": "Sistem, kendali, peraturan"
+  },
+  {
+    "id": 377,
+    "kanji": "数",
+    "onyomi": "スウ",
+    "kunyomi": "かず, かぞ.える",
+    "romaji": "su; kazu",
+    "arti": "Angka"
+  },
+  {
+    "id": 378,
+    "kanji": "吹",
+    "onyomi": "スイ",
+    "kunyomi": "ふ.く",
+    "romaji": "sui; fuku",
+    "arti": "Meniup"
+  },
+  {
+    "id": 379,
+    "kanji": "震",
+    "onyomi": "シン",
+    "kunyomi": "ふる.える, ふる.わす",
+    "romaji": "shin; furueru",
+    "arti": "Gemetar"
+  },
+  {
+    "id": 380,
+    "kanji": "針",
+    "onyomi": "シン",
+    "kunyomi": "はり",
+    "romaji": "shin; hari",
+    "arti": "Jarum"
+  },
+  {
+    "id": 381,
+    "kanji": "辛",
+    "onyomi": "シン",
+    "kunyomi": "から.い, つら.い",
+    "romaji": "shin; karai",
+    "arti": "Pedas"
+  },
+  {
+    "id": 382,
+    "kanji": "身",
+    "onyomi": "シン",
+    "kunyomi": "み",
+    "romaji": "shin; mi",
+    "arti": "Tubuh, diri"
+  },
+  {
+    "id": 383,
+    "kanji": "臣",
+    "onyomi": "シン, ジン",
+    "kunyomi": "",
+    "romaji": "shin",
+    "arti": "Pelayan, subjek"
+  },
+  {
+    "id": 384,
+    "kanji": "神",
+    "onyomi": "シン, ジン",
+    "kunyomi": "かみ",
+    "romaji": "shin; kami",
+    "arti": "Dewa, tuhan"
+  },
+  {
+    "id": 385,
+    "kanji": "申",
+    "onyomi": "シン",
+    "kunyomi": "もう.す",
+    "romaji": "shin; mousu",
+    "arti": "Mengatakan"
+  },
+  {
+    "id": 386,
+    "kanji": "深",
+    "onyomi": "シン",
+    "kunyomi": "ふか.い",
+    "romaji": "shin; fukai",
+    "arti": "Dalam"
+  },
+  {
+    "id": 387,
+    "kanji": "寝",
+    "onyomi": "シン",
+    "kunyomi": "ね.る, ね.かす",
+    "romaji": "shin; neru",
+    "arti": "Tidur"
+  },
+  {
+    "id": 388,
+    "kanji": "信",
+    "onyomi": "シン",
+    "kunyomi": "",
+    "romaji": "shin",
+    "arti": "Percaya, pesan"
+  },
+  {
+    "id": 389,
+    "kanji": "伸",
+    "onyomi": "シン",
+    "kunyomi": "の.びる, の.べる",
+    "romaji": "shin; nobiru",
+    "arti": "Meregang"
+  },
+  {
+    "id": 390,
+    "kanji": "触",
+    "onyomi": "ショク",
+    "kunyomi": "ふ.れる, さわ.る",
+    "romaji": "shoku; fureru",
+    "arti": "Menyentuh"
+  },
+  {
+    "id": 391,
+    "kanji": "職",
+    "onyomi": "ショク",
+    "kunyomi": "",
+    "romaji": "shoku",
+    "arti": "Pekerjaan, jabatan"
+  },
+  {
+    "id": 392,
+    "kanji": "植",
+    "onyomi": "ショク",
+    "kunyomi": "う.える, う.わる",
+    "romaji": "shoku; uueru",
+    "arti": "Menanam"
+  },
+  {
+    "id": 393,
+    "kanji": "蒸",
+    "onyomi": "ジョウ",
+    "kunyomi": "む.す, む.れる",
+    "romaji": "jou; musu",
+    "arti": "Mengukus"
+  },
+  {
+    "id": 394,
+    "kanji": "畳",
+    "onyomi": "ジョウ",
+    "kunyomi": "たた.む, たたみ",
+    "romaji": "jou; tatami",
+    "arti": "Melipat"
+  },
+  {
+    "id": 395,
+    "kanji": "状",
+    "onyomi": "ジョウ",
+    "kunyomi": "",
+    "romaji": "jou",
+    "arti": "Kondisi, bentuk, surat"
+  },
+  {
+    "id": 396,
+    "kanji": "条",
+    "onyomi": "ジョウ",
+    "kunyomi": "",
+    "romaji": "jou",
+    "arti": "Pasal, klausul, garis"
+  },
+  {
+    "id": 397,
+    "kanji": "情",
+    "onyomi": "ジョウ, セイ",
+    "kunyomi": "なさ.け",
+    "romaji": "jou; nasake",
+    "arti": "Perasaan"
+  },
+  {
+    "id": 398,
+    "kanji": "常",
+    "onyomi": "ジョウ",
+    "kunyomi": "つね, とこ-",
+    "romaji": "jou; tsune",
+    "arti": "Biasa, normal"
+  },
+  {
+    "id": 399,
+    "kanji": "城",
+    "onyomi": "ジョウ",
+    "kunyomi": "しろ",
+    "romaji": "jou; shiro",
+    "arti": "Kastel, istana"
+  },
+  {
+    "id": 400,
+    "kanji": "賞",
+    "onyomi": "ショウ",
+    "kunyomi": "",
+    "romaji": "shou",
+    "arti": "Hadiah, penghargaan"
+  },
+  {
+    "id": 401,
+    "kanji": "象",
+    "onyomi": "ショウ, ゾウ",
+    "kunyomi": "かたど.る",
+    "romaji": "zou; katadoru",
+    "arti": "Gajah"
+  },
+  {
+    "id": 402,
+    "kanji": "紹",
+    "onyomi": "ショウ",
+    "kunyomi": "",
+    "romaji": "shou",
+    "arti": "Memperkenalkan"
+  },
+  {
+    "id": 403,
+    "kanji": "笑",
+    "onyomi": "ショウ",
+    "kunyomi": "わら.う, え.む",
+    "romaji": "shou; warau",
+    "arti": "Tertawa"
+  },
+  {
+    "id": 404,
+    "kanji": "章",
+    "onyomi": "ショウ",
+    "kunyomi": "",
+    "romaji": "shou",
+    "arti": "Bab, lencana, tanda"
+  },
+  {
+    "id": 405,
+    "kanji": "省",
+    "onyomi": "セイ, ショウ",
+    "kunyomi": "かえり.みる, はぶ.く",
+    "romaji": "sei; habuku",
+    "arti": "Kementerian"
+  },
+  {
+    "id": 406,
+    "kanji": "照",
+    "onyomi": "ショウ",
+    "kunyomi": "て.る, て.らす",
+    "romaji": "shou; teru",
+    "arti": "Menyinari"
+  },
+  {
+    "id": 407,
+    "kanji": "焼",
+    "onyomi": "ショウ",
+    "kunyomi": "や.ける, や.く",
+    "romaji": "shou; yaku",
+    "arti": "Membakar"
+  },
+  {
+    "id": 408,
+    "kanji": "消",
+    "onyomi": "ショウ",
+    "kunyomi": "き.える, け.す",
+    "romaji": "shou; kieru",
+    "arti": "Padam"
+  },
+  {
+    "id": 409,
+    "kanji": "昇",
+    "onyomi": "ショウ",
+    "kunyomi": "のぼ.る",
+    "romaji": "shou; noboru",
+    "arti": "Naik, terbit"
+  },
+  {
+    "id": 410,
+    "kanji": "招",
+    "onyomi": "ショウ",
+    "kunyomi": "まね.く",
+    "romaji": "shou; maneku",
+    "arti": "Mengundang"
+  },
+  {
+    "id": 411,
+    "kanji": "承",
+    "onyomi": "ショウ",
+    "kunyomi": "うけたまわ.る",
+    "romaji": "shou; uketamawaru",
+    "arti": "Menerima"
+  },
+  {
+    "id": 412,
+    "kanji": "床",
+    "onyomi": "ショウ",
+    "kunyomi": "とこ, ゆか",
+    "romaji": "shou; yuka",
+    "arti": "Lantai"
+  },
+  {
+    "id": 413,
+    "kanji": "将",
+    "onyomi": "ショウ",
+    "kunyomi": "",
+    "romaji": "shou",
+    "arti": "Komandan, masa depan"
+  },
+  {
+    "id": 414,
+    "kanji": "商",
+    "onyomi": "ショウ",
+    "kunyomi": "あきな.う",
+    "romaji": "shou; akinau",
+    "arti": "Dagang"
+  },
+  {
+    "id": 415,
+    "kanji": "召",
+    "onyomi": "ショウ",
+    "kunyomi": "め.す",
+    "romaji": "shou; mesu",
+    "arti": "Memanggil"
+  },
+  {
+    "id": 416,
+    "kanji": "勝",
+    "onyomi": "ショウ",
+    "kunyomi": "か.つ, まさ.る",
+    "romaji": "shou; katsu",
+    "arti": "Menang"
+  },
+  {
+    "id": 417,
+    "kanji": "除",
+    "onyomi": "ジョ, ジ",
+    "kunyomi": "のぞ.く",
+    "romaji": "jo; nozoku",
+    "arti": "Menghapus"
+  },
+  {
+    "id": 418,
+    "kanji": "助",
+    "onyomi": "ジョ",
+    "kunyomi": "たす.ける, たす.かる",
+    "romaji": "jo; tasukeru",
+    "arti": "Menolong"
+  },
+  {
+    "id": 419,
+    "kanji": "諸",
+    "onyomi": "ショ",
+    "kunyomi": "もろ",
+    "romaji": "sho; moro",
+    "arti": "Berbagai, banyak"
+  },
+  {
+    "id": 420,
+    "kanji": "署",
+    "onyomi": "ショ",
+    "kunyomi": "",
+    "romaji": "sho",
+    "arti": "Kantor, tanda tangan"
+  },
+  {
+    "id": 421,
+    "kanji": "緒",
+    "onyomi": "ショ, チョ",
+    "kunyomi": "お",
+    "romaji": "sho; o",
+    "arti": "Tali, awal, bersama"
+  },
+  {
+    "id": 422,
+    "kanji": "初",
+    "onyomi": "ショ",
+    "kunyomi": "はじ.め, はじ.めて",
+    "romaji": "sho; hajime",
+    "arti": "Awal"
+  },
+  {
+    "id": 423,
+    "kanji": "処",
+    "onyomi": "ショ",
+    "kunyomi": "",
+    "romaji": "sho",
+    "arti": "Tempat, memproses"
+  },
+  {
+    "id": 424,
+    "kanji": "順",
+    "onyomi": "ジュン",
+    "kunyomi": "",
+    "romaji": "jun",
+    "arti": "Urutan, patuh"
+  },
+  {
+    "id": 425,
+    "kanji": "純",
+    "onyomi": "ジュン",
+    "kunyomi": "",
+    "romaji": "jun",
+    "arti": "Murni, asli"
+  },
+  {
+    "id": 426,
+    "kanji": "準",
+    "onyomi": "ジュン",
+    "kunyomi": "",
+    "romaji": "jun",
+    "arti": "Standar, persiapan"
+  },
+  {
+    "id": 427,
+    "kanji": "述",
+    "onyomi": "ジュツ",
+    "kunyomi": "の.べる",
+    "romaji": "jutsu; noberu",
+    "arti": "Menyatakan"
+  },
+  {
+    "id": 428,
+    "kanji": "術",
+    "onyomi": "ジュツ",
+    "kunyomi": "すべ",
+    "romaji": "jutsu; sube",
+    "arti": "Seni, teknik"
+  },
+  {
+    "id": 429,
+    "kanji": "祝",
+    "onyomi": "シュク, シュウ",
+    "kunyomi": "いわ.う",
+    "romaji": "shuku; iwau",
+    "arti": "Merayakan"
+  },
+  {
+    "id": 430,
+    "kanji": "宿",
+    "onyomi": "シュク",
+    "kunyomi": "やど, やど.る",
+    "romaji": "shuku; yado",
+    "arti": "Penginapan"
+  },
+  {
+    "id": 431,
+    "kanji": "柔",
+    "onyomi": "ジュウ, ニュウ",
+    "kunyomi": "やわ.らか, やわ.らかい",
+    "romaji": "juu; yawarakai",
+    "arti": "Lunak"
+  },
+  {
+    "id": 432,
+    "kanji": "舟",
+    "onyomi": "シュウ",
+    "kunyomi": "ふね, ふな-",
+    "romaji": "shuu; fune",
+    "arti": "Perahu"
+  },
+  {
+    "id": 433,
+    "kanji": "拾",
+    "onyomi": "シュウ, ジュウ",
+    "kunyomi": "ひろ.う",
+    "romaji": "shuu; hirou",
+    "arti": "Memungut"
+  },
+  {
+    "id": 434,
+    "kanji": "修",
+    "onyomi": "シュウ, シュ",
+    "kunyomi": "おさ.める, おさ.まる",
+    "romaji": "shuu; osameru",
+    "arti": "Memperbaiki"
+  },
+  {
+    "id": 435,
+    "kanji": "州",
+    "onyomi": "シュウ",
+    "kunyomi": "す",
+    "romaji": "shuu; su",
+    "arti": "Negara bagian, benua"
+  },
+  {
+    "id": 436,
+    "kanji": "周",
+    "onyomi": "シュウ",
+    "kunyomi": "まわ.り",
+    "romaji": "shuu; mawari",
+    "arti": "Sekeliling"
+  },
+  {
+    "id": 437,
+    "kanji": "収",
+    "onyomi": "シュウ",
+    "kunyomi": "おさ.める, おさ.まる",
+    "romaji": "shuu; osameru",
+    "arti": "Mendapatkan"
+  },
+  {
+    "id": 438,
+    "kanji": "授",
+    "onyomi": "ジュ",
+    "kunyomi": "さず.ける, さず.かる",
+    "romaji": "ju; sazukeru",
+    "arti": "Memberikan"
+  },
+  {
+    "id": 439,
+    "kanji": "受",
+    "onyomi": "ジュ",
+    "kunyomi": "う.ける, う.かる",
+    "romaji": "ju; uukeru",
+    "arti": "Menerima"
+  },
+  {
+    "id": 440,
+    "kanji": "酒",
+    "onyomi": "シュ",
+    "kunyomi": "さけ, さか-",
+    "romaji": "shu; sake",
+    "arti": "Sake, alkohol"
+  },
+  {
+    "id": 441,
+    "kanji": "種",
+    "onyomi": "シュ",
+    "kunyomi": "たね",
+    "romaji": "shu; tane",
+    "arti": "Benih, jenis"
+  },
+  {
+    "id": 442,
+    "kanji": "守",
+    "onyomi": "シュ, ス",
+    "kunyomi": "まも.る, も.り",
+    "romaji": "shu; mamoru",
+    "arti": "Melindungi"
+  },
+  {
+    "id": 443,
+    "kanji": "取",
+    "onyomi": "シュ",
+    "kunyomi": "と.る",
+    "romaji": "shu; toru",
+    "arti": "Mengambil"
+  },
+  {
+    "id": 444,
+    "kanji": "若",
+    "onyomi": "ジャク, ニャク",
+    "kunyomi": "わか.い, も.しくわ",
+    "romaji": "jaku; wakai",
+    "arti": "Muda"
+  },
+  {
+    "id": 445,
+    "kanji": "捨",
+    "onyomi": "シャ",
+    "kunyomi": "す.てる",
+    "romaji": "sha; suteru",
+    "arti": "Membuang"
+  },
+  {
+    "id": 446,
+    "kanji": "実",
+    "onyomi": "ジツ",
+    "kunyomi": "み, みの.る",
+    "romaji": "jitsu; mi",
+    "arti": "Kenyataan, buah"
+  },
+  {
+    "id": 447,
+    "kanji": "湿",
+    "onyomi": "シツ",
+    "kunyomi": "しめ.る, しめ.す",
+    "romaji": "shitsu; shimeru",
+    "arti": "Lembap"
+  },
+  {
+    "id": 448,
+    "kanji": "失",
+    "onyomi": "シツ",
+    "kunyomi": "うしな.う",
+    "romaji": "shitsu; ushinau",
+    "arti": "Kehilangan"
+  },
+  {
+    "id": 449,
+    "kanji": "識",
+    "onyomi": "シキ",
+    "kunyomi": "",
+    "romaji": "shiki",
+    "arti": "Pengetahuan, mengenal"
+  },
+  {
+    "id": 450,
+    "kanji": "式",
+    "onyomi": "シキ",
+    "kunyomi": "",
+    "romaji": "shiki",
+    "arti": "Gaya, upacara, rumus"
+  },
+  {
+    "id": 451,
+    "kanji": "辞",
+    "onyomi": "ジ",
+    "kunyomi": "や.める",
+    "romaji": "ji; yameru",
+    "arti": "Kamus, berhenti"
+  },
+  {
+    "id": 452,
+    "kanji": "示",
+    "onyomi": "ジ, シ",
+    "kunyomi": "しめ.す",
+    "romaji": "ji; shimesu",
+    "arti": "Menunjukkan"
+  },
+  {
+    "id": 453,
+    "kanji": "治",
+    "onyomi": "ジ, チ",
+    "kunyomi": "おさ.める, なお.る",
+    "romaji": "ji, chi; osameru",
+    "arti": "Memerintah"
+  },
+  {
+    "id": 454,
+    "kanji": "次",
+    "onyomi": "ジ, シ",
+    "kunyomi": "つぎ, つ.ぐ",
+    "romaji": "ji; tsugi",
+    "arti": "Berikutnya"
+  },
+  {
+    "id": 455,
+    "kanji": "寺",
+    "onyomi": "ジ",
+    "kunyomi": "てら",
+    "romaji": "ji; tera",
+    "arti": "Kuil Buddha"
+  },
+  {
+    "id": 456,
+    "kanji": "児",
+    "onyomi": "ジ, ニ, ゲ",
+    "kunyomi": "こ",
+    "romaji": "ji; ko",
+    "arti": "Anak-anak"
+  },
+  {
+    "id": 457,
+    "kanji": "似",
+    "onyomi": "ジ",
+    "kunyomi": "に.る",
+    "romaji": "ji; niru",
+    "arti": "Mirip, menyerupai"
+  },
+  {
+    "id": 458,
+    "kanji": "歯",
+    "onyomi": "シ",
+    "kunyomi": "は",
+    "romaji": "shi; ha",
+    "arti": "Gigi"
+  },
+  {
+    "id": 459,
+    "kanji": "資",
+    "onyomi": "シ",
+    "kunyomi": "",
+    "romaji": "shi",
+    "arti": "Sumber daya, modal"
+  },
+  {
+    "id": 460,
+    "kanji": "誌",
+    "onyomi": "シ",
+    "kunyomi": "",
+    "romaji": "shi",
+    "arti": "Majalah, catatan"
+  },
+  {
+    "id": 461,
+    "kanji": "詞",
+    "onyomi": "シ",
+    "kunyomi": "ことば",
+    "romaji": "shi; kotoba",
+    "arti": "Kata, lirik"
+  },
+  {
+    "id": 462,
+    "kanji": "脂",
+    "onyomi": "シ",
+    "kunyomi": "あぶら",
+    "romaji": "shi; abura",
+    "arti": "Lemak"
+  },
+  {
+    "id": 463,
+    "kanji": "糸",
+    "onyomi": "シ",
+    "kunyomi": "いと",
+    "romaji": "shi; ito",
+    "arti": "Benang"
+  },
+  {
+    "id": 464,
+    "kanji": "枝",
+    "onyomi": "シ",
+    "kunyomi": "えだ",
+    "romaji": "shi; eda",
+    "arti": "Dahan, cabang"
+  },
+  {
+    "id": 465,
+    "kanji": "支",
+    "onyomi": "シ",
+    "kunyomi": "ささ.える",
+    "romaji": "shi; sasaeru",
+    "arti": "Mendukung"
+  },
+  {
+    "id": 466,
+    "kanji": "指",
+    "onyomi": "シ",
+    "kunyomi": "ゆび, さ.す",
+    "romaji": "shi; yubi",
+    "arti": "Jari, menunjuk"
+  },
+  {
+    "id": 467,
+    "kanji": "志",
+    "onyomi": "シ",
+    "kunyomi": "こころざし",
+    "romaji": "shi; kokorozashi",
+    "arti": "Aspirasi"
+  },
+  {
+    "id": 468,
+    "kanji": "師",
+    "onyomi": "シ",
+    "kunyomi": "",
+    "romaji": "shi",
+    "arti": "Guru, master, ahli"
+  },
+  {
+    "id": 469,
+    "kanji": "史",
+    "onyomi": "シ",
+    "kunyomi": "",
+    "romaji": "shi",
+    "arti": "Sejarah"
+  },
+  {
+    "id": 470,
+    "kanji": "司",
+    "onyomi": "シ",
+    "kunyomi": "つかさど.る",
+    "romaji": "shi; tsukasadoru",
+    "arti": "Memimpin"
+  },
+  {
+    "id": 471,
+    "kanji": "刺",
+    "onyomi": "シ",
+    "kunyomi": "さ.す, さ.さる",
+    "romaji": "shi; sasu",
+    "arti": "Menusuk"
+  },
+  {
+    "id": 472,
+    "kanji": "伺",
+    "onyomi": "シ",
+    "kunyomi": "うかが.う",
+    "romaji": "shi; ukagau",
+    "arti": "Bertanya"
+  },
+  {
+    "id": 473,
+    "kanji": "残",
+    "onyomi": "ザン",
+    "kunyomi": "のこ.る, のこ.す",
+    "romaji": "zan; nokoru",
+    "arti": "Sisa"
+  },
+  {
+    "id": 474,
+    "kanji": "賛",
+    "onyomi": "サン",
+    "kunyomi": "",
+    "romaji": "san",
+    "arti": "Setuju, memuji"
+  },
+  {
+    "id": 475,
+    "kanji": "算",
+    "onyomi": "サン",
+    "kunyomi": "",
+    "romaji": "san",
+    "arti": "Menghitung, kalkulasi"
+  },
+  {
+    "id": 476,
+    "kanji": "散",
+    "onyomi": "サン",
+    "kunyomi": "ち.る, ちら.かす",
+    "romaji": "san; chiru",
+    "arti": "Menyebar"
+  },
+  {
+    "id": 477,
+    "kanji": "参",
+    "onyomi": "サン",
+    "kunyomi": "まい.る",
+    "romaji": "san; mairu",
+    "arti": "Datang, berkunjung"
+  },
+  {
+    "id": 478,
+    "kanji": "皿",
+    "onyomi": "ベイ",
+    "kunyomi": "さら",
+    "romaji": "bei; sara",
+    "arti": "Piring"
+  },
+  {
+    "id": 479,
+    "kanji": "雑",
+    "onyomi": "ザツ, ゾウ",
+    "kunyomi": "",
+    "romaji": "zatsu",
+    "arti": "Campuran"
+  },
+  {
+    "id": 480,
+    "kanji": "殺",
+    "onyomi": "サツ, サイ",
+    "kunyomi": "ころ.す",
+    "romaji": "satsu; korosu",
+    "arti": "Membunuh"
+  },
+  {
+    "id": 481,
+    "kanji": "札",
+    "onyomi": "サツ",
+    "kunyomi": "ふだ",
+    "romaji": "satsu; fuda",
+    "arti": "Uang kertas, label"
+  },
+  {
+    "id": 482,
+    "kanji": "察",
+    "onyomi": "サツ",
+    "kunyomi": "",
+    "romaji": "satsu",
+    "arti": "Menduga, memeriksa"
+  },
+  {
+    "id": 483,
+    "kanji": "刷",
+    "onyomi": "サツ",
+    "kunyomi": "す.る, は.く",
+    "romaji": "satsu; suru",
+    "arti": "Cetak"
+  },
+  {
+    "id": 484,
+    "kanji": "冊",
+    "onyomi": "サツ, サク",
+    "kunyomi": "",
+    "romaji": "satsu",
+    "arti": "Counter buku"
+  },
+  {
+    "id": 485,
+    "kanji": "昨",
+    "onyomi": "サク",
+    "kunyomi": "",
+    "romaji": "saku",
+    "arti": "Kemarin, sebelumnya"
+  },
+  {
+    "id": 486,
+    "kanji": "咲",
+    "onyomi": "ショウ",
+    "kunyomi": "さ.く",
+    "romaji": "shou; saku",
+    "arti": "Mekar"
+  },
+  {
+    "id": 487,
+    "kanji": "坂",
+    "onyomi": "ハン",
+    "kunyomi": "さか",
+    "romaji": "han; saka",
+    "arti": "Lereng, tanjakan"
+  },
+  {
+    "id": 488,
+    "kanji": "財",
+    "onyomi": "ザイ, サイ",
+    "kunyomi": "",
+    "romaji": "zai",
+    "arti": "Harta, kekayaan"
+  },
+  {
+    "id": 489,
+    "kanji": "罪",
+    "onyomi": "ザイ",
+    "kunyomi": "つみ",
+    "romaji": "zai; tsumi",
+    "arti": "Dosa, kejahatan"
+  },
+  {
+    "id": 490,
+    "kanji": "材",
+    "onyomi": "ザイ",
+    "kunyomi": "",
+    "romaji": "zai",
+    "arti": "Bahan, material, bakat"
+  },
+  {
+    "id": 491,
+    "kanji": "在",
+    "onyomi": "ザイ",
+    "kunyomi": "あ.る",
+    "romaji": "zai; aru",
+    "arti": "Ada, berada di"
+  },
+  {
+    "id": 492,
+    "kanji": "際",
+    "onyomi": "サイ",
+    "kunyomi": "きわ",
+    "romaji": "sai; kiwa",
+    "arti": "Saat, waktu, tepi"
+  },
+  {
+    "id": 493,
+    "kanji": "細",
+    "onyomi": "サイ",
+    "kunyomi": "ほそ.い, こま.かい",
+    "romaji": "sai; hosoi",
+    "arti": "Tipis, detail"
+  },
+  {
+    "id": 494,
+    "kanji": "祭",
+    "onyomi": "サイ",
+    "kunyomi": "まつ.り, まつ.る",
+    "romaji": "sai; matsuri",
+    "arti": "Festival"
+  },
+  {
+    "id": 495,
+    "kanji": "済",
+    "onyomi": "サイ",
+    "kunyomi": "す.む, す.ます",
+    "romaji": "sai; sumu",
+    "arti": "Selesai"
+  },
+  {
+    "id": 496,
+    "kanji": "歳",
+    "onyomi": "サイ, セイ",
+    "kunyomi": "とし",
+    "romaji": "sai; toshi",
+    "arti": "Tahun, usia"
+  },
+  {
+    "id": 497,
+    "kanji": "採",
+    "onyomi": "サイ",
+    "kunyomi": "と.る",
+    "romaji": "sai; toru",
+    "arti": "Mengambil"
+  },
+  {
+    "id": 498,
+    "kanji": "才",
+    "onyomi": "サイ",
+    "kunyomi": "",
+    "romaji": "sai",
+    "arti": "Bakat, usia"
+  },
+  {
+    "id": 499,
+    "kanji": "妻",
+    "onyomi": "サイ",
+    "kunyomi": "つま",
+    "romaji": "sai; tsuma",
+    "arti": "Istri"
+  },
+  {
+    "id": 500,
+    "kanji": "最",
+    "onyomi": "サイ",
+    "kunyomi": "もっと.も",
+    "romaji": "sai; mottomo",
+    "arti": "Paling"
+  },
+  {
+    "id": 501,
+    "kanji": "再",
+    "onyomi": "サイ, サ",
+    "kunyomi": "ふたた.び",
+    "romaji": "sai; futatabi",
+    "arti": "Lagi"
+  },
+  {
+    "id": 502,
+    "kanji": "座",
+    "onyomi": "ザ",
+    "kunyomi": "すわ.る",
+    "romaji": "za; suwaru",
+    "arti": "Duduk, kursi"
+  },
+  {
+    "id": 503,
+    "kanji": "砂",
+    "onyomi": "サ, シャ",
+    "kunyomi": "すな",
+    "romaji": "sa; suna",
+    "arti": "Pasir"
+  },
+  {
+    "id": 504,
+    "kanji": "査",
+    "onyomi": "サ",
+    "kunyomi": "",
+    "romaji": "sa",
+    "arti": "Menyelidiki, memeriksa"
+  },
+  {
+    "id": 505,
+    "kanji": "差",
+    "onyomi": "サ",
+    "kunyomi": "さ.す",
+    "romaji": "sa; sasu",
+    "arti": "Perbedaan, selisih"
+  },
+  {
+    "id": 506,
+    "kanji": "混",
+    "onyomi": "コン",
+    "kunyomi": "ま.じる, ま.ぜる",
+    "romaji": "kon; majiru",
+    "arti": "Campur"
+  },
+  {
+    "id": 507,
+    "kanji": "根",
+    "onyomi": "コン",
+    "kunyomi": "ね",
+    "romaji": "kon; ne",
+    "arti": "Akar"
+  },
+  {
+    "id": 508,
+    "kanji": "婚",
+    "onyomi": "コン",
+    "kunyomi": "",
+    "romaji": "kon",
+    "arti": "Pernikahan"
+  },
+  {
+    "id": 509,
+    "kanji": "困",
+    "onyomi": "コン",
+    "kunyomi": "こま.る",
+    "romaji": "kon; komaru",
+    "arti": "Susah"
+  },
+  {
+    "id": 510,
+    "kanji": "込",
+    "onyomi": "",
+    "kunyomi": "こ.む",
+    "romaji": "komu",
+    "arti": "Penuh, ramai"
+  },
+  {
+    "id": 511,
+    "kanji": "骨",
+    "onyomi": "コツ",
+    "kunyomi": "ほね",
+    "romaji": "kotsu; hone",
+    "arti": "Tulang"
+  },
+  {
+    "id": 512,
+    "kanji": "腰",
+    "onyomi": "ヨウ",
+    "kunyomi": "こし",
+    "romaji": "yo; koshi",
+    "arti": "Pinggang"
+  },
+  {
+    "id": 513,
+    "kanji": "告",
+    "onyomi": "コク",
+    "kunyomi": "つ.げる",
+    "romaji": "koku; tsugeru",
+    "arti": "Memberitahu"
+  },
+  {
+    "id": 514,
+    "kanji": "刻",
+    "onyomi": "コク",
+    "kunyomi": "きざ.む",
+    "romaji": "koku; kizamu",
+    "arti": "Mengukir"
+  },
+  {
+    "id": 515,
+    "kanji": "号",
+    "onyomi": "ゴウ",
+    "kunyomi": "",
+    "romaji": "go",
+    "arti": "Nomor, sinyal, tanda"
+  },
+  {
+    "id": 516,
+    "kanji": "香",
+    "onyomi": "コウ, キョウ",
+    "kunyomi": "かお.り",
+    "romaji": "kou; kaori",
+    "arti": "Wangi"
+  },
+  {
+    "id": 517,
+    "kanji": "降",
+    "onyomi": "コウ",
+    "kunyomi": "お.りる, ふ.る",
+    "romaji": "kou; oriru",
+    "arti": "Turun"
+  },
+  {
+    "id": 518,
+    "kanji": "鉱",
+    "onyomi": "コウ",
+    "kunyomi": "",
+    "romaji": "kou",
+    "arti": "Mineral, bijih"
+  },
+  {
+    "id": 519,
+    "kanji": "郊",
+    "onyomi": "コウ",
+    "kunyomi": "",
+    "romaji": "kou",
+    "arti": "Pinggiran kota"
+  },
+  {
+    "id": 520,
+    "kanji": "講",
+    "onyomi": "コウ",
+    "kunyomi": "",
+    "romaji": "kou",
+    "arti": "Ceramah, kuliah"
+  },
+  {
+    "id": 521,
+    "kanji": "荒",
+    "onyomi": "コウ",
+    "kunyomi": "あら.い, あ.れる",
+    "romaji": "kou; arai",
+    "arti": "Kasar"
+  },
+  {
+    "id": 522,
+    "kanji": "航",
+    "onyomi": "コウ",
+    "kunyomi": "",
+    "romaji": "kou",
+    "arti": "Navigasi, pelayaran"
+  },
+  {
+    "id": 523,
+    "kanji": "肯",
+    "onyomi": "コウ",
+    "kunyomi": "",
+    "romaji": "kou",
+    "arti": "Setuju, bersedia"
+  },
+  {
+    "id": 524,
+    "kanji": "耕",
+    "onyomi": "コウ",
+    "kunyomi": "たがや.す",
+    "romaji": "kou; tagayasu",
+    "arti": "Membajak"
+  },
+  {
+    "id": 525,
+    "kanji": "紅",
+    "onyomi": "コウ, ク",
+    "kunyomi": "べに, くれない",
+    "romaji": "kou; beni",
+    "arti": "Merah tua"
+  },
+  {
+    "id": 526,
+    "kanji": "硬",
+    "onyomi": "コウ",
+    "kunyomi": "かた.い",
+    "romaji": "kou; katai",
+    "arti": "Keras, kaku"
+  },
+  {
+    "id": 527,
+    "kanji": "港",
+    "onyomi": "コウ",
+    "kunyomi": "みなと",
+    "romaji": "kou; minato",
+    "arti": "Pelabuhan"
+  },
+  {
+    "id": 528,
+    "kanji": "構",
+    "onyomi": "コウ",
+    "kunyomi": "かま.える",
+    "romaji": "kou; kamaeru",
+    "arti": "Struktur"
+  },
+  {
+    "id": 529,
+    "kanji": "更",
+    "onyomi": "コウ",
+    "kunyomi": "さら, ふ.ける",
+    "romaji": "kou; sara",
+    "arti": "Lagi"
+  },
+  {
+    "id": 530,
+    "kanji": "康",
+    "onyomi": "コウ",
+    "kunyomi": "",
+    "romaji": "kou",
+    "arti": "Kesehatan"
+  },
+  {
+    "id": 531,
+    "kanji": "幸",
+    "onyomi": "コウ",
+    "kunyomi": "しあわ.せ, さいわ.い",
+    "romaji": "kou; shiawase",
+    "arti": "Bahagia"
+  },
+  {
+    "id": 532,
+    "kanji": "向",
+    "onyomi": "コウ",
+    "kunyomi": "む.く, む.こう",
+    "romaji": "kou; muku",
+    "arti": "Menghadap"
+  },
+  {
+    "id": 533,
+    "kanji": "厚",
+    "onyomi": "コウ",
+    "kunyomi": "あつ.い",
+    "romaji": "kou; atsui",
+    "arti": "Tebal"
+  },
+  {
+    "id": 534,
+    "kanji": "効",
+    "onyomi": "コウ",
+    "kunyomi": "き.く",
+    "romaji": "kou; kiku",
+    "arti": "Efek, khasiat"
+  },
+  {
+    "id": 535,
+    "kanji": "公",
+    "onyomi": "コウ, ク",
+    "kunyomi": "おおやけ",
+    "romaji": "kou; oyake",
+    "arti": "Umum"
+  },
+  {
+    "id": 536,
+    "kanji": "候",
+    "onyomi": "コウ",
+    "kunyomi": "sourou",
+    "romaji": "kou; sourou",
+    "arti": "Musim, cuaca"
+  },
+  {
+    "id": 537,
+    "kanji": "交",
+    "onyomi": "コウ",
+    "kunyomi": "まじ.わる, ま.ぜる",
+    "romaji": "kou; majiru",
+    "arti": "Persimpangan"
+  },
+  {
+    "id": 538,
+    "kanji": "誤",
+    "onyomi": "ゴ",
+    "kunyomi": "あやま.る",
+    "romaji": "go; ayamaru",
+    "arti": "Salah"
+  },
+  {
+    "id": 539,
+    "kanji": "御",
+    "onyomi": "ゴ, ギョ",
+    "kunyomi": "おん, お",
+    "romaji": "go; on",
+    "arti": "Hormat, awalan"
+  },
+  {
+    "id": 540,
+    "kanji": "互",
+    "onyomi": "ゴ",
+    "kunyomi": "たが.い",
+    "romaji": "go; tagai",
+    "arti": "Saling"
+  },
+  {
+    "id": 541,
+    "kanji": "雇",
+    "onyomi": "コ",
+    "kunyomi": "やと.う",
+    "romaji": "ko; yatou",
+    "arti": "Mempekerjakan"
+  },
+  {
+    "id": 542,
+    "kanji": "湖",
+    "onyomi": "コ",
+    "kunyomi": "みずうみ",
+    "romaji": "ko; mizuumi",
+    "arti": "Danau"
+  },
+  {
+    "id": 543,
+    "kanji": "枯",
+    "onyomi": "コ",
+    "kunyomi": "か.れる, か.らす",
+    "romaji": "ko; kareru",
+    "arti": "Layu"
+  },
+  {
+    "id": 544,
+    "kanji": "故",
+    "onyomi": "コ",
+    "kunyomi": "ゆえ",
+    "romaji": "ko; yue",
+    "arti": "Alasan, almarhum"
+  },
+  {
+    "id": 545,
+    "kanji": "戸",
+    "onyomi": "コ",
+    "kunyomi": "と",
+    "romaji": "ko; to",
+    "arti": "Pintu"
+  },
+  {
+    "id": 546,
+    "kanji": "庫",
+    "onyomi": "コ, ク",
+    "kunyomi": "くら",
+    "romaji": "ko; kura",
+    "arti": "Gudang"
+  },
+  {
+    "id": 547,
+    "kanji": "固",
+    "onyomi": "コ",
+    "kunyomi": "かた.める, かた.い",
+    "romaji": "ko; katai",
+    "arti": "Keras"
+  },
+  {
+    "id": 548,
+    "kanji": "呼",
+    "onyomi": "コ",
+    "kunyomi": "よ.ぶ",
+    "romaji": "ko; yobu",
+    "arti": "Memanggil"
+  },
+  {
+    "id": 549,
+    "kanji": "個",
+    "onyomi": "コ",
+    "kunyomi": "",
+    "romaji": "ko",
+    "arti": "Individu, counter"
+  },
+  {
+    "id": 550,
+    "kanji": "限",
+    "onyomi": "ゲン",
+    "kunyomi": "かぎ.る",
+    "romaji": "gen; kagiru",
+    "arti": "Batas"
+  },
+  {
+    "id": 551,
+    "kanji": "現",
+    "onyomi": "ゲン",
+    "kunyomi": "あらわ.れる",
+    "romaji": "gen; arawareru",
+    "arti": "Muncul"
+  },
+  {
+    "id": 552,
+    "kanji": "減",
+    "onyomi": "ゲン",
+    "kunyomi": "へ.る, へ.らす",
+    "romaji": "gen; heru",
+    "arti": "Berkurang"
+  },
+  {
+    "id": 553,
+    "kanji": "原",
+    "onyomi": "ゲン",
+    "kunyomi": "はら",
+    "romaji": "gen; hara",
+    "arti": "Asal, dasar"
+  },
+  {
+    "id": 554,
+    "kanji": "険",
+    "onyomi": "ケン",
+    "kunyomi": "けわ.しい",
+    "romaji": "ken; kewashii",
+    "arti": "Curam"
+  },
+  {
+    "id": 555,
+    "kanji": "軒",
+    "onyomi": "ケン",
+    "kunyomi": "のき",
+    "romaji": "ken; noki",
+    "arti": "Atap, counter"
+  },
+  {
+    "id": 556,
+    "kanji": "賢",
+    "onyomi": "ケン",
+    "kunyomi": "かしこ.い",
+    "romaji": "ken; kashikoi",
+    "arti": "Bijaksana"
+  },
+  {
+    "id": 557,
+    "kanji": "肩",
+    "onyomi": "ケン",
+    "kunyomi": "かた",
+    "romaji": "ken; kata",
+    "arti": "Bahu"
+  },
+  {
+    "id": 558,
+    "kanji": "権",
+    "onyomi": "ケン, ゴン",
+    "kunyomi": "",
+    "romaji": "ken",
+    "arti": "Hak, otoritas"
+  },
+  {
+    "id": 559,
+    "kanji": "検",
+    "onyomi": "ケン",
+    "kunyomi": "",
+    "romaji": "ken",
+    "arti": "Memeriksa, menyelidiki"
+  },
+  {
+    "id": 560,
+    "kanji": "券",
+    "onyomi": "ケン",
+    "kunyomi": "",
+    "romaji": "ken",
+    "arti": "Tiket, kupon"
+  },
+  {
+    "id": 561,
+    "kanji": "健",
+    "onyomi": "ケン",
+    "kunyomi": "すこ.やか",
+    "romaji": "ken; sukoyaka",
+    "arti": "Sehat"
+  },
+  {
+    "id": 562,
+    "kanji": "件",
+    "onyomi": "ケン",
+    "kunyomi": "",
+    "romaji": "ken",
+    "arti": "Masalah, kasus"
+  },
+  {
+    "id": 563,
+    "kanji": "血",
+    "onyomi": "ケツ",
+    "kunyomi": "ち",
+    "romaji": "ketsu; chi",
+    "arti": "Darah"
+  },
+  {
+    "id": 564,
+    "kanji": "結",
+    "onyomi": "ケツ",
+    "kunyomi": "むす.ぶ, ゆう",
+    "romaji": "ketsu; musubu",
+    "arti": "Mengikat"
+  },
+  {
+    "id": 565,
+    "kanji": "決",
+    "onyomi": "ケツ",
+    "kunyomi": "き.める, き.まる",
+    "romaji": "ketsu; kimeru",
+    "arti": "Memutuskan"
+  },
+  {
+    "id": 566,
+    "kanji": "欠",
+    "onyomi": "ケツ",
+    "kunyomi": "か.ける, か.く",
+    "romaji": "ketsu; kakeru",
+    "arti": "Kurang"
+  },
+  {
+    "id": 567,
+    "kanji": "劇",
+    "onyomi": "ゲキ",
+    "kunyomi": "",
+    "romaji": "geki",
+    "arti": "Drama, teater"
+  },
+  {
+    "id": 568,
+    "kanji": "迎",
+    "onyomi": "ゲイ",
+    "kunyomi": "むか.える",
+    "romaji": "gei; mukaeru",
+    "arti": "Menyambut"
+  },
+  {
+    "id": 569,
+    "kanji": "芸",
+    "onyomi": "ゲイ",
+    "kunyomi": "",
+    "romaji": "gei",
+    "arti": "Seni, teknik"
+  },
+  {
+    "id": 570,
+    "kanji": "警",
+    "onyomi": "ケイ",
+    "kunyomi": "",
+    "romaji": "kei",
+    "arti": "Peringatan, polisi"
+  },
+  {
+    "id": 571,
+    "kanji": "経",
+    "onyomi": "ケイ, キョウ",
+    "kunyomi": "へ.る",
+    "romaji": "kei; heru",
+    "arti": "Lewat"
+  },
+  {
+    "id": 572,
+    "kanji": "景",
+    "onyomi": "ケイ",
+    "kunyomi": "",
+    "romaji": "kei",
+    "arti": "Pemandangan"
+  },
+  {
+    "id": 573,
+    "kanji": "敬",
+    "onyomi": "ケイ",
+    "kunyomi": "うやま.う",
+    "romaji": "kei; uyamau",
+    "arti": "Hormat"
+  },
+  {
+    "id": 574,
+    "kanji": "恵",
+    "onyomi": "ケイ, エ",
+    "kunyomi": "めぐ.む",
+    "romaji": "kei; megumu",
+    "arti": "Anugerah"
+  },
+  {
+    "id": 575,
+    "kanji": "形",
+    "onyomi": "ケイ, ギョウ",
+    "kunyomi": "かたち, かた",
+    "romaji": "kei; katachi",
+    "arti": "Bentuk"
+  },
+  {
+    "id": 576,
+    "kanji": "型",
+    "onyomi": "ケイ",
+    "kunyomi": "かた",
+    "romaji": "kei; kata",
+    "arti": "Model, tipe"
+  },
+  {
+    "id": 577,
+    "kanji": "傾",
+    "onyomi": "ケイ",
+    "kunyomi": "かたむ.く, かたむ.ける",
+    "romaji": "kei; katamuku",
+    "arti": "Miring"
+  },
+  {
+    "id": 578,
+    "kanji": "係",
+    "onyomi": "ケイ",
+    "kunyomi": "かかり, かか.わる",
+    "romaji": "kei; kakari",
+    "arti": "Tugas"
+  },
+  {
+    "id": 579,
+    "kanji": "軍",
+    "onyomi": "グン",
+    "kunyomi": "",
+    "romaji": "gun",
+    "arti": "Militer, tentara"
+  },
+  {
+    "id": 580,
+    "kanji": "群",
+    "onyomi": "グン",
+    "kunyomi": "む.れ",
+    "romaji": "gun; mure",
+    "arti": "Kawanan"
+  },
+  {
+    "id": 581,
+    "kanji": "訓",
+    "onyomi": "クン",
+    "kunyomi": "",
+    "romaji": "kun",
+    "arti": "Instruksi"
+  },
+  {
+    "id": 582,
+    "kanji": "君",
+    "onyomi": "クン",
+    "kunyomi": "きみ",
+    "romaji": "kun; kimi",
+    "arti": "Kamu, penguasa"
+  },
+  {
+    "id": 583,
+    "kanji": "靴",
+    "onyomi": "カ",
+    "kunyomi": "くつ",
+    "romaji": "ka; kutsu",
+    "arti": "Sepatu"
+  },
+  {
+    "id": 584,
+    "kanji": "掘",
+    "onyomi": "クツ",
+    "kunyomi": "ほ.る",
+    "romaji": "kutsu; horu",
+    "arti": "Menggali"
+  },
+  {
+    "id": 585,
+    "kanji": "隅",
+    "onyomi": "グウ",
+    "kunyomi": "すみ",
+    "romaji": "guu; sumi",
+    "arti": "Sudut, pojok"
+  },
+  {
+    "id": 586,
+    "kanji": "偶",
+    "onyomi": "グウ",
+    "kunyomi": "",
+    "romaji": "guu",
+    "arti": "Kebetulan"
+  },
+  {
+    "id": 587,
+    "kanji": "具",
+    "onyomi": "グ",
+    "kunyomi": "",
+    "romaji": "gu",
+    "arti": "Alat, bahan"
+  },
+  {
+    "id": 588,
+    "kanji": "苦",
+    "onyomi": "ク",
+    "kunyomi": "くる.しい, にが.い",
+    "romaji": "ku; kurushii",
+    "arti": "Pahit"
+  },
+  {
+    "id": 589,
+    "kanji": "禁",
+    "onyomi": "キン",
+    "kunyomi": "",
+    "romaji": "kin",
+    "arti": "Dilarang"
+  },
+  {
+    "id": 590,
+    "kanji": "均",
+    "onyomi": "キン",
+    "kunyomi": "",
+    "romaji": "kin",
+    "arti": "Rata, seragam"
+  },
+  {
+    "id": 591,
+    "kanji": "勤",
+    "onyomi": "キン, ゴン",
+    "kunyomi": "つと.める, つと.まる",
+    "romaji": "kin; tsutomeru",
+    "arti": "Bekerja"
+  },
+  {
+    "id": 592,
+    "kanji": "玉",
+    "onyomi": "ギョク",
+    "kunyomi": "たま",
+    "romaji": "gyoku; tama",
+    "arti": "Permata"
+  },
+  {
+    "id": 593,
+    "kanji": "極",
+    "onyomi": "キョク, ゴク",
+    "kunyomi": "きわ.める",
+    "romaji": "kyoku; kiwamameru",
+    "arti": "Kutub"
+  },
+  {
+    "id": 594,
+    "kanji": "曲",
+    "onyomi": "キョク",
+    "kunyomi": "ま.がる, ま.げる",
+    "romaji": "kyoku; magaru",
+    "arti": "Lagu"
+  },
+  {
+    "id": 595,
+    "kanji": "局",
+    "onyomi": "キョク",
+    "kunyomi": "",
+    "romaji": "kyoku",
+    "arti": "Biro, kantor"
+  },
+  {
+    "id": 596,
+    "kanji": "胸",
+    "onyomi": "キョウ",
+    "kunyomi": "むね",
+    "romaji": "kyou; mune",
+    "arti": "Dada"
+  },
+  {
+    "id": 597,
+    "kanji": "狭",
+    "onyomi": "キョウ",
+    "kunyomi": "せま.い",
+    "romaji": "kyou; semai",
+    "arti": "Sempit"
+  },
+  {
+    "id": 598,
+    "kanji": "況",
+    "onyomi": "キョウ",
+    "kunyomi": "",
+    "romaji": "kyou",
+    "arti": "Kondisi, situasi"
+  },
+  {
+    "id": 599,
+    "kanji": "橋",
+    "onyomi": "キョウ",
+    "kunyomi": "はし",
+    "romaji": "kyou; hashi",
+    "arti": "Jembatan"
+  },
+  {
+    "id": 600,
+    "kanji": "挟",
+    "onyomi": "キョウ",
+    "kunyomi": "はさ.む, はさ.まる",
+    "romaji": "kyou; hasamu",
+    "arti": "Menjepit"
+  },
+  {
+    "id": 601,
+    "kanji": "恐",
+    "onyomi": "キョウ",
+    "kunyomi": "おそ.れる, おそ.ろしい",
+    "romaji": "kyou; osoreru",
+    "arti": "Takut"
+  },
+  {
+    "id": 602,
+    "kanji": "境",
+    "onyomi": "キョウ",
+    "kunyomi": "さかい",
+    "romaji": "kyou; sakai",
+    "arti": "Batas"
+  },
+  {
+    "id": 603,
+    "kanji": "叫",
+    "onyomi": "キョウ",
+    "kunyomi": "さけ.ぶ",
+    "romaji": "kyou; sakebu",
+    "arti": "Berteriak"
+  },
+  {
+    "id": 604,
+    "kanji": "協",
+    "onyomi": "キョウ",
+    "kunyomi": "",
+    "romaji": "kyou",
+    "arti": "Kerja sama"
+  },
+  {
+    "id": 605,
+    "kanji": "共",
+    "onyomi": "キョウ",
+    "kunyomi": "とも",
+    "romaji": "kyou; tomo",
+    "arti": "Bersama"
+  },
+  {
+    "id": 606,
+    "kanji": "競",
+    "onyomi": "キョウ, ケイ",
+    "kunyomi": "きそ.う, せ.る",
+    "romaji": "kyou; kisou",
+    "arti": "Bersaing"
+  },
+  {
+    "id": 607,
+    "kanji": "供",
+    "onyomi": "キョウ, ク",
+    "kunyomi": "そな.える, とも",
+    "romaji": "kyou; sonaeru",
+    "arti": "Menyediakan"
+  },
+  {
+    "id": 608,
+    "kanji": "漁",
+    "onyomi": "ギョ, リョウ",
+    "kunyomi": "あさ.る",
+    "romaji": "gyo; asaru",
+    "arti": "Menangkap ikan"
+  },
+  {
+    "id": 609,
+    "kanji": "許",
+    "onyomi": "キョ",
+    "kunyomi": "ゆる.す",
+    "romaji": "kyo; yurusu",
+    "arti": "Mengizinkan"
+  },
+  {
+    "id": 610,
+    "kanji": "巨",
+    "onyomi": "キョ",
+    "kunyomi": "",
+    "romaji": "kyo",
+    "arti": "Besar, raksasa"
+  },
+  {
+    "id": 611,
+    "kanji": "居",
+    "onyomi": "キョ",
+    "kunyomi": "い.る",
+    "romaji": "kyo; iru",
+    "arti": "Tinggal"
+  },
+  {
+    "id": 612,
+    "kanji": "旧",
+    "onyomi": "キュウ",
+    "kunyomi": "",
+    "romaji": "kyuu",
+    "arti": "Lama, kuno"
+  },
+  {
+    "id": 613,
+    "kanji": "給",
+    "onyomi": "キュウ",
+    "kunyomi": "たま.う",
+    "romaji": "kyuu; tamau",
+    "arti": "Gaji"
+  },
+  {
+    "id": 614,
+    "kanji": "級",
+    "onyomi": "キュウ",
+    "kunyomi": "",
+    "romaji": "kyuu",
+    "arti": "Tingkat, derajat"
+  },
+  {
+    "id": 615,
+    "kanji": "球",
+    "onyomi": "キュウ",
+    "kunyomi": "たま",
+    "romaji": "kyuu; tama",
+    "arti": "Bola"
+  },
+  {
+    "id": 616,
+    "kanji": "泣",
+    "onyomi": "キュウ",
+    "kunyomi": "な.く",
+    "romaji": "kyuu; naku",
+    "arti": "Menangis"
+  },
+  {
+    "id": 617,
+    "kanji": "求",
+    "onyomi": "キュウ",
+    "kunyomi": "もと.める",
+    "romaji": "kyuu; motomeru",
+    "arti": "Meminta"
+  },
+  {
+    "id": 618,
+    "kanji": "救",
+    "onyomi": "キュウ",
+    "kunyomi": "すく.う",
+    "romaji": "kyuu; sukuu",
+    "arti": "Menyelamatkan"
+  },
+  {
+    "id": 619,
+    "kanji": "吸",
+    "onyomi": "キュウ",
+    "kunyomi": "す.う",
+    "romaji": "kyuu; suu",
+    "arti": "Menghisap"
+  },
+  {
+    "id": 620,
+    "kanji": "久",
+    "onyomi": "キュウ, ク",
+    "kunyomi": "ひさ.しい",
+    "romaji": "kyuu; hisashii",
+    "arti": "Lama"
+  },
+  {
+    "id": 621,
+    "kanji": "逆",
+    "onyomi": "ギャク",
+    "kunyomi": "さか, さか.らう",
+    "romaji": "gyaku; saka",
+    "arti": "Terbalik"
+  },
+  {
+    "id": 622,
+    "kanji": "客",
+    "onyomi": "キャク, カク",
+    "kunyomi": "",
+    "romaji": "kyaku; hito",
+    "arti": "Tamu"
+  },
+  {
+    "id": 623,
+    "kanji": "詰",
+    "onyomi": "キツ",
+    "kunyomi": "つ.める, つ.まる",
+    "romaji": "kitsu; tsumeru",
+    "arti": "Mengisi"
+  },
+  {
+    "id": 624,
+    "kanji": "喫",
+    "onyomi": "キツ",
+    "kunyomi": "の.む",
+    "romaji": "kitsu; nomu",
+    "arti": "Minum"
+  },
+  {
+    "id": 625,
+    "kanji": "議",
+    "onyomi": "ギ",
+    "kunyomi": "",
+    "romaji": "gi",
+    "arti": "Musyawarah"
+  },
+  {
+    "id": 626,
+    "kanji": "疑",
+    "onyomi": "ギ",
+    "kunyomi": "うたが.う",
+    "romaji": "gi; utagau",
+    "arti": "Ragu"
+  },
+  {
+    "id": 627,
+    "kanji": "技",
+    "onyomi": "ギ",
+    "kunyomi": "わざ",
+    "romaji": "gi; waza",
+    "arti": "Teknik"
+  },
+  {
+    "id": 628,
+    "kanji": "記",
+    "onyomi": "キ",
+    "kunyomi": "しる.す",
+    "romaji": "ki; shirusu",
+    "arti": "Mencatat"
+  },
+  {
+    "id": 629,
+    "kanji": "規",
+    "onyomi": "キ",
+    "kunyomi": "",
+    "romaji": "ki",
+    "arti": "Standar, aturan"
+  },
+  {
+    "id": 630,
+    "kanji": "季",
+    "onyomi": "キ",
+    "kunyomi": "",
+    "romaji": "ki",
+    "arti": "Musim"
+  },
+  {
+    "id": 631,
+    "kanji": "祈",
+    "onyomi": "キ",
+    "kunyomi": "いの.る",
+    "romaji": "ki; inoru",
+    "arti": "Berdoa"
+  },
+  {
+    "id": 632,
+    "kanji": "機",
+    "onyomi": "キ",
+    "kunyomi": "はた",
+    "romaji": "ki; hata",
+    "arti": "Mesin"
+  },
+  {
+    "id": 633,
+    "kanji": "期",
+    "onyomi": "キ, ゴ",
+    "kunyomi": "",
+    "romaji": "ki",
+    "arti": "Periode"
+  },
+  {
+    "id": 634,
+    "kanji": "机",
+    "onyomi": "キ",
+    "kunyomi": "つくえ",
+    "romaji": "ki; tsukue",
+    "arti": "Meja"
+  },
+  {
+    "id": 635,
+    "kanji": "希",
+    "onyomi": "キ",
+    "kunyomi": "まれ",
+    "romaji": "ki; mare",
+    "arti": "Harapan"
+  },
+  {
+    "id": 636,
+    "kanji": "寄",
+    "onyomi": "キ",
+    "kunyomi": "よ.る, よ.せる",
+    "romaji": "ki; yoru",
+    "arti": "Mampir"
+  },
+  {
+    "id": 637,
+    "kanji": "基",
+    "onyomi": "キ",
+    "kunyomi": "もと, もとい",
+    "romaji": "ki; moto",
+    "arti": "Dasar"
+  },
+  {
+    "id": 638,
+    "kanji": "器",
+    "onyomi": "キ",
+    "kunyomi": "うつわ",
+    "romaji": "ki; utsuwa",
+    "arti": "Wadah"
+  },
+  {
+    "id": 639,
+    "kanji": "喜",
+    "onyomi": "キ",
+    "kunyomi": "よろこ.ぶ",
+    "romaji": "ki; yorokobu",
+    "arti": "Senang"
+  },
+  {
+    "id": 640,
+    "kanji": "危",
+    "onyomi": "キ",
+    "kunyomi": "あぶ.ない, あや.うい",
+    "romaji": "ki; abunai",
+    "arti": "Bahaya"
+  },
+  {
+    "id": 641,
+    "kanji": "願",
+    "onyomi": "ガン",
+    "kunyomi": "ねが.う",
+    "romaji": "gan; negau",
+    "arti": "Berharap"
+  },
+  {
+    "id": 642,
+    "kanji": "岩",
+    "onyomi": "ガン",
+    "kunyomi": "いわ",
+    "romaji": "gan; iwa",
+    "arti": "Batu besar"
+  },
+  {
+    "id": 643,
+    "kanji": "岸",
+    "onyomi": "ガン",
+    "kunyomi": "きし",
+    "romaji": "gan; kishi",
+    "arti": "Pantai"
+  },
+  {
+    "id": 644,
+    "kanji": "含",
+    "onyomi": "ガン",
+    "kunyomi": "ふく.む, ふく.める",
+    "romaji": "gan; fukumu",
+    "arti": "Mengandung"
+  },
+  {
+    "id": 645,
+    "kanji": "丸",
+    "onyomi": "ガン",
+    "kunyomi": "まる, まる.める",
+    "romaji": "gan; maru",
+    "arti": "Bulat"
+  },
+  {
+    "id": 646,
+    "kanji": "関",
+    "onyomi": "カン",
+    "kunyomi": "せき",
+    "romaji": "kan; seki",
+    "arti": "Berhubungan"
+  },
+  {
+    "id": 647,
+    "kanji": "観",
+    "onyomi": "カン",
+    "kunyomi": "み.る",
+    "romaji": "kan; miru",
+    "arti": "Menonton"
+  },
+  {
+    "id": 648,
+    "kanji": "簡",
+    "onyomi": "カン",
+    "kunyomi": "",
+    "romaji": "kan",
+    "arti": "Sederhana"
+  },
+  {
+    "id": 649,
+    "kanji": "管",
+    "onyomi": "カン",
+    "kunyomi": "くだ",
+    "romaji": "kan; kuda",
+    "arti": "Pipa"
+  },
+  {
+    "id": 650,
+    "kanji": "看",
+    "onyomi": "カン",
+    "kunyomi": "み.る",
+    "romaji": "kan; miru",
+    "arti": "Melihat"
+  },
+  {
+    "id": 651,
+    "kanji": "甘",
+    "onyomi": "カン",
+    "kunyomi": "あま.い, あま.かす",
+    "romaji": "kan; amai",
+    "arti": "Manis"
+  },
+  {
+    "id": 652,
+    "kanji": "環",
+    "onyomi": "カン",
+    "kunyomi": "わ",
+    "romaji": "kan; wa",
+    "arti": "Lingkaran"
+  },
+  {
+    "id": 653,
+    "kanji": "汗",
+    "onyomi": "カン",
+    "kunyomi": "あせ",
+    "romaji": "kan; ase",
+    "arti": "Keringat"
+  },
+  {
+    "id": 654,
+    "kanji": "換",
+    "onyomi": "カン",
+    "kunyomi": "か.える, か.わる",
+    "romaji": "kan; kaeru",
+    "arti": "Menukar"
+  },
+  {
+    "id": 655,
+    "kanji": "慣",
+    "onyomi": "カン",
+    "kunyomi": "な.れる, な.らす",
+    "romaji": "kan; nareru",
+    "arti": "Terbiasa"
+  },
+  {
+    "id": 656,
+    "kanji": "感",
+    "onyomi": "カン",
+    "kunyomi": "",
+    "romaji": "kan",
+    "arti": "Perasaan"
+  },
+  {
+    "id": 657,
+    "kanji": "干",
+    "onyomi": "カン",
+    "kunyomi": "ほ.す, ひ.る",
+    "romaji": "kan; hosu",
+    "arti": "Mengeringkan"
+  },
+  {
+    "id": 658,
+    "kanji": "官",
+    "onyomi": "カン",
+    "kunyomi": "",
+    "romaji": "kan",
+    "arti": "Pejabat"
+  },
+  {
+    "id": 659,
+    "kanji": "完",
+    "onyomi": "カン",
+    "kunyomi": "",
+    "romaji": "kan",
+    "arti": "Sempurna"
+  },
+  {
+    "id": 660,
+    "kanji": "巻",
+    "onyomi": "カン",
+    "kunyomi": "ま.く, まき",
+    "romaji": "kan; maku",
+    "arti": "Menggulung"
+  },
+  {
+    "id": 661,
+    "kanji": "刊",
+    "onyomi": "カン",
+    "kunyomi": "",
+    "romaji": "kan",
+    "arti": "Menerbitkan"
+  },
+  {
+    "id": 662,
+    "kanji": "乾",
+    "onyomi": "カン",
+    "kunyomi": "かわ.く, かわ.かす",
+    "romaji": "kan; kawaku",
+    "arti": "Kering"
+  },
+  {
+    "id": 663,
+    "kanji": "活",
+    "onyomi": "カツ",
+    "kunyomi": "い.きる",
+    "romaji": "katsu; ikiru",
+    "arti": "Hidup"
+  },
+  {
+    "id": 664,
+    "kanji": "割",
+    "onyomi": "カツ",
+    "kunyomi": "わ.る, わ.かれる",
+    "romaji": "katsu; waru",
+    "arti": "Membagi"
+  },
+  {
+    "id": 665,
+    "kanji": "額",
+    "onyomi": "ガク",
+    "kunyomi": "ひたい",
+    "romaji": "gaku; hitai",
+    "arti": "Dahi"
+  },
+  {
+    "id": 666,
+    "kanji": "革",
+    "onyomi": "カク",
+    "kunyomi": "かわ",
+    "romaji": "kaku; kawa",
+    "arti": "Kulit"
+  },
+  {
+    "id": 667,
+    "kanji": "較",
+    "onyomi": "カク",
+    "kunyomi": "",
+    "romaji": "kaku",
+    "arti": "Membandingkan"
+  },
+  {
+    "id": 668,
+    "kanji": "角",
+    "onyomi": "カク",
+    "kunyomi": "かど, つの",
+    "romaji": "kaku; kado",
+    "arti": "Sudut"
+  },
+  {
+    "id": 669,
+    "kanji": "覚",
+    "onyomi": "カク",
+    "kunyomi": "おぼ.える, さ.める",
+    "romaji": "kaku; oboeru",
+    "arti": "Mengingat"
+  },
+  {
+    "id": 670,
+    "kanji": "確",
+    "onyomi": "カク",
+    "kunyomi": "たし.か, たし.かめる",
+    "romaji": "kaku; tashika",
+    "arti": "Pasti"
+  },
+  {
+    "id": 671,
+    "kanji": "格",
+    "onyomi": "カク, コウ",
+    "kunyomi": "",
+    "romaji": "kaku",
+    "arti": "Status"
+  },
+  {
+    "id": 672,
+    "kanji": "拡",
+    "onyomi": "カク",
+    "kunyomi": "ひろ.がる, ひろ.げる",
+    "romaji": "kaku; hirogeru",
+    "arti": "Memperluas"
+  },
+  {
+    "id": 673,
+    "kanji": "各",
+    "onyomi": "カク",
+    "kunyomi": "おのおの",
+    "romaji": "kaku; onoono",
+    "arti": "Masing-masing"
+  },
+  {
+    "id": 674,
+    "kanji": "害",
+    "onyomi": "ガイ",
+    "kunyomi": "",
+    "romaji": "gai",
+    "arti": "Bahaya"
+  },
+  {
+    "id": 675,
+    "kanji": "貝",
+    "onyomi": "バイ",
+    "kunyomi": "かい",
+    "romaji": "bai; kai",
+    "arti": "Kerang"
+  },
+  {
+    "id": 676,
+    "kanji": "階",
+    "onyomi": "カイ",
+    "kunyomi": "",
+    "romaji": "kai",
+    "arti": "Lantai"
+  },
+  {
+    "id": 677,
+    "kanji": "絵",
+    "onyomi": "カイ, エ",
+    "kunyomi": "",
+    "romaji": "kai, e",
+    "arti": "Gambar"
+  },
+  {
+    "id": 678,
+    "kanji": "皆",
+    "onyomi": "カイ",
+    "kunyomi": "みな",
+    "romaji": "kai; mina",
+    "arti": "Semua orang"
+  },
+  {
+    "id": 679,
+    "kanji": "灰",
+    "onyomi": "カイ",
+    "kunyomi": "はい",
+    "romaji": "kai; hai",
+    "arti": "Abu"
+  },
+  {
+    "id": 680,
+    "kanji": "械",
+    "onyomi": "カイ",
+    "kunyomi": "",
+    "romaji": "kai",
+    "arti": "Mesin"
+  },
+  {
+    "id": 681,
+    "kanji": "改",
+    "onyomi": "カイ",
+    "kunyomi": "あらた.める,あらた.まる",
+    "romaji": "kai; aratameru",
+    "arti": "Memperbaiki"
+  },
+  {
+    "id": 682,
+    "kanji": "快",
+    "onyomi": "カイ",
+    "kunyomi": "こころよ.い",
+    "romaji": "kai; kokoroyoi",
+    "arti": "Menyenangkan"
+  },
+  {
+    "id": 683,
+    "kanji": "解",
+    "onyomi": "カイ, ゲ",
+    "kunyomi": "と.く, と.ける",
+    "romaji": "kai; toku",
+    "arti": "Menyelesaikan"
+  },
+  {
+    "id": 684,
+    "kanji": "介",
+    "onyomi": "カイ",
+    "kunyomi": "",
+    "romaji": "kai",
+    "arti": "Perantara"
+  },
+  {
+    "id": 685,
+    "kanji": "過",
+    "onyomi": "カ",
+    "kunyomi": "す.ぎる, す.ごす",
+    "romaji": "ka; sugiru",
+    "arti": "Lewat"
+  },
+  {
+    "id": 686,
+    "kanji": "貨",
+    "onyomi": "カ",
+    "kunyomi": "",
+    "romaji": "ka",
+    "arti": "Barang"
+  },
+  {
+    "id": 687,
+    "kanji": "課",
+    "onyomi": "カ",
+    "kunyomi": "",
+    "romaji": "ka",
+    "arti": "Seksi"
+  },
+  {
+    "id": 688,
+    "kanji": "菓",
+    "onyomi": "カ",
+    "kunyomi": "",
+    "romaji": "ka",
+    "arti": "Kue"
+  },
+  {
+    "id": 689,
+    "kanji": "荷",
+    "onyomi": "カ",
+    "kunyomi": "に",
+    "romaji": "ka; ni",
+    "arti": "Beban"
+  },
+  {
+    "id": 690,
+    "kanji": "河",
+    "onyomi": "カ",
+    "kunyomi": "かわ",
+    "romaji": "ka; kawa",
+    "arti": "Sungai"
+  },
+  {
+    "id": 691,
+    "kanji": "果",
+    "onyomi": "カ",
+    "kunyomi": "は.たす, は.て",
+    "romaji": "ka; hatasu",
+    "arti": "Buah"
+  },
+  {
+    "id": 692,
+    "kanji": "科",
+    "onyomi": "カ",
+    "kunyomi": "",
+    "romaji": "ka",
+    "arti": "Departemen"
+  },
+  {
+    "id": 693,
+    "kanji": "可",
+    "onyomi": "カ",
+    "kunyomi": "べ.し",
+    "romaji": "ka",
+    "arti": "Boleh"
+  },
+  {
+    "id": 694,
+    "kanji": "加",
+    "onyomi": "カ",
+    "kunyomi": "くわ.える, くわ.わる",
+    "romaji": "ka; kuwaeru",
+    "arti": "Tambah"
+  },
+  {
+    "id": 695,
+    "kanji": "価",
+    "onyomi": "カ",
+    "kunyomi": "あたい",
+    "romaji": "ka; atai",
+    "arti": "Harga"
+  },
+  {
+    "id": 696,
+    "kanji": "仮",
+    "onyomi": "カ, ケ",
+    "kunyomi": "かり",
+    "romaji": "ka; kari",
+    "arti": "Sementara"
+  },
+  {
+    "id": 697,
+    "kanji": "化",
+    "onyomi": "カ, ケ",
+    "kunyomi": "ば.ける, ば.かす",
+    "romaji": "ka; bakeru",
+    "arti": "Berubah"
+  },
+  {
+    "id": 698,
+    "kanji": "温",
+    "onyomi": "オン",
+    "kunyomi": "あたた.かい, あたた.まる",
+    "romaji": "on; atatakai",
+    "arti": "Hangat"
+  },
+  {
+    "id": 699,
+    "kanji": "億",
+    "onyomi": "オク",
+    "kunyomi": "",
+    "romaji": "oku",
+    "arti": "Seratus juta"
+  },
+  {
+    "id": 700,
+    "kanji": "黄",
+    "onyomi": "コウ, オウ",
+    "kunyomi": "き, こ",
+    "romaji": "ko; ki",
+    "arti": "Kuning"
+  },
+  {
+    "id": 701,
+    "kanji": "王",
+    "onyomi": "オウ",
+    "kunyomi": "",
+    "romaji": "ou",
+    "arti": "Raja"
+  },
+  {
+    "id": 702,
+    "kanji": "欧",
+    "onyomi": "オウ",
+    "kunyomi": "",
+    "romaji": "ou",
+    "arti": "Eropa"
+  },
+  {
+    "id": 703,
+    "kanji": "横",
+    "onyomi": "オウ",
+    "kunyomi": "よこ",
+    "romaji": "ou; yoko",
+    "arti": "Samping"
+  },
+  {
+    "id": 704,
+    "kanji": "押",
+    "onyomi": "オウ",
+    "kunyomi": "お.す, お.さえる",
+    "romaji": "ou; osu",
+    "arti": "Mendorong"
+  },
+  {
+    "id": 705,
+    "kanji": "応",
+    "onyomi": "オウ",
+    "kunyomi": "こた.える",
+    "romaji": "ou; kotaeru",
+    "arti": "Menanggapi"
+  },
+  {
+    "id": 706,
+    "kanji": "奥",
+    "onyomi": "オウ",
+    "kunyomi": "おく",
+    "romaji": "ou; oku",
+    "arti": "Bagian dalam"
+  },
+  {
+    "id": 707,
+    "kanji": "央",
+    "onyomi": "オウ",
+    "kunyomi": "",
+    "romaji": "ou",
+    "arti": "Tengah"
+  },
+  {
+    "id": 708,
+    "kanji": "汚",
+    "onyomi": "オ",
+    "kunyomi": "けが.す, よご.れる",
+    "romaji": "o; yogoreru",
+    "arti": "Kotor"
+  },
+  {
+    "id": 709,
+    "kanji": "塩",
+    "onyomi": "エン",
+    "kunyomi": "しお",
+    "romaji": "en; shio",
+    "arti": "Garam"
+  },
+  {
+    "id": 710,
+    "kanji": "煙",
+    "onyomi": "エン",
+    "kunyomi": "けむり, けむ.る",
+    "romaji": "en; kemuri",
+    "arti": "Asap"
+  },
+  {
+    "id": 711,
+    "kanji": "演",
+    "onyomi": "エン",
+    "kunyomi": "",
+    "romaji": "en",
+    "arti": "Pertunjukan"
+  },
+  {
+    "id": 712,
+    "kanji": "延",
+    "onyomi": "エン",
+    "kunyomi": "の.びる, の.べる",
+    "romaji": "en; nobiru",
+    "arti": "Menunda"
+  },
+  {
+    "id": 713,
+    "kanji": "園",
+    "onyomi": "エン",
+    "kunyomi": "その",
+    "romaji": "en; sono",
+    "arti": "Taman"
+  },
+  {
+    "id": 714,
+    "kanji": "越",
+    "onyomi": "エツ",
+    "kunyomi": "こ.える, こ.す",
+    "romaji": "etsu; koeru",
+    "arti": "Melewati"
+  },
+  {
+    "id": 715,
+    "kanji": "液",
+    "onyomi": "エキ",
+    "kunyomi": "",
+    "romaji": "eki",
+    "arti": "Cairan"
+  },
+  {
+    "id": 716,
+    "kanji": "鋭",
+    "onyomi": "エイ",
+    "kunyomi": "するど.い",
+    "romaji": "ei; surudoi",
+    "arti": "Tajam"
+  },
+  {
+    "id": 717,
+    "kanji": "泳",
+    "onyomi": "エイ",
+    "kunyomi": "およ.ぐ",
+    "romaji": "ei; oyogu",
+    "arti": "Berenang"
+  },
+  {
+    "id": 718,
+    "kanji": "永",
+    "onyomi": "エイ",
+    "kunyomi": "なが.い",
+    "romaji": "ei; nagai",
+    "arti": "Abadi"
+  },
+  {
+    "id": 719,
+    "kanji": "栄",
+    "onyomi": "エイ",
+    "kunyomi": "さか.える, は.え",
+    "romaji": "ei; sakaeru",
+    "arti": "Kejayaan"
+  },
+  {
+    "id": 720,
+    "kanji": "営",
+    "onyomi": "エイ",
+    "kunyomi": "いとな.む",
+    "romaji": "ei; itonamu",
+    "arti": "Bisnis"
+  },
+  {
+    "id": 721,
+    "kanji": "雲",
+    "onyomi": "ウン",
+    "kunyomi": "くも",
+    "romaji": "un; kumo",
+    "arti": "Awan"
+  },
+  {
+    "id": 722,
+    "kanji": "羽",
+    "onyomi": "ウ",
+    "kunyomi": "は, はね",
+    "romaji": "u; ha",
+    "arti": "Sayap"
+  },
+  {
+    "id": 723,
+    "kanji": "宇",
+    "onyomi": "ウ",
+    "kunyomi": "",
+    "romaji": "u",
+    "arti": "Alam semesta"
+  },
+  {
+    "id": 724,
+    "kanji": "因",
+    "onyomi": "イン",
+    "kunyomi": "よ.る",
+    "romaji": "in; yoru",
+    "arti": "Penyebab"
+  },
+  {
+    "id": 725,
+    "kanji": "印",
+    "onyomi": "イン",
+    "kunyomi": "しるし",
+    "romaji": "in; shirushi",
+    "arti": "Tanda"
+  },
+  {
+    "id": 726,
+    "kanji": "育",
+    "onyomi": "イク",
+    "kunyomi": "そだ.つ, そだ.てる",
+    "romaji": "iku; sodatsu",
+    "arti": "Tumbuh"
+  },
+  {
+    "id": 727,
+    "kanji": "域",
+    "onyomi": "イキ",
+    "kunyomi": "",
+    "romaji": "iki",
+    "arti": "Wilayah"
+  },
+  {
+    "id": 728,
+    "kanji": "違",
+    "onyomi": "イ",
+    "kunyomi": "ちが.う, ちが.い",
+    "romaji": "i; chigau",
+    "arti": "Berbeda"
+  },
+  {
+    "id": 729,
+    "kanji": "衣",
+    "onyomi": "イ, エ",
+    "kunyomi": "ころも, きぬ",
+    "romaji": "i; koromo",
+    "arti": "Pakaian"
+  },
+  {
+    "id": 730,
+    "kanji": "胃",
+    "onyomi": "イ",
+    "kunyomi": "",
+    "romaji": "i",
+    "arti": "Perut"
+  },
+  {
+    "id": 731,
+    "kanji": "移",
+    "onyomi": "イ",
+    "kunyomi": "うつ.る, うつ.す",
+    "romaji": "i; utsuru",
+    "arti": "Pindah"
+  },
+  {
+    "id": 732,
+    "kanji": "異",
+    "onyomi": "イ",
+    "kunyomi": "こと",
+    "romaji": "i; koto",
+    "arti": "Berbeda"
+  },
+  {
+    "id": 733,
+    "kanji": "易",
+    "onyomi": "エキ, イ",
+    "kunyomi": "やさ.しい",
+    "romaji": "i; yasashii",
+    "arti": "Mudah"
+  },
+  {
+    "id": 734,
+    "kanji": "委",
+    "onyomi": "イ",
+    "kunyomi": "ゆだ.ねる",
+    "romaji": "i; yudaneru",
+    "arti": "Mempercayakan"
+  },
+  {
+    "id": 735,
+    "kanji": "囲",
+    "onyomi": "イ",
+    "kunyomi": "かこ.む, かこ.う",
+    "romaji": "i; kakomu",
+    "arti": "Mengepung"
+  },
+  {
+    "id": 736,
+    "kanji": "偉",
+    "onyomi": "イ",
+    "kunyomi": "えら.い",
+    "romaji": "i; erai",
+    "arti": "Hebat"
+  },
+  {
+    "id": 737,
+    "kanji": "依",
+    "onyomi": "イ, エ",
+    "kunyomi": "よ.る",
+    "romaji": "i; yoru",
+    "arti": "Bergantung"
+  },
+  {
+    "id": 738,
+    "kanji": "位",
+    "onyomi": "イ",
+    "kunyomi": "くらい, ぐら",
+    "romaji": "i; kurai",
+    "arti": "Pangkat"
+  },
+  {
+    "id": 739,
+    "kanji": "案",
+    "onyomi": "アン",
+    "kunyomi": "",
+    "romaji": "an",
+    "arti": "Rencana"
+  },
+  {
+    "id": 740,
+    "kanji": "圧",
+    "onyomi": "アツ",
+    "kunyomi": "",
+    "romaji": "atsu",
+    "arti": "Tekanan"
+  },
+  {
+    "id": 741,
+    "kanji": "愛",
+    "onyomi": "アイ",
+    "kunyomi": "いと.しい",
+    "romaji": "ai; ito.shii",
+    "arti": "Cinta"
+  }
 ]
