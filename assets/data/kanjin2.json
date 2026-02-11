@@ -20,7 +20,7 @@
     "kanji": "和",
     "onyomi": "ワ, オ, カ",
     "kunyomi": "やわ.らぐ, なご.やか",
-    "romaji": "wa, o, ka; yawara.gu",
+    "romaji": "wa, o, ka; yawara.gu, nago.yaka",
     "arti": "Harmoni, damai, gaya Jepang"
   },
   {
@@ -58,7 +58,7 @@
   {
     "id": 8,
     "kanji": "路",
-    "onyomi": "ロ, -じ",
+    "onyomi": "ロ, じ",
     "kunyomi": "みち",
     "romaji": "ro; michi",
     "arti": "Jalan, rute"
@@ -267,8 +267,8 @@
     "id": 34,
     "kanji": "略",
     "onyomi": "リャク",
-    "kunyomi": "ほぼ, はぶ.く",
-    "romaji": "ryaku; hobo",
+    "kunyomi": "はぶ.く",
+    "romaji": "ryaku; habu",
     "arti": "Singkatan, strategi, ringkasan"
   },
   {
@@ -859,7 +859,7 @@
     "id": 108,
     "kanji": "捕",
     "onyomi": "ホ",
-    "kunyomi": "と.える, つか.まえる",
+    "kunyomi": "と.らえる, つか.まえる",
     "romaji": "ho; tsuka.maeru",
     "arti": "Menangkap, memburu"
   },
@@ -1115,7 +1115,7 @@
     "id": 140,
     "kanji": "怖",
     "onyomi": "フ",
-    "kunyomi": "こわ.イ",
+    "kunyomi": "こわ.い",
     "romaji": "fu; kowai",
     "arti": "Takut, menyeramkan"
   },
@@ -1283,7 +1283,7 @@
     "id": 161,
     "kanji": "費",
     "onyomi": "ヒ",
-    "kunyomi": "つい.やす,つい.える",
+    "kunyomi": "つい.やす, つい.える",
     "romaji": "hi; tsuiyasu",
     "arti": "Biaya, pengeluaran"
   },
@@ -1643,7 +1643,7 @@
     "id": 206,
     "kanji": "認",
     "onyomi": "ニン",
-    "kunyomi": "みと.める, したた.める",
+    "kunyomi": "みと.める",
     "romaji": "nin; mitomeru",
     "arti": "Mengakui"
   },
@@ -1772,7 +1772,7 @@
     "kanji": "逃",
     "onyomi": "トウ",
     "kunyomi": "に.げる, に.がす, のが.れる",
-    "romaji": "tou; tigeru",
+    "romaji": "tou; nigeru",
     "arti": "Melarikan diri"
   },
   {
@@ -1992,14 +1992,6 @@
     "arti": "Sasaran, target"
   },
   {
-    "id": 250,
-    "kanji": "的な",
-    "onyomi": "テキ",
-    "kunyomi": "まと",
-    "romaji": "teki; mato",
-    "arti": "Bersifat, target"
-  },
-  {
     "id": 251,
     "kanji": "滴",
     "onyomi": "テキ",
@@ -2059,7 +2051,7 @@
     "id": 258,
     "kanji": "痛",
     "onyomi": "ツウ",
-    "kunyomi": "いた.イ, いた.む",
+    "kunyomi": "いた.い, いた.む",
     "romaji": "tsuu; itai",
     "arti": "Sakit, nyeri"
   },
@@ -2100,7 +2092,7 @@
     "kanji": "直",
     "onyomi": "チョク, ジキ",
     "kunyomi": "ただ.ちに, なお.す",
-    "romaji": "choku; naosu",
+    "romaji": "choku; naosu, jiki; tadachini",
     "arti": "Langsung"
   },
   {
@@ -2476,7 +2468,7 @@
     "kanji": "続",
     "onyomi": "ゾク, ショク",
     "kunyomi": "つづ.ける, つづ.く",
-    "romaji": "zoku; tsuduku",
+    "romaji": "tsu.zuku, tsu.zukeru",
     "arti": "Lanjut"
   },
   {
@@ -2779,7 +2771,7 @@
     "id": 348,
     "kanji": "戦",
     "onyomi": "セン",
-    "kunyomi": "いくさ, たたたか.う",
+    "kunyomi": "いくさ, たたか.う",
     "romaji": "sen; tatakau",
     "arti": "Perang"
   },
@@ -2971,7 +2963,7 @@
     "id": 372,
     "kanji": "成",
     "onyomi": "セイ, ジョウ",
-    "kunyomi": "なる, な.ス",
+    "kunyomi": "な.す, な.る",
     "romaji": "sei; naru",
     "arti": "Menjadi"
   },
@@ -3508,7 +3500,7 @@
     "kanji": "受",
     "onyomi": "ジュ",
     "kunyomi": "う.ける, う.かる",
-    "romaji": "ju; uukeru",
+    "romaji": "ju; u.keru",
     "arti": "Menerima"
   },
   {
@@ -4740,7 +4732,7 @@
     "kanji": "極",
     "onyomi": "キョク, ゴク",
     "kunyomi": "きわ.める",
-    "romaji": "kyoku; kiwamameru",
+    "romaji": "kyoku; kiwameru",
     "arti": "Kutub"
   },
   {
