@@ -38,9 +38,13 @@ document.addEventListener('DOMContentLoaded', () => {
             // Sort data by id
             data.sort((a, b) => a.id - b.id);
 
-            data.forEach(kanji => {
+            data.forEach((kanji, index) => {
                 const kanjiItem = document.createElement('div');
                 kanjiItem.classList.add('kanji-item');
+
+                const kanjiId = document.createElement('div');
+                kanjiId.classList.add('kanji-id');
+                kanjiId.textContent = index + 1;
 
                 const kanjiChar = document.createElement('div');
                 kanjiChar.classList.add('kanji-char');
@@ -72,6 +76,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 const combinedRomaji = isJlpt ? kanaToRomaji(combinedReading) : '';
                 generalReading.innerHTML = `<span style="font-weight: bold;">Reading:</span> ${isJlpt ? combinedReading : (kanji.reading || '-')} ${isJlpt && combinedRomaji ? `(${combinedRomaji})` : ''}`;
 
+                kanjiItem.appendChild(kanjiId);
                 kanjiItem.appendChild(kanjiChar);
                 kanjiItem.appendChild(kanjiMeaning);
                 kanjiItem.appendChild(onyomiReading);

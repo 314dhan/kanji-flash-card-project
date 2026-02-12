@@ -27,9 +27,19 @@
             box-shadow: var(--shadow);
             border-left: 6px solid var(--primary-color);
             transition: transform 0.2s;
+            position: relative;
         }
         .jlpt-row:hover {
             transform: scale(1.01);
+        }
+        .jlpt-id {
+            position: absolute;
+            top: 5px;
+            left: 12px;
+            font-size: 0.8rem;
+            font-weight: 700;
+            color: var(--text-light);
+            opacity: 0.6;
         }
         .level-info {
             text-align: left;
@@ -123,6 +133,7 @@
             <div class="jlpt-list">
                 <!-- N2 -->
                 <div class="jlpt-row" style="border-left-color: #764ba2;">
+                    <div class="jlpt-id">1</div>
                     <div class="level-info">
                         <p class="level-name">JLPT N2</p>
                         <p class="level-desc">Upper Intermediate Level</p>
@@ -135,6 +146,7 @@
 
                 <!-- N3 -->
                 <div class="jlpt-row" style="border-left-color: #667eea;">
+                    <div class="jlpt-id">2</div>
                     <div class="level-info">
                         <p class="level-name">JLPT N3</p>
                         <p class="level-desc">Intermediate Level</p>
@@ -147,6 +159,7 @@
 
                 <!-- N4 -->
                 <div class="jlpt-row" style="border-left-color: #4db8ff;">
+                    <div class="jlpt-id">3</div>
                     <div class="level-info">
                         <p class="level-name">JLPT N4</p>
                         <p class="level-desc">Elementary Level</p>
@@ -159,6 +172,7 @@
 
                 <!-- N5 -->
                 <div class="jlpt-row" style="border-left-color: #4CAF50;">
+                    <div class="jlpt-id">4</div>
                     <div class="level-info">
                         <p class="level-name">JLPT N5</p>
                         <p class="level-desc">Basic Level</p>

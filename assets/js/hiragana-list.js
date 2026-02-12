@@ -18,9 +18,13 @@ document.addEventListener('DOMContentLoaded', () => {
                 throw new Error('Data is not an array.');
             }
 
-            data.forEach(hiragana => {
+            data.forEach((hiragana, index) => {
                 const hiraganaItem = document.createElement('div');
                 hiraganaItem.classList.add('kanji-item'); // Reusing kanji-item style
+
+                const hiraganaId = document.createElement('div');
+                hiraganaId.classList.add('kanji-id');
+                hiraganaId.textContent = index + 1;
 
                 const hiraganaChar = document.createElement('div');
                 hiraganaChar.classList.add('kanji-char'); // Reusing kanji-char style
@@ -30,6 +34,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 hiraganaRomaji.classList.add('kanji-meaning'); // Reusing kanji-meaning style
                 hiraganaRomaji.textContent = hiragana.romaji;
 
+                hiraganaItem.appendChild(hiraganaId);
                 hiraganaItem.appendChild(hiraganaChar);
                 hiraganaItem.appendChild(hiraganaRomaji);
 

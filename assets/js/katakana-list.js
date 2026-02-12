@@ -18,9 +18,13 @@ document.addEventListener('DOMContentLoaded', () => {
                 throw new Error('Data is not an array.');
             }
 
-            data.forEach(katakana => {
+            data.forEach((katakana, index) => {
                 const katakanaItem = document.createElement('div');
                 katakanaItem.classList.add('kanji-item'); // Reusing kanji-item style
+
+                const katakanaId = document.createElement('div');
+                katakanaId.classList.add('kanji-id');
+                katakanaId.textContent = index + 1;
 
                 const katakanaChar = document.createElement('div');
                 katakanaChar.classList.add('kanji-char'); // Reusing kanji-char style
@@ -30,6 +34,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 katakanaRomaji.classList.add('kanji-meaning'); // Reusing kanji-meaning style
                 katakanaRomaji.textContent = katakana.romaji;
 
+                katakanaItem.appendChild(katakanaId);
                 katakanaItem.appendChild(katakanaChar);
                 katakanaItem.appendChild(katakanaRomaji);
 
