@@ -19,6 +19,10 @@ document.addEventListener('DOMContentLoaded', () => {
     const categorySelector = document.getElementById('category-selector');
     const categorySelect = document.getElementById('category-select');
     const specificKanjiSelector = document.getElementById('specific-kanji-selector');
+    const rangeSelector = document.getElementById('range-selector');
+    const startRangeInput = document.getElementById('start-range-input');
+    const endRangeInput = document.getElementById('end-range-input');
+    const maxKanjiRangeEl = document.getElementById('max-kanji-range');
     const startKanjiInput = document.getElementById('start-kanji-input');
     const startScreenTitle = startScreen.querySelector('.title');
     const startScreenSubtitle = startScreen.querySelector('.subtitle');
@@ -70,6 +74,12 @@ document.addEventListener('DOMContentLoaded', () => {
                 if (listBtn) {
                     listBtn.href = `kanji-list.html?level=${level}`;
                 }
+
+                // Hide category option for JLPT
+                const categoryOption = document.querySelector('input[name="learning-mode"][value="by-category"]');
+                if (categoryOption && categoryOption.parentElement) {
+                    categoryOption.parentElement.style.display = 'none';
+                }
             }
 
             const response = await fetch(dataUrl);
@@ -99,7 +109,11 @@ document.addEventListener('DOMContentLoaded', () => {
             
             quizLengthInput.max = kanjiData.length;
             maxKanjiNumberEl.textContent = kanjiData.length;
+            maxKanjiRangeEl.textContent = kanjiData.length;
             startKanjiInput.max = kanjiData.length;
+            startRangeInput.max = kanjiData.length;
+            endRangeInput.max = kanjiData.length;
+            endRangeInput.value = Math.min(20, kanjiData.length);
             
             playBtn.disabled = false;
             playBtn.querySelector('span').textContent = 'Start Learning';
@@ -163,6 +177,16 @@ document.addEventListener('DOMContentLoaded', () => {
             const startNumber = parseInt(startKanjiInput.value, 10) || 1;
             const startIndex = Math.max(0, Math.min(startNumber - 1, kanjiData.length - 1));
             baseKanji = kanjiData.slice(startIndex);
+        } else if (learningMode === "random-range") {
+            const start = parseInt(startRangeInput.value, 10) || 1;
+            const end = parseInt(endRangeInput.value, 10) || kanjiData.length;
+            
+            // Filter by ID range (assuming IDs are sequential and represent their position if possible)
+            // or just use slice if we assume index-based range as requested
+            const minId = Math.min(start, end);
+            const maxId = Math.max(start, end);
+            
+            baseKanji = kanjiData.filter(k => k.id >= minId && k.id <= maxId);
         } else if (learningMode === "continue") {
             const lastStudiedIndex = getLastStudiedIndex();
             if (lastStudiedIndex > 0) {
@@ -181,6 +205,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 availableKanji = weakKanji.length > 0 ? weakKanji : baseKanji.filter(k => !seenKanjiIds.includes(k.id));
                 break;
             case "random":
+            case "random-range":
                 availableKanji = baseKanji.filter(k => !seenKanjiIds.includes(k.id));
                 // Shuffle for random mode
                 if (availableKanji.length > 0) {
@@ -339,9 +364,7 @@ document.addEventListener('DOMContentLoaded', () => {
         
         startScreenTitle.textContent = message;
         startScreenSubtitle.innerHTML = `
-            Your final score: ${score} out of ${quizLength}<br>
-            Mastered: ${totalMastered} kanji | Need practice: ${totalWeak} kanji
-            ${userProgress.streak > 2 ? `<br>Current streak: ${userProgress.streak} correct in a row! 🔥` : ''}
+            Your final score: ${score} out of ${quizLength}
         `;
         playBtn.querySelector('span').textContent = 'Play Again';
     }
@@ -418,12 +441,33 @@ document.addEventListener('DOMContentLoaded', () => {
                 const mode = e.target.value;
                 categorySelector.style.display = mode === 'by-category' ? 'block' : 'none';
                 specificKanjiSelector.style.display = mode === 'specific' ? 'block' : 'none';
+                rangeSelector.style.display = mode === 'random-range' ? 'block' : 'none';
 
                 if (mode === 'continue') {
                     const lastIndex = getLastStudiedIndex();
                     // We don't need to set the input, but this logic is here if we want to show it
                 }
             });
+        });
+
+        startRangeInput.addEventListener('change', () => {
+            let value = parseInt(startRangeInput.value, 10);
+            const max = parseInt(startRangeInput.max, 10);
+            if (isNaN(value) || value < 1) {
+                startRangeInput.value = 1;
+            } else if (value > max) {
+                startRangeInput.value = max;
+            }
+        });
+
+        endRangeInput.addEventListener('change', () => {
+            let value = parseInt(endRangeInput.value, 10);
+            const max = parseInt(endRangeInput.max, 10);
+            if (isNaN(value) || value < 1) {
+                endRangeInput.value = 1;
+            } else if (value > max) {
+                endRangeInput.value = max;
+            }
         });
 
         startKanjiInput.addEventListener('change', () => {

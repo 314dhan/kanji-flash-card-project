@@ -51,6 +51,38 @@
                     <input type="number" id="quiz-length-input" value="10" min="1" max="50">
                 </div>
 
+                <!-- Learning Mode Options -->
+                <div class="learning-options">
+                    <h3>Learning Mode:</h3>
+                    <div class="option-group">
+                        <label class="option-label">
+                            <input type="radio" name="learning-mode" value="random" checked>
+                            <span class="option-text">Random</span>
+                        </label>
+                        <label class="option-label">
+                            <input type="radio" name="learning-mode" value="random-range">
+                            <span class="option-text">Random Range (Specific ID)</span>
+                        </label>
+                        <label class="option-label">
+                            <input type="radio" name="learning-mode" value="sequential">
+                            <span class="option-text">Sequential</span>
+                        </label>
+                    </div>
+                    <div id="range-selector" class="range-selector" style="display: none;">
+                        <div class="range-inputs">
+                            <div class="input-field">
+                                <label for="start-range-input">Start ID:</label>
+                                <input type="number" id="start-range-input" min="1" value="1">
+                            </div>
+                            <div class="input-field">
+                                <label for="end-range-input">End ID:</label>
+                                <input type="number" id="end-range-input" min="1" value="20">
+                            </div>
+                        </div>
+                        <small>Available range: 1 - <span id="max-kana-range">46</span></small>
+                    </div>
+                </div>
+
                 <button id="play-btn" class="btn-primary">
                     <span>Start Learning</span>
                     <div class="btn-icon">→</div>

@@ -15,6 +15,10 @@ document.addEventListener('DOMContentLoaded', () => {
     const resultEl = document.getElementById('result');
     const answerInputEl = document.getElementById('answer-input');
     const quizLengthInput = document.getElementById('quiz-length-input');
+    const rangeSelector = document.getElementById('range-selector');
+    const startRangeInput = document.getElementById('start-range-input');
+    const endRangeInput = document.getElementById('end-range-input');
+    const maxKanaRangeEl = document.getElementById('max-kana-range');
     
     // Start/End Screen Elements
     const startScreenTitle = startScreen.querySelector('.title');
@@ -34,6 +38,10 @@ document.addEventListener('DOMContentLoaded', () => {
         .then(data => {
             kanaData = data;
             quizLengthInput.max = kanaData.length;
+            maxKanaRangeEl.textContent = kanaData.length;
+            startRangeInput.max = kanaData.length;
+            endRangeInput.max = kanaData.length;
+            endRangeInput.value = Math.min(20, kanaData.length);
             playBtn.disabled = false;
             playBtn.querySelector('span').textContent = 'Start Learning';
         })
@@ -56,14 +64,37 @@ document.addEventListener('DOMContentLoaded', () => {
         document.getElementById('score-max').textContent = `/ ${quizLength}`;
         progressFillEl.style.width = '0%';
 
-        // Create and shuffle indices for the quiz
-        quizIndices = [...Array(kanaData.length).keys()];
-        for (let i = quizIndices.length - 1; i > 0; i--) {
-            const j = Math.floor(Math.random() * (i + 1));
-            [quizIndices[i], quizIndices[j]] = [quizIndices[j], quizIndices[i]];
+        const learningMode = document.querySelector('input[name="learning-mode"]:checked').value;
+        let availableIndices = [...Array(kanaData.length).keys()];
+
+        if (learningMode === 'random-range') {
+            const start = parseInt(startRangeInput.value, 10) || 1;
+            const end = parseInt(endRangeInput.value, 10) || kanaData.length;
+            const minIdx = Math.max(0, Math.min(start, end) - 1);
+            const maxIdx = Math.min(kanaData.length - 1, Math.max(start, end) - 1);
+            
+            availableIndices = [];
+            for (let i = minIdx; i <= maxIdx; i++) {
+                availableIndices.push(i);
+            }
         }
-        // Trim the shuffled list to the desired quiz length
-        quizIndices = quizIndices.slice(0, quizLength);
+
+        if (learningMode === 'random' || learningMode === 'random-range') {
+            // Shuffle available indices
+            for (let i = availableIndices.length - 1; i > 0; i--) {
+                const j = Math.floor(Math.random() * (i + 1));
+                [availableIndices[i], availableIndices[j]] = [availableIndices[j], availableIndices[i]];
+            }
+        } else if (learningMode === 'sequential') {
+            // Already sequential from 0 to N-1
+        }
+
+        // Trim the list to the desired quiz length
+        quizIndices = availableIndices.slice(0, quizLength);
+        
+        // Re-adjust quizLength if there are fewer available items than requested
+        quizLength = quizIndices.length;
+        document.getElementById('score-max').textContent = `/ ${quizLength}`;
 
         startScreen.classList.remove('active');
         gameContainer.classList.add('active');
@@ -143,6 +174,33 @@ document.addEventListener('DOMContentLoaded', () => {
     answerInputEl.addEventListener('keyup', (event) => {
         if (event.key === 'Enter' && !submitBtn.disabled) {
             checkAnswer();
+        }
+    });
+
+    document.querySelectorAll('input[name="learning-mode"]').forEach(radio => {
+        radio.addEventListener('change', (e) => {
+            const mode = e.target.value;
+            rangeSelector.style.display = mode === 'random-range' ? 'block' : 'none';
+        });
+    });
+
+    startRangeInput.addEventListener('change', () => {
+        let value = parseInt(startRangeInput.value, 10);
+        const max = parseInt(startRangeInput.max, 10);
+        if (isNaN(value) || value < 1) {
+            startRangeInput.value = 1;
+        } else if (value > max) {
+            startRangeInput.value = max;
+        }
+    });
+
+    endRangeInput.addEventListener('change', () => {
+        let value = parseInt(endRangeInput.value, 10);
+        const max = parseInt(endRangeInput.max, 10);
+        if (isNaN(value) || value < 1) {
+            endRangeInput.value = 1;
+        } else if (value > max) {
+            endRangeInput.value = max;
         }
     });
 

@@ -71,6 +71,10 @@
                             <span class="option-text">Random</span>
                         </label>
                         <label class="option-label">
+                            <input type="radio" name="learning-mode" value="random-range">
+                            <span class="option-text">Random Range (Specific ID)</span>
+                        </label>
+                        <label class="option-label">
                             <input type="radio" name="learning-mode" value="specific">
                             <span class="option-text">From Specific Kanji</span>
                         </label>
@@ -85,6 +89,19 @@
                             <option value="activities">Daily Activities</option>
                             <option value="nature">Nature & Environment</option>
                         </select>
+                    </div>
+                    <div id="range-selector" class="range-selector" style="display: none;">
+                        <div class="range-inputs">
+                            <div class="input-field">
+                                <label for="start-range-input">Start ID:</label>
+                                <input type="number" id="start-range-input" min="1" value="1">
+                            </div>
+                            <div class="input-field">
+                                <label for="end-range-input">End ID:</label>
+                                <input type="number" id="end-range-input" min="1" value="20">
+                            </div>
+                        </div>
+                        <small>Available range: 1 - <span id="max-kanji-range">300</span></small>
                     </div>
                     <div id="specific-kanji-selector" class="specific-kanji-selector" style="display: none;">
                         <label for="start-kanji-input">Start from Kanji Number:</label>

@@ -571,7 +571,7 @@ button:disabled, a:disabled {
     font-weight: 500;
 }
 
-.category-selector, .specific-kanji-selector {
+.category-selector, .specific-kanji-selector, .range-selector {
     margin-top: 15px;
     padding: 15px;
     background: rgba(0, 0, 0, 0.2);
@@ -579,14 +579,14 @@ button:disabled, a:disabled {
     animation: fadeIn 0.3s ease;
 }
 
-.category-selector label, .specific-kanji-selector label {
+.category-selector label, .specific-kanji-selector label, .range-selector label {
     display: block;
     margin-bottom: 8px;
     color: var(--text-dark);
     font-weight: 500;
 }
 
-.category-selector select, .specific-kanji-selector input {
+.category-selector select, .specific-kanji-selector input, .range-selector input {
     width: 100%;
     padding: 10px 12px;
     border-radius: 6px;
@@ -596,18 +596,32 @@ button:disabled, a:disabled {
     font-size: 14px;
 }
 
-.specific-kanji-selector input {
+.specific-kanji-selector input, .range-selector input {
     width: 80px;
-    margin-left: 10px;
+    margin-left: 0;
 }
 
-.specific-kanji-selector small {
+.range-inputs {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 10px;
+}
+
+.range-selector .input-field {
+    flex: 1;
+}
+
+.range-selector .input-field input {
+    width: 100%;
+}
+
+.specific-kanji-selector small, .range-selector small {
     display: block;
     margin-top: 5px;
     color: var(--text-light);
 }
 
-.category-selector select:focus, .specific-kanji-selector input:focus {
+.category-selector select:focus, .specific-kanji-selector input:focus, .range-selector input:focus {
     outline: none;
     border-color: var(--primary-color);
 }
