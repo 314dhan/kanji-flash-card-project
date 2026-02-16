@@ -393,38 +393,46 @@ button:disabled, a:disabled {
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 30px;
+    height: 60px; /* Increased height slightly for better spacing */
     cursor: pointer;
     font-size: 1.2em;
     color: var(--text-light);
     font-weight: 500;
-    transition: all 0.3s ease;
+    width: 100%;
+    max-width: 400px; /* Constrain width to match input */
+}
+
+#hint-icon, #hint-text {
+    position: absolute;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    opacity: 0;
+    pointer-events: none;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#hint-icon.active, #hint-text.active {
+    opacity: 1;
+    pointer-events: auto;
 }
 
 #hint-icon {
-    font-size: 2em;
-    transition: opacity 0.3s ease;
-    opacity: 0;
-    position: absolute;
-}
-
-#hint-icon.active {
-    opacity: 1;
-    position: static;
+    font-size: 2.2em;
 }
 
 #hint-text {
-    opacity: 0;
-    position: absolute;
-    transition: opacity 0.3s ease;
-    padding: 5px 10px;
-    border-radius: 8px;
-    background: rgba(0, 0, 0, 0.05);
-}
-
-#hint-text.active {
-    opacity: 1;
-    position: static;
+    padding: 8px 20px;
+    border-radius: 12px;
+    background: rgba(102, 126, 234, 0.1);
+    border: 1px solid rgba(102, 126, 234, 0.2);
+    color: var(--primary-dark);
+    white-space: nowrap; /* Keep text horizontal */
+    width: auto; /* Allow it to grow horizontally */
+    max-width: 95vw; /* But don't let it overflow the screen */
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 .flashcard-wrapper {
@@ -483,23 +491,27 @@ button:disabled, a:disabled {
    Result Message & Game Controls
    ================================= */
 .result-message {
-    margin: 20px 0;
-    padding: 15px 20px;
+    margin: 10px 0;
+    padding: 10px 20px;
     border-radius: 12px;
     font-size: 1.1em;
     font-weight: 500;
-    min-height: 50px; /* Reserve space */
+    min-height: 70px; /* Consistent height for feedback */
     display: flex;
     align-items: center;
     justify-content: center;
     transition: all 0.3s ease;
     opacity: 0;
-    transform: translateY(10px);
+    transform: translateY(5px);
+    visibility: hidden; /* Always occupy space */
+    word-break: break-word; /* Handle long meanings */
+    max-width: 100%;
 }
 
 .result-message.show {
     opacity: 1;
     transform: translateY(0);
+    visibility: visible;
 }
 
 .result-message.correct {
