@@ -31,6 +31,45 @@ document.addEventListener('DOMContentLoaded', () => {
     let questionsAnswered = 0;
     let quizIndices = [];
     let quizLength = 10;
+    let userProgress = {
+        mastered: [],
+        weak: [],
+        lastStudy: null
+    };
+
+    // --- Progress Management ---
+    function loadUserProgress() {
+        const saved = localStorage.getItem('katakanaMasterProgress');
+        if (saved) {
+            userProgress = JSON.parse(saved);
+        }
+    }
+
+    function saveUserProgress() {
+        userProgress.lastStudy = new Date().toISOString();
+        localStorage.setItem('katakanaMasterProgress', JSON.stringify(userProgress));
+    }
+
+    function updateProgress(isCorrect) {
+        if (!currentKana) return;
+
+        // Use prefixed index as ID for katakana
+        const idx = kanaData.indexOf(currentKana);
+        if (idx === -1) return;
+        const id = `katakana-${idx}`;
+
+        if (isCorrect) {
+            if (!userProgress.mastered.includes(id)) {
+                userProgress.mastered.push(id);
+            }
+            userProgress.weak = userProgress.weak.filter(weakId => weakId !== id);
+        } else {
+            if (!userProgress.weak.includes(id)) {
+                userProgress.weak.push(id);
+            }
+        }
+        saveUserProgress();
+    }
 
     // --- Data Loading ---
     fetch('assets/data/katakana.json')
@@ -44,6 +83,7 @@ document.addEventListener('DOMContentLoaded', () => {
             endRangeInput.value = Math.min(20, kanaData.length);
             playBtn.disabled = false;
             playBtn.querySelector('span').textContent = 'Start Learning';
+            loadUserProgress();
         })
         .catch(error => {
             console.error("Error fetching katakana data:", error);
@@ -53,9 +93,20 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // --- Game Flow Functions ---
     function startGame() {
+        const learningMode = document.querySelector('input[name="learning-mode"]:checked').value;
         const desiredLength = parseInt(quizLengthInput.value, 10);
-        if (!isNaN(desiredLength) && desiredLength > 0) {
-            quizLength = Math.min(desiredLength, kanaData.length); // Ensure quiz length doesn't exceed available data
+        
+        if (learningMode === 'weak-first') {
+            // Count weak points that belong to katakana
+            const katakanaWeakPoints = userProgress.weak.filter(id => typeof id === 'string' && id.startsWith('katakana-'));
+            quizLength = katakanaWeakPoints.length;
+            
+            if (quizLength === 0) {
+                showToast("You have no weak points in Katakana yet! Try other modes first.", 'warning', 'No Weak Points Found');
+                return;
+            }
+        } else if (!isNaN(desiredLength) && desiredLength > 0) {
+            quizLength = Math.min(desiredLength, kanaData.length);
         }
 
         score = 0;
@@ -64,7 +115,6 @@ document.addEventListener('DOMContentLoaded', () => {
         document.getElementById('score-max').textContent = `/ ${quizLength}`;
         progressFillEl.style.width = '0%';
 
-        const learningMode = document.querySelector('input[name="learning-mode"]:checked').value;
         let availableIndices = [...Array(kanaData.length).keys()];
 
         if (learningMode === 'random-range') {
@@ -77,16 +127,19 @@ document.addEventListener('DOMContentLoaded', () => {
             for (let i = minIdx; i <= maxIdx; i++) {
                 availableIndices.push(i);
             }
+        } else if (learningMode === 'weak-first') {
+            // Map "katakana-0" back to index 0
+            availableIndices = userProgress.weak
+                .filter(id => typeof id === 'string' && id.startsWith('katakana-'))
+                .map(id => parseInt(id.replace('katakana-', ''), 10));
         }
 
-        if (learningMode === 'random' || learningMode === 'random-range') {
+        if (learningMode === 'random' || learningMode === 'random-range' || learningMode === 'weak-first') {
             // Shuffle available indices
             for (let i = availableIndices.length - 1; i > 0; i--) {
                 const j = Math.floor(Math.random() * (i + 1));
                 [availableIndices[i], availableIndices[j]] = [availableIndices[j], availableIndices[i]];
             }
-        } else if (learningMode === 'sequential') {
-            // Already sequential from 0 to N-1
         }
 
         // Trim the list to the desired quiz length
@@ -135,6 +188,8 @@ document.addEventListener('DOMContentLoaded', () => {
         if (!userAnswer || !currentKana) return;
 
         const isCorrect = userAnswer === currentKana.romaji.toLowerCase();
+        
+        updateProgress(isCorrect);
 
         resultEl.classList.add('show');
         if (isCorrect) {
@@ -167,6 +222,46 @@ document.addEventListener('DOMContentLoaded', () => {
         playBtn.querySelector('span').textContent = 'Play Again';
     }
 
+    function showToast(message, type = 'info', title = '') {
+        // Create container if it doesn't exist
+        let container = document.querySelector('.toast-container');
+        if (!container) {
+            container = document.createElement('div');
+            container.className = 'toast-container';
+            document.body.appendChild(container);
+        }
+
+        const toast = document.createElement('div');
+        toast.className = `toast ${type}`;
+        
+        const icons = {
+            success: '✅',
+            error: '❌',
+            warning: '⚠️',
+            info: 'ℹ️'
+        };
+
+        toast.innerHTML = `
+            <div class="toast-icon">${icons[type] || icons.info}</div>
+            <div class="toast-content">
+                ${title ? `<div class="toast-title">${title}</div>` : ''}
+                <div class="toast-message">${message}</div>
+            </div>
+            <div class="toast-progress"></div>
+        `;
+
+        container.appendChild(toast);
+        void toast.offsetWidth;
+        toast.classList.add('show');
+
+        setTimeout(() => {
+            toast.classList.remove('show');
+            setTimeout(() => {
+                toast.remove();
+            }, 500);
+        }, 3000);
+    }
+
     // --- Event Listeners ---
     playBtn.addEventListener('click', startGame);
     submitBtn.addEventListener('click', checkAnswer);
@@ -181,6 +276,12 @@ document.addEventListener('DOMContentLoaded', () => {
         radio.addEventListener('change', (e) => {
             const mode = e.target.value;
             rangeSelector.style.display = mode === 'random-range' ? 'block' : 'none';
+            
+            // Hide quiz length input for weak points mode
+            const quizLengthContainer = document.querySelector('.quiz-length-container');
+            if (quizLengthContainer) {
+                quizLengthContainer.style.display = mode === 'weak-first' ? 'none' : 'block';
+            }
         });
     });
 

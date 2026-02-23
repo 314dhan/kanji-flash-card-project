@@ -30,6 +30,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // --- Game State ---
     let kanjiData = [];
     let currentKanji = null;
+    let currentLevel = 'general';
     let score = 0;
     let seenKanjiIds = [];
     let quizLength = 10;
@@ -42,12 +43,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // --- Kanji Categories (Hardcoded) ---
     const kanjiCategories = {
-        "basic": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50],
-        "numbers-time": [7, 28, 29, 30, 31, 56, 134, 135, 136, 137, 138, 139, 140, 141, 142, 143, 144, 145],
-        "places": [5, 6, 40, 41, 65, 70, 115, 154, 159, 161, 163, 164, 246],
-        "family": [54, 195, 196, 197, 198, 199, 200, 201, 202, 203, 204, 205, 206, 207],
-        "activities": [15, 43, 44, 46, 89, 92, 97, 98, 168, 230, 94, 95, 96],
-        "nature": [57, 58, 59, 60, 62, 63, 64, 66, 67, 68, 123, 124]
+        "basic": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50].map(id => `general-${id}`),
+        "numbers-time": [7, 28, 29, 30, 31, 56, 134, 135, 136, 137, 138, 139, 140, 141, 142, 143, 144, 145].map(id => `general-${id}`),
+        "places": [5, 6, 40, 41, 65, 70, 115, 154, 159, 161, 163, 164, 246].map(id => `general-${id}`),
+        "family": [54, 195, 196, 197, 198, 199, 200, 201, 202, 203, 204, 205, 206, 207].map(id => `general-${id}`),
+        "activities": [15, 43, 44, 46, 89, 92, 97, 98, 168, 230, 94, 95, 96].map(id => `general-${id}`),
+        "nature": [57, 58, 59, 60, 62, 63, 64, 66, 67, 68, 123, 124].map(id => `general-${id}`)
     };
 
     // --- Data Loading ---
@@ -57,6 +58,7 @@ document.addEventListener('DOMContentLoaded', () => {
             const level = urlParams.get('level');
             let dataUrl = 'assets/data/kanji.json';
             let isJlpt = false;
+            currentLevel = level ? level.toLowerCase() : 'general';
 
             if (level && ['n2', 'n3', 'n4', 'n5'].includes(level.toLowerCase())) {
                 dataUrl = `assets/data/kanji${level.toLowerCase()}.json`;
@@ -94,7 +96,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     const kanaAnswers = `${item.onyomi}, ${item.kunyomi}`.replace(/-/g, '').split(',').map(s => s.trim()).filter(s => s && s !== '-');
                     
                     return {
-                        id: item.id,
+                        id: `${currentLevel}-${item.id}`,
                         kanji: item.kanji,
                         meaning: item.arti,
                         onyomi: item.onyomi,
@@ -104,7 +106,10 @@ document.addEventListener('DOMContentLoaded', () => {
                     };
                 });
             } else {
-                kanjiData = rawData;
+                kanjiData = rawData.map(item => ({
+                    ...item,
+                    id: `${currentLevel}-${item.id}`
+                }));
             }
             
             quizLengthInput.max = kanjiData.length;
@@ -181,12 +186,14 @@ document.addEventListener('DOMContentLoaded', () => {
             const start = parseInt(startRangeInput.value, 10) || 1;
             const end = parseInt(endRangeInput.value, 10) || kanjiData.length;
             
-            // Filter by ID range (assuming IDs are sequential and represent their position if possible)
-            // or just use slice if we assume index-based range as requested
-            const minId = Math.min(start, end);
-            const maxId = Math.max(start, end);
+            const minNum = Math.min(start, end);
+            const maxNum = Math.max(start, end);
             
-            baseKanji = kanjiData.filter(k => k.id >= minId && k.id <= maxId);
+            baseKanji = kanjiData.filter(k => {
+                // Extract numeric part from prefixed ID (e.g., "n3-10" -> 10)
+                const numericId = parseInt(k.id.split('-').pop(), 10);
+                return numericId >= minNum && numericId <= maxNum;
+            });
         } else if (learningMode === "continue") {
             const lastStudiedIndex = getLastStudiedIndex();
             if (lastStudiedIndex > 0) {
@@ -201,8 +208,14 @@ document.addEventListener('DOMContentLoaded', () => {
                 availableKanji = baseKanji.filter(k => categoryIds.includes(k.id) && !seenKanjiIds.includes(k.id));
                 break;
             case "weak-first":
-                const weakKanji = baseKanji.filter(k => userProgress.weak.includes(k.id) && !seenKanjiIds.includes(k.id));
-                availableKanji = weakKanji.length > 0 ? weakKanji : baseKanji.filter(k => !seenKanjiIds.includes(k.id));
+                availableKanji = baseKanji.filter(k => userProgress.weak.includes(k.id) && !seenKanjiIds.includes(k.id));
+                // Shuffle weak kanji to make it more interactive
+                if (availableKanji.length > 0) {
+                    for (let i = availableKanji.length - 1; i > 0; i--) {
+                        const j = Math.floor(Math.random() * (i + 1));
+                        [availableKanji[i], availableKanji[j]] = [availableKanji[j], availableKanji[i]];
+                    }
+                }
                 break;
             case "random":
             case "random-range":
@@ -283,8 +296,21 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     function startGame() {
+        const learningMode = document.querySelector('input[name="learning-mode"]:checked').value;
         const desiredLength = parseInt(quizLengthInput.value, 10);
-        quizLength = (!isNaN(desiredLength) && desiredLength > 0) ? Math.min(desiredLength, kanjiData.length) : 10;
+        
+        if (learningMode === "weak-first") {
+            // Set quiz length to the number of weak points for the CURRENT level
+            const availableWeakKanji = kanjiData.filter(k => userProgress.weak.includes(k.id));
+            quizLength = availableWeakKanji.length;
+            
+            if (quizLength === 0) {
+                showToast("You have no weak points in this level yet! Try other modes first.", 'warning', 'No Weak Points Found');
+                return;
+            }
+        } else {
+            quizLength = (!isNaN(desiredLength) && desiredLength > 0) ? Math.min(desiredLength, kanjiData.length) : 10;
+        }
 
         score = 0;
         seenKanjiIds = [];
@@ -309,6 +335,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
         const availableKanji = getAvailableKanji();
         if (availableKanji.length === 0) {
+            // Check if we finished the weak points quiz or just ran out of options
+            const learningMode = document.querySelector('input[name="learning-mode"]:checked').value;
+            if (learningMode === "weak-first" && seenKanjiIds.length > 0) {
+                endGame("All weak points reviewed!");
+                return;
+            }
             endGame("No more Kanji available in this mode!");
             return;
         }
@@ -370,6 +402,50 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // --- UI Update Functions ---
+    function showToast(message, type = 'info', title = '') {
+        // Create container if it doesn't exist
+        let container = document.querySelector('.toast-container');
+        if (!container) {
+            container = document.createElement('div');
+            container.className = 'toast-container';
+            document.body.appendChild(container);
+        }
+
+        // Create toast element
+        const toast = document.createElement('div');
+        toast.className = `toast ${type}`;
+        
+        const icons = {
+            success: '✅',
+            error: '❌',
+            warning: '⚠️',
+            info: 'ℹ️'
+        };
+
+        toast.innerHTML = `
+            <div class="toast-icon">${icons[type] || icons.info}</div>
+            <div class="toast-content">
+                ${title ? `<div class="toast-title">${title}</div>` : ''}
+                <div class="toast-message">${message}</div>
+            </div>
+            <div class="toast-progress"></div>
+        `;
+
+        container.appendChild(toast);
+
+        // Trigger reflow for animation
+        void toast.offsetWidth;
+        toast.classList.add('show');
+
+        // Auto remove
+        setTimeout(() => {
+            toast.classList.remove('show');
+            setTimeout(() => {
+                toast.remove();
+            }, 500);
+        }, 3000);
+    }
+
     function updateScoreDisplay() {
         scoreValueEl.textContent = score;
     }
@@ -442,6 +518,12 @@ document.addEventListener('DOMContentLoaded', () => {
                 categorySelector.style.display = mode === 'by-category' ? 'block' : 'none';
                 specificKanjiSelector.style.display = mode === 'specific' ? 'block' : 'none';
                 rangeSelector.style.display = mode === 'random-range' ? 'block' : 'none';
+                
+                // Hide quiz length input for weak points mode
+                const quizLengthContainer = document.querySelector('.quiz-length-container');
+                if (quizLengthContainer) {
+                    quizLengthContainer.style.display = mode === 'weak-first' ? 'none' : 'block';
+                }
 
                 if (mode === 'continue') {
                     const lastIndex = getLastStudiedIndex();
