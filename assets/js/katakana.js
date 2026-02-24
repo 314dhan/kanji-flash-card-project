@@ -105,6 +105,10 @@ document.addEventListener('DOMContentLoaded', () => {
                 showToast("You have no weak points in Katakana yet! Try other modes first.", 'warning', 'No Weak Points Found');
                 return;
             }
+        } else if (learningMode === 'random-range') {
+            const start = parseInt(startRangeInput.value, 10) || 1;
+            const end = parseInt(endRangeInput.value, 10) || kanaData.length;
+            quizLength = Math.abs(end - start) + 1;
         } else if (!isNaN(desiredLength) && desiredLength > 0) {
             quizLength = Math.min(desiredLength, kanaData.length);
         }
@@ -277,10 +281,10 @@ document.addEventListener('DOMContentLoaded', () => {
             const mode = e.target.value;
             rangeSelector.style.display = mode === 'random-range' ? 'block' : 'none';
             
-            // Hide quiz length input for weak points mode
+            // Hide quiz length input for weak points and random-range mode
             const quizLengthContainer = document.querySelector('.quiz-length-container');
             if (quizLengthContainer) {
-                quizLengthContainer.style.display = mode === 'weak-first' ? 'none' : 'block';
+                quizLengthContainer.style.display = (mode === 'weak-first' || mode === 'random-range') ? 'none' : 'block';
             }
         });
     });

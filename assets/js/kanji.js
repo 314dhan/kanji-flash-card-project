@@ -295,23 +295,26 @@ document.addEventListener('DOMContentLoaded', () => {
         return result.toLowerCase();
     }
 
-    function startGame() {
-        const learningMode = document.querySelector('input[name="learning-mode"]:checked').value;
-        const desiredLength = parseInt(quizLengthInput.value, 10);
-        
-        if (learningMode === "weak-first") {
-            // Set quiz length to the number of weak points for the CURRENT level
-            const availableWeakKanji = kanjiData.filter(k => userProgress.weak.includes(k.id));
-            quizLength = availableWeakKanji.length;
+        function startGame() {
+            const learningMode = document.querySelector('input[name="learning-mode"]:checked').value;
+            const desiredLength = parseInt(quizLengthInput.value, 10);
             
-            if (quizLength === 0) {
-                showToast("You have no weak points in this level yet! Try other modes first.", 'warning', 'No Weak Points Found');
-                return;
+            if (learningMode === "weak-first") {
+                // Set quiz length to the number of weak points for the CURRENT level
+                const availableWeakKanji = kanjiData.filter(k => userProgress.weak.includes(k.id));
+                quizLength = availableWeakKanji.length;
+                
+                if (quizLength === 0) {
+                    showToast("You have no weak points in this level yet! Try other modes first.", 'warning', 'No Weak Points Found');
+                    return;
+                }
+            } else if (learningMode === "random-range") {
+                const start = parseInt(startRangeInput.value, 10) || 1;
+                const end = parseInt(endRangeInput.value, 10) || kanjiData.length;
+                quizLength = Math.abs(end - start) + 1;
+            } else {
+                quizLength = (!isNaN(desiredLength) && desiredLength > 0) ? Math.min(desiredLength, kanjiData.length) : 10;
             }
-        } else {
-            quizLength = (!isNaN(desiredLength) && desiredLength > 0) ? Math.min(desiredLength, kanjiData.length) : 10;
-        }
-
         score = 0;
         seenKanjiIds = [];
         updateScoreDisplay();
@@ -519,10 +522,10 @@ document.addEventListener('DOMContentLoaded', () => {
                 specificKanjiSelector.style.display = mode === 'specific' ? 'block' : 'none';
                 rangeSelector.style.display = mode === 'random-range' ? 'block' : 'none';
                 
-                // Hide quiz length input for weak points mode
+                // Hide quiz length input for weak points and random-range mode
                 const quizLengthContainer = document.querySelector('.quiz-length-container');
                 if (quizLengthContainer) {
-                    quizLengthContainer.style.display = mode === 'weak-first' ? 'none' : 'block';
+                    quizLengthContainer.style.display = (mode === 'weak-first' || mode === 'random-range') ? 'none' : 'block';
                 }
 
                 if (mode === 'continue') {
