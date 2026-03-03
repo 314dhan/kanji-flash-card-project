@@ -26,6 +26,11 @@ document.addEventListener('DOMContentLoaded', () => {
     const startKanjiInput = document.getElementById('start-kanji-input');
     const startScreenTitle = startScreen.querySelector('.title');
     const startScreenSubtitle = startScreen.querySelector('.subtitle');
+    const countdownToggle = document.getElementById('countdown-toggle');
+    const countdownSettings = document.getElementById('countdown-settings');
+    const countdownMinutesInput = document.getElementById('countdown-minutes');
+    const timerDisplay = document.getElementById('timer-display');
+    const timerValueEl = document.getElementById('timer-value');
 
     // --- Game State ---
     let kanjiData = [];
@@ -34,6 +39,9 @@ document.addEventListener('DOMContentLoaded', () => {
     let score = 0;
     let seenKanjiIds = [];
     let quizLength = 10;
+    let timerInterval = null;
+    let timeLeft = 0;
+    let isCountdownActive = false;
     let userProgress = {
         mastered: [],
         weak: [],
@@ -238,6 +246,45 @@ document.addEventListener('DOMContentLoaded', () => {
         return availableKanji;
     }
 
+    // --- Timer Management ---
+    function startTimer(minutes) {
+        clearInterval(timerInterval);
+        timeLeft = minutes * 60;
+        updateTimerDisplay();
+        
+        timerDisplay.style.display = 'flex';
+        isCountdownActive = true;
+
+        timerInterval = setInterval(() => {
+            timeLeft--;
+            updateTimerDisplay();
+
+            if (timeLeft <= 10) {
+                timerDisplay.style.color = '#ff5252';
+                timerDisplay.style.borderColor = 'rgba(255, 82, 82, 0.5)';
+            }
+
+            if (timeLeft <= 0) {
+                stopTimer();
+                endGame("Time's Up!");
+            }
+        }, 1000);
+    }
+
+    function stopTimer() {
+        clearInterval(timerInterval);
+        isCountdownActive = false;
+        timerDisplay.style.display = 'none';
+        timerDisplay.style.color = '#ffeb3b';
+        timerDisplay.style.borderColor = 'rgba(255,235,59,0.3)';
+    }
+
+    function updateTimerDisplay() {
+        const minutes = Math.floor(timeLeft / 60);
+        const seconds = timeLeft % 60;
+        timerValueEl.textContent = `${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
+    }
+
     // --- Game Flow ---
     const kanaToRomajiMap = {
         'あ': 'a', 'い': 'i', 'う': 'u', 'え': 'e', 'お': 'o',
@@ -324,6 +371,14 @@ document.addEventListener('DOMContentLoaded', () => {
         startScreen.classList.remove('active');
         gameContainer.classList.add('active');
 
+        // Start Countdown if enabled
+        if (countdownToggle.checked) {
+            const minutes = parseInt(countdownMinutesInput.value, 10) || 1;
+            startTimer(minutes);
+        } else {
+            stopTimer(); // Ensure timer is hidden if not enabled
+        }
+
         displayNewKanji();
     }
 
@@ -390,6 +445,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     function endGame(message = 'Quiz Complete!') {
+        stopTimer();
         updateGameHeader(); // Final progress bar update
         gameContainer.classList.remove('active');
         startScreen.classList.add('active');
@@ -508,6 +564,19 @@ document.addEventListener('DOMContentLoaded', () => {
         submitBtn.addEventListener('click', checkAnswer);
         nextBtn.addEventListener('click', displayNewKanji);
         hintDisplay.addEventListener('click', toggleHint);
+
+        countdownToggle.addEventListener('change', () => {
+            countdownSettings.style.display = countdownToggle.checked ? 'block' : 'none';
+        });
+
+        countdownMinutesInput.addEventListener('change', () => {
+            let value = parseInt(countdownMinutesInput.value, 10);
+            if (isNaN(value) || value < 1) {
+                countdownMinutesInput.value = 1;
+            } else if (value > 60) {
+                countdownMinutesInput.value = 60;
+            }
+        });
 
         answerInputEl.addEventListener('keyup', (event) => {
             if (event.key === 'Enter' && !submitBtn.disabled) {

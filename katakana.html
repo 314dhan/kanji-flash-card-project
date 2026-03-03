@@ -71,6 +71,19 @@
                             <span class="option-text">Sequential</span>
                         </label>
                     </div>
+
+                    <div class="countdown-mode-container">
+                        <label class="option-label" style="cursor: pointer;">
+                            <input type="checkbox" id="countdown-toggle" style="width: 20px; height: 20px;">
+                            <span class="option-text" style="font-weight: 600;">Enable Countdown Mode ⏱️</span>
+                        </label>
+                        
+                        <div id="countdown-settings" style="display: none;">
+                            <label for="countdown-minutes">Duration (minutes):</label>
+                            <input type="number" id="countdown-minutes" value="1" min="1" max="60">
+                        </div>
+                    </div>
+
                     <div id="range-selector" class="range-selector" style="display: none;">
                         <div class="range-inputs">
                             <div class="input-field">
@@ -82,7 +95,7 @@
                                 <input type="number" id="end-range-input" min="1" value="20">
                             </div>
                         </div>
-                        <small>Available range: 1 - <span id="max-kana-range">46</span></small>
+                        <small>Available range: 1 - <span id="max-kana-range">76</span></small>
                     </div>
                 </div>
 
@@ -108,6 +121,10 @@
                 <span class="score-label">Score</span>
                 <span class="score-value">0</span>
                 <span id="score-max" class="score-max"></span>
+            </div>
+            <div id="timer-display" class="timer-display">
+                <span class="timer-icon">⏱️</span>
+                <span id="timer-value">01:00</span>
             </div>
             <div class="progress-bar">
                 <div class="progress-fill" style="width: 0%"></div>

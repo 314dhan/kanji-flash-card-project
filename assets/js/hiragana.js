@@ -19,6 +19,11 @@ document.addEventListener('DOMContentLoaded', () => {
     const startRangeInput = document.getElementById('start-range-input');
     const endRangeInput = document.getElementById('end-range-input');
     const maxKanaRangeEl = document.getElementById('max-kana-range');
+    const countdownToggle = document.getElementById('countdown-toggle');
+    const countdownSettings = document.getElementById('countdown-settings');
+    const countdownMinutesInput = document.getElementById('countdown-minutes');
+    const timerDisplay = document.getElementById('timer-display');
+    const timerValueEl = document.getElementById('timer-value');
     
     // Start/End Screen Elements
     const startScreenTitle = startScreen.querySelector('.title');
@@ -31,6 +36,9 @@ document.addEventListener('DOMContentLoaded', () => {
     let questionsAnswered = 0;
     let quizIndices = [];
     let quizLength = 10;
+    let timerInterval = null;
+    let timeLeft = 0;
+    let isCountdownActive = false;
     let userProgress = {
         mastered: [],
         weak: [],
@@ -90,6 +98,45 @@ document.addEventListener('DOMContentLoaded', () => {
             startScreenTitle.textContent = 'Error';
             startScreenSubtitle.textContent = 'Could not load Hiragana data.';
         });
+
+    // --- Timer Management ---
+    function startTimer(minutes) {
+        clearInterval(timerInterval);
+        timeLeft = minutes * 60;
+        updateTimerDisplay();
+        
+        timerDisplay.style.display = 'flex';
+        isCountdownActive = true;
+
+        timerInterval = setInterval(() => {
+            timeLeft--;
+            updateTimerDisplay();
+
+            if (timeLeft <= 10) {
+                timerDisplay.style.color = '#ff5252';
+                timerDisplay.style.borderColor = 'rgba(255, 82, 82, 0.5)';
+            }
+
+            if (timeLeft <= 0) {
+                stopTimer();
+                endGame("Time's Up!");
+            }
+        }, 1000);
+    }
+
+    function stopTimer() {
+        clearInterval(timerInterval);
+        isCountdownActive = false;
+        timerDisplay.style.display = 'none';
+        timerDisplay.style.color = '#ffeb3b';
+        timerDisplay.style.borderColor = 'rgba(255,235,59,0.3)';
+    }
+
+    function updateTimerDisplay() {
+        const minutes = Math.floor(timeLeft / 60);
+        const seconds = timeLeft % 60;
+        timerValueEl.textContent = `${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
+    }
 
     // --- Game Flow Functions ---
     function startGame() {
@@ -156,6 +203,14 @@ document.addEventListener('DOMContentLoaded', () => {
         startScreen.classList.remove('active');
         gameContainer.classList.add('active');
 
+        // Start Countdown if enabled
+        if (countdownToggle.checked) {
+            const minutes = parseInt(countdownMinutesInput.value, 10) || 1;
+            startTimer(minutes);
+        } else {
+            stopTimer();
+        }
+
         displayNewKana();
     }
 
@@ -212,16 +267,18 @@ document.addEventListener('DOMContentLoaded', () => {
         answerInputEl.disabled = true;
         submitBtn.disabled = true;
         nextBtn.disabled = false;
+        nextBtn.focus();
     }
 
-    function endGame() {
+    function endGame(message = 'Quiz Complete!') {
+        stopTimer();
         const finalProgress = (questionsAnswered / quizLength) * 100;
         progressFillEl.style.width = `${finalProgress}%`;
 
         gameContainer.classList.remove('active');
         startScreen.classList.add('active');
         
-        startScreenTitle.textContent = 'Quiz Complete!';
+        startScreenTitle.textContent = message;
         startScreenSubtitle.textContent = `Your final score is ${score} out of ${quizLength}`;
         playBtn.querySelector('span').textContent = 'Play Again';
     }
@@ -270,6 +327,20 @@ document.addEventListener('DOMContentLoaded', () => {
     playBtn.addEventListener('click', startGame);
     submitBtn.addEventListener('click', checkAnswer);
     nextBtn.addEventListener('click', displayNewKana);
+
+    countdownToggle.addEventListener('change', () => {
+        countdownSettings.style.display = countdownToggle.checked ? 'block' : 'none';
+    });
+
+    countdownMinutesInput.addEventListener('change', () => {
+        let value = parseInt(countdownMinutesInput.value, 10);
+        if (isNaN(value) || value < 1) {
+            countdownMinutesInput.value = 1;
+        } else if (value > 60) {
+            countdownMinutesInput.value = 60;
+        }
+    });
+
     answerInputEl.addEventListener('keyup', (event) => {
         if (event.key === 'Enter' && !submitBtn.disabled) {
             checkAnswer();

@@ -375,6 +375,68 @@ button:disabled, a:disabled {
     width: 0%;
 }
 
+/* =================================
+   Timer Display
+   ================================= */
+.timer-display {
+    display: none;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    background: rgba(0, 0, 0, 0.3);
+    padding: 8px 20px;
+    border-radius: 20px;
+    color: #ffeb3b;
+    font-weight: bold;
+    min-width: 100px;
+    text-align: center;
+    border: 1px solid rgba(255, 235, 59, 0.3);
+    margin: 10px auto;
+    font-family: 'Poppins', monospace;
+    transition: all 0.3s ease;
+}
+
+.timer-icon {
+    font-size: 1.2em;
+}
+
+#timer-value {
+    font-size: 1.2em;
+    letter-spacing: 1px;
+}
+
+/* =================================
+   Countdown Mode Settings
+   ================================= */
+.countdown-mode-container {
+    margin-top: 20px;
+    padding-top: 15px;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+#countdown-settings {
+    margin-top: 10px;
+    padding-left: 30px;
+    animation: fadeIn 0.3s ease;
+}
+
+#countdown-settings label {
+    font-size: 0.9em;
+    opacity: 0.8;
+    color: var(--text-dark);
+}
+
+#countdown-minutes {
+    width: 70px;
+    padding: 8px;
+    border-radius: 8px;
+    border: 1px solid #e2e8f0;
+    background: var(--bg-white);
+    color: var(--primary-dark);
+    font-weight: 600;
+    text-align: center;
+}
+
 .game-content {
     max-width: 500px;
     width: 100%;
