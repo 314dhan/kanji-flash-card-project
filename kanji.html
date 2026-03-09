@@ -29,127 +29,123 @@
             </header>
 
             <main class="content">
-                <section class="feature-card">
-                    <div class="feature-icon">🎯</div>
-                    <h3>Test Your Knowledge</h3>
-                    <p>Guess the correct reading for each Kanji character and master Japanese characters through practice.</p>
-                </section>
-
-                <section class="instructions">
-                    <h3>How to Play:</h3>
+                <div class="instructions-card">
+                    <h3>Quick Guide 📖</h3>
                     <ul>
-                        <li>Type the reading (romaji) of the displayed Kanji</li>
-                        <li>Get instant feedback on your answers</li>
-                        <li>Aim for a high score!</li>
-                        <li>Challenge yourself and improve!</li>
+                        <li>Type the <strong>romaji</strong> (English characters) for the Kanji shown.</li>
+                        <li>Example: For <strong>字</strong>, type <strong>ji</strong>.</li>
+                        <li>Press <strong>Enter</strong> or click <strong>Check</strong> to submit.</li>
+                        <li>Click the 👁️ icon during the quiz for a hint!</li>
                     </ul>
-                </section>
-
-                <div class="quiz-length-container">
-                    <label for="quiz-length-input">Number of Questions:</label>
-                    <input type="number" id="quiz-length-input" value="10" min="1" max="50">
                 </div>
 
-                <!-- Learning Mode Options -->
-                <div class="learning-options">
-                    <h3>Learning Mode:</h3>
-                    <div class="option-group">
-                        <label class="option-label">
-                            <input type="radio" name="learning-mode" value="sequential" checked>
-                            <span class="option-text">Sequential (From Beginning To Hard)</span>
-                        </label>
-                        <label class="option-label">
-                            <input type="radio" name="learning-mode" value="by-category">
-                            <span class="option-text">By Category</span>
-                        </label>
-                        <label class="option-label">
-                            <input type="radio" name="learning-mode" value="weak-first">
-                            <span class="option-text">Focus on Weak Points</span>
-                        </label>
-                        <label class="option-label">
-                            <input type="radio" name="learning-mode" value="random">
-                            <span class="option-text">Random</span>
-                        </label>
-                        <label class="option-label">
-                            <input type="radio" name="learning-mode" value="random-range">
-                            <span class="option-text">Random Range (Specific ID)</span>
-                        </label>
-                        <label class="option-label">
-                            <input type="radio" name="learning-mode" value="specific">
-                            <span class="option-text">From Specific Kanji</span>
-                        </label>
-                    </div>
-
-                    <div class="countdown-mode-container">
-                        <label class="option-label" style="cursor: pointer;">
-                            <input type="checkbox" id="countdown-toggle" style="width: 20px; height: 20px;">
-                            <span class="option-text" style="font-weight: 600;"> Enable Countdown Mode ⏱️</span>
-                        </label>
-                        
-                        <div id="countdown-settings" style="display: none;">
-                            <label for="countdown-minutes">Duration (minutes):</label>
-                            <input type="number" id="countdown-minutes" value="1" min="1" max="60">
-                        </div>
-                    </div>
-
-                    <div class="no-hints-container">
-                        <label class="option-label" style="cursor: pointer;">
-                            <input type="checkbox" id="no-hints-toggle" style="width: 20px; height: 20px;">
-                            <span class="option-text" style="font-weight: 600;"> No Hints Mode (Hide Eye Icon) 👁️‍🗨️</span>
-                        </label>
-                    </div>
-
-                    <div class="repetition-mode-container">
-                        <label class="option-label" style="cursor: pointer;">
-                            <input type="checkbox" id="repetition-toggle" style="width: 20px; height: 20px;">
-                            <span class="option-text" style="font-weight: 600;"> Repetition Mode (Repeat Same Kanji) 🔁</span>
-                        </label>
-                    </div>
-
-                    <div id="category-selector" class="category-selector" style="display: none;">
-                        <label for="category-select">Choose Category:</label>
-                        <select id="category-select">
-                            <option value="basic">Basic (First 50 Kanji)</option>
-                            <option value="numbers-time">Numbers & Time</option>
-                            <option value="places">Places & Locations</option>
-                            <option value="family">Family & People</option>
-                            <option value="activities">Daily Activities</option>
-                            <option value="nature">Nature & Environment</option>
-                        </select>
-                    </div>
-                    <div id="range-selector" class="range-selector" style="display: none;">
-                        <div class="range-inputs">
-                            <div class="input-field">
-                                <label for="start-range-input">Start ID:</label>
-                                <input type="number" id="start-range-input" min="1" value="1">
-                            </div>
-                            <div class="input-field">
-                                <label for="end-range-input">End ID:</label>
-                                <input type="number" id="end-range-input" min="1" value="20">
-                            </div>
-                        </div>
-                        <small>Available range: 1 - <span id="max-kanji-range">300</span></small>
-                    </div>
-                    <div id="specific-kanji-selector" class="specific-kanji-selector" style="display: none;">
-                        <label for="start-kanji-input">Start from Kanji Number:</label>
-                        <input type="number" id="start-kanji-input" min="1" value="1">
-                        <small>Current range: 1 - <span id="max-kanji-number">300</span></small>
+                <div class="basic-settings">
+                    <div class="quiz-length-container">
+                        <label for="quiz-length-input">Number of Questions:</label>
+                        <input type="number" id="quiz-length-input" value="10" min="1" max="50">
                     </div>
                 </div>
 
-                <!-- Action Buttons -->
-                <button id="play-btn" class="btn-primary">
-                    <span>Start Learning</span>
-                    <i class="btn-icon">→</i>
-                </button>
-                <a href="kanji-list.html" class="btn-secondary">
-                    <span>View Kanji List</span>
-                    <i class="btn-icon">≡</i>
-                </a>
-                <a href="index.html" class="btn-secondary">
-                    <span>Back to Main Menu</span>
-                    <i class="btn-icon">←</i>
-                </a>
+                <!-- Advanced Options Collapsible -->
+                <details class="advanced-options-details">
+                    <summary class="advanced-summary">Advanced Settings ⚙️</summary>
+                    <div class="learning-options">
+                        <h3>Learning Mode:</h3>
+                        <div class="option-group">
+                            <label class="option-label">
+                                <input type="radio" name="learning-mode" value="sequential" checked>
+                                <span class="option-text">Sequential (From Beginning To Hard)</span>
+                            </label>
+                            <label class="option-label">
+                                <input type="radio" name="learning-mode" value="by-category">
+                                <span class="option-text">By Category</span>
+                            </label>
+                            <label class="option-label">
+                                <input type="radio" name="learning-mode" value="weak-first">
+                                <span class="option-text">Focus on Weak Points</span>
+                            </label>
+                            <label class="option-label">
+                                <input type="radio" name="learning-mode" value="random">
+                                <span class="option-text">Random</span>
+                            </label>
+                            <label class="option-label">
+                                <input type="radio" name="learning-mode" value="random-range">
+                                <span class="option-text">Random Range (Specific ID)</span>
+                            </label>
+                            <label class="option-label">
+                                <input type="radio" name="learning-mode" value="specific">
+                                <span class="option-text">From Specific Kanji</span>
+                            </label>
+                        </div>
+
+                        <div class="countdown-mode-container">
+                            <label class="option-label" style="cursor: pointer;">
+                                <input type="checkbox" id="countdown-toggle" style="width: 20px; height: 20px;">
+                                <span class="option-text" style="font-weight: 600;"> Enable Countdown Mode ⏱️</span>
+                            </label>
+                            
+                            <div id="countdown-settings" style="display: none;">
+                                <label for="countdown-minutes">Duration (minutes):</label>
+                                <input type="number" id="countdown-minutes" value="1" min="1" max="60">
+                            </div>
+                        </div>
+
+                        <div class="no-hints-container">
+                            <label class="option-label" style="cursor: pointer;">
+                                <input type="checkbox" id="no-hints-toggle" style="width: 20px; height: 20px;">
+                                <span class="option-text" style="font-weight: 600;"> No Hints Mode (Hide Eye Icon) 👁️‍🗨️</span>
+                            </label>
+                        </div>
+
+                        <div class="repetition-mode-container">
+                            <label class="option-label" style="cursor: pointer;">
+                                <input type="checkbox" id="repetition-toggle" style="width: 20px; height: 20px;">
+                                <span class="option-text" style="font-weight: 600;"> Repetition Mode (Repeat Same Kanji) 🔁</span>
+                            </label>
+                        </div>
+
+                        <div id="category-selector" class="category-selector" style="display: none;">
+                            <label for="category-select">Choose Category:</label>
+                            <select id="category-select">
+                                <option value="basic">Basic (First 50 Kanji)</option>
+                                <option value="numbers-time">Numbers & Time</option>
+                                <option value="places">Places & Locations</option>
+                                <option value="family">Family & People</option>
+                                <option value="activities">Daily Activities</option>
+                                <option value="nature">Nature & Environment</option>
+                            </select>
+                        </div>
+                        <div id="range-selector" class="range-selector" style="display: none;">
+                            <div class="range-inputs">
+                                <div class="input-field">
+                                    <label for="start-range-input">Start ID:</label>
+                                    <input type="number" id="start-range-input" min="1" value="1">
+                                </div>
+                                <div class="input-field">
+                                    <label for="end-range-input">End ID:</label>
+                                    <input type="number" id="end-range-input" min="1" value="20">
+                                </div>
+                            </div>
+                            <small>Available range: 1 - <span id="max-kanji-range">300</span></small>
+                        </div>
+                        <div id="specific-kanji-selector" class="specific-kanji-selector" style="display: none;">
+                            <label for="start-kanji-input">Start from Kanji Number:</label>
+                            <input type="number" id="start-kanji-input" min="1" value="1">
+                            <small>Current range: 1 - <span id="max-kanji-number">300</span></small>
+                        </div>
+                    </div>
+                </details>
+
+                <div class="action-buttons">
+                    <button id="play-btn" class="btn-primary">
+                        <span>Start Quiz</span>
+                        <div class="btn-icon">→</div>
+                    </button>
+                    <div class="secondary-actions">
+                        <a href="kanji-list.html" class="btn-secondary">Study List</a>
+                        <a href="index.html" class="btn-secondary">Main Menu</a>
+                    </div>
+                </div>
             </main>
         </div>
     </div>

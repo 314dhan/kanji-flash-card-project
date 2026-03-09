@@ -76,6 +76,7 @@ document.addEventListener('DOMContentLoaded', () => {
             if (level && ['n2', 'n3', 'n4', 'n5'].includes(level.toLowerCase())) {
                 dataUrl = `assets/data/kanji${level.toLowerCase()}.json`;
                 isJlpt = true;
+                console.log(`Loading JLPT data from: ${dataUrl}`);
                 startScreenSubtitle.textContent = `JLPT ${level.toUpperCase()} Kanji Challenge`;
                 answerInputEl.placeholder = "Enter reading (romaji)";
                 
@@ -83,7 +84,8 @@ document.addEventListener('DOMContentLoaded', () => {
                 const backBtn = document.querySelector('a[href="index.html"]');
                 if (backBtn) {
                     backBtn.href = 'jlpt-kanji.html';
-                    backBtn.querySelector('span').textContent = 'Back to JLPT Selection';
+                    const backText = backBtn.querySelector('span');
+                    if (backText) backText.textContent = 'Back to JLPT Selection';
                 }
                 const listBtn = document.querySelector('a[href="kanji-list.html"]');
                 if (listBtn) {
@@ -98,8 +100,9 @@ document.addEventListener('DOMContentLoaded', () => {
             }
 
             const response = await fetch(dataUrl);
-            if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
+            if (!response.ok) throw new Error(`HTTP error! status: ${response.status} for ${dataUrl}`);
             const rawData = await response.json();
+            console.log(`Loaded ${rawData.length} items from ${dataUrl}`);
             
             // Map data if it's JLPT format
             if (isJlpt) {

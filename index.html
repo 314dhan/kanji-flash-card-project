@@ -23,29 +23,71 @@
     </div>
 
     <div id="start-screen" class="screen active">
-        <div class="container">
+        <div class="container main-hub">
             <div class="header">
-                <h1 class="title">Japanese Language Learning</h1>
-                <div class="subtitle">Choose your training</div>
+                <h1 class="title">Japanese Master</h1>
+                <div class="subtitle">Your journey to fluency starts here</div>
             </div>
 
-            <div class="content">
-                <a href="hiragana.html" class="btn-primary" style="text-decoration: none;">
-                    <span>Hiragana</span>
-                    <div class="btn-icon">→</div>
-                </a>
-                <a href="katakana.html" class="btn-primary" style="text-decoration: none; margin-top: 15px;">
-                    <span>Katakana</span>
-                    <div class="btn-icon">→</div>
-                </a>
-                <a href="kanji.html" class="btn-primary" style="text-decoration: none; margin-top: 15px;">
-                    <span>Kanji</span>
-                    <div class="btn-icon">→</div>
-                </a>
-                <a href="jlpt-kanji.html" class="btn-primary" style="text-decoration: none; margin-top: 15px;">
-                    <span>JLPT Kanji (N5-N2)</span>
-                    <div class="btn-icon">→</div>
-                </a>
+            <div class="welcome-section">
+                <p>Welcome! If you're new to Japanese, we recommend following the path below in order.</p>
+            </div>
+
+            <div class="learning-path">
+                <!-- Step 1: Hiragana -->
+                <div class="path-card" data-step="1">
+                    <div class="card-badge">Step 1</div>
+                    <div class="card-icon">あ</div>
+                    <div class="card-info">
+                        <h3>Hiragana</h3>
+                        <p>The foundation of Japanese. Used for native words and grammar.</p>
+                        <div class="card-actions">
+                            <a href="hiragana.html" class="btn-primary-sm">Start Quiz</a>
+                            <a href="hiragana-list.html" class="btn-link">Study List</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Step 2: Katakana -->
+                <div class="path-card" data-step="2">
+                    <div class="card-badge">Step 2</div>
+                    <div class="card-icon">ア</div>
+                    <div class="card-info">
+                        <h3>Katakana</h3>
+                        <p>Used for foreign loanwords, names, and emphasis.</p>
+                        <div class="card-actions">
+                            <a href="katakana.html" class="btn-primary-sm">Start Quiz</a>
+                            <a href="katakana-list.html" class="btn-link">Study List</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Step 3: Kanji -->
+                <div class="path-card" data-step="3">
+                    <div class="card-badge">Step 3</div>
+                    <div class="card-icon">字</div>
+                    <div class="card-info">
+                        <h3>Kanji</h3>
+                        <p>Complex characters representing concepts and meanings.</p>
+                        <div class="card-actions">
+                            <a href="kanji.html" class="btn-primary-sm">Start Quiz</a>
+                            <a href="kanji-list.html" class="btn-link">Study List</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Extra: JLPT -->
+                <div class="path-card special">
+                    <div class="card-badge">Exam Prep</div>
+                    <div class="card-icon">🏆</div>
+                    <div class="card-info">
+                        <h3>JLPT Kanji</h3>
+                        <p>Master N5 to N2 Kanji for the Japanese Language Proficiency Test.</p>
+                        <div class="card-actions">
+                            <a href="jlpt-kanji.html" class="btn-primary-sm">Practice</a>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>

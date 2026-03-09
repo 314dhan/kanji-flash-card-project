@@ -86,13 +86,129 @@ body {
 
 .container {
     width: 100%;
-    max-width: 800px;
+    max-width: 900px; /* Increased for grid */
     background: rgba(255, 255, 255, 0.95);
     backdrop-filter: blur(10px);
     border-radius: 24px;
-    padding: 60px 40px;
+    padding: 50px 40px;
     box-shadow: var(--shadow-lg);
     border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.main-hub {
+    max-width: 1000px;
+}
+
+/* =================================
+   Learning Path Grid
+   ================================= */
+.welcome-section {
+    margin-bottom: 30px;
+    color: var(--text-light);
+    font-size: 1.1em;
+}
+
+.learning-path {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+    text-align: left;
+}
+
+.path-card {
+    background: var(--bg-white);
+    padding: 25px;
+    border-radius: 18px;
+    box-shadow: var(--shadow);
+    position: relative;
+    transition: all 0.3s ease;
+    border: 1px solid #edf2f7;
+    display: flex;
+    flex-direction: column;
+}
+
+.path-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-lg);
+    border-color: var(--primary-color);
+}
+
+.card-badge {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: var(--bg-light);
+    color: var(--primary-color);
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 0.75em;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.path-card.special .card-badge {
+    background: var(--accent-color);
+    color: white;
+}
+
+.card-icon {
+    font-size: 2.5em;
+    margin-bottom: 15px;
+    color: var(--text-dark);
+    font-family: 'Noto Sans JP', sans-serif;
+    font-weight: 700;
+}
+
+.card-info h3 {
+    font-size: 1.4em;
+    margin-bottom: 8px;
+    color: var(--text-dark);
+}
+
+.card-info p {
+    color: var(--text-light);
+    font-size: 0.95em;
+    line-height: 1.5;
+    margin-bottom: 20px;
+    min-height: 45px;
+}
+
+.card-actions {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-top: auto;
+}
+
+.btn-primary-sm {
+    padding: 10px 20px;
+    background: var(--gradient);
+    color: white;
+    text-decoration: none;
+    border-radius: 10px;
+    font-weight: 600;
+    font-size: 0.9em;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 10px rgba(102, 126, 234, 0.2);
+}
+
+.btn-primary-sm:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 6px 15px rgba(102, 126, 234, 0.3);
+}
+
+.btn-link {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.9em;
+    border-bottom: 2px solid transparent;
+    transition: all 0.3s ease;
+}
+
+.btn-link:hover {
+    border-bottom-color: var(--primary-color);
 }
 
 /* =================================
@@ -179,6 +295,88 @@ body {
     left: 0;
     color: var(--success-color);
     font-weight: bold;
+}
+
+.instructions-card {
+    background: #f8fafc;
+    border-radius: 16px;
+    padding: 20px;
+    margin-bottom: 25px;
+    text-align: left;
+    border: 1px solid #e2e8f0;
+}
+
+.instructions-card h3 {
+    font-size: 1.1em;
+    color: var(--text-dark);
+    margin-bottom: 10px;
+}
+
+.instructions-card ul {
+    list-style: none;
+}
+
+.instructions-card li {
+    font-size: 0.95em;
+    color: var(--text-light);
+    margin-bottom: 5px;
+    position: relative;
+    padding-left: 20px;
+}
+
+.instructions-card li::before {
+    content: "•";
+    position: absolute;
+    left: 5px;
+    color: var(--primary-color);
+    font-weight: bold;
+}
+
+.basic-settings {
+    margin-bottom: 20px;
+}
+
+.advanced-options-details {
+    margin-bottom: 25px;
+    text-align: left;
+}
+
+.advanced-summary {
+    cursor: pointer;
+    font-weight: 600;
+    color: var(--text-light);
+    padding: 10px;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    user-select: none;
+    list-style: none; /* Hide default arrow */
+}
+
+.advanced-summary::-webkit-details-marker {
+    display: none;
+}
+
+.advanced-summary:hover {
+    color: var(--primary-color);
+    background: rgba(102, 126, 234, 0.05);
+}
+
+.action-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.secondary-actions {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+}
+
+.secondary-actions .btn-secondary {
+    flex: 1;
+    font-size: 0.95em;
+    padding: 12px;
 }
 
 /* =================================

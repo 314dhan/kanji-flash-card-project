@@ -28,96 +28,91 @@
             </div>
 
             <div class="content">
-                <div class="feature-card">
-                    <div class="feature-icon">🎯</div>
-                    <h3>Test Your Knowledge</h3>
-                    <p>Guess the correct reading for each Katakana character and master Japanese characters through
-                        practice.</p>
-                </div>
-
-                <div class="instructions">
-                    <h3>How to Play:</h3>
+                <div class="instructions-card">
+                    <h3>Quick Guide 📖</h3>
                     <ul>
-                        <li>Type the reading (romaji) of the displayed Katakana</li>
-                        <li>Get instant feedback on your answers</li>
-                        <li>Aim for a high score!</li>
-                        <li>Challenge yourself and improve!</li>
+                        <li>Type the <strong>romaji</strong> (English characters) for the Katakana shown.</li>
+                        <li>Example: For <strong>ア</strong>, type <strong>a</strong>.</li>
+                        <li>Press <strong>Enter</strong> or click <strong>Check</strong> to submit.</li>
                     </ul>
                 </div>
 
-                <div class="quiz-length-container">
-                    <label for="quiz-length-input">Number of Questions:</label>
-                    <input type="number" id="quiz-length-input" value="10" min="1" max="50">
-                </div>
-
-                <!-- Learning Mode Options -->
-                <div class="learning-options">
-                    <h3>Learning Mode:</h3>
-                    <div class="option-group">
-                        <label class="option-label">
-                            <input type="radio" name="learning-mode" value="random" checked>
-                            <span class="option-text">Random</span>
-                        </label>
-                        <label class="option-label">
-                            <input type="radio" name="learning-mode" value="weak-first">
-                            <span class="option-text">Focus on Weak Points</span>
-                        </label>
-                        <label class="option-label">
-                            <input type="radio" name="learning-mode" value="random-range">
-                            <span class="option-text">Random Range (Specific ID)</span>
-                        </label>
-                        <label class="option-label">
-                            <input type="radio" name="learning-mode" value="sequential">
-                            <span class="option-text">Sequential</span>
-                        </label>
-                    </div>
-
-                    <div class="countdown-mode-container">
-                        <label class="option-label" style="cursor: pointer;">
-                            <input type="checkbox" id="countdown-toggle" style="width: 20px; height: 20px;">
-                            <span class="option-text" style="font-weight: 600;"> Enable Countdown Mode ⏱️</span>
-                        </label>
-
-                        <div id="countdown-settings" style="display: none;">
-                            <label for="countdown-minutes">Duration (minutes):</label>
-                            <input type="number" id="countdown-minutes" value="1" min="1" max="60">
-                        </div>
-                    </div>
-
-                    <div class="repetition-mode-container">
-                        <label class="option-label" style="cursor: pointer;">
-                            <input type="checkbox" id="repetition-toggle" style="width: 20px; height: 20px;">
-                            <span class="option-text" style="font-weight: 600;"> Repetition Mode (Repeat Same Katakana) 🔁</span>
-                        </label>
-                    </div>
-
-                    <div id="range-selector" class="range-selector" style="display: none;">
-                        <div class="range-inputs">
-                            <div class="input-field">
-                                <label for="start-range-input">Start ID:</label>
-                                <input type="number" id="start-range-input" min="1" value="1">
-                            </div>
-                            <div class="input-field">
-                                <label for="end-range-input">End ID:</label>
-                                <input type="number" id="end-range-input" min="1" value="20">
-                            </div>
-                        </div>
-                        <small>Available range: 1 - <span id="max-kana-range">76</span></small>
+                <div class="basic-settings">
+                    <div class="quiz-length-container">
+                        <label for="quiz-length-input">Number of Questions:</label>
+                        <input type="number" id="quiz-length-input" value="10" min="1" max="50">
                     </div>
                 </div>
 
-                <button id="play-btn" class="btn-primary">
-                    <span>Start Learning</span>
-                    <div class="btn-icon">→</div>
-                </button>
-                <a href="katakana-list.html" class="btn-secondary" style="text-decoration: none; margin-top: 15px;">
-                    <span>Katakana List</span>
-                    <i class="btn-icon">≡</i>
-                </a>
-                <a href="index.html" class="btn-secondary" style="text-decoration: none; margin-top: 15px;">
-                    <span>Back to Main Menu</span>
-                    <div class="btn-icon">←</div>
-                </a>
+                <!-- Advanced Options Collapsible -->
+                <details class="advanced-options-details">
+                    <summary class="advanced-summary">Advanced Settings ⚙️</summary>
+                    <div class="learning-options">
+                        <h3>Learning Mode:</h3>
+                        <div class="option-group">
+                            <label class="option-label">
+                                <input type="radio" name="learning-mode" value="random" checked>
+                                <span class="option-text">Random</span>
+                            </label>
+                            <label class="option-label">
+                                <input type="radio" name="learning-mode" value="weak-first">
+                                <span class="option-text">Focus on Weak Points</span>
+                            </label>
+                            <label class="option-label">
+                                <input type="radio" name="learning-mode" value="random-range">
+                                <span class="option-text">Random Range (Specific ID)</span>
+                            </label>
+                            <label class="option-label">
+                                <input type="radio" name="learning-mode" value="sequential">
+                                <span class="option-text">Sequential</span>
+                            </label>
+                        </div>
+
+                        <div class="countdown-mode-container">
+                            <label class="option-label" style="cursor: pointer;">
+                                <input type="checkbox" id="countdown-toggle" style="width: 20px; height: 20px;">
+                                <span class="option-text" style="font-weight: 600;"> Enable Countdown Mode ⏱️</span>
+                            </label>
+
+                            <div id="countdown-settings" style="display: none;">
+                                <label for="countdown-minutes">Duration (minutes):</label>
+                                <input type="number" id="countdown-minutes" value="1" min="1" max="60">
+                            </div>
+                        </div>
+
+                        <div class="repetition-mode-container">
+                            <label class="option-label" style="cursor: pointer;">
+                                <input type="checkbox" id="repetition-toggle" style="width: 20px; height: 20px;">
+                                <span class="option-text" style="font-weight: 600;"> Repetition Mode (Repeat Same Katakana) 🔁</span>
+                            </label>
+                        </div>
+
+                        <div id="range-selector" class="range-selector" style="display: none;">
+                            <div class="range-inputs">
+                                <div class="input-field">
+                                    <label for="start-range-input">Start ID:</label>
+                                    <input type="number" id="start-range-input" min="1" value="1">
+                                </div>
+                                <div class="input-field">
+                                    <label for="end-range-input">End ID:</label>
+                                    <input type="number" id="end-range-input" min="1" value="20">
+                                </div>
+                            </div>
+                            <small>Available range: 1 - <span id="max-kana-range">76</span></small>
+                        </div>
+                    </div>
+                </details>
+
+                <div class="action-buttons">
+                    <button id="play-btn" class="btn-primary">
+                        <span>Start Quiz</span>
+                        <div class="btn-icon">→</div>
+                    </button>
+                    <div class="secondary-actions">
+                        <a href="katakana-list.html" class="btn-secondary">Study List</a>
+                        <a href="index.html" class="btn-secondary">Main Menu</a>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
