@@ -33,6 +33,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const noHintsToggle = document.getElementById('no-hints-toggle');
     const timerDisplay = document.getElementById('timer-display');
     const timerValueEl = document.getElementById('timer-value');
+    const idDisplayEl = document.getElementById('id-display');
+    const repetitionToggle = document.getElementById('repetition-toggle');
 
     // --- Game State ---
     let kanjiData = [];
@@ -44,6 +46,7 @@ document.addEventListener('DOMContentLoaded', () => {
     let timerInterval = null;
     let timeLeft = 0;
     let isCountdownActive = false;
+    let isRepetitionMode = false;
     let userProgress = {
         mastered: [],
         weak: [],
@@ -388,6 +391,20 @@ document.addEventListener('DOMContentLoaded', () => {
             hintDisplay.style.display = 'flex'; // Use flex as per hint-wrapper class in CSS
         }
 
+        isRepetitionMode = repetitionToggle.checked;
+        if (isRepetitionMode) {
+            // Pick the first available kanji to repeat
+            const available = getAvailableKanji();
+            if (available.length > 0) {
+                currentKanji = available[0];
+            } else {
+                showToast("No Kanji available to repeat!", 'warning', 'Error');
+                return;
+            }
+        } else {
+            currentKanji = null;
+        }
+
         displayNewKanji();
     }
 
@@ -400,23 +417,30 @@ document.addEventListener('DOMContentLoaded', () => {
         updateGameHeader();
         resetUIForNewCard();
 
-        const availableKanji = getAvailableKanji();
-        if (availableKanji.length === 0) {
-            // Check if we finished the weak points quiz or just ran out of options
-            const learningMode = document.querySelector('input[name="learning-mode"]:checked').value;
-            if (learningMode === "weak-first" && seenKanjiIds.length > 0) {
-                endGame("All weak points reviewed!");
+        if (isRepetitionMode && currentKanji) {
+            // Keep using the same kanji
+            seenKanjiIds.push(currentKanji.id); // Push to track progress
+        } else {
+            const availableKanji = getAvailableKanji();
+            if (availableKanji.length === 0) {
+                // Check if we finished the weak points quiz or just ran out of options
+                const learningMode = document.querySelector('input[name="learning-mode"]:checked').value;
+                if (learningMode === "weak-first" && seenKanjiIds.length > 0) {
+                    endGame("All weak points reviewed!");
+                    return;
+                }
+                endGame("No more Kanji available in this mode!");
                 return;
             }
-            endGame("No more Kanji available in this mode!");
-            return;
+
+            // For random mode, we just pick the first one from the pre-shuffled list
+            currentKanji = availableKanji[0];
+            seenKanjiIds.push(currentKanji.id);
         }
 
-        // For random mode, we just pick the first one from the pre-shuffled list
-        const nextKanji = availableKanji[0];
-
-        currentKanji = nextKanji;
-        seenKanjiIds.push(currentKanji.id);
+        if (idDisplayEl && currentKanji) {
+            idDisplayEl.textContent = `ID: ${currentKanji.id.split('-').pop()}`;
+        }
 
         kanjiCharacterEl.textContent = currentKanji.kanji;
         kanjiCharacterEl.parentElement.style.animation = 'none';

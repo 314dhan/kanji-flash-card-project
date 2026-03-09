@@ -25,6 +25,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const countdownMinutesInput = document.getElementById('countdown-minutes');
     const timerDisplay = document.getElementById('timer-display');
     const timerValueEl = document.getElementById('timer-value');
+    const idDisplayEl = document.getElementById('id-display');
+    const repetitionToggle = document.getElementById('repetition-toggle');
     
     // Start/End Screen Elements
     const startScreenTitle = startScreen.querySelector('.title');
@@ -40,6 +42,7 @@ document.addEventListener('DOMContentLoaded', () => {
     let timerInterval = null;
     let timeLeft = 0;
     let isCountdownActive = false;
+    let isRepetitionMode = false;
     let userProgress = {
         mastered: [],
         weak: [],
@@ -212,6 +215,13 @@ document.addEventListener('DOMContentLoaded', () => {
             stopTimer();
         }
 
+        isRepetitionMode = repetitionToggle.checked;
+        if (isRepetitionMode) {
+            const currentIndex = quizIndices[0];
+            currentKana = kanaData[currentIndex];
+        } else {
+            currentKana = null;
+        }
         displayNewKana();
     }
 
@@ -228,9 +238,18 @@ document.addEventListener('DOMContentLoaded', () => {
         // Reset result message
         resultEl.classList.remove('show', 'correct', 'incorrect');
 
-        const currentIndex = quizIndices[questionsAnswered];
-        currentKana = kanaData[currentIndex];
+        if (isRepetitionMode && currentKana) {
+            // Keep using the same kana
+        } else {
+            const currentIndex = quizIndices[questionsAnswered];
+            currentKana = kanaData[currentIndex];
+        }
         
+        if (idDisplayEl && currentKana) {
+            const idx = kanaData.indexOf(currentKana);
+            idDisplayEl.textContent = `ID: ${idx + 1}`;
+        }
+
         kanaCharacterEl.textContent = currentKana.kana;
         kanaCharacterEl.parentElement.style.animation = 'none';
         void kanaCharacterEl.parentElement.offsetWidth; // Trigger reflow

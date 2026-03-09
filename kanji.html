@@ -99,6 +99,13 @@
                         </label>
                     </div>
 
+                    <div class="repetition-mode-container">
+                        <label class="option-label" style="cursor: pointer;">
+                            <input type="checkbox" id="repetition-toggle" style="width: 20px; height: 20px;">
+                            <span class="option-text" style="font-weight: 600;"> Repetition Mode (Repeat Same Kanji) 🔁</span>
+                        </label>
+                    </div>
+
                     <div id="category-selector" class="category-selector" style="display: none;">
                         <label for="category-select">Choose Category:</label>
                         <select id="category-select">
@@ -150,6 +157,7 @@
     <!-- Game Container -->
     <div id="game-container" class="screen">
         <header class="game-header">
+            <div id="id-display" class="id-display">ID: -</div>
             <div class="score-display">
                 <span class="score-label">Score</span>
                 <span class="score-value">0</span>
