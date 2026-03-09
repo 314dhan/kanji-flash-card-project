@@ -7,6 +7,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const playBtn = document.getElementById('play-btn');
     const submitBtn = document.getElementById('submit-btn');
     const nextBtn = document.getElementById('next-btn');
+    const restartBtn = document.getElementById('restart-btn');
 
     // Game Display Elements
     const scoreValueEl = document.querySelector('.score-value');
@@ -327,6 +328,7 @@ document.addEventListener('DOMContentLoaded', () => {
     playBtn.addEventListener('click', startGame);
     submitBtn.addEventListener('click', checkAnswer);
     nextBtn.addEventListener('click', displayNewKana);
+    restartBtn.addEventListener('click', startGame);
 
     countdownToggle.addEventListener('change', () => {
         countdownSettings.style.display = countdownToggle.checked ? 'block' : 'none';

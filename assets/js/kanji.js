@@ -5,6 +5,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const playBtn = document.getElementById('play-btn');
     const submitBtn = document.getElementById('submit-btn');
     const nextBtn = document.getElementById('next-btn');
+    const restartBtn = document.getElementById('restart-btn');
     const scoreValueEl = document.querySelector('.score-value');
     const scoreMaxEl = document.getElementById('score-max');
     const progressFillEl = document.querySelector('.progress-fill');
@@ -563,6 +564,7 @@ document.addEventListener('DOMContentLoaded', () => {
         playBtn.addEventListener('click', startGame);
         submitBtn.addEventListener('click', checkAnswer);
         nextBtn.addEventListener('click', displayNewKanji);
+        restartBtn.addEventListener('click', startGame);
         hintDisplay.addEventListener('click', toggleHint);
 
         countdownToggle.addEventListener('change', () => {

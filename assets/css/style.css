@@ -590,6 +590,10 @@ button:disabled, a:disabled {
 
 .game-controls {
     margin-top: 20px;
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    flex-wrap: wrap;
 }
 
 /* =================================
