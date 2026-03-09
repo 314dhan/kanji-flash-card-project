@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Katakana Master - Flashcard Quiz</title>
+    <title>Similar Kanji Master - Flashcard Quiz</title>
     <link rel="icon" type="image/png" href="assets/images/favicon.png">
     <link rel="stylesheet" href="assets/css/style.css">
     <link
@@ -20,20 +20,22 @@
         <div class="bg-circle circle-3"></div>
     </div>
 
+    <!-- Start Screen -->
     <div id="start-screen" class="screen active">
         <div class="container">
-            <div class="header">
-                <h1 class="title">Katakana Master</h1>
-                <div class="subtitle">Flashcard Quiz</div>
-            </div>
+            <header class="header">
+                <h1 class="title">Similar Kanji Master</h1>
+                <p class="subtitle">Distinguish visually similar Kanji</p>
+            </header>
 
-            <div class="content">
+            <main class="content">
                 <div class="instructions-card">
                     <h3>Quick Guide 📖</h3>
                     <ul>
-                        <li>Type the <strong>romaji</strong> (English characters) for the Katakana shown.</li>
-                        <li>Example: For <strong>ア</strong>, type <strong>a</strong>.</li>
+                        <li>Learn Kanji that look almost identical!</li>
+                        <li>Type the <strong>romaji</strong> (English characters) for the Kanji shown.</li>
                         <li>Press <strong>Enter</strong> or click <strong>Check</strong> to submit.</li>
+                        <li>Click the 👁️ icon during the quiz for a hint!</li>
                     </ul>
                 </div>
 
@@ -52,29 +54,18 @@
                         <div class="option-group">
                             <label class="option-label">
                                 <input type="radio" name="learning-mode" value="random" checked>
-                                <span class="option-text">Random</span>
-                            </label>
-                            <label class="option-label">
-                                <input type="radio" name="learning-mode" value="weak-first">
-                                <span class="option-text">Focus on Weak Points</span>
+                                <span class="option-text">Random Similar Kanji</span>
                             </label>
                             <label class="option-label" style="flex-direction: column; align-items: flex-start;">
                                 <div style="display: flex; align-items: center; width: 100%;">
-                                    <input type="radio" name="learning-mode" value="random-range">
-                                    <span class="option-text">Random Range (Specific ID)</span>
+                                    <input type="radio" name="learning-mode" value="by-category">
+                                    <span class="option-text">By Similarity Group</span>
                                 </div>
-                                <div id="range-selector" class="range-selector" style="display: none; width: 100%; margin-top: 10px; padding-left: 25px;">
-                                    <div class="range-inputs" style="display: flex; gap: 10px;">
-                                        <div class="input-field" style="flex: 1;">
-                                            <label for="start-range-input" style="font-size: 0.8em; display: block;">Start ID:</label>
-                                            <input type="number" id="start-range-input" min="1" value="1" style="width: 100%;">
-                                        </div>
-                                        <div class="input-field" style="flex: 1;">
-                                            <label for="end-range-input" style="font-size: 0.8em; display: block;">End ID:</label>
-                                            <input type="number" id="end-range-input" min="1" value="20" style="width: 100%;">
-                                        </div>
-                                    </div>
-                                    <small style="display: block; margin-top: 5px;">Available range: 1 - <span id="max-kana-range">76</span></small>
+                                <div id="category-selector" class="category-selector" style="display: none; width: 100%; margin-top: 10px; padding-left: 25px;">
+                                    <label for="category-select" style="font-size: 0.9em; margin-bottom: 5px; display: block;">Choose Group:</label>
+                                    <select id="category-select" style="width: 100%;">
+                                        <!-- Groups will be populated dynamically -->
+                                    </select>
                                 </div>
                             </label>
                             <label class="option-label">
@@ -88,17 +79,17 @@
                                 <input type="checkbox" id="countdown-toggle" style="width: 20px; height: 20px;">
                                 <span class="option-text" style="font-weight: 600;"> Enable Countdown Mode ⏱️</span>
                             </label>
-
+                            
                             <div id="countdown-settings" style="display: none;">
                                 <label for="countdown-minutes">Duration (minutes):</label>
                                 <input type="number" id="countdown-minutes" value="1" min="1" max="60">
                             </div>
                         </div>
 
-                        <div class="repetition-mode-container">
+                        <div class="no-hints-container">
                             <label class="option-label" style="cursor: pointer;">
-                                <input type="checkbox" id="repetition-toggle" style="width: 20px; height: 20px;">
-                                <span class="option-text" style="font-weight: 600;"> Repetition Mode (Repeat Same Katakana) 🔁</span>
+                                <input type="checkbox" id="no-hints-toggle" style="width: 20px; height: 20px;">
+                                <span class="option-text" style="font-weight: 600;"> No Hints Mode (Hide Eye Icon) 👁️‍🗨️</span>
                             </label>
                         </div>
                     </div>
@@ -110,44 +101,47 @@
                         <div class="btn-icon">→</div>
                     </button>
                     <div class="secondary-actions">
-                        <a href="katakana-list.html" class="btn-secondary">Study List</a>
                         <a href="index.html" class="btn-secondary">Main Menu</a>
                     </div>
                 </div>
-            </div>
+            </main>
         </div>
     </div>
 
+    <!-- Game Container -->
     <div id="game-container" class="screen">
-        <div class="game-header">
+        <header class="game-header">
             <div id="id-display" class="id-display">ID: -</div>
-            <div id="score" class="score-display">
+            <div class="score-display">
                 <span class="score-label">Score</span>
                 <span class="score-value">0</span>
-                <span id="score-max" class="score-max"></span>
+                <span id="score-max" class="score-max">/ 10</span>
             </div>
             <div id="timer-display" class="timer-display">
                 <span class="timer-icon">⏱️</span>
                 <span id="timer-value">01:00</span>
             </div>
             <div class="progress-bar">
-                <div class="progress-fill" style="width: 0%"></div>
+                <div class="progress-fill"></div>
             </div>
-        </div>
+        </header>
 
-        <div class="game-content">
+        <main class="game-content">
+            <div id="hint-display" class="hint-wrapper" title="Click to reveal hint">
+                <div id="hint-icon" class="active">👁️</div>
+                <div id="hint-text"></div>
+            </div>
 
-            <div id="flashcard-container" class="flashcard-wrapper">
-                <div id="kanji-card" class="kanji-card">
-                    <div class="kanji-character">ア</div>
+            <div class="flashcard-wrapper">
+                <div class="kanji-card">
+                    <p class="kanji-character">字</p>
                 </div>
                 <div class="card-shine"></div>
             </div>
 
-            <div id="input-container" class="input-wrapper">
+            <div class="input-wrapper">
                 <div class="input-group">
-                    <input type="text" id="answer-input" placeholder="Enter reading in romaji"
-                        autocomplete="off">
+                    <input type="text" id="answer-input" placeholder="Enter reading in romaji" autocomplete="off">
                     <button id="submit-btn" class="btn-submit">
                         <span>Check</span>
                     </button>
@@ -159,23 +153,24 @@
             <div class="game-controls">
                 <button id="restart-btn" class="btn-secondary">
                     <span>Restart</span>
-                    <div class="btn-icon">↺</div>
+                    <i class="btn-icon">↺</i>
                 </button>
                 <button id="next-btn" class="btn-secondary" disabled>
-                    <span>Next Katakana</span>
-                    <div class="btn-icon">→</div>
+                    <span>Next Kanji</span>
+                    <i class="btn-icon">→</i>
                 </button>
             </div>
+        </main>
+    </div>
+
+    <!-- Footer -->
+    <footer class="main-footer">
+        <div class="footer-content">
+            <p>Made with <span class="heart">♥</span> by <span class="author">Ramadhan</span></p>
         </div>
-    </div>
+    </footer>
 
-    <script src="assets/js/katakana.js"></script>
+    <script src="assets/js/similar-kanji.js"></script>
 </body>
-
-<footer class="main-footer">
-    <div class="footer-content">
-        <p>Made with <span class="heart">♥</span> by <span class="author">Ramadhan</span></p>
-    </div>
-</footer>
 
 </html>

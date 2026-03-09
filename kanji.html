@@ -56,9 +56,22 @@
                                 <input type="radio" name="learning-mode" value="sequential" checked>
                                 <span class="option-text">Sequential (From Beginning To Hard)</span>
                             </label>
-                            <label class="option-label">
-                                <input type="radio" name="learning-mode" value="by-category">
-                                <span class="option-text">By Category</span>
+                            <label class="option-label" style="flex-direction: column; align-items: flex-start;">
+                                <div style="display: flex; align-items: center; width: 100%;">
+                                    <input type="radio" name="learning-mode" value="by-category">
+                                    <span class="option-text">By Category</span>
+                                </div>
+                                <div id="category-selector" class="category-selector" style="display: none; width: 100%; margin-top: 10px; padding-left: 25px;">
+                                    <label for="category-select" style="font-size: 0.9em; margin-bottom: 5px; display: block;">Choose Category:</label>
+                                    <select id="category-select" style="width: 100%;">
+                                        <option value="basic">Basic (First 50 Kanji)</option>
+                                        <option value="numbers-time">Numbers & Time</option>
+                                        <option value="places">Places & Locations</option>
+                                        <option value="family">Family & People</option>
+                                        <option value="activities">Daily Activities</option>
+                                        <option value="nature">Nature & Environment</option>
+                                    </select>
+                                </div>
                             </label>
                             <label class="option-label">
                                 <input type="radio" name="learning-mode" value="weak-first">
@@ -68,13 +81,35 @@
                                 <input type="radio" name="learning-mode" value="random">
                                 <span class="option-text">Random</span>
                             </label>
-                            <label class="option-label">
-                                <input type="radio" name="learning-mode" value="random-range">
-                                <span class="option-text">Random Range (Specific ID)</span>
+                            <label class="option-label" style="flex-direction: column; align-items: flex-start;">
+                                <div style="display: flex; align-items: center; width: 100%;">
+                                    <input type="radio" name="learning-mode" value="random-range">
+                                    <span class="option-text">Random Range (Specific ID)</span>
+                                </div>
+                                <div id="range-selector" class="range-selector" style="display: none; width: 100%; margin-top: 10px; padding-left: 25px;">
+                                    <div class="range-inputs" style="display: flex; gap: 10px;">
+                                        <div class="input-field" style="flex: 1;">
+                                            <label for="start-range-input" style="font-size: 0.8em; display: block;">Start ID:</label>
+                                            <input type="number" id="start-range-input" min="1" value="1" style="width: 100%;">
+                                        </div>
+                                        <div class="input-field" style="flex: 1;">
+                                            <label for="end-range-input" style="font-size: 0.8em; display: block;">End ID:</label>
+                                            <input type="number" id="end-range-input" min="1" value="20" style="width: 100%;">
+                                        </div>
+                                    </div>
+                                    <small style="display: block; margin-top: 5px;">Available range: 1 - <span id="max-kanji-range">300</span></small>
+                                </div>
                             </label>
-                            <label class="option-label">
-                                <input type="radio" name="learning-mode" value="specific">
-                                <span class="option-text">From Specific Kanji</span>
+                            <label class="option-label" style="flex-direction: column; align-items: flex-start;">
+                                <div style="display: flex; align-items: center; width: 100%;">
+                                    <input type="radio" name="learning-mode" value="specific">
+                                    <span class="option-text">From Specific Kanji</span>
+                                </div>
+                                <div id="specific-kanji-selector" class="specific-kanji-selector" style="display: none; width: 100%; margin-top: 10px; padding-left: 25px;">
+                                    <label for="start-kanji-input" style="font-size: 0.9em; margin-bottom: 5px; display: block;">Start from Kanji Number:</label>
+                                    <input type="number" id="start-kanji-input" min="1" value="1" style="width: 100%;">
+                                    <small style="display: block; margin-top: 5px;">Current range: 1 - <span id="max-kanji-number">300</span></small>
+                                </div>
                             </label>
                         </div>
 
@@ -102,36 +137,6 @@
                                 <input type="checkbox" id="repetition-toggle" style="width: 20px; height: 20px;">
                                 <span class="option-text" style="font-weight: 600;"> Repetition Mode (Repeat Same Kanji) 🔁</span>
                             </label>
-                        </div>
-
-                        <div id="category-selector" class="category-selector" style="display: none;">
-                            <label for="category-select">Choose Category:</label>
-                            <select id="category-select">
-                                <option value="basic">Basic (First 50 Kanji)</option>
-                                <option value="numbers-time">Numbers & Time</option>
-                                <option value="places">Places & Locations</option>
-                                <option value="family">Family & People</option>
-                                <option value="activities">Daily Activities</option>
-                                <option value="nature">Nature & Environment</option>
-                            </select>
-                        </div>
-                        <div id="range-selector" class="range-selector" style="display: none;">
-                            <div class="range-inputs">
-                                <div class="input-field">
-                                    <label for="start-range-input">Start ID:</label>
-                                    <input type="number" id="start-range-input" min="1" value="1">
-                                </div>
-                                <div class="input-field">
-                                    <label for="end-range-input">End ID:</label>
-                                    <input type="number" id="end-range-input" min="1" value="20">
-                                </div>
-                            </div>
-                            <small>Available range: 1 - <span id="max-kanji-range">300</span></small>
-                        </div>
-                        <div id="specific-kanji-selector" class="specific-kanji-selector" style="display: none;">
-                            <label for="start-kanji-input">Start from Kanji Number:</label>
-                            <input type="number" id="start-kanji-input" min="1" value="1">
-                            <small>Current range: 1 - <span id="max-kanji-number">300</span></small>
                         </div>
                     </div>
                 </details>

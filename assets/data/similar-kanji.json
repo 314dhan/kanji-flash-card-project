@@ -1,0 +1,894 @@
+[
+  {
+    "id": 1,
+    "category": "人 vs 入 vs 八",
+    "kanjiList": [
+      {
+        "kanji": "人",
+        "meaning": "Person, Orang, Orang",
+        "onyomi": "ジン, ニン",
+        "kunyomi": "ひと",
+        "reading": "jin, nin, hito"
+      },
+      {
+        "kanji": "入",
+        "meaning": "Enter, Masuk, Masuk",
+        "onyomi": "ニュウ",
+        "kunyomi": "はい.る, い.れる, い.る, はい.る",
+        "reading": "nyu, hairu, ireru, iri, iru"
+      },
+      {
+        "kanji": "八",
+        "meaning": "Delapan",
+        "onyomi": "ハチ",
+        "kunyomi": "や, や.つ, やっ.つ, よう",
+        "reading": "hachi, ya, yatsu, yattsu, yo"
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "category": "日 vs 目 vs 自 vs 白 vs 百 vs 旧",
+    "kanjiList": [
+      {
+        "kanji": "日",
+        "meaning": "Day, Sun, Hari, Matahari, Hari / Matahari",
+        "onyomi": "ニチ, ジツ",
+        "kunyomi": "ひ, か, び",
+        "reading": "nichi, jitsu, hi, ka, bi"
+      },
+      {
+        "kanji": "目",
+        "meaning": "Eye, Mata, Mata",
+        "onyomi": "モク, ボク",
+        "kunyomi": "め, ま",
+        "reading": "moku, me, boku, ma"
+      },
+      {
+        "kanji": "自",
+        "meaning": "Oneself, Diri Sendiri, Diri sendiri",
+        "onyomi": "ジ, シ",
+        "kunyomi": "みずか.ら, みずから",
+        "reading": "ji, mizukara, shi"
+      },
+      {
+        "kanji": "白",
+        "meaning": "White, Putih, Putih",
+        "onyomi": "ハク, ビャク",
+        "kunyomi": "しろ, しら",
+        "reading": "haku, shiro, byaku, shira"
+      },
+      {
+        "kanji": "百",
+        "meaning": "Seratus",
+        "onyomi": "ヒャク",
+        "kunyomi": "もも",
+        "reading": "hyaku, momo"
+      },
+      {
+        "kanji": "旧",
+        "meaning": "Lama, kuno",
+        "onyomi": "キュウ",
+        "kunyomi": "",
+        "reading": "kyuu"
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "category": "木 vs 本 vs 未 vs 末 vs 米",
+    "kanjiList": [
+      {
+        "kanji": "木",
+        "meaning": "Tree, Wood, Pohon, Kayu, Kayu / Pokok",
+        "onyomi": "モク, ボク",
+        "kunyomi": "き, こ",
+        "reading": "moku, ki, boku, ko"
+      },
+      {
+        "kanji": "本",
+        "meaning": "Book, Origin, Buku, Asal, Buku / Asal",
+        "onyomi": "ホン",
+        "kunyomi": "もと",
+        "reading": "hon, moto"
+      },
+      {
+        "kanji": "未",
+        "meaning": "Belum, masih",
+        "onyomi": "ミ",
+        "kunyomi": "いま.だ, まだ",
+        "reading": "mi, ima.da, mada"
+      },
+      {
+        "kanji": "末",
+        "meaning": "Ujung, akhir",
+        "onyomi": "マツ, バツ",
+        "kunyomi": "すえ",
+        "reading": "matsu, sue, batsu"
+      },
+      {
+        "kanji": "米",
+        "meaning": "Rice, Beras, Beras, Amerika",
+        "onyomi": "ベイ, マイ",
+        "kunyomi": "こめ",
+        "reading": "bei, mai, kome"
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "category": "大 vs 犬 vs 太 vs 夫 vs 天",
+    "kanjiList": [
+      {
+        "kanji": "大",
+        "meaning": "Big, Besar, Besar",
+        "onyomi": "ダイ, タイ",
+        "kunyomi": "おお.きい, おお, おお.きい",
+        "reading": "dai, tai, ookii, o, okii"
+      },
+      {
+        "kanji": "犬",
+        "meaning": "Dog, Anjing, Anjing",
+        "onyomi": "ケン",
+        "kunyomi": "いぬ",
+        "reading": "ken, inu"
+      },
+      {
+        "kanji": "太",
+        "meaning": "Gemuk, tebal",
+        "onyomi": "タイ, タ",
+        "kunyomi": "ふとい",
+        "reading": "tai, ta, futoi"
+      },
+      {
+        "kanji": "夫",
+        "meaning": "Husband, Suami, Suami",
+        "onyomi": "フ, フウ",
+        "kunyomi": "おっと",
+        "reading": "fu, otto, fu"
+      },
+      {
+        "kanji": "天",
+        "meaning": "Langit / Syurga",
+        "onyomi": "テン",
+        "kunyomi": "あめ, あま",
+        "reading": "ten, ame, ama"
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "category": "土 vs 士 vs 志 vs 寺",
+    "kanjiList": [
+      {
+        "kanji": "土",
+        "meaning": "Soil, Earth, Tanah, Tanah",
+        "onyomi": "ド, ト",
+        "kunyomi": "つち",
+        "reading": "do, tsuchi, to"
+      },
+      {
+        "kanji": "士",
+        "meaning": "Satria, pria, sarjana",
+        "onyomi": "シ",
+        "kunyomi": "",
+        "reading": "shi"
+      },
+      {
+        "kanji": "志",
+        "meaning": "Aspirasi",
+        "onyomi": "シ",
+        "kunyomi": "こころざし",
+        "reading": "shi, kokorozashi"
+      },
+      {
+        "kanji": "寺",
+        "meaning": "Kuil Buddha",
+        "onyomi": "ジ",
+        "kunyomi": "てら",
+        "reading": "ji, tera"
+      }
+    ]
+  },
+  {
+    "id": 6,
+    "category": "右 vs 左 vs 石 vs 若",
+    "kanjiList": [
+      {
+        "kanji": "右",
+        "meaning": "Right, Kanan, Kanan",
+        "onyomi": "ウ, ユウ",
+        "kunyomi": "みぎ",
+        "reading": "u, migi, yu"
+      },
+      {
+        "kanji": "左",
+        "meaning": "Left, Kiri, Kiri",
+        "onyomi": "サ",
+        "kunyomi": "ひだり",
+        "reading": "sa, hidari"
+      },
+      {
+        "kanji": "石",
+        "meaning": "Stone, Batu, Batu",
+        "onyomi": "セキ, シャク",
+        "kunyomi": "いし",
+        "reading": "seki, ishi, shaku"
+      },
+      {
+        "kanji": "若",
+        "meaning": "Young, Muda, Muda",
+        "onyomi": "ジャク, ニャク",
+        "kunyomi": "わか.い, も.しくわ",
+        "reading": "jaku, wakai"
+      }
+    ]
+  },
+  {
+    "id": 7,
+    "category": "問 vs 間 vs 開 vs 閉 vs 関",
+    "kanjiList": [
+      {
+        "kanji": "問",
+        "meaning": "Pertanyaan",
+        "onyomi": "モン",
+        "kunyomi": "とう, とい",
+        "reading": "mon, to, toi"
+      },
+      {
+        "kanji": "間",
+        "meaning": "Antara / Ruang",
+        "onyomi": "カン, ケン",
+        "kunyomi": "あいだ, ま",
+        "reading": "kan, ken, aida, ma"
+      },
+      {
+        "kanji": "開",
+        "meaning": "Open, Membuka, Membuka",
+        "onyomi": "カイ",
+        "kunyomi": "あ.く, ひら.く, あける, ひらく",
+        "reading": "kai, aku, hiraku, akeru"
+      },
+      {
+        "kanji": "閉",
+        "meaning": "Close, Menutup, Menutup",
+        "onyomi": "ヘイ",
+        "kunyomi": "し.める, と.じる, と.じる, し.める",
+        "reading": "hei, shimeru, tojiru, to.jiru"
+      },
+      {
+        "kanji": "関",
+        "meaning": "Berhubungan, gerbang",
+        "onyomi": "カン",
+        "kunyomi": "せき",
+        "reading": "kan, seki"
+      }
+    ]
+  },
+  {
+    "id": 8,
+    "category": "待 vs 持 vs 特",
+    "kanjiList": [
+      {
+        "kanji": "待",
+        "meaning": "Wait, Menunggu, Menunggu",
+        "onyomi": "タイ",
+        "kunyomi": "ま.つ, まつ",
+        "reading": "tai, matsu"
+      },
+      {
+        "kanji": "持",
+        "meaning": "Hold, Have, Memegang, Mempunyai, Membawa, memiliki",
+        "onyomi": "ジ",
+        "kunyomi": "も.つ, もつ",
+        "reading": "ji, motsu"
+      },
+      {
+        "kanji": "特",
+        "meaning": "Special, Khusus, Khusus, istimewa",
+        "onyomi": "トク",
+        "kunyomi": "",
+        "reading": "toku"
+      }
+    ]
+  },
+  {
+    "id": 9,
+    "category": "鳥 vs 島 vs 鳴",
+    "kanjiList": [
+      {
+        "kanji": "鳥",
+        "meaning": "Bird, Burung, Burung",
+        "onyomi": "チョウ",
+        "kunyomi": "とり",
+        "reading": "cho, tori"
+      },
+      {
+        "kanji": "島",
+        "meaning": "Pulau",
+        "onyomi": "トウ",
+        "kunyomi": "しま",
+        "reading": "tou, shima, to"
+      },
+      {
+        "kanji": "鳴",
+        "meaning": "Berbunyi, berkicau",
+        "onyomi": "メイ",
+        "kunyomi": "な.く, な.る, な.らす, なる, なき",
+        "reading": "mei, na.ku, naru, naki"
+      }
+    ]
+  },
+  {
+    "id": 10,
+    "category": "買 vs 売 vs 員 vs 貝",
+    "kanjiList": [
+      {
+        "kanji": "買",
+        "meaning": "Buy, Membeli, Beli",
+        "onyomi": "カイ, バイ",
+        "kunyomi": "か.う",
+        "reading": "kai, kau, bai"
+      },
+      {
+        "kanji": "売",
+        "meaning": "Menjual",
+        "onyomi": "バイ",
+        "kunyomi": "うる",
+        "reading": "bai, uru"
+      },
+      {
+        "kanji": "員",
+        "meaning": "Member, Staff, Anggota, Staf, Anggota, karyawan",
+        "onyomi": "イン",
+        "kunyomi": "",
+        "reading": "in"
+      },
+      {
+        "kanji": "貝",
+        "meaning": "Kerang",
+        "onyomi": "バイ",
+        "kunyomi": "かい",
+        "reading": "bai, kai"
+      }
+    ]
+  },
+  {
+    "id": 11,
+    "category": "牛 vs 午 vs 半 vs 羊",
+    "kanjiList": [
+      {
+        "kanji": "牛",
+        "meaning": "Cow, Sapi, Sapi",
+        "onyomi": "ギュウ",
+        "kunyomi": "うし",
+        "reading": "gyu, ushi"
+      },
+      {
+        "kanji": "午",
+        "meaning": "Tengah hari",
+        "onyomi": "ゴ",
+        "kunyomi": "None",
+        "reading": "go"
+      },
+      {
+        "kanji": "半",
+        "meaning": "Setengah",
+        "onyomi": "ハン",
+        "kunyomi": "なか.ば",
+        "reading": "han, nakaba"
+      },
+      {
+        "kanji": "羊",
+        "meaning": "Domba",
+        "onyomi": "ヨウ",
+        "kunyomi": "ひつじ",
+        "reading": "yo, hitsuji"
+      }
+    ]
+  },
+  {
+    "id": 12,
+    "category": "貝 vs 見 vs 具 vs 負",
+    "kanjiList": [
+      {
+        "kanji": "貝",
+        "meaning": "Kerang",
+        "onyomi": "バイ",
+        "kunyomi": "かい",
+        "reading": "bai, kai"
+      },
+      {
+        "kanji": "見",
+        "meaning": "Lihat",
+        "onyomi": "ケン",
+        "kunyomi": "み.る, み.える, み.せる",
+        "reading": "ken, miru, mieru, miseru"
+      },
+      {
+        "kanji": "具",
+        "meaning": "Alat, bahan, perlengkapan",
+        "onyomi": "グ",
+        "kunyomi": "そなえる, つぶさに",
+        "reading": "gu, sonaeru, tsubusani"
+      },
+      {
+        "kanji": "負",
+        "meaning": "Kalah, memikul",
+        "onyomi": "フ",
+        "kunyomi": "ま.ける, ま.かす, お.う, まける, おう",
+        "reading": "fu, makeru, ou"
+      }
+    ]
+  },
+  {
+    "id": 13,
+    "category": "氷 vs 水 vs 永",
+    "kanjiList": [
+      {
+        "kanji": "氷",
+        "meaning": "Es",
+        "onyomi": "ヒョウ",
+        "kunyomi": "こおり, ひ",
+        "reading": "hyou, koori, hyo, kori, hi"
+      },
+      {
+        "kanji": "水",
+        "meaning": "Water, Air, Air",
+        "onyomi": "スイ",
+        "kunyomi": "みず",
+        "reading": "sui, mizu"
+      },
+      {
+        "kanji": "永",
+        "meaning": "Abadi",
+        "onyomi": "エイ",
+        "kunyomi": "なが.い",
+        "reading": "ei, nagai"
+      }
+    ]
+  },
+  {
+    "id": 14,
+    "category": "刀 vs 力 vs 万",
+    "kanjiList": [
+      {
+        "kanji": "刀",
+        "meaning": "Pedang, pisau",
+        "onyomi": "トウ",
+        "kunyomi": "かたな",
+        "reading": "to, katana"
+      },
+      {
+        "kanji": "力",
+        "meaning": "Kekuatan, tenaga",
+        "onyomi": "リョク, リキ",
+        "kunyomi": "ちから",
+        "reading": "ryoku, riki, chikara"
+      },
+      {
+        "kanji": "万",
+        "meaning": "Sepuluh ribu",
+        "onyomi": "マン, バン",
+        "kunyomi": "よろず",
+        "reading": "man, ban, yorozu"
+      }
+    ]
+  },
+  {
+    "id": 15,
+    "category": "夫 vs 天 vs 失 vs 矢",
+    "kanjiList": [
+      {
+        "kanji": "夫",
+        "meaning": "Husband, Suami, Suami",
+        "onyomi": "フ, フウ",
+        "kunyomi": "おっと",
+        "reading": "fu, otto, fu"
+      },
+      {
+        "kanji": "天",
+        "meaning": "Langit / Syurga",
+        "onyomi": "テン",
+        "kunyomi": "あめ, あま",
+        "reading": "ten, ame, ama"
+      },
+      {
+        "kanji": "失",
+        "meaning": "Kehilangan, kesalahan",
+        "onyomi": "シツ",
+        "kunyomi": "うしな.う, うしなう",
+        "reading": "shitsu, ushinau"
+      },
+      {
+        "kanji": "矢",
+        "meaning": "Anak panah",
+        "onyomi": "シ",
+        "kunyomi": "や",
+        "reading": "si, ya"
+      }
+    ]
+  },
+  {
+    "id": 16,
+    "category": "市 vs 姉",
+    "kanjiList": [
+      {
+        "kanji": "市",
+        "meaning": "City, Kota, Kota, pasar",
+        "onyomi": "シ",
+        "kunyomi": "いち",
+        "reading": "shi, ichi"
+      },
+      {
+        "kanji": "姉",
+        "meaning": "Older sister, Kakak perempuan, Kakak perempuan",
+        "onyomi": "シ",
+        "kunyomi": "あね",
+        "reading": "shi, ane"
+      }
+    ]
+  },
+  {
+    "id": 17,
+    "category": "未 vs 末 vs 味 vs 妹",
+    "kanjiList": [
+      {
+        "kanji": "未",
+        "meaning": "Belum, masih",
+        "onyomi": "ミ",
+        "kunyomi": "いま.だ, まだ",
+        "reading": "mi, ima.da, mada"
+      },
+      {
+        "kanji": "末",
+        "meaning": "Ujung, akhir",
+        "onyomi": "マツ, バツ",
+        "kunyomi": "すえ",
+        "reading": "matsu, sue, batsu"
+      },
+      {
+        "kanji": "味",
+        "meaning": "Taste, Rasa, Rasa",
+        "onyomi": "ミ",
+        "kunyomi": "あじ",
+        "reading": "mi, aji"
+      },
+      {
+        "kanji": "妹",
+        "meaning": "Younger sister, Adik perempuan, Adik perempuan",
+        "onyomi": "マイ",
+        "kunyomi": "いもうと",
+        "reading": "mai, imouto, imoto"
+      }
+    ]
+  },
+  {
+    "id": 18,
+    "category": "活 vs 話",
+    "kanjiList": [
+      {
+        "kanji": "活",
+        "meaning": "Hidup, aktivitas",
+        "onyomi": "カツ",
+        "kunyomi": "い.きる, いきる",
+        "reading": "katsu, ikiru"
+      },
+      {
+        "kanji": "話",
+        "meaning": "Speak, Talk, Bicara, Cerita, Bercakap / Cerita",
+        "onyomi": "ワ",
+        "kunyomi": "はな.す, はなし",
+        "reading": "wa, hanasu, hanashi"
+      }
+    ]
+  },
+  {
+    "id": 19,
+    "category": "読 vs 続 vs 説",
+    "kanjiList": [
+      {
+        "kanji": "読",
+        "meaning": "Read, Membaca, Baca",
+        "onyomi": "ドク",
+        "kunyomi": "よ.む",
+        "reading": "doku, yomu"
+      },
+      {
+        "kanji": "続",
+        "meaning": "Lanjut, Berlanjut",
+        "onyomi": "ゾク, ショク",
+        "kunyomi": "つづ.ける, つづ.く, つづく, つづける",
+        "reading": "tsu.zuku, tsu.zukeru, zoku, tsuduku, tsudukeru"
+      },
+      {
+        "kanji": "説",
+        "meaning": "Menjelaskan, teori",
+        "onyomi": "セツ",
+        "kunyomi": "とく",
+        "reading": "setsu, toku"
+      }
+    ]
+  },
+  {
+    "id": 20,
+    "category": "語 vs 話",
+    "kanjiList": [
+      {
+        "kanji": "語",
+        "meaning": "Language, Word, Bahasa, Kata, Bahasa / Kata",
+        "onyomi": "ゴ",
+        "kunyomi": "かた.る",
+        "reading": "go, kataru"
+      },
+      {
+        "kanji": "話",
+        "meaning": "Speak, Talk, Bicara, Cerita, Bercakap / Cerita",
+        "onyomi": "ワ",
+        "kunyomi": "はな.す, はなし",
+        "reading": "wa, hanasu, hanashi"
+      }
+    ]
+  },
+  {
+    "id": 21,
+    "category": "席 vs 度",
+    "kanjiList": [
+      {
+        "kanji": "席",
+        "meaning": "Kursi, tempat duduk",
+        "onyomi": "セキ",
+        "kunyomi": "",
+        "reading": "seki"
+      },
+      {
+        "kanji": "度",
+        "meaning": "Derajat, kali",
+        "onyomi": "ド, ト",
+        "kunyomi": "たび",
+        "reading": "do, to, tabi"
+      }
+    ]
+  },
+  {
+    "id": 22,
+    "category": "晴 vs 清 vs 静",
+    "kanjiList": [
+      {
+        "kanji": "晴",
+        "meaning": "Cerah, Cerah (cuaca)",
+        "onyomi": "セイ",
+        "kunyomi": "は.れる, は.れ, はれる, はれ",
+        "reading": "sei, hareru, hare"
+      },
+      {
+        "kanji": "清",
+        "meaning": "Murni, bersih",
+        "onyomi": "セイ, ショウ",
+        "kunyomi": "きよ.い, きよい",
+        "reading": "sei, kiyoi, sho"
+      },
+      {
+        "kanji": "静",
+        "meaning": "Quiet, Tenang, Tenang, diam",
+        "onyomi": "セイ, ジョウ",
+        "kunyomi": "しず.か, しずか",
+        "reading": "sei, shizuka, jo"
+      }
+    ]
+  },
+  {
+    "id": 23,
+    "category": "職 vs 識",
+    "kanjiList": [
+      {
+        "kanji": "職",
+        "meaning": "Pekerjaan, jabatan",
+        "onyomi": "ショク",
+        "kunyomi": "",
+        "reading": "shoku"
+      },
+      {
+        "kanji": "識",
+        "meaning": "Pengetahuan, mengenal",
+        "onyomi": "シキ",
+        "kunyomi": "",
+        "reading": "shiki"
+      }
+    ]
+  },
+  {
+    "id": 24,
+    "category": "構 vs 講",
+    "kanjiList": [
+      {
+        "kanji": "構",
+        "meaning": "Struktur",
+        "onyomi": "コウ",
+        "kunyomi": "かま.える",
+        "reading": "kou, kamaeru"
+      },
+      {
+        "kanji": "講",
+        "meaning": "Ceramah, kuliah",
+        "onyomi": "コウ",
+        "kunyomi": "",
+        "reading": "kou"
+      }
+    ]
+  },
+  {
+    "id": 25,
+    "category": "借 vs 貸",
+    "kanjiList": [
+      {
+        "kanji": "借",
+        "meaning": "Borrow, Meminjam, Meminjam",
+        "onyomi": "シャク",
+        "kunyomi": "か.りる, かりる",
+        "reading": "shaku, kariru"
+      },
+      {
+        "kanji": "貸",
+        "meaning": "Lend, Meminjamkan, Meminjamkan",
+        "onyomi": "タイ",
+        "kunyomi": "か.す, かす",
+        "reading": "tai, kasu"
+      }
+    ]
+  },
+  {
+    "id": 26,
+    "category": "園 vs 遠 vs 運",
+    "kanjiList": [
+      {
+        "kanji": "園",
+        "meaning": "Taman, kebun",
+        "onyomi": "エン",
+        "kunyomi": "その",
+        "reading": "en, sono"
+      },
+      {
+        "kanji": "遠",
+        "meaning": "Far, Jauh, Jauh",
+        "onyomi": "エン",
+        "kunyomi": "とお.い, とおい",
+        "reading": "en, tooi, toi"
+      },
+      {
+        "kanji": "運",
+        "meaning": "Luck, Fortune, Keberuntungan, Membawa, keberuntungan",
+        "onyomi": "ウン",
+        "kunyomi": "はこぶ",
+        "reading": "un, hakobu"
+      }
+    ]
+  },
+  {
+    "id": 27,
+    "category": "千 vs 干 vs 午",
+    "kanjiList": [
+      {
+        "kanji": "千",
+        "meaning": "Seribu",
+        "onyomi": "セン",
+        "kunyomi": "ち",
+        "reading": "sen, chi"
+      },
+      {
+        "kanji": "干",
+        "meaning": "Mengeringkan",
+        "onyomi": "カン",
+        "kunyomi": "ほ.す, ひ.る",
+        "reading": "kan, hosu"
+      },
+      {
+        "kanji": "午",
+        "meaning": "Tengah hari",
+        "onyomi": "ゴ",
+        "kunyomi": "None",
+        "reading": "go"
+      }
+    ]
+  },
+  {
+    "id": 28,
+    "category": "右 vs 石",
+    "kanjiList": [
+      {
+        "kanji": "右",
+        "meaning": "Right, Kanan, Kanan",
+        "onyomi": "ウ, ユウ",
+        "kunyomi": "みぎ",
+        "reading": "u, migi, yu"
+      },
+      {
+        "kanji": "石",
+        "meaning": "Stone, Batu, Batu",
+        "onyomi": "セキ, シャク",
+        "kunyomi": "いし",
+        "reading": "seki, ishi, shaku"
+      }
+    ]
+  },
+  {
+    "id": 29,
+    "category": "左 vs 在",
+    "kanjiList": [
+      {
+        "kanji": "左",
+        "meaning": "Left, Kiri, Kiri",
+        "onyomi": "サ",
+        "kunyomi": "ひだり",
+        "reading": "sa, hidari"
+      },
+      {
+        "kanji": "在",
+        "meaning": "Ada, berada di",
+        "onyomi": "ザイ",
+        "kunyomi": "あ.る",
+        "reading": "zai, aru"
+      }
+    ]
+  },
+  {
+    "id": 30,
+    "category": "休 vs 体",
+    "kanjiList": [
+      {
+        "kanji": "休",
+        "meaning": "Rest, Istirahat, Istirahat",
+        "onyomi": "キュウ",
+        "kunyomi": "やす.む, やす.まる, やす.める",
+        "reading": "kyu, yasumu, yasumaru, yasumeru"
+      },
+      {
+        "kanji": "体",
+        "meaning": "Body, Badan, Tubuh, badan",
+        "onyomi": "タイ, テイ",
+        "kunyomi": "からだ",
+        "reading": "tai, karada, tei"
+      }
+    ]
+  },
+  {
+    "id": 31,
+    "category": "船 vs 航",
+    "kanjiList": [
+      {
+        "kanji": "船",
+        "meaning": "Ship, Kapal, Kapal",
+        "onyomi": "セン",
+        "kunyomi": "ふね, ふな-, ふな",
+        "reading": "sen, fune, funa"
+      },
+      {
+        "kanji": "航",
+        "meaning": "Navigasi, pelayaran, penerbangan",
+        "onyomi": "コウ",
+        "kunyomi": "",
+        "reading": "kou, ko"
+      }
+    ]
+  },
+  {
+    "id": 32,
+    "category": "練 vs 運",
+    "kanjiList": [
+      {
+        "kanji": "練",
+        "meaning": "Latihan, mengasah, menguleni",
+        "onyomi": "レン",
+        "kunyomi": "ね.る, ねる",
+        "reading": "ren, ne.ru, neru"
+      },
+      {
+        "kanji": "運",
+        "meaning": "Luck, Fortune, Keberuntungan, Membawa, keberuntungan",
+        "onyomi": "ウン",
+        "kunyomi": "はこぶ",
+        "reading": "un, hakobu"
+      }
+    ]
+  }
+]
