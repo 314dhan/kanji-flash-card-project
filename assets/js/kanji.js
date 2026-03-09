@@ -30,6 +30,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const countdownToggle = document.getElementById('countdown-toggle');
     const countdownSettings = document.getElementById('countdown-settings');
     const countdownMinutesInput = document.getElementById('countdown-minutes');
+    const noHintsToggle = document.getElementById('no-hints-toggle');
     const timerDisplay = document.getElementById('timer-display');
     const timerValueEl = document.getElementById('timer-value');
 
@@ -378,6 +379,13 @@ document.addEventListener('DOMContentLoaded', () => {
             startTimer(minutes);
         } else {
             stopTimer(); // Ensure timer is hidden if not enabled
+        }
+
+        // Handle No Hints Mode
+        if (noHintsToggle.checked) {
+            hintDisplay.style.display = 'none';
+        } else {
+            hintDisplay.style.display = 'flex'; // Use flex as per hint-wrapper class in CSS
         }
 
         displayNewKanji();
