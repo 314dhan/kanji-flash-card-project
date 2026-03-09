@@ -25,6 +25,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const timerDisplay = document.getElementById('timer-display');
     const timerValueEl = document.getElementById('timer-value');
     const idDisplayEl = document.getElementById('id-display');
+    const muteBtn = document.getElementById('mute-btn');
 
     // --- Game State ---
     let similarGroups = [];
@@ -36,6 +37,27 @@ document.addEventListener('DOMContentLoaded', () => {
     let timerInterval = null;
     let timeLeft = 0;
     let isCountdownActive = false;
+    let isMuted = localStorage.getItem('isMuted') === 'true';
+
+    // --- Audio Management ---
+    function updateMuteUI() {
+        if (muteBtn) {
+            muteBtn.textContent = isMuted ? '🔇' : '🔊';
+            muteBtn.classList.toggle('muted', isMuted);
+        }
+    }
+
+    function toggleMute() {
+        isMuted = !isMuted;
+        localStorage.setItem('isMuted', isMuted);
+        updateMuteUI();
+    }
+
+    function playSound(src) {
+        if (!isMuted) {
+            new Audio(src).play().catch(e => console.error("Audio play failed:", e));
+        }
+    }
 
     // --- Data Loading ---
     async function loadData() {
@@ -70,6 +92,7 @@ document.addEventListener('DOMContentLoaded', () => {
             quizLengthInput.max = flattenedKanji.length;
             playBtn.disabled = false;
             playBtn.querySelector('span').textContent = 'Start Learning';
+            updateMuteUI();
         } catch (error) {
             console.error("Error fetching similar kanji data:", error);
             playBtn.disabled = true;
@@ -193,11 +216,11 @@ document.addEventListener('DOMContentLoaded', () => {
         if (isCorrect) {
             resultEl.textContent = `Correct! Meaning: ${currentKanji.meaning}`;
             resultEl.classList.add('correct');
-            new Audio('assets/sound/correct.mp3').play();
+            playSound('assets/sound/correct.mp3');
         } else {
             resultEl.textContent = `Wrong! Reading: ${currentKanji.reading}, Meaning: ${currentKanji.meaning}`;
             resultEl.classList.add('incorrect');
-            new Audio('assets/sound/wrong.mp3').play();
+            playSound('assets/sound/wrong.mp3');
         }
     }
 
@@ -243,6 +266,7 @@ document.addEventListener('DOMContentLoaded', () => {
     nextBtn.addEventListener('click', displayNewKanji);
     restartBtn.addEventListener('click', startGame);
     hintDisplay.addEventListener('click', toggleHint);
+    if (muteBtn) muteBtn.addEventListener('click', toggleMute);
 
     answerInputEl.addEventListener('keyup', (e) => {
         if (e.key === 'Enter' && !submitBtn.disabled) checkAnswer();

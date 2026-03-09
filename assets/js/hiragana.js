@@ -27,6 +27,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const timerValueEl = document.getElementById('timer-value');
     const idDisplayEl = document.getElementById('id-display');
     const repetitionToggle = document.getElementById('repetition-toggle');
+    const muteBtn = document.getElementById('mute-btn');
     
     // Start/End Screen Elements
     const startScreenTitle = startScreen.querySelector('.title');
@@ -43,11 +44,32 @@ document.addEventListener('DOMContentLoaded', () => {
     let timeLeft = 0;
     let isCountdownActive = false;
     let isRepetitionMode = false;
+    let isMuted = localStorage.getItem('isMuted') === 'true';
     let userProgress = {
         mastered: [],
         weak: [],
         lastStudy: null
     };
+
+    // --- Audio Management ---
+    function updateMuteUI() {
+        if (muteBtn) {
+            muteBtn.textContent = isMuted ? '🔇' : '🔊';
+            muteBtn.classList.toggle('muted', isMuted);
+        }
+    }
+
+    function toggleMute() {
+        isMuted = !isMuted;
+        localStorage.setItem('isMuted', isMuted);
+        updateMuteUI();
+    }
+
+    function playSound(src) {
+        if (!isMuted) {
+            new Audio(src).play().catch(e => console.error("Audio play failed:", e));
+        }
+    }
 
     // --- Progress Management ---
     function loadUserProgress() {
@@ -280,11 +302,11 @@ document.addEventListener('DOMContentLoaded', () => {
             scoreValueEl.textContent = score;
             resultEl.textContent = 'Correct!';
             resultEl.classList.add('correct');
-            new Audio('assets/sound/correct.mp3').play();
+            playSound('assets/sound/correct.mp3');
         } else {
             resultEl.textContent = `Wrong! The correct answer is ${currentKana.romaji}`;
             resultEl.classList.add('incorrect');
-            new Audio('assets/sound/wrong.mp3').play();
+            playSound('assets/sound/wrong.mp3');
         }
         
         questionsAnswered++; // Increment after answering
@@ -352,6 +374,7 @@ document.addEventListener('DOMContentLoaded', () => {
     submitBtn.addEventListener('click', checkAnswer);
     nextBtn.addEventListener('click', displayNewKana);
     restartBtn.addEventListener('click', startGame);
+    if (muteBtn) muteBtn.addEventListener('click', toggleMute);
 
     countdownToggle.addEventListener('change', () => {
         countdownSettings.style.display = countdownToggle.checked ? 'block' : 'none';
@@ -408,4 +431,5 @@ document.addEventListener('DOMContentLoaded', () => {
     // --- Initial State ---
     playBtn.disabled = true;
     playBtn.querySelector('span').textContent = 'Loading...';
+    updateMuteUI();
 });

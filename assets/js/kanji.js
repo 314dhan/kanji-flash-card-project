@@ -35,6 +35,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const timerValueEl = document.getElementById('timer-value');
     const idDisplayEl = document.getElementById('id-display');
     const repetitionToggle = document.getElementById('repetition-toggle');
+    const muteBtn = document.getElementById('mute-btn');
 
     // --- Game State ---
     let kanjiData = [];
@@ -47,12 +48,33 @@ document.addEventListener('DOMContentLoaded', () => {
     let timeLeft = 0;
     let isCountdownActive = false;
     let isRepetitionMode = false;
+    let isMuted = localStorage.getItem('isMuted') === 'true';
     let userProgress = {
         mastered: [],
         weak: [],
         lastStudy: null,
         streak: 0
     };
+
+    // --- Audio Management ---
+    function updateMuteUI() {
+        if (muteBtn) {
+            muteBtn.textContent = isMuted ? '🔇' : '🔊';
+            muteBtn.classList.toggle('muted', isMuted);
+        }
+    }
+
+    function toggleMute() {
+        isMuted = !isMuted;
+        localStorage.setItem('isMuted', isMuted);
+        updateMuteUI();
+    }
+
+    function playSound(src) {
+        if (!isMuted) {
+            new Audio(src).play().catch(e => console.error("Audio play failed:", e));
+        }
+    }
 
     // --- Kanji Categories (Hardcoded) ---
     const kanjiCategories = {
@@ -573,11 +595,11 @@ document.addEventListener('DOMContentLoaded', () => {
         if (isCorrect) {
             resultEl.textContent = `Correct! Meaning: ${currentKanji.meaning}`;
             resultEl.classList.add('correct');
-            new Audio('assets/sound/correct.mp3').play();
+            playSound('assets/sound/correct.mp3');
         } else {
             resultEl.textContent = `Wrong! Reading: ${readingDisplay}, Meaning: ${currentKanji.meaning}`;
             resultEl.classList.add('incorrect');
-            new Audio('assets/sound/wrong.mp3').play();
+            playSound('assets/sound/wrong.mp3');
         }
     }
 
@@ -601,6 +623,7 @@ document.addEventListener('DOMContentLoaded', () => {
         nextBtn.addEventListener('click', displayNewKanji);
         restartBtn.addEventListener('click', startGame);
         hintDisplay.addEventListener('click', toggleHint);
+        if (muteBtn) muteBtn.addEventListener('click', toggleMute);
 
         countdownToggle.addEventListener('change', () => {
             countdownSettings.style.display = countdownToggle.checked ? 'block' : 'none';
@@ -678,6 +701,7 @@ document.addEventListener('DOMContentLoaded', () => {
         playBtn.querySelector('span').textContent = 'Loading...';
         setupEventListeners();
         loadKanjiData();
+        updateMuteUI();
     }
 
     init();
