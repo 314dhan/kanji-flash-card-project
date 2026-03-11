@@ -10,6 +10,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const scoreMaxEl = document.getElementById('score-max');
     const progressFillEl = document.querySelector('.progress-fill');
     const kanjiCharacterEl = document.querySelector('.kanji-character');
+    const contohKataTextEl = document.querySelector('.contoh-kata-text');
+    const kanjiCard = document.getElementById('kanji-card');
     const resultEl = document.getElementById('result');
     const answerInputEl = document.getElementById('answer-input');
     const quizLengthInput = document.getElementById('quiz-length-input');
@@ -139,6 +141,7 @@ document.addEventListener('DOMContentLoaded', () => {
                         meaning: item.arti,
                         onyomi: item.onyomi,
                         kunyomi: item.kunyomi,
+                        contoh_kata: item.contoh_kata || '-',
                         // Combine all for checking
                         reading: [...romajiAnswers, ...kanaAnswers].join(', ')
                     };
@@ -467,10 +470,24 @@ document.addEventListener('DOMContentLoaded', () => {
             idDisplayEl.textContent = `ID: ${currentKanji.id.split('-').pop()}`;
         }
 
-        kanjiCharacterEl.textContent = currentKanji.kanji;
-        kanjiCharacterEl.parentElement.style.animation = 'none';
-        void kanjiCharacterEl.parentElement.offsetWidth; // Trigger reflow
-        kanjiCharacterEl.parentElement.style.animation = 'flipIn 0.6s ease-out';
+        // Reset flip state and update content
+        if (kanjiCard) kanjiCard.classList.remove('flipped');
+        
+        // Swap: Front (kanjiCharacterEl) shows example word, Back (contohKataTextEl) shows kanji
+        const hasContoh = currentKanji.contoh_kata && currentKanji.contoh_kata !== '-';
+        kanjiCharacterEl.textContent = hasContoh ? currentKanji.contoh_kata : currentKanji.kanji;
+        
+        if (contohKataTextEl) {
+            contohKataTextEl.textContent = hasContoh ? currentKanji.kanji : '-';
+        }
+        
+        // Use a simpler animation since we now have the 3D structure
+        const cardInner = document.querySelector('.card-inner');
+        if (cardInner) {
+            cardInner.style.animation = 'none';
+            void cardInner.offsetWidth; // Trigger reflow
+            cardInner.style.animation = 'flipIn 0.6s ease-out';
+        }
     }
 
     function checkAnswer() {
@@ -624,6 +641,12 @@ document.addEventListener('DOMContentLoaded', () => {
         restartBtn.addEventListener('click', startGame);
         hintDisplay.addEventListener('click', toggleHint);
         if (muteBtn) muteBtn.addEventListener('click', toggleMute);
+
+        if (kanjiCard) {
+            kanjiCard.addEventListener('click', () => {
+                kanjiCard.classList.toggle('flipped');
+            });
+        }
 
         countdownToggle.addEventListener('change', () => {
             countdownSettings.style.display = countdownToggle.checked ? 'block' : 'none';
