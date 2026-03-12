@@ -37,6 +37,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const timerValueEl = document.getElementById('timer-value');
     const idDisplayEl = document.getElementById('id-display');
     const repetitionToggle = document.getElementById('repetition-toggle');
+    const contohKataToggle = document.getElementById('contoh-kata-toggle');
     const muteBtn = document.getElementById('mute-btn');
 
     // --- Game State ---
@@ -50,6 +51,7 @@ document.addEventListener('DOMContentLoaded', () => {
     let timeLeft = 0;
     let isCountdownActive = false;
     let isRepetitionMode = false;
+    let isContohKataMode = false;
     let isMuted = localStorage.getItem('isMuted') === 'true';
     let userProgress = {
         mastered: [],
@@ -420,6 +422,8 @@ document.addEventListener('DOMContentLoaded', () => {
         }
 
         isRepetitionMode = repetitionToggle.checked;
+        isContohKataMode = contohKataToggle ? contohKataToggle.checked : false;
+        
         if (isRepetitionMode) {
             // Pick the first available kanji to repeat
             const available = getAvailableKanji();
@@ -472,15 +476,23 @@ document.addEventListener('DOMContentLoaded', () => {
 
         // Reset flip state and update content
         if (kanjiCard) kanjiCard.classList.remove('flipped');
-        
-        // Swap: Front (kanjiCharacterEl) shows example word, Back (contohKataTextEl) shows kanji
+
         const hasContoh = currentKanji.contoh_kata && currentKanji.contoh_kata !== '-';
-        kanjiCharacterEl.textContent = hasContoh ? currentKanji.contoh_kata : currentKanji.kanji;
-        
-        if (contohKataTextEl) {
-            contohKataTextEl.textContent = hasContoh ? currentKanji.kanji : '-';
+
+        if (isContohKataMode && hasContoh) {
+            // New Mode: Contoh Kata on Front, Kanji on Back
+            kanjiCharacterEl.textContent = currentKanji.contoh_kata;
+            if (contohKataTextEl) {
+                contohKataTextEl.textContent = currentKanji.kanji;
+            }
+        } else {
+            // Standard Mode: Kanji on Front, Contoh Kata on Back
+            kanjiCharacterEl.textContent = currentKanji.kanji;
+            if (contohKataTextEl) {
+                contohKataTextEl.textContent = hasContoh ? currentKanji.contoh_kata : '-';
+            }
         }
-        
+
         // Use a simpler animation since we now have the 3D structure
         const cardInner = document.querySelector('.card-inner');
         if (cardInner) {
