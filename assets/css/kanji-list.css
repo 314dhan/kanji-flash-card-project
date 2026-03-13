@@ -226,10 +226,10 @@ body.kanji-list-page .subtitle {
         padding: 10px;
     }
     body.kanji-list-page .title {
-        font-size: 1.8em;
+        font-size: 1.6em;
     }
     .content {
-        padding: 10px;
+        padding: 5px;
     }
     #kanji-list-container, #hiragana-list-container, #katakana-list-container {
         grid-template-columns: repeat(2, 1fr);
@@ -237,20 +237,24 @@ body.kanji-list-page .subtitle {
     }
     .kanji-char {
         font-size: 1.8em;
+        margin-bottom: 8px;
     }
     .kanji-meaning {
         font-size: 0.9em;
     }
+    .kanji-reading {
+        font-size: 0.8em;
+    }
     .kanji-item {
-        min-height: 80px;
+        min-height: 85px;
         padding: 10px;
     }
     #scrollToTopBtn {
-        width: 40px;
-        height: 40px;
-        font-size: 18px;
-        line-height: 40px;
-        bottom: 15px;
-        right: 15px;
+        width: 35px;
+        height: 35px;
+        font-size: 16px;
+        line-height: 35px;
+        bottom: 10px;
+        right: 10px;
     }
 }

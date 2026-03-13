@@ -723,6 +723,9 @@ button:disabled, a:disabled {
     transform-style: preserve-3d;
     transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
     cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .kanji-card.flipped {
@@ -1134,24 +1137,117 @@ button:disabled, a:disabled {
    ================================= */
 @media (max-width: 768px) {
     .container {
-        padding: 40px 20px;
+        padding: 30px 20px;
         margin: 10px;
+        border-radius: 20px;
     }
 
-    .title { font-size: 2.5em; }
-    .kanji-card { width: 240px; height: 240px; }
-    .kanji-character { font-size: 5em; }
-    .input-group { flex-direction: column; }
+    .title { font-size: 2.2em; }
+    .subtitle { font-size: 1.1em; }
+    
+    .kanji-card { width: 220px; height: 220px; }
+    .kanji-character { font-size: 4.5em; }
+    .contoh-kata-text { font-size: 2em; }
+    
+    .input-group { 
+        flex-direction: column; 
+        width: 100%;
+    }
+    
+    #answer-input {
+        width: 100%;
+        text-align: center;
+    }
+
+    .btn-submit {
+        width: 100%;
+    }
+
     .main-footer { padding: 15px; }
     .footer-content p { font-size: 0.8em; }
+
+    .learning-path {
+        grid-template-columns: 1fr;
+    }
+
+    .path-card {
+        padding: 20px;
+    }
+
+    .card-icon {
+        font-size: 2em;
+    }
 }
 
 @media (max-width: 480px) {
-    .title { font-size: 2.2em; }
-    .kanji-card { width: 200px; height: 200px; }
-    .kanji-character { font-size: 4em; }
-    .feature-card, .instructions { padding: 20px; }
+    .container {
+        padding: 20px 15px;
+        margin: 5px;
+    }
+
+    .header {
+        margin-bottom: 20px;
+    }
+
+    .welcome-section {
+        margin-bottom: 15px;
+        font-size: 1em;
+    }
+
+    .title { font-size: 1.8em; }
+    .subtitle { font-size: 0.9em; }
+    
+    .kanji-card { width: 180px; height: 180px; }
+    .kanji-character { font-size: 3.5em; }
+    .contoh-kata-text { font-size: 1.6em; }
+
+    .feature-card, .instructions { padding: 15px; }
+    
+    .btn-primary, .btn-secondary, .btn-submit {
+        padding: 12px 20px;
+        font-size: 1em;
+    }
+
+    .learning-options, .start-from-container {
+        padding: 15px;
+        margin: 10px 0;
+    }
+
+    .option-label {
+        padding: 10px;
+    }
+
+    .quiz-length-container {
+        flex-direction: column;
+        gap: 10px;
+        padding: 15px;
+    }
+
     .main-footer { padding: 10px; }
+    
+    .id-display {
+        font-size: 0.9em;
+        top: 10px;
+        left: 10px;
+    }
+
+    .mute-btn {
+        top: 10px;
+        right: 10px;
+        width: 35px;
+        height: 35px;
+        font-size: 1.1em;
+    }
+
+    .input-wrapper {
+        margin-bottom: 15px;
+    }
+
+    .result-message {
+        min-height: 50px;
+        font-size: 1em;
+        padding: 8px 15px;
+    }
 }
 
 .category-selector select option {
