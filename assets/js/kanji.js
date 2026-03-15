@@ -6,6 +6,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const submitBtn = document.getElementById('submit-btn');
     const nextBtn = document.getElementById('next-btn');
     const restartBtn = document.getElementById('restart-btn');
+    const speakBtn = document.getElementById('speak-btn');
     const scoreValueEl = document.querySelector('.score-value');
     const scoreMaxEl = document.getElementById('score-max');
     const progressFillEl = document.querySelector('.progress-fill');
@@ -37,6 +38,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const timerValueEl = document.getElementById('timer-value');
     const idDisplayEl = document.getElementById('id-display');
     const repetitionToggle = document.getElementById('repetition-toggle');
+    const autoSpeakToggle = document.getElementById('auto-speak-toggle');
+    const voiceSelect = document.getElementById('voice-select');
     const contohKataToggle = document.getElementById('contoh-kata-toggle');
     const muteBtn = document.getElementById('mute-btn');
 
@@ -52,6 +55,8 @@ document.addEventListener('DOMContentLoaded', () => {
     let isCountdownActive = false;
     let isRepetitionMode = false;
     let isContohKataMode = false;
+    let isAutoSpeakActive = false;
+    let selectedVoice = null;
     let isMuted = localStorage.getItem('isMuted') === 'true';
     let userProgress = {
         mastered: [],
@@ -79,6 +84,61 @@ document.addEventListener('DOMContentLoaded', () => {
             new Audio(src).play().catch(e => console.error("Audio play failed:", e));
         }
     }
+
+    function speak(text) {
+        if (!isMuted && 'speechSynthesis' in window) {
+            // Cancel any ongoing speech
+            window.speechSynthesis.cancel();
+            
+            const utterance = new SpeechSynthesisUtterance(text);
+            utterance.lang = 'ja-JP';
+            utterance.rate = 0.8;
+            
+            if (selectedVoice) {
+                utterance.voice = selectedVoice;
+            } else {
+                // Try to find a Japanese voice if no specific voice is selected
+                const voices = window.speechSynthesis.getVoices();
+                const jaVoice = voices.find(v => v.lang.includes('ja'));
+                if (jaVoice) utterance.voice = jaVoice;
+            }
+
+            window.speechSynthesis.speak(utterance);
+        }
+    }
+
+    // --- Voice Selection ---
+    function populateVoiceList() {
+        if (!('speechSynthesis' in window)) return;
+        
+        const voices = window.speechSynthesis.getVoices();
+        const jaVoices = voices.filter(voice => voice.lang.includes('ja') || voice.lang.includes('JA'));
+        
+        const currentSelection = voiceSelect.value;
+        voiceSelect.innerHTML = '<option value="">Default Japanese Voice</option>';
+        
+        jaVoices.forEach(voice => {
+            const option = document.createElement('option');
+            option.textContent = `${voice.name} (${voice.lang})`;
+            option.value = voice.name;
+            voiceSelect.appendChild(option);
+        });
+
+        if (currentSelection) {
+            voiceSelect.value = currentSelection;
+        }
+    }
+
+    if ('speechSynthesis' in window) {
+        window.speechSynthesis.onvoiceschanged = populateVoiceList;
+        populateVoiceList();
+    }
+
+    voiceSelect.addEventListener('change', () => {
+        const voices = window.speechSynthesis.getVoices();
+        selectedVoice = voices.find(voice => voice.name === voiceSelect.value) || null;
+        if (selectedVoice) speak("こんにちは");
+    });
 
     // --- Kanji Categories (Hardcoded) ---
     const kanjiCategories = {
@@ -349,20 +409,20 @@ document.addEventListener('DOMContentLoaded', () => {
         'びゃ': 'bya', 'びゅ': 'byu', 'びょ': 'byo',
         'ぴゃ': 'pya', 'ぴゅ': 'pyu', 'ぴょ': 'pyo',
         'ア': 'a', 'イ': 'i', 'ウ': 'u', 'エ': 'e', 'オ': 'o',
-        'カ': 'ka', 'キ': 'ki', 'ク': 'ku', 'ケ': 'ke', 'コ': 'ko',
-        'サ': 'sa', 'シ': 'shi', 'ス': 'su', 'セ': 'se', 'ソ': 'so',
+        'カ': 'ka', 'キ': 'ki', 'く': 'ku', 'け': 'ke', 'コ': 'ko',
+        'サ': 'sa', 'シ': 'shi', 'ス': 'su', 'せ': 'se', 'ソ': 'so',
         'タ': 'ta', 'チ': 'chi', 'ツ': 'tsu', 'テ': 'te', 'ト': 'to',
         'ナ': 'na', 'ニ': 'ni', 'ヌ': 'nu', 'ネ': 'ne', 'ノ': 'no',
         'ハ': 'ha', 'ヒ': 'hi', 'フ': 'fu', 'ヘ': 'he', 'ホ': 'ho',
         'マ': 'ma', 'ミ': 'mi', 'ム': 'mu', 'メ': 'me', 'モ': 'mo',
         'ヤ': 'ya', 'ユ': 'yu', 'ヨ': 'yo',
-        'ラ': 'ra', 'リ': 'ri', 'ル': 'ru', 'レ': 're', 'ロ': 'ro',
+        'ラ': 'ra', 'り': 'ri', 'る': 'ru', 'れ': 're', 'ロ': 'ro',
         'ワ': 'wa', 'ヲ': 'wo', 'ン': 'n',
-        'ガ': 'ga', 'ギ': 'gi', 'グ': 'gu', 'ゲ': 'ge', 'ゴ': 'go',
-        'ザ': 'za', 'ジ': 'ji', 'ズ': 'zu', 'ゼ': 'ze', 'ゾ': 'zo',
-        'ダ': 'da', 'ヂ': 'ji', 'ヅ': 'zu', 'デ': 'de', 'ド': 'do',
-        'バ': 'ba', 'ビ': 'bi', 'ブ': 'bu', 'ベ': 'be', 'ボ': 'bo',
-        'パ': 'pa', 'ピ': 'pi', 'プ': 'pu', 'ペ': 'pe', 'ポ': 'po'
+        'ガ': 'ga', 'ギ': 'gi', 'グ': 'gu', 'げ': 'ge', 'ご': 'go',
+        'ざ': 'za', 'じ': 'ji', 'ず': 'zu', 'ぜ': 'ze', 'ぞ': 'zo',
+        'だ': 'da', 'ヂ': 'ji', 'ヅ': 'zu', 'デ': 'de', 'ド': 'do',
+        'バ': 'ba', 'び': 'bi', 'ぶ': 'bu', 'べ': 'be', 'ぼ': 'bo',
+        'パ': 'pa', 'ぴ': 'pi', 'ぷ': 'pu', 'ぺ': 'pe', 'ぽ': 'po'
     };
 
     function kanaToRomaji(text) {
@@ -422,8 +482,14 @@ document.addEventListener('DOMContentLoaded', () => {
         }
 
         isRepetitionMode = repetitionToggle.checked;
+        isAutoSpeakActive = autoSpeakToggle.checked;
         isContohKataMode = contohKataToggle ? contohKataToggle.checked : false;
         
+        // Show speak button only if pronunciation mode is active
+        if (speakBtn) {
+            speakBtn.style.display = isAutoSpeakActive ? 'flex' : 'none';
+        }
+
         if (isRepetitionMode) {
             // Pick the first available kanji to repeat
             const available = getAvailableKanji();
@@ -630,6 +696,11 @@ document.addEventListener('DOMContentLoaded', () => {
             resultEl.classList.add('incorrect');
             playSound('assets/sound/wrong.mp3');
         }
+
+        // Automatically speak the kanji if the mode is active
+        if (isAutoSpeakActive) {
+            speak(currentKanji.kanji);
+        }
     }
 
     function toggleHint() {
@@ -651,6 +722,11 @@ document.addEventListener('DOMContentLoaded', () => {
         submitBtn.addEventListener('click', checkAnswer);
         nextBtn.addEventListener('click', displayNewKanji);
         restartBtn.addEventListener('click', startGame);
+        if (speakBtn) {
+            speakBtn.addEventListener('click', () => {
+                if (currentKanji) speak(currentKanji.kanji);
+            });
+        }
         hintDisplay.addEventListener('click', toggleHint);
         if (muteBtn) muteBtn.addEventListener('click', toggleMute);
 

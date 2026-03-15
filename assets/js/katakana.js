@@ -8,6 +8,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const submitBtn = document.getElementById('submit-btn');
     const nextBtn = document.getElementById('next-btn');
     const restartBtn = document.getElementById('restart-btn');
+    const speakBtn = document.getElementById('speak-btn');
 
     // Game Display Elements
     const scoreValueEl = document.querySelector('.score-value');
@@ -27,6 +28,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const timerValueEl = document.getElementById('timer-value');
     const idDisplayEl = document.getElementById('id-display');
     const repetitionToggle = document.getElementById('repetition-toggle');
+    const autoSpeakToggle = document.getElementById('auto-speak-toggle');
+    const voiceSelect = document.getElementById('voice-select');
     const muteBtn = document.getElementById('mute-btn');
     
     // Start/End Screen Elements
@@ -44,6 +47,8 @@ document.addEventListener('DOMContentLoaded', () => {
     let timeLeft = 0;
     let isCountdownActive = false;
     let isRepetitionMode = false;
+    let isAutoSpeakActive = false;
+    let selectedVoice = null;
     let isMuted = localStorage.getItem('isMuted') === 'true';
     let userProgress = {
         mastered: [],
@@ -70,6 +75,61 @@ document.addEventListener('DOMContentLoaded', () => {
             new Audio(src).play().catch(e => console.error("Audio play failed:", e));
         }
     }
+
+    function speak(text) {
+        if (!isMuted && 'speechSynthesis' in window) {
+            // Cancel any ongoing speech
+            window.speechSynthesis.cancel();
+            
+            const utterance = new SpeechSynthesisUtterance(text);
+            utterance.lang = 'ja-JP';
+            utterance.rate = 0.9;
+            
+            if (selectedVoice) {
+                utterance.voice = selectedVoice;
+            } else {
+                // Try to find a Japanese voice if no specific voice is selected
+                const voices = window.speechSynthesis.getVoices();
+                const jaVoice = voices.find(v => v.lang.includes('ja'));
+                if (jaVoice) utterance.voice = jaVoice;
+            }
+
+            window.speechSynthesis.speak(utterance);
+        }
+    }
+
+    // --- Voice Selection ---
+    function populateVoiceList() {
+        if (!('speechSynthesis' in window)) return;
+        
+        const voices = window.speechSynthesis.getVoices();
+        const jaVoices = voices.filter(voice => voice.lang.includes('ja') || voice.lang.includes('JA'));
+        
+        const currentSelection = voiceSelect.value;
+        voiceSelect.innerHTML = '<option value="">Default Japanese Voice</option>';
+        
+        jaVoices.forEach(voice => {
+            const option = document.createElement('option');
+            option.textContent = `${voice.name} (${voice.lang})`;
+            option.value = voice.name;
+            voiceSelect.appendChild(option);
+        });
+
+        if (currentSelection) {
+            voiceSelect.value = currentSelection;
+        }
+    }
+
+    if ('speechSynthesis' in window) {
+        window.speechSynthesis.onvoiceschanged = populateVoiceList;
+        populateVoiceList();
+    }
+
+    voiceSelect.addEventListener('change', () => {
+        const voices = window.speechSynthesis.getVoices();
+        selectedVoice = voices.find(voice => voice.name === voiceSelect.value) || null;
+        if (selectedVoice) speak("こんにちは");
+    });
 
     // --- Progress Management ---
     function loadUserProgress() {
@@ -238,6 +298,13 @@ document.addEventListener('DOMContentLoaded', () => {
         }
 
         isRepetitionMode = repetitionToggle.checked;
+        isAutoSpeakActive = autoSpeakToggle.checked;
+
+        // Show speak button only if pronunciation mode is active
+        if (speakBtn) {
+            speakBtn.style.display = isAutoSpeakActive ? 'flex' : 'none';
+        }
+
         if (isRepetitionMode) {
             const currentIndex = quizIndices[0];
             currentKana = kanaData[currentIndex];
@@ -303,6 +370,11 @@ document.addEventListener('DOMContentLoaded', () => {
             resultEl.textContent = `Wrong! The correct answer is ${currentKana.romaji}`;
             resultEl.classList.add('incorrect');
             playSound('assets/sound/wrong.mp3');
+        }
+
+        // Automatically speak the character if the mode is active
+        if (isAutoSpeakActive) {
+            speak(currentKana.kana);
         }
         
         questionsAnswered++; // Increment after answering
@@ -370,6 +442,11 @@ document.addEventListener('DOMContentLoaded', () => {
     submitBtn.addEventListener('click', checkAnswer);
     nextBtn.addEventListener('click', displayNewKana);
     restartBtn.addEventListener('click', startGame);
+    if (speakBtn) {
+        speakBtn.addEventListener('click', () => {
+            if (currentKana) speak(currentKana.kana);
+        });
+    }
     if (muteBtn) muteBtn.addEventListener('click', toggleMute);
 
     countdownToggle.addEventListener('change', () => {

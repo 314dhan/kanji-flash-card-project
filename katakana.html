@@ -100,6 +100,17 @@
                                 <input type="checkbox" id="repetition-toggle" style="width: 20px; height: 20px;">
                                 <span class="option-text" style="font-weight: 600;"> Repetition Mode (Repeat Same Katakana) 🔁</span>
                             </label>
+                            <label class="option-label" style="cursor: pointer; margin-top: 10px;">
+                                <input type="checkbox" id="auto-speak-toggle" style="width: 20px; height: 20px;">
+                                <span class="option-text" style="font-weight: 600;"> Automatic Pronunciation 🔊</span>
+                            </label>
+
+                            <div id="voice-selection-container" style="margin-top: 15px; text-align: left;">
+                                <label for="voice-select" style="font-size: 0.9em; font-weight: 600; color: var(--text-dark); display: block; margin-bottom: 5px;">Select Voice:</label>
+                                <select id="voice-select" style="width: 100%; padding: 8px; border-radius: 8px; border: 1px solid #e2e8f0; background: white; font-family: inherit;">
+                                    <option value="">Default Japanese Voice</option>
+                                </select>
+                            </div>
                         </div>
                     </div>
                 </details>
@@ -161,6 +172,10 @@
                 <button id="restart-btn" class="btn-secondary">
                     <span>Restart</span>
                     <div class="btn-icon">↺</div>
+                </button>
+                <button id="speak-btn" class="btn-secondary">
+                    <span>Speak</span>
+                    <div class="btn-icon">🔊</div>
                 </button>
                 <button id="next-btn" class="btn-secondary" disabled>
                     <span>Next Katakana</span>

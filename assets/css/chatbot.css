@@ -143,13 +143,7 @@
     padding: 10px 15px;
     border-radius: 20px;
     line-height: 1.4;
-}
-
-.message.user {
-    background-color: #007bff;
-    color: white;
-    align-self: flex-end;
-    border-bottom-right-radius: 5px;
+    position: relative;
 }
 
 .message.bot {
@@ -157,7 +151,30 @@
     color: #333;
     align-self: flex-start;
     border-bottom-left-radius: 5px;
+    padding-right: 35px; /* Space for speak button */
 }
+
+.speak-message-btn {
+    position: absolute;
+    right: 8px;
+    bottom: 8px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 14px;
+    opacity: 0.6;
+    transition: opacity 0.2s, transform 0.2s;
+    padding: 2px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.speak-message-btn:hover {
+    opacity: 1;
+    transform: scale(1.2);
+}
+
 
 .message.error {
     background-color: #f8d7da;

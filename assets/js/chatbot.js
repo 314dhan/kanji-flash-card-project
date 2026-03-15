@@ -181,10 +181,34 @@ document.addEventListener('DOMContentLoaded', () => {
     function addMessage(text, type) {
         const messageElement = document.createElement('div');
         messageElement.classList.add('message', type);
-        messageElement.innerHTML = text; // Use innerHTML to render line breaks from the start
+        
+        const textWrapper = document.createElement('div');
+        textWrapper.className = 'message-text';
+        textWrapper.innerHTML = text;
+        messageElement.appendChild(textWrapper);
+
+        if (type === 'bot') {
+            const speakBtn = document.createElement('button');
+            speakBtn.className = 'speak-message-btn';
+            speakBtn.innerHTML = '🔊';
+            speakBtn.title = 'Hear pronunciation';
+            speakBtn.onclick = () => speak(textWrapper.innerText);
+            messageElement.appendChild(speakBtn);
+        }
+
         messagesContainer.appendChild(messageElement);
         messagesContainer.scrollTop = messagesContainer.scrollHeight;
-        return messageElement;
+        return textWrapper; // Return the text wrapper so sendMessage can update its content
+    }
+
+    function speak(text) {
+        if ('speechSynthesis' in window) {
+            window.speechSynthesis.cancel();
+            const utterance = new SpeechSynthesisUtterance(text);
+            utterance.lang = 'ja-JP';
+            utterance.rate = 0.9;
+            window.speechSynthesis.speak(utterance);
+        }
     }
 
     // --- Initial Load ---
