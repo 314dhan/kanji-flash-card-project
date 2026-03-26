@@ -4,23 +4,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Japanese Language Learning</title>
+    <title>Japanese Master — Learn Japanese</title>
     <link rel="icon" type="image/png" href="assets/images/favicon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,300&family=Noto+Sans+JP:wght@300;400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/chatbot.css">
-    <link
-        href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&family=Poppins:wght@300;400;500;600;700&display=swap"
-        rel="stylesheet">
-    
 </head>
 
 <body>
-    <!-- Background Elements -->
-    <div class="bg-elements">
-        <div class="bg-circle circle-1"></div>
-        <div class="bg-circle circle-2"></div>
-        <div class="bg-circle circle-3"></div>
-    </div>
+    <div class="bg-elements"></div>
 
     <div id="start-screen" class="screen active">
         <div class="container main-hub">
@@ -30,75 +24,71 @@
             </div>
 
             <div class="welcome-section">
-                <p>Welcome! If you're new to Japanese, we recommend following the path below in order.</p>
+                <p>New to Japanese? Follow the path below in order for the best results.</p>
             </div>
 
-            <div class="learning-path">
+            <div class="editorial-list">
                 <!-- Step 1: Hiragana -->
-                <div class="path-card" data-step="1">
-                    <div class="card-badge">Step 1</div>
-                    <div class="card-icon">あ</div>
-                    <div class="card-info">
-                        <h3>Hiragana</h3>
-                        <p>The foundation of Japanese. Used for native words and grammar.</p>
-                        <div class="card-actions">
-                            <a href="hiragana.html" class="btn-primary-sm">Start Quiz</a>
-                            <a href="hiragana-list.html" class="btn-link">Study List</a>
-                        </div>
+                <div class="editorial-item">
+                    <div class="ed-num">01</div>
+                    <div class="ed-content">
+                        <h3 class="display-huge">Hiragana</h3>
+                        <p>The foundation of Japanese. Used for native words and grammar patterns.</p>
+                    </div>
+                    <div class="ed-actions">
+                        <a href="hiragana.html" class="btn-primary-sm">Start Quiz</a>
+                        <a href="hiragana-list.html" class="btn-link">Study List</a>
                     </div>
                 </div>
 
                 <!-- Step 2: Katakana -->
-                <div class="path-card" data-step="2">
-                    <div class="card-badge">Step 2</div>
-                    <div class="card-icon">ア</div>
-                    <div class="card-info">
-                        <h3>Katakana</h3>
-                        <p>Used for foreign loanwords, names, and emphasis.</p>
-                        <div class="card-actions">
-                            <a href="katakana.html" class="btn-primary-sm">Start Quiz</a>
-                            <a href="katakana-list.html" class="btn-link">Study List</a>
-                        </div>
+                <div class="editorial-item">
+                    <div class="ed-num">02</div>
+                    <div class="ed-content">
+                        <h3 class="display-huge">Katakana</h3>
+                        <p>Used for foreign loanwords, names, and stylistic emphasis.</p>
+                    </div>
+                    <div class="ed-actions">
+                        <a href="katakana.html" class="btn-primary-sm">Start Quiz</a>
+                        <a href="katakana-list.html" class="btn-link">Study List</a>
                     </div>
                 </div>
 
                 <!-- Step 3: Kanji -->
-                <div class="path-card" data-step="3">
-                    <div class="card-badge">Step 3</div>
-                    <div class="card-icon">字</div>
-                    <div class="card-info">
-                        <h3>Kanji</h3>
-                        <p>Complex characters representing concepts and meanings.</p>
-                        <div class="card-actions">
-                            <a href="kanji.html" class="btn-primary-sm">Start Quiz</a>
-                            <a href="kanji-list.html" class="btn-link">Study List</a>
-                        </div>
+                <div class="editorial-item">
+                    <div class="ed-num">03</div>
+                    <div class="ed-content">
+                        <h3 class="display-huge">Kanji</h3>
+                        <p>Complex characters representing concepts, meanings, and ideas.</p>
+                    </div>
+                    <div class="ed-actions">
+                        <a href="kanji.html" class="btn-primary-sm">Start Quiz</a>
+                        <a href="kanji-list.html" class="btn-link">Study List</a>
                     </div>
                 </div>
 
                 <!-- Step 4: Similar Kanji -->
-                <div class="path-card" data-step="4">
-                    <div class="card-badge">Step 4</div>
-                    <div class="card-icon">👀</div>
-                    <div class="card-info">
-                        <h3>Similar Kanji</h3>
+                <div class="editorial-item">
+                    <div class="ed-num">04</div>
+                    <div class="ed-content">
+                        <h3 class="display-huge">Similar Kanji</h3>
                         <p>Master the subtle differences between visually similar characters.</p>
-                        <div class="card-actions">
-                            <a href="similar-kanji.html" class="btn-primary-sm">Start Learning</a>
-                        </div>
+                    </div>
+                    <div class="ed-actions">
+                        <a href="similar-kanji.html" class="btn-primary-sm">Start Learning</a>
                     </div>
                 </div>
 
-                <!-- Extra: JLPT -->
-                <div class="path-card special">
-                    <div class="card-badge">Exam Prep</div>
-                    <div class="card-icon">🏆</div>
-                    <div class="card-info">
-                        <h3>JLPT Kanji</h3>
+                <!-- Exam Prep: JLPT -->
+                <div class="editorial-item">
+                    <div class="ed-badge">Exam Prep</div>
+                    <div class="ed-num">05</div>
+                    <div class="ed-content">
+                        <h3 class="display-huge">JLPT</h3>
                         <p>Master N5 to N2 Kanji for the Japanese Language Proficiency Test.</p>
-                        <div class="card-actions">
-                            <a href="jlpt-kanji.html" class="btn-primary-sm">Practice</a>
-                        </div>
+                    </div>
+                    <div class="ed-actions">
+                        <a href="jlpt-kanji.html" class="btn-primary-sm">Practice</a>
                     </div>
                 </div>
             </div>
@@ -116,22 +106,20 @@
             <input type="password" id="api-key-input" placeholder="Enter your API Key...">
             <button id="save-api-key">Save Key</button>
         </div>
-        <div class="chatbot-messages" id="chatbot-messages">
-            <!-- Messages will be appended here -->
-        </div>
+        <div class="chatbot-messages" id="chatbot-messages"></div>
         <div class="chatbot-input">
             <input type="text" id="user-input" placeholder="Ask a question...">
             <button id="send-button">➤</button>
         </div>
     </div>
-    
-    <script type="module" src="assets/js/chatbot.js"></script>
-</body>
 
-<footer class="main-footer">
-    <div class="footer-content">
-        <p>Made with <span class="heart">♥</span> by <span class="author">Ramadhan</span></p>
-    </div>
-</footer>
+    <script type="module" src="assets/js/chatbot.js"></script>
+
+    <footer class="main-footer">
+        <div class="footer-content">
+            <p>Made with <span class="heart">♥</span> by <span class="author">Ramadhan</span></p>
+        </div>
+    </footer>
+</body>
 
 </html>
