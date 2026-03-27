@@ -157,6 +157,7 @@ document.addEventListener('DOMContentLoaded', () => {
         
         startScreen.classList.remove('active');
         gameContainer.classList.add('active');
+        window.scrollTo(0, 0); // Ensure game starts at top
 
         if (countdownToggle.checked) {
             startTimer(parseInt(countdownMinutesInput.value, 10) || 1);
