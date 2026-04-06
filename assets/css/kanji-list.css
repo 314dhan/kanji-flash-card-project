@@ -46,6 +46,77 @@ body.kanji-list-page .subtitle {
     color: var(--surface-dim);
 }
 
+.search-container {
+    position: relative;
+    max-width: 400px;
+    margin: 15px auto 0;
+}
+
+.search-input {
+    width: 100%;
+    padding: 12px 40px 12px 15px;
+    background: var(--surface-pure);
+    border: 2px solid var(--muted-light);
+    border-bottom: 3px solid var(--accent);
+    border-radius: 8px;
+    color: var(--ink);
+    font-size: 1rem;
+    outline: none;
+    box-shadow: var(--shadow);
+    transition: all 0.3s ease;
+    box-sizing: border-box;
+    font-family: inherit;
+}
+
+.search-input::placeholder {
+    color: var(--muted);
+}
+
+.search-input:focus {
+    border-color: var(--accent);
+    box-shadow: 0 0 0 3px var(--accent-dim);
+}
+
+.clear-search-btn {
+    position: absolute;
+    right: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    color: var(--ink);
+    font-size: 1.2rem;
+    cursor: pointer;
+    padding: 0;
+    opacity: 0.7;
+    transition: opacity 0.2s;
+    outline: none;
+    display: none;
+}
+
+body.kanji-list-page .search-input {
+    background: rgba(255, 255, 255, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-bottom: 3px solid white;
+    color: white;
+    backdrop-filter: blur(5px);
+    box-shadow: none;
+}
+
+body.kanji-list-page .search-input::placeholder { color: rgba(255, 255, 255, 0.7); }
+
+body.kanji-list-page .search-input:focus {
+    background: rgba(255, 255, 255, 0.3);
+    border-color: white;
+    box-shadow: 0 0 10px rgba(255,255,255,0.2);
+}
+
+body.kanji-list-page .clear-search-btn { color: white; }
+
+.clear-search-btn:hover {
+    opacity: 1;
+}
+
 .back-button {
     position: absolute;
     top: 20px;
@@ -79,21 +150,20 @@ body.kanji-list-page .subtitle {
     padding: 20px; /* Padding around the grid */
 }
 
-#kanji-list-container, #hiragana-list-container, #katakana-list-container {
+#kanji-list-container, #hiragana-list-container, #katakana-list-container, #global-search-container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); /* Aim for 5 columns, flexible width */
     gap: 20px;
 }
 
 .kanji-item {
-    background: rgba(255, 255, 255, 0.15); /* Slightly more opaque for better contrast */
-    backdrop-filter: blur(10px); /* Liquid glass effect for cards */
+    background: var(--surface-pure);
     border-radius: 12px;
     padding: 15px;
     text-align: center;
-    box-shadow: var(--shadow); /* Subtle shadow */
+    box-shadow: var(--shadow);
     transition: transform 0.2s ease, box-shadow 0.2s ease;
-    border: 1px solid rgba(255, 255, 255, 0.2); /* Subtle border */
+    border: 1.5px solid oklch(12% 0.015 260 / 0.08);
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -120,27 +190,45 @@ body.kanji-list-page .subtitle {
 .kanji-item:hover {
     transform: translateY(-5px);
     box-shadow: var(--shadow-lg);
-    border-color: var(--primary-color); /* Highlight border on hover */
+    border-color: var(--accent);
 }
 
 .kanji-char {
     font-size: 2.5em;
     font-weight: 700;
-    color: white; /* Changed from var(--text-dark) for better contrast */
+    color: var(--ink);
     margin-bottom: 10px;
     font-family: 'Noto Sans JP', sans-serif;
 }
 
 .kanji-meaning {
     font-size: 1em;
-    color: white; /* Changed from var(--text-dark) */
+    color: var(--ink-soft);
     font-weight: 500;
 }
 
 .kanji-reading {
     font-size: 0.9em;
-    color: var(--surface-dim); /* Soft light gray for secondary info */
+    color: var(--muted);
     margin-top: 5px;
+}
+
+body.kanji-list-page .kanji-item {
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+}
+body.kanji-list-page .kanji-item:hover {
+    box-shadow: 0 12px 48px rgba(0,0,0,0.2);
+    border-color: white;
+}
+body.kanji-list-page .kanji-char,
+body.kanji-list-page .kanji-meaning {
+    color: white;
+}
+body.kanji-list-page .kanji-reading {
+    color: rgba(255, 255, 255, 0.82);
 }
 
 /* Scroll to Top Button */

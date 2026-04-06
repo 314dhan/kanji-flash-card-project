@@ -46,6 +46,40 @@ document.addEventListener('DOMContentLoaded', () => {
             hiraganaListContainer.innerHTML = '<p style="color: #ff6b6b; text-align: center;">Failed to load Hiragana list. Please check the console for more details.</p>';
         });
 
+    // Search functionality
+    const searchInput = document.getElementById('searchInput');
+    const clearBtn = document.getElementById('clearSearchBtn');
+
+    if (searchInput && clearBtn) {
+        const filterItems = () => {
+            const query = searchInput.value.toLowerCase();
+            clearBtn.style.display = query ? 'block' : 'none';
+            const items = hiraganaListContainer.querySelectorAll('.kanji-item');
+
+            items.forEach(item => {
+                let match = false;
+                const char = item.querySelector('.kanji-char');
+                if (char && char.textContent.toLowerCase().includes(query)) match = true;
+                
+                const meaning = item.querySelector('.kanji-meaning');
+                if (meaning && meaning.textContent.toLowerCase().includes(query)) match = true;
+
+                if (match) {
+                    item.style.display = 'flex';
+                } else {
+                    item.style.display = 'none';
+                }
+            });
+        };
+
+        searchInput.addEventListener('input', filterItems);
+        clearBtn.addEventListener('click', () => {
+            searchInput.value = '';
+            filterItems();
+            searchInput.focus();
+        });
+    }
+
     // Scroll to top button logic
     const scrollToTopBtn = document.getElementById("scrollToTopBtn");
 
