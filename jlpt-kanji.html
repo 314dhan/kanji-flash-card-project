@@ -81,6 +81,16 @@
             color: var(--accent);
             border: 1px solid var(--accent);
         }
+        .btn-vocab-green {
+            background: var(--success-dim);
+            color: var(--success);
+            border: 1px solid var(--success);
+        }
+        .btn-vocab-purple {
+            background: oklch(55% 0.15 300 / 0.10);
+            color: oklch(55% 0.15 300);
+            border: 1px solid oklch(55% 0.15 300);
+        }
         .btn-action:hover {
             transform: translateY(-2px);
             filter: brightness(0.95);
@@ -98,7 +108,7 @@
             text-decoration: underline;
         }
 
-        @media (max-width: 600px) {
+        @media (max-width: 700px) {
             .jlpt-row {
                 flex-direction: column;
                 gap: 15px;
@@ -109,7 +119,10 @@
             }
             .level-actions {
                 width: 100%;
-                flex-direction: column;
+                flex-wrap: wrap;
+            }
+            .btn-action {
+                flex: 1 1 calc(50% - 6px);
             }
         }
     </style>
@@ -124,7 +137,7 @@
     </div>
 
     <div class="screen active">
-        <div class="container" style="max-width: 800px;">
+        <div class="container">
             <div class="header">
                 <h1 class="title">JLPT Mastery</h1>
                 <div class="subtitle">Select your target level (N5 is for beginners)</div>
@@ -141,6 +154,8 @@
                     <div class="level-actions">
                         <a href="kanji-list.html?level=n5" class="btn-action btn-list-blue">Study List ≡</a>
                         <a href="kanji.html?level=n5" class="btn-action btn-challenge-red">Start Quiz 🎯</a>
+                        <a href="vocab-flashcard.html?level=n5" class="btn-action btn-vocab-green">Flashcards 📚</a>
+                        <a href="vocab-list.html?level=n5" class="btn-action btn-vocab-purple">Word List ≡</a>
                     </div>
                 </div>
 
@@ -154,6 +169,8 @@
                     <div class="level-actions">
                         <a href="kanji-list.html?level=n4" class="btn-action btn-list-blue">Study List ≡</a>
                         <a href="kanji.html?level=n4" class="btn-action btn-challenge-red">Start Quiz 🎯</a>
+                        <a href="vocab-flashcard.html?level=n4" class="btn-action btn-vocab-green">Flashcards 📚</a>
+                        <a href="vocab-list.html?level=n4" class="btn-action btn-vocab-purple">Word List ≡</a>
                     </div>
                 </div>
 
@@ -167,6 +184,8 @@
                     <div class="level-actions">
                         <a href="kanji-list.html?level=n3" class="btn-action btn-list-blue">Study List ≡</a>
                         <a href="kanji.html?level=n3" class="btn-action btn-challenge-red">Start Quiz 🎯</a>
+                        <a href="vocab-flashcard.html?level=n3" class="btn-action btn-vocab-green">Flashcards 📚</a>
+                        <a href="vocab-list.html?level=n3" class="btn-action btn-vocab-purple">Word List ≡</a>
                     </div>
                 </div>
 
@@ -180,6 +199,8 @@
                     <div class="level-actions">
                         <a href="kanji-list.html?level=n2" class="btn-action btn-list-blue">Study List ≡</a>
                         <a href="kanji.html?level=n2" class="btn-action btn-challenge-red">Start Quiz 🎯</a>
+                        <a href="vocab-flashcard.html?level=n2" class="btn-action btn-vocab-green">Flashcards 📚</a>
+                        <a href="vocab-list.html?level=n2" class="btn-action btn-vocab-purple">Word List ≡</a>
                     </div>
                 </div>
             </div>

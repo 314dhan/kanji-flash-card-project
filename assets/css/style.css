@@ -188,7 +188,7 @@ body {
 
 .container {
   width: 100%;
-  max-width: 860px;
+  max-width: 1100px;
   background: var(--surface-pure);
   border-radius: 20px;
   padding: clamp(var(--sp-8), 5vw, var(--sp-16)) clamp(var(--sp-6), 4vw, var(--sp-12));
@@ -197,7 +197,7 @@ body {
   animation: page-in 0.55s var(--ease-out-expo) both;
 }
 
-.main-hub { max-width: 960px; }
+.main-hub { max-width: 1280px; }
 
 @keyframes page-in {
   from { opacity: 0; transform: translateY(20px); }
@@ -265,14 +265,13 @@ body {
 }
 
 .editorial-item {
-  display: grid;
-  grid-template-columns: auto 1fr;
+  display: flex;
+  align-items: center;
   gap: var(--sp-6);
   padding: var(--sp-6) 0;
   border-bottom: 1.5px solid oklch(12% 0.015 260 / 0.08);
   position: relative;
   transition: transform 0.4s var(--ease-out-quart);
-  align-items: center;
 }
 
 .editorial-item:hover {
@@ -297,10 +296,11 @@ body {
 }
 
 .ed-content {
+  flex: 1;
   display: flex;
   flex-direction: column;
   gap: var(--sp-2);
-  max-width: 500px;
+  min-width: 0;
 }
 
 .display-huge {
@@ -324,15 +324,7 @@ body {
   display: flex;
   align-items: center;
   gap: var(--sp-5);
-  margin-left: auto;
-  opacity: 0;
-  transform: translateX(-10px);
-  transition: opacity 0.4s var(--ease-out-quart), transform 0.4s var(--ease-out-quart);
-}
-
-.editorial-item:hover .ed-actions {
-  opacity: 1;
-  transform: translateX(0);
+  flex-shrink: 0;
 }
 
 .ed-badge {
@@ -351,14 +343,12 @@ body {
 
 @media (max-width: 768px) {
   .editorial-item {
-    grid-template-columns: 1fr;
+    flex-direction: column;
+    align-items: flex-start;
     gap: var(--sp-4);
   }
   .ed-actions {
-    margin-left: 0;
-    opacity: 1;
-    transform: none;
-    margin-top: var(--sp-4);
+    margin-top: var(--sp-2);
   }
   .ed-num {
     font-size: var(--text-xl);
@@ -935,8 +925,8 @@ small { font-size: var(--text-xs); color: var(--muted-light); }
 }
 
 .kanji-card {
-  width: clamp(260px, 40vw, 420px);
-  height: clamp(260px, 40vw, 420px);
+  width: clamp(260px, 40vw, 500px);
+  height: clamp(260px, 40vw, 500px);
   position: relative;
   z-index: 2;
   transform-style: preserve-3d;
@@ -1273,6 +1263,29 @@ body.kanji-list-page .header { text-align: center; }
   .mute-btn { top: var(--sp-3); right: var(--sp-3); width: 36px; height: 36px; }
   .result-message { min-height: 48px; }
   .game-controls { gap: var(--sp-2); }
+}
+
+@media (min-width: 1024px) {
+  #game-container.active {
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: center;
+    gap: var(--sp-10);
+    padding: var(--sp-10) var(--sp-8);
+  }
+  .game-header {
+    width: 300px;
+    max-width: 300px;
+    position: sticky;
+    top: var(--sp-8);
+    margin-bottom: 0;
+    flex-shrink: 0;
+  }
+  .game-content {
+    max-width: 600px;
+    flex: 1;
+    padding: 0;
+  }
 }
 
 .category-selector select option,
