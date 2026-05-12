@@ -26,6 +26,7 @@ document.addEventListener('DOMContentLoaded', () => {
       readingDisplay:  document.getElementById('reading-display'),
       parentKanji:     document.getElementById('parent-kanji'),
       parentMeaning:   document.getElementById('parent-meaning'),
+      wordMeaning:     document.getElementById('word-meaning'),
       tapHint:         document.getElementById('tap-hint'),
       actionButtons:   document.getElementById('action-buttons'),
       knownBtn:        document.getElementById('known-btn'),
@@ -112,6 +113,7 @@ document.addEventListener('DOMContentLoaded', () => {
     renderCard(card) {
       Dom.flashcard.wordDisplay.textContent    = card.word;
       Dom.flashcard.readingDisplay.textContent = card.reading;
+      Dom.flashcard.wordMeaning.textContent    = card.wordMeaning ?? '';
       Dom.flashcard.parentKanji.textContent    = card.parentKanji;
       Dom.flashcard.parentMeaning.textContent  = card.parentMeaning;
     },
@@ -130,12 +132,11 @@ document.addEventListener('DOMContentLoaded', () => {
       Dom.flashcard.cardInner.classList.remove('flipped');
       if (State.isPractice) {
         Dom.flashcard.tapHint.style.opacity = '0';
-        Dom.flashcard.actionButtons.classList.add('visible');
         Dom.flashcard.practicePrevBtn.classList.toggle('inactive', State.index === 0);
       } else {
         Dom.flashcard.tapHint.style.opacity = '1';
-        Dom.flashcard.actionButtons.classList.remove('visible');
       }
+      Dom.flashcard.actionButtons.classList.add('visible');
     },
 
     renderResults() {
@@ -221,11 +222,6 @@ document.addEventListener('DOMContentLoaded', () => {
       if (State.isPractice) return;
 
       Dom.flashcard.tapHint.style.opacity = State.isFlipped ? '0' : '1';
-      if (State.isFlipped) {
-        setTimeout(() => Dom.flashcard.actionButtons.classList.add('visible'), 360);
-      } else {
-        Dom.flashcard.actionButtons.classList.remove('visible');
-      }
     },
 
     mark(known) {
@@ -342,11 +338,11 @@ document.addEventListener('DOMContentLoaded', () => {
           break;
         case 'ArrowRight':
           if (State.isPractice) Session.next();
-          else if (State.isFlipped) Session.mark(true);
+          else Session.mark(true);
           break;
         case 'ArrowLeft':
           if (State.isPractice) Session.prev();
-          else if (State.isFlipped) Session.mark(false);
+          else Session.mark(false);
           break;
         case 'Escape':
           showScreen('setup');

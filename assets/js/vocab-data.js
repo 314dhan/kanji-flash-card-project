@@ -23,10 +23,19 @@ const VocabData = (() => {
     const words    = wordsStr.split(',').map(w => w.trim()).filter(Boolean);
     const readings = readStr ? readStr.split(',').map(r => r.trim()).filter(Boolean) : [];
 
+    const artiRaw = item.arti_contoh_kata ?? item.arti_contoh;
+    let meanings = [];
+    if (Array.isArray(artiRaw)) {
+      meanings = artiRaw.map(m => String(m).trim()).filter(Boolean);
+    } else if (artiRaw) {
+      meanings = String(artiRaw).split(',').map(m => m.trim()).filter(Boolean);
+    }
+
     return words.map((word, idx) => ({
       id:            `${level}-${item.id}-${idx}`,
       word,
       reading:       readings[idx] ?? '',
+      wordMeaning:   meanings[idx] ?? '',
       parentKanji:   item.kanji    ?? '',
       parentMeaning: item.arti     ?? '',
       parentOnyomi:  item.onyomi   ?? '',

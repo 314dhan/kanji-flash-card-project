@@ -3,16 +3,23 @@
 document.addEventListener('DOMContentLoaded', () => {
 
   const Dom = {
-    levelTabs:      document.querySelectorAll('.level-tab'),
-    groupContainer: document.getElementById('group-container'),
-    practiceLink:   document.getElementById('practice-link'),
-    listContent:    document.getElementById('list-content'),
-    totalBadge:     document.getElementById('total-badge'),
+    levelTabs:        document.querySelectorAll('.level-tab'),
+    groupContainer:   document.getElementById('group-container'),
+    practiceLink:     document.getElementById('practice-link'),
+    listContent:      document.getElementById('list-content'),
+    totalBadge:       document.getElementById('total-badge'),
+    searchInput:      document.getElementById('search-input'),
+    searchClear:      document.getElementById('search-clear'),
+    chipsToggle:      document.getElementById('chips-toggle'),
+    chipsToggleLabel: document.getElementById('chips-toggle-label'),
+    chipsPanel:       document.getElementById('chips-panel'),
   };
 
   const State = {
     level:         'n5',
     selectedGroup: 'all',
+    searchQuery:   '',
+    chipsOpen:     false,
   };
 
   const Renderer = {
@@ -40,11 +47,33 @@ document.addEventListener('DOMContentLoaded', () => {
       Dom.groupContainer.querySelectorAll('.group-chip').forEach(chip => {
         chip.addEventListener('click', () => {
           State.selectedGroup = chip.dataset.group;
+          State.chipsOpen = false;
+          Renderer._applyChipsPanelState();
           Renderer.renderGroupChips();
           Renderer.renderList();
           Renderer.updatePracticeLink();
         });
       });
+
+      Renderer._updateToggleLabel();
+    },
+
+    _updateToggleLabel() {
+      if (!Dom.chipsToggleLabel) return;
+      if (State.selectedGroup === 'all') {
+        Dom.chipsToggleLabel.textContent = 'Semua Grup';
+        return;
+      }
+      const groups = VocabData.getGroupInfoList(State.level);
+      const g = groups.find(g => String(g.id) === String(State.selectedGroup));
+      Dom.chipsToggleLabel.textContent = g ? g.label : 'Grup';
+    },
+
+    _applyChipsPanelState() {
+      if (!Dom.chipsPanel || !Dom.chipsToggle) return;
+      Dom.chipsPanel.classList.toggle('open', State.chipsOpen);
+      Dom.chipsToggle.classList.toggle('expanded', State.chipsOpen);
+      Dom.chipsToggle.setAttribute('aria-expanded', String(State.chipsOpen));
     },
 
     updatePracticeLink() {
@@ -55,10 +84,19 @@ document.addEventListener('DOMContentLoaded', () => {
     },
 
     renderList() {
-      const entries = VocabData.getKanjiList(State.level, State.selectedGroup);
+      const q = State.searchQuery.trim();
+
+      let entries;
+      if (q) {
+        entries = Renderer._searchEntries(q);
+      } else {
+        entries = VocabData.getKanjiList(State.level, State.selectedGroup);
+      }
 
       if (entries.length === 0) {
-        Dom.listContent.innerHTML = '<p class="vl-empty">No vocabulary found for this selection.</p>';
+        Dom.listContent.innerHTML = q
+          ? `<p class="vl-empty">Tidak ada hasil untuk "<strong>${q}</strong>"</p>`
+          : '<p class="vl-empty">No vocabulary found for this selection.</p>';
         return;
       }
 
@@ -67,14 +105,45 @@ document.addEventListener('DOMContentLoaded', () => {
         .join('');
     },
 
+    _searchEntries(q) {
+      const allEntries = VocabData.getKanjiList(State.level, 'all');
+      const ql = q.toLowerCase();
+
+      return allEntries.reduce((acc, entry) => {
+        const kanjiMatch   = entry.kanji.includes(q);
+        const meaningMatch = entry.meaning.toLowerCase().includes(ql);
+
+        const matchedCardIds = new Set(
+          entry.cards
+            .filter(c =>
+              c.word.includes(q) ||
+              c.reading.includes(q) ||
+              (c.wordMeaning && c.wordMeaning.toLowerCase().includes(ql))
+            )
+            .map(c => c.id)
+        );
+
+        if (!kanjiMatch && !meaningMatch && matchedCardIds.size === 0) return acc;
+
+        const cards = entry.cards.map(c => ({
+          ...c,
+          _match: kanjiMatch || meaningMatch || matchedCardIds.has(c.id),
+        }));
+
+        acc.push({ ...entry, cards });
+        return acc;
+      }, []);
+    },
+
     _kanjiBlockHTML(entry) {
       const onyomiLabel  = Renderer._readingLabel(entry.onyomi,  'ON');
       const kunyomiLabel = Renderer._readingLabel(entry.kunyomi, 'KUN');
 
       const wordCards = entry.cards.map(card => `
-        <div class="vl-word-card">
+        <div class="vl-word-card${card._match ? ' match' : ''}">
           <div class="vl-word-kanji">${card.word}</div>
           <div class="vl-word-reading">${card.reading}</div>
+          ${card.wordMeaning ? `<div class="vl-word-meaning">${card.wordMeaning}</div>` : ''}
         </div>`).join('');
 
       return `
@@ -107,6 +176,11 @@ document.addEventListener('DOMContentLoaded', () => {
                 ${value}
               </span>`;
     },
+
+    _updateSearchClear() {
+      if (!Dom.searchClear) return;
+      Dom.searchClear.style.display = State.searchQuery ? 'flex' : 'none';
+    },
   };
 
   function bindEvents() {
@@ -116,6 +190,11 @@ document.addEventListener('DOMContentLoaded', () => {
         tab.classList.add('active');
         State.level         = tab.dataset.level;
         State.selectedGroup = 'all';
+        State.searchQuery   = '';
+        State.chipsOpen     = false;
+        if (Dom.searchInput) Dom.searchInput.value = '';
+        Renderer._updateSearchClear();
+        Renderer._applyChipsPanelState();
 
         Dom.groupContainer.innerHTML = '<span class="loading-chips">Loading…</span>';
         Dom.listContent.innerHTML    = '<p class="vl-loading">Loading vocabulary…</p>';
@@ -132,6 +211,43 @@ document.addEventListener('DOMContentLoaded', () => {
         Renderer.updatePracticeLink();
       });
     });
+
+    if (Dom.searchInput) {
+      let debounceTimer;
+      Dom.searchInput.addEventListener('input', () => {
+        clearTimeout(debounceTimer);
+        debounceTimer = setTimeout(() => {
+          State.searchQuery = Dom.searchInput.value;
+          Renderer._updateSearchClear();
+          Renderer.renderList();
+        }, 200);
+      });
+    }
+
+    if (Dom.searchClear) {
+      Dom.searchClear.addEventListener('click', () => {
+        Dom.searchInput.value = '';
+        State.searchQuery = '';
+        Renderer._updateSearchClear();
+        Renderer.renderList();
+        Dom.searchInput.focus();
+      });
+    }
+
+    if (Dom.chipsToggle) {
+      Dom.chipsToggle.addEventListener('click', () => {
+        State.chipsOpen = !State.chipsOpen;
+        Renderer._applyChipsPanelState();
+      });
+    }
+
+    document.addEventListener('click', e => {
+      if (!State.chipsOpen) return;
+      if (Dom.chipsToggle?.contains(e.target)) return;
+      if (Dom.chipsPanel?.contains(e.target)) return;
+      State.chipsOpen = false;
+      Renderer._applyChipsPanelState();
+    });
   }
 
   async function init() {
@@ -146,6 +262,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
     document.querySelector(`.level-tab[data-level="${State.level}"]`)?.classList.add('active');
 
+    Renderer._updateSearchClear();
+    Renderer._applyChipsPanelState();
     bindEvents();
 
     Dom.groupContainer.innerHTML = '<span class="loading-chips">Loading…</span>';

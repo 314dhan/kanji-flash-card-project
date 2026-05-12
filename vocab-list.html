@@ -40,10 +40,30 @@
                 <button class="level-tab" data-level="n2">N2</button>
             </div>
 
+            <!-- Search bar -->
+            <div class="vl-search-row">
+                <div class="vl-search-wrap">
+                    <span class="vl-search-icon">
+                        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/>
+                        </svg>
+                    </span>
+                    <input type="search" id="search-input" class="vl-search-input"
+                           placeholder="Cari kanji atau kata…" autocomplete="off" spellcheck="false">
+                    <button id="search-clear" class="vl-search-clear" aria-label="Hapus pencarian">✕</button>
+                </div>
+            </div>
+
             <!-- Group filter + global practice button -->
             <div class="vl-filter-row">
-                <div id="group-container" class="group-chips">
-                    <span class="loading-chips">Loading…</span>
+                <button id="chips-toggle" class="vl-chips-toggle" aria-expanded="false">
+                    <span id="chips-toggle-label">Semua Grup</span>
+                    <span class="vl-toggle-arrow">▾</span>
+                </button>
+                <div id="chips-panel" class="vl-chips-panel">
+                    <div id="group-container" class="group-chips">
+                        <span class="loading-chips">Loading…</span>
+                    </div>
                 </div>
                 <a id="practice-link" href="vocab-flashcard.html" class="vl-practice-link">
                     Practice ›
