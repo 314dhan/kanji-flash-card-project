@@ -113,7 +113,7 @@ document.addEventListener('DOMContentLoaded', () => {
     renderCard(card) {
       Dom.flashcard.wordDisplay.textContent    = card.word;
       Dom.flashcard.readingDisplay.textContent = card.reading;
-      Dom.flashcard.wordMeaning.textContent    = card.wordMeaning ?? '';
+      if (Dom.flashcard.wordMeaning) Dom.flashcard.wordMeaning.textContent = card.wordMeaning ?? '';
       Dom.flashcard.parentKanji.textContent    = card.parentKanji;
       Dom.flashcard.parentMeaning.textContent  = card.parentMeaning;
     },
