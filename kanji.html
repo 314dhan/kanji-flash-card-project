@@ -176,12 +176,13 @@
     <!-- Game Container -->
     <div id="game-container" class="screen">
         <header class="game-header">
-            <button id="mute-btn" class="mute-btn" title="Toggle Sound">🔊</button>
-            <div id="id-display" class="id-display">ID: -</div>
-            <div class="score-display">
-                <span class="score-label">Score</span>
-                <span class="score-value">0</span>
-                <span id="score-max" class="score-max">/ 10</span>
+            <div class="game-header-top">
+                <div id="id-display" class="id-display">ID: -</div>
+                <div class="score-display">
+                    <span class="score-value">0</span>
+                    <span id="score-max" class="score-max">/ 10</span>
+                </div>
+                <button id="mute-btn" class="mute-btn" title="Toggle Sound">🔊</button>
             </div>
             <div id="timer-display" class="timer-display">
                 <span class="timer-icon">⏱️</span>
@@ -214,13 +215,10 @@
                 <div class="card-shine"></div>
             </div>
             <div id="input-container" class="input-wrapper">
-                <div class="input-group">
-                    <input type="text" id="answer-input" placeholder="Enter reading in romaji"
-                        autocomplete="off">
-                    <button id="submit-btn" class="btn-submit">
-                        <span>Check</span>
-                    </button>
-                </div>
+                <input type="text" id="answer-input" placeholder="Type romaji reading..." autocomplete="off">
+                <button id="submit-btn" class="btn-submit">
+                    <span>Check Answer</span>
+                </button>
             </div>
 
             <div id="result" class="result-message"></div>

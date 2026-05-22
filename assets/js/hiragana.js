@@ -42,6 +42,7 @@ document.addEventListener('DOMContentLoaded', () => {
     let score = 0;
     let questionsAnswered = 0;
     let quizIndices = [];
+    let wrongIndices = [];
     let quizLength = 10;
     let timerInterval = null;
     let timeLeft = 0;
@@ -225,7 +226,27 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // --- Game Flow Functions ---
-    function startGame() {
+    function startGame(reviewIndices = null) {
+        if (reviewIndices) {
+            wrongIndices = [];
+            quizIndices = reviewIndices;
+            quizLength = quizIndices.length;
+            score = 0;
+            questionsAnswered = 0;
+            scoreValueEl.textContent = score;
+            document.getElementById('score-max').textContent = `/ ${quizLength}`;
+            progressFillEl.style.width = '0%';
+            startScreen.classList.remove('active');
+            gameContainer.classList.add('active');
+            window.scrollTo(0, 0);
+            stopTimer();
+            isRepetitionMode = false;
+            currentKana = null;
+            displayNewKana();
+            return;
+        }
+
+        wrongIndices = [];
         const learningMode = document.querySelector('input[name="learning-mode"]:checked').value;
         const desiredLength = parseInt(quizLengthInput.value, 10);
         
@@ -357,8 +378,15 @@ document.addEventListener('DOMContentLoaded', () => {
         if (!userAnswer || !currentKana) return;
 
         const isCorrect = userAnswer === currentKana.romaji.toLowerCase();
-        
+
         updateProgress(isCorrect);
+
+        if (!isCorrect) {
+            const idx = kanaData.indexOf(currentKana);
+            if (idx !== -1 && !wrongIndices.includes(idx)) {
+                wrongIndices.push(idx);
+            }
+        }
 
         resultEl.classList.add('show');
         if (isCorrect) {
@@ -377,7 +405,7 @@ document.addEventListener('DOMContentLoaded', () => {
         if (isAutoSpeakActive) {
             speak(currentKana.kana);
         }
-        
+
         questionsAnswered++; // Increment after answering
         answerInputEl.disabled = true;
         submitBtn.disabled = true;
@@ -389,13 +417,75 @@ document.addEventListener('DOMContentLoaded', () => {
         stopTimer();
         const finalProgress = (questionsAnswered / quizLength) * 100;
         progressFillEl.style.width = `${finalProgress}%`;
+        const wrongSnapshot = [...wrongIndices];
+        showResultsModal(score, quizLength, wrongSnapshot, message);
+    }
 
-        gameContainer.classList.remove('active');
-        startScreen.classList.add('active');
-        
-        startScreenTitle.textContent = message;
-        startScreenSubtitle.textContent = `Your final score is ${score} out of ${quizLength}`;
-        playBtn.querySelector('span').textContent = 'Play Again';
+    function showResultsModal(finalScore, total, wrongIdxSnapshot, message) {
+        const wrongItems = wrongIdxSnapshot.map(i => kanaData[i]).filter(Boolean);
+        const hasWrong = wrongItems.length > 0;
+
+        const overlay = document.createElement('div');
+        overlay.className = 'results-modal-overlay';
+        overlay.innerHTML = `
+            <div class="results-modal">
+                <div class="results-modal-header">
+                    <div class="results-modal-score">
+                        <span class="score-big">${finalScore}</span>
+                        <span class="score-label">/ ${total} correct</span>
+                    </div>
+                    <div class="results-modal-title">${message}</div>
+                </div>
+                ${hasWrong ? `
+                <div class="results-wrong-label">Wrong Answers (${wrongItems.length})</div>
+                <div class="results-wrong-list">
+                    ${wrongItems.map(item => `
+                        <div class="wrong-item">
+                            <div class="wrong-item-char">${item.kana}</div>
+                            <div class="wrong-item-info">
+                                <div class="wrong-item-meaning">${item.romaji}</div>
+                            </div>
+                        </div>
+                    `).join('')}
+                </div>
+                ` : `<div class="results-wrong-label">Perfect score! No mistakes.</div>`}
+                <div class="results-modal-actions">
+                    ${hasWrong ? `<button class="btn-review">&#128260; Review Mistakes (${wrongItems.length})</button>` : ''}
+                    <button class="btn-secondary btn-play-again">Play Again</button>
+                    <button class="btn-secondary btn-back-menu">Back to Menu</button>
+                </div>
+            </div>
+        `;
+
+        document.body.appendChild(overlay);
+        void overlay.offsetWidth;
+        overlay.classList.add('active');
+
+        if (hasWrong) {
+            overlay.querySelector('.btn-review').addEventListener('click', () => {
+                overlay.classList.remove('active');
+                setTimeout(() => overlay.remove(), 350);
+                startGame(wrongIdxSnapshot);
+            });
+        }
+
+        overlay.querySelector('.btn-play-again').addEventListener('click', () => {
+            overlay.classList.remove('active');
+            setTimeout(() => overlay.remove(), 350);
+            gameContainer.classList.remove('active');
+            startScreen.classList.add('active');
+            startGame();
+        });
+
+        overlay.querySelector('.btn-back-menu').addEventListener('click', () => {
+            overlay.classList.remove('active');
+            setTimeout(() => overlay.remove(), 350);
+            gameContainer.classList.remove('active');
+            startScreen.classList.add('active');
+            startScreenTitle.textContent = 'Hiragana Master';
+            startScreenSubtitle.textContent = 'Master the Japanese Hiragana syllabary';
+            playBtn.querySelector('span').textContent = 'Start Learning';
+        });
     }
 
     function showToast(message, type = 'info', title = '') {

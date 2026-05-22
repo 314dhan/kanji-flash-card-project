@@ -64,6 +64,8 @@ document.addEventListener('DOMContentLoaded', () => {
         lastStudy: null,
         streak: 0
     };
+    let wrongKanji = [];
+    let reviewPool = null;
 
     // --- Audio Management ---
     function updateMuteUI() {
@@ -204,6 +206,7 @@ document.addEventListener('DOMContentLoaded', () => {
                         onyomi: item.onyomi,
                         kunyomi: item.kunyomi,
                         contoh_kata: item.contoh_kata || '-',
+                        contoh_kata_huruf: item.contoh_kata_huruf || '',
                         // Combine all for checking
                         reading: [...romajiAnswers, ...kanaAnswers].join(', ')
                     };
@@ -277,6 +280,9 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     function getAvailableKanji() {
+        if (reviewPool !== null) {
+            return reviewPool.filter(k => !seenKanjiIds.includes(k.id));
+        }
         const learningMode = document.querySelector('input[name="learning-mode"]:checked').value;
         let baseKanji = [...kanjiData];
 
@@ -459,6 +465,8 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         score = 0;
         seenKanjiIds = [];
+        wrongKanji = [];
+        reviewPool = null;
         updateScoreDisplay();
         scoreMaxEl.textContent = `/ ${quizLength}`;
         progressFillEl.style.width = '0%';
@@ -507,6 +515,56 @@ document.addEventListener('DOMContentLoaded', () => {
         displayNewKanji();
     }
 
+    function buildCardBackHTML(kanji, showContoh) {
+        const kunyomi = kanji.kunyomi && kanji.kunyomi !== '-' ? kanji.kunyomi : '';
+        const onyomi = kanji.onyomi && kanji.onyomi !== '-' ? kanji.onyomi : '';
+
+        let html = '<div class="card-back-inner">';
+
+        if (!showContoh) {
+            // Contoh kata mode: show the kanji character large on the back
+            html += `<div class="card-back-kunyomi" style="font-size:3em;color:var(--ink)">${kanji.kanji}</div>`;
+            if (kunyomi) html += `<div class="card-back-kunyomi">${kunyomi}</div>`;
+            if (onyomi) html += `<div class="card-back-onyomi">${onyomi}</div>`;
+            html += '</div>';
+            return html;
+        }
+
+        if (kunyomi) {
+            html += `<div class="card-back-kunyomi">${kunyomi}</div>`;
+        }
+        if (onyomi) {
+            html += `<div class="card-back-onyomi">${onyomi}</div>`;
+        }
+
+        if (kanji.contoh_kata && kanji.contoh_kata !== '-') {
+            const words = kanji.contoh_kata.split(',').map(s => s.trim()).filter(Boolean);
+            const hiras = kanji.contoh_kata_huruf
+                ? kanji.contoh_kata_huruf.split(',').map(s => s.trim())
+                : [];
+
+            if (words.length > 0) {
+                if (kunyomi || onyomi) {
+                    html += '<div class="card-back-divider"></div>';
+                    html += '<div class="card-back-contoh-label">Contoh Kata</div>';
+                }
+                html += '<div class="contoh-kata-list">';
+                words.forEach((word, i) => {
+                    const hira = hiras[i] || '';
+                    html += `
+                        <div class="contoh-kata-list-item">
+                            <span class="contoh-kata-list-word">${word}</span>
+                            ${hira ? `<span class="contoh-kata-list-hira">${hira}</span>` : ''}
+                        </div>`;
+                });
+                html += '</div>';
+            }
+        }
+
+        html += '</div>';
+        return html;
+    }
+
     function displayNewKanji() {
         if (seenKanjiIds.length >= quizLength) {
             endGame();
@@ -522,7 +580,10 @@ document.addEventListener('DOMContentLoaded', () => {
         } else {
             const availableKanji = getAvailableKanji();
             if (availableKanji.length === 0) {
-                // Check if we finished the weak points quiz or just ran out of options
+                if (reviewPool !== null) {
+                    endGame("Review Complete!");
+                    return;
+                }
                 const learningMode = document.querySelector('input[name="learning-mode"]:checked').value;
                 if (learningMode === "weak-first" && seenKanjiIds.length > 0) {
                     endGame("All weak points reviewed!");
@@ -545,19 +606,16 @@ document.addEventListener('DOMContentLoaded', () => {
         if (kanjiCard) kanjiCard.classList.remove('flipped');
 
         const hasContoh = currentKanji.contoh_kata && currentKanji.contoh_kata !== '-';
+        const cardBack = document.querySelector('.card-back');
 
         if (isContohKataMode && hasContoh) {
-            // New Mode: Contoh Kata on Front, Kanji on Back
+            // Contoh Kata on Front, Kanji on Back
             kanjiCharacterEl.textContent = currentKanji.contoh_kata;
-            if (contohKataTextEl) {
-                contohKataTextEl.textContent = currentKanji.kanji;
-            }
+            if (cardBack) cardBack.innerHTML = buildCardBackHTML(currentKanji, false);
         } else {
-            // Standard Mode: Kanji on Front, Contoh Kata on Back
+            // Standard Mode: Kanji on Front, reading + contoh on Back
             kanjiCharacterEl.textContent = currentKanji.kanji;
-            if (contohKataTextEl) {
-                contohKataTextEl.textContent = hasContoh ? currentKanji.contoh_kata : '-';
-            }
+            if (cardBack) cardBack.innerHTML = buildCardBackHTML(currentKanji, hasContoh);
         }
 
         // Use a simpler animation since we now have the 3D structure
@@ -590,6 +648,10 @@ document.addEventListener('DOMContentLoaded', () => {
         if (isCorrect) {
             score++;
             updateScoreDisplay();
+        } else {
+            if (!wrongKanji.some(k => k.id === currentKanji.id)) {
+                wrongKanji.push(currentKanji);
+            }
         }
 
         answerInputEl.disabled = true;
@@ -600,18 +662,95 @@ document.addEventListener('DOMContentLoaded', () => {
 
     function endGame(message = 'Quiz Complete!') {
         stopTimer();
-        updateGameHeader(); // Final progress bar update
-        gameContainer.classList.remove('active');
-        startScreen.classList.add('active');
+        updateGameHeader();
+        const wrongSnapshot = [...wrongKanji];
+        showResultsModal(score, quizLength, wrongSnapshot, message);
+    }
 
-        const totalMastered = userProgress.mastered.length;
-        const totalWeak = userProgress.weak.length;
-        
-        startScreenTitle.textContent = message;
-        startScreenSubtitle.innerHTML = `
-            Your final score: ${score} out of ${quizLength}
+    function showResultsModal(finalScore, total, wrongItems, message) {
+        const hasWrong = wrongItems.length > 0;
+
+        const overlay = document.createElement('div');
+        overlay.className = 'results-modal-overlay';
+        overlay.innerHTML = `
+            <div class="results-modal">
+                <div class="results-modal-header">
+                    <div class="results-modal-score">
+                        <span class="score-big">${finalScore}</span>
+                        <span class="score-label">/ ${total} correct</span>
+                    </div>
+                    <div class="results-modal-title">${message}</div>
+                </div>
+                ${hasWrong ? `
+                <div class="results-wrong-label">Wrong Answers (${wrongItems.length})</div>
+                <div class="results-wrong-list">
+                    ${wrongItems.map(k => `
+                        <div class="wrong-item">
+                            <div class="wrong-item-char">${k.kanji}</div>
+                            <div class="wrong-item-info">
+                                ${k.kunyomi && k.kunyomi !== '-' ? `<div class="wrong-item-reading">${k.kunyomi}</div>` : ''}
+                                ${k.reading ? `<div class="wrong-item-romaji">${k.reading.split(',')[0].trim()}</div>` : ''}
+                                <div class="wrong-item-meaning">${k.meaning}</div>
+                            </div>
+                        </div>
+                    `).join('')}
+                </div>
+                ` : `<div class="results-wrong-label">Perfect score! No mistakes.</div>`}
+                <div class="results-modal-actions">
+                    ${hasWrong ? `<button class="btn-review">&#128260; Review Mistakes (${wrongItems.length})</button>` : ''}
+                    <button class="btn-secondary btn-play-again">Play Again</button>
+                    <button class="btn-secondary btn-back-menu">Back to Menu</button>
+                </div>
+            </div>
         `;
-        playBtn.querySelector('span').textContent = 'Play Again';
+
+        document.body.appendChild(overlay);
+        void overlay.offsetWidth;
+        overlay.classList.add('active');
+
+        if (hasWrong) {
+            overlay.querySelector('.btn-review').addEventListener('click', () => {
+                overlay.classList.remove('active');
+                setTimeout(() => overlay.remove(), 350);
+                startReviewGame(wrongItems);
+            });
+        }
+
+        overlay.querySelector('.btn-play-again').addEventListener('click', () => {
+            overlay.classList.remove('active');
+            setTimeout(() => overlay.remove(), 350);
+            gameContainer.classList.remove('active');
+            startScreen.classList.add('active');
+            startGame();
+        });
+
+        overlay.querySelector('.btn-back-menu').addEventListener('click', () => {
+            overlay.classList.remove('active');
+            setTimeout(() => overlay.remove(), 350);
+            gameContainer.classList.remove('active');
+            startScreen.classList.add('active');
+            playBtn.querySelector('span').textContent = 'Start Learning';
+        });
+    }
+
+    function startReviewGame(pool) {
+        reviewPool = pool.slice();
+        wrongKanji = [];
+        score = 0;
+        seenKanjiIds = [];
+        quizLength = reviewPool.length;
+        updateScoreDisplay();
+        scoreMaxEl.textContent = `/ ${quizLength}`;
+        progressFillEl.style.width = '0%';
+
+        startScreen.classList.remove('active');
+        gameContainer.classList.add('active');
+        window.scrollTo(0, 0);
+        stopTimer();
+
+        isRepetitionMode = false;
+        currentKanji = null;
+        displayNewKanji();
     }
 
     // --- UI Update Functions ---
