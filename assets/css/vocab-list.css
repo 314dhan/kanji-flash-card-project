@@ -266,8 +266,26 @@ body {
     border-radius: 14px;
     padding: 8px 14px;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
+    gap: 5px;
+}
+
+.vl-level-badge {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.6rem;
+    font-weight: 800;
+    letter-spacing: 0.06em;
+    padding: 2px 7px;
+    border-radius: 6px;
+    line-height: 1.4;
+}
+.vl-n3-badge {
+    background: oklch(60% 0.18 280);
+    color: #fff;
 }
 .vl-kanji-char {
     font-family: var(--font-jp);

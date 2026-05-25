@@ -141,6 +141,12 @@ const VocabData = (() => {
       }));
   }
 
+  function getKanjiSet(level) {
+    const raw = _raw[level];
+    if (!raw) return new Set();
+    return new Set(raw.map(item => item.kanji));
+  }
+
   function shuffle(arr) {
     const copy = [...arr];
     for (let i = copy.length - 1; i > 0; i--) {
@@ -159,6 +165,7 @@ const VocabData = (() => {
     getTotalCards,
     getCards,
     getKanjiList,
+    getKanjiSet,
     shuffle,
   });
 

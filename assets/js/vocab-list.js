@@ -139,6 +139,8 @@ document.addEventListener('DOMContentLoaded', () => {
       const onyomiLabel  = Renderer._readingLabel(entry.onyomi,  'ON');
       const kunyomiLabel = Renderer._readingLabel(entry.kunyomi, 'KUN');
 
+      const isInN3 = State.level === 'n2' && VocabData.getKanjiSet('n3').has(entry.kanji);
+
       const wordCards = entry.cards.map(card => `
         <div class="vl-word-card${card._match ? ' match' : ''}">
           <div class="vl-word-kanji">${card.word}</div>
@@ -151,6 +153,7 @@ document.addEventListener('DOMContentLoaded', () => {
           <div class="vl-kanji-header">
             <div class="vl-kanji-char-wrap">
               <span class="vl-kanji-char">${entry.kanji}</span>
+              ${isInN3 ? '<span class="vl-level-badge vl-n3-badge" title="Kanji ini juga ada di N3">N3</span>' : ''}
             </div>
             <div class="vl-kanji-meta">
               <span class="vl-kanji-meaning">${entry.meaning}</span>
@@ -201,6 +204,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         try {
           await VocabData.load(State.level);
+          if (State.level === 'n2') await VocabData.load('n3').catch(() => {});
         } catch {
           Dom.listContent.innerHTML = '<p class="vl-empty">Failed to load data.</p>';
           return;
@@ -271,6 +275,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     try {
       await VocabData.load(State.level);
+      if (State.level === 'n2') await VocabData.load('n3').catch(() => {});
     } catch {
       Dom.listContent.innerHTML = '<p class="vl-empty">Failed to load data.</p>';
       return;
