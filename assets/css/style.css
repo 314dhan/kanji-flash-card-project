@@ -984,6 +984,15 @@ small { font-size: var(--text-xs); color: var(--muted-light); }
 
 .contoh-kata-container { text-align: center; }
 
+.kanji-character.contoh-kata-front {
+  font-size: clamp(1.4rem, 4vw, 2.4rem);
+  line-height: 1.3;
+  white-space: normal;
+  overflow-wrap: break-word;
+  word-break: break-word;
+  padding: 0 12px;
+}
+
 .contoh-label {
   display: block;
   font-size: var(--text-xs);

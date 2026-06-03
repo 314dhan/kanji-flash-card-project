@@ -611,10 +611,12 @@ document.addEventListener('DOMContentLoaded', () => {
         if (isContohKataMode && hasContoh) {
             // Contoh Kata on Front, Kanji on Back
             kanjiCharacterEl.textContent = currentKanji.contoh_kata;
+            kanjiCharacterEl.classList.add('contoh-kata-front');
             if (cardBack) cardBack.innerHTML = buildCardBackHTML(currentKanji, false);
         } else {
             // Standard Mode: Kanji on Front, reading + contoh on Back
             kanjiCharacterEl.textContent = currentKanji.kanji;
+            kanjiCharacterEl.classList.remove('contoh-kata-front');
             if (cardBack) cardBack.innerHTML = buildCardBackHTML(currentKanji, hasContoh);
         }
 
