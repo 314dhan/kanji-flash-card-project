@@ -1509,6 +1509,14 @@ body.kanji-list-page .header { text-align: center; }
   line-height: 1.2;
 }
 
+.contoh-kata-list-arti {
+  font-size: 0.78em;
+  color: var(--muted);
+  font-style: italic;
+  line-height: 1.2;
+  opacity: 0.8;
+}
+
 /* Scrollable card back */
 .card-back {
   overflow-y: auto;

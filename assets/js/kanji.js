@@ -207,6 +207,7 @@ document.addEventListener('DOMContentLoaded', () => {
                         kunyomi: item.kunyomi,
                         contoh_kata: item.contoh_kata || '-',
                         contoh_kata_huruf: item.contoh_kata_huruf || '',
+                        arti_contoh_kata: item.arti_contoh_kata || [],
                         // Combine all for checking
                         reading: [...romajiAnswers, ...kanaAnswers].join(', ')
                     };
@@ -548,13 +549,16 @@ document.addEventListener('DOMContentLoaded', () => {
                     html += '<div class="card-back-divider"></div>';
                     html += '<div class="card-back-contoh-label">Contoh Kata</div>';
                 }
+                const artis = Array.isArray(kanji.arti_contoh_kata) ? kanji.arti_contoh_kata : [];
                 html += '<div class="contoh-kata-list">';
                 words.forEach((word, i) => {
                     const hira = hiras[i] || '';
+                    const arti = artis[i] || '';
                     html += `
                         <div class="contoh-kata-list-item">
                             <span class="contoh-kata-list-word">${word}</span>
                             ${hira ? `<span class="contoh-kata-list-hira">${hira}</span>` : ''}
+                            ${arti ? `<span class="contoh-kata-list-arti">${arti}</span>` : ''}
                         </div>`;
                 });
                 html += '</div>';
