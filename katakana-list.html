@@ -39,7 +39,14 @@
         </div>
     </main>
 
-    <script src="assets/js/katakana-list.js"></script>
+    <script>
+        window.KANA_LIST_CONFIG = {
+            containerId: 'katakana-list-container',
+            dataUrl: 'assets/data/katakana.json',
+            typeName: 'Katakana'
+        };
+    </script>
+    <script src="assets/js/kana-list.js"></script>
     <button id="scrollToTopBtn" title="Go to top">↑</button>
 </body>
 

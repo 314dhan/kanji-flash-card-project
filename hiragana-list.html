@@ -39,7 +39,14 @@
         </div>
     </main>
 
-    <script src="assets/js/hiragana-list.js"></script>
+    <script>
+        window.KANA_LIST_CONFIG = {
+            containerId: 'hiragana-list-container',
+            dataUrl: 'assets/data/hiragana.json',
+            typeName: 'Hiragana'
+        };
+    </script>
+    <script src="assets/js/kana-list.js"></script>
     <button id="scrollToTopBtn" title="Go to top">↑</button>
 </body>
 
