@@ -9,6 +9,8 @@ body {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 20px 80px;
+    position: relative;
+    z-index: 1;
 }
 
 .vl-page-header {

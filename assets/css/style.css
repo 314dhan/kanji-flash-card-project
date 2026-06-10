@@ -155,7 +155,7 @@ body {
   position: fixed;
   inset: 0;
   pointer-events: none;
-  z-index: -1;
+  z-index: 0;
 }
 
 .bg-elements::before {
@@ -179,10 +179,14 @@ body {
   font-size: var(--fk-size, 3rem);
   font-weight: 300;
   line-height: 1;
-  color: var(--ink);
-  opacity: 0.04;
+  color: var(--accent);
+  opacity: 0.12;
   user-select: none;
   animation: kana-drift var(--fk-dur, 24s) var(--fk-delay, 0s) ease-in-out infinite alternate;
+}
+
+:root[data-theme='dark'] .float-kana {
+  opacity: 0.18;
 }
 
 @keyframes kana-drift {
@@ -198,6 +202,8 @@ body {
   width: 100%;
   padding: var(--sp-6) var(--sp-4);
   flex-grow: 1;
+  position: relative;
+  z-index: 1;
 }
 
 .screen.active {

@@ -1,49 +1,50 @@
-/* Styles for the Kanji List Page */
+/* Styles for the Kanji / Hiragana / Katakana List Pages */
 
 body.kanji-list-page {
-    display: flex; /* Use flexbox for overall layout */
+    display: flex;
     flex-direction: column;
     min-height: 100vh;
-    background: var(--gradient); /* Keep the gradient background for the body */
-    color: var(--text-dark);
+    background: var(--surface);
+    color: var(--ink);
     text-align: center;
     position: relative;
     overflow-x: hidden;
 }
 
 body.kanji-list-page main {
-    flex-grow: 1; /* Allow main content to grow */
-    width: 100%; /* Full width */
-    padding: 0; /* Remove padding from main, content div will handle it */
+    flex-grow: 1;
+    width: 100%;
+    padding: 0;
     margin: 0;
+    position: relative;
+    z-index: 1;
 }
 
 body.kanji-list-page .header {
     text-align: center;
-    margin-bottom: 30px;
-    padding: 20px; /* Add padding to header for spacing */
-    background: rgba(255, 255, 255, 0.1); /* Transparent background for header */
-    backdrop-filter: blur(10px); /* Liquid glass effect for header */
-    border-radius: 12px; /* Rounded corners for header */
-    margin: 20px auto; /* Center header with some margin */
-    max-width: 1200px; /* Constrain header width */
-    box-shadow: var(--shadow); /* Subtle shadow */
-    position: relative; /* For back-button positioning */
+    padding: 20px;
+    background: var(--surface-pure);
+    border: 1px solid oklch(12% 0.015 260 / 0.08);
+    border-radius: 12px;
+    margin: 20px auto;
+    max-width: 1200px;
+    box-shadow: var(--shadow);
+    position: relative;
 }
 
 body.kanji-list-page .title {
     font-size: 3em;
     margin-bottom: 10px;
-    color: white;
+    color: var(--ink);
 }
 
 body.kanji-list-page .title::after {
-    background: white;
+    background: var(--accent);
 }
 
 body.kanji-list-page .subtitle {
     font-size: 1.2em;
-    color: var(--surface-dim);
+    color: var(--muted);
 }
 
 .search-container {
@@ -93,25 +94,6 @@ body.kanji-list-page .subtitle {
     display: none;
 }
 
-body.kanji-list-page .search-input {
-    background: rgba(255, 255, 255, 0.2);
-    border: 1px solid rgba(255, 255, 255, 0.3);
-    border-bottom: 3px solid white;
-    color: white;
-    backdrop-filter: blur(5px);
-    box-shadow: none;
-}
-
-body.kanji-list-page .search-input::placeholder { color: rgba(255, 255, 255, 0.7); }
-
-body.kanji-list-page .search-input:focus {
-    background: rgba(255, 255, 255, 0.3);
-    border-color: white;
-    box-shadow: 0 0 10px rgba(255,255,255,0.2);
-}
-
-body.kanji-list-page .clear-search-btn { color: white; }
-
 .clear-search-btn:hover {
     opacity: 1;
 }
@@ -120,10 +102,9 @@ body.kanji-list-page .clear-search-btn { color: white; }
     position: absolute;
     top: 20px;
     left: 20px;
-    background: rgba(255, 255, 255, 0.2); /* Transparent background */
-    backdrop-filter: blur(5px); /* Liquid glass effect */
-    color: white;
-    border: 1px solid rgba(255, 255, 255, 0.3); /* Subtle border */
+    background: var(--surface-dim);
+    color: var(--ink);
+    border: 1px solid oklch(12% 0.015 260 / 0.12);
     padding: 8px 15px;
     border-radius: 8px;
     text-decoration: none;
@@ -132,26 +113,26 @@ body.kanji-list-page .clear-search-btn { color: white; }
     display: flex;
     align-items: center;
     gap: 5px;
-    box-shadow: var(--shadow); /* Subtle shadow */
+    box-shadow: var(--shadow);
 }
 
 .back-button:hover {
-    background: var(--primary-color);
-    color: white;
+    background: var(--accent);
+    color: var(--surface-pure);
     transform: translateX(-3px);
-    border-color: var(--primary-color); /* Change border on hover */
+    border-color: var(--accent);
 }
 
 /* Content wrapper for the grid */
 .content {
-    max-width: 1200px; /* Max width for the content grid */
-    margin: 0 auto; /* Center the content grid */
-    padding: 20px; /* Padding around the grid */
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
 }
 
 #kanji-list-container, #hiragana-list-container, #katakana-list-container, #global-search-container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); /* Aim for 5 columns, flexible width */
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
     gap: 20px;
 }
 
@@ -171,25 +152,25 @@ body.kanji-list-page .clear-search-btn { color: white; }
     position: relative;
 }
 
+.kanji-item:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-lg);
+    border-color: var(--accent);
+}
+
 .kanji-id {
     position: absolute;
     top: 5px;
     left: 5px;
     font-size: 0.65rem;
     font-weight: 800;
-    color: white;
-    background: var(--primary-color);
+    color: var(--surface-pure);
+    background: var(--accent);
     padding: 2px 5px;
     border-radius: 4px;
     line-height: 1;
     z-index: 2;
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-}
-
-.kanji-item:hover {
-    transform: translateY(-5px);
-    box-shadow: var(--shadow-lg);
-    border-color: var(--accent);
 }
 
 .kanji-char {
@@ -212,24 +193,6 @@ body.kanji-list-page .clear-search-btn { color: white; }
     margin-top: 5px;
 }
 
-body.kanji-list-page .kanji-item {
-    background: rgba(255, 255, 255, 0.15);
-    backdrop-filter: blur(10px);
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
-}
-body.kanji-list-page .kanji-item:hover {
-    box-shadow: 0 12px 48px rgba(0,0,0,0.2);
-    border-color: white;
-}
-body.kanji-list-page .kanji-char,
-body.kanji-list-page .kanji-meaning {
-    color: white;
-}
-body.kanji-list-page .kanji-reading {
-    color: rgba(255, 255, 255, 0.82);
-}
-
 /* Scroll to Top Button */
 #scrollToTopBtn {
   display: none;
@@ -239,8 +202,8 @@ body.kanji-list-page .kanji-reading {
   z-index: 99;
   border: none;
   outline: none;
-  background-color: var(--primary-color);
-  color: white;
+  background-color: var(--accent);
+  color: var(--surface-pure);
   cursor: pointer;
   padding: 0;
   border-radius: 50%;
@@ -254,23 +217,19 @@ body.kanji-list-page .kanji-reading {
 }
 
 #scrollToTopBtn:hover {
-  background-color: var(--primary-dark);
+  background-color: var(--accent-hover);
   transform: translateY(-2px);
 }
 
-/* Responsive adjustments for list pages */
+/* Responsive */
 @media (max-width: 1200px) {
-    .content, body.kanji-list-page .header {
-        max-width: 960px; /* Adjust max-width for smaller screens */
-    }
+    .content, body.kanji-list-page .header { max-width: 960px; }
 }
 
 @media (max-width: 992px) {
-    .content, body.kanji-list-page .header {
-        max-width: 720px;
-    }
+    .content, body.kanji-list-page .header { max-width: 720px; }
     #kanji-list-container, #hiragana-list-container, #katakana-list-container {
-        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Adjust minmax for smaller screens */
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
     }
 }
 
@@ -279,9 +238,7 @@ body.kanji-list-page .kanji-reading {
         margin: 15px auto;
         padding: 15px;
     }
-    body.kanji-list-page .title {
-        font-size: 2.2em;
-    }
+    body.kanji-list-page .title { font-size: 2.2em; }
     .back-button {
         top: 10px;
         left: 10px;
@@ -289,19 +246,15 @@ body.kanji-list-page .kanji-reading {
         font-size: 0.9em;
     }
     .content, body.kanji-list-page .header {
-        max-width: 100%; /* Full width on small screens */
+        max-width: 100%;
         padding: 15px;
     }
     #kanji-list-container, #hiragana-list-container, #katakana-list-container {
-        grid-template-columns: repeat(2, 1fr); /* Adjust minmax for smaller screens */
+        grid-template-columns: repeat(2, 1fr);
         gap: 15px;
     }
-    .kanji-char {
-        font-size: 2em;
-    }
-    .kanji-item {
-        min-height: 100px;
-    }
+    .kanji-char { font-size: 2em; }
+    .kanji-item { min-height: 100px; }
     #scrollToTopBtn {
         width: 45px;
         height: 45px;
@@ -317,12 +270,8 @@ body.kanji-list-page .kanji-reading {
         margin: 10px auto;
         padding: 10px;
     }
-    body.kanji-list-page .title {
-        font-size: 1.6em;
-    }
-    .content {
-        padding: 5px;
-    }
+    body.kanji-list-page .title { font-size: 1.6em; }
+    .content { padding: 5px; }
     #kanji-list-container, #hiragana-list-container, #katakana-list-container {
         grid-template-columns: repeat(2, 1fr);
         gap: 10px;
@@ -331,12 +280,8 @@ body.kanji-list-page .kanji-reading {
         font-size: 1.8em;
         margin-bottom: 8px;
     }
-    .kanji-meaning {
-        font-size: 0.9em;
-    }
-    .kanji-reading {
-        font-size: 0.8em;
-    }
+    .kanji-meaning { font-size: 0.9em; }
+    .kanji-reading { font-size: 0.8em; }
     .kanji-item {
         min-height: 85px;
         padding: 10px;
