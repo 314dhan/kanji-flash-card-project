@@ -14,7 +14,14 @@
 <script src="assets/js/theme.js"></script></head>
 
 <body>
-    <div class="bg-elements"></div>
+    <div class="bg-elements" aria-hidden="true">
+        <span class="float-kana" style="--fk-top: 12%; --fk-left: 5%;  --fk-size: 4.5rem; --fk-dur: 26s;">あ</span>
+        <span class="float-kana" style="--fk-top: 68%; --fk-left: 3%;  --fk-size: 3rem;   --fk-dur: 21s; --fk-delay: -8s;">ぬ</span>
+        <span class="float-kana" style="--fk-top: 20%; --fk-left: 88%; --fk-size: 3.6rem; --fk-dur: 24s; --fk-delay: -14s;">ン</span>
+        <span class="float-kana" style="--fk-top: 76%; --fk-left: 90%; --fk-size: 5rem;   --fk-dur: 30s; --fk-delay: -5s;">学</span>
+        <span class="float-kana" style="--fk-top: 45%; --fk-left: 94%; --fk-size: 2.6rem; --fk-dur: 19s; --fk-delay: -11s;">き</span>
+        <span class="float-kana" style="--fk-top: 88%; --fk-left: 46%; --fk-size: 3.2rem; --fk-dur: 27s; --fk-delay: -17s;">ヤ</span>
+    </div>
 
     <div id="start-screen" class="screen active">
         <div class="container main-hub">
@@ -22,7 +29,7 @@
                 <h1 class="title">Japanese Master</h1>
                 <div class="subtitle">Your journey to fluency starts here</div>
                 <div class="search-container">
-                    <input type="text" id="globalSearchInput" class="search-input" placeholder="Global Dictionary: Search Romaji or Japanese...">
+                    <input type="text" id="globalSearchInput" class="search-input" placeholder="Global Dictionary: Search Romaji or Japanese..." autocomplete="off">
                     <button id="clearGlobalSearchBtn" class="clear-search-btn" aria-label="Clear Search">✕</button>
                 </div>
             </div>
@@ -39,7 +46,7 @@
 
             <div class="editorial-list">
                 <!-- Step 1: Hiragana -->
-                <div class="editorial-item">
+                <div class="editorial-item" data-glyph="あ">
                     <div class="ed-num">01</div>
                     <div class="ed-content">
                         <h3 class="display-huge">Hiragana</h3>
@@ -52,7 +59,7 @@
                 </div>
 
                 <!-- Step 2: Katakana -->
-                <div class="editorial-item">
+                <div class="editorial-item" data-glyph="ア">
                     <div class="ed-num">02</div>
                     <div class="ed-content">
                         <h3 class="display-huge">Katakana</h3>
@@ -65,7 +72,7 @@
                 </div>
 
                 <!-- Step 3: Kanji -->
-                <div class="editorial-item">
+                <div class="editorial-item" data-glyph="漢">
                     <div class="ed-num">03</div>
                     <div class="ed-content">
                         <h3 class="display-huge">Kanji</h3>
@@ -78,7 +85,7 @@
                 </div>
 
                 <!-- Step 4: Similar Kanji -->
-                <div class="editorial-item">
+                <div class="editorial-item" data-glyph="似">
                     <div class="ed-num">04</div>
                     <div class="ed-content">
                         <h3 class="display-huge">Similar Kanji</h3>
@@ -90,7 +97,7 @@
                 </div>
 
                 <!-- Exam Prep: JLPT -->
-                <div class="editorial-item">
+                <div class="editorial-item" data-glyph="試">
                     <div class="ed-badge">Exam Prep</div>
                     <div class="ed-num">05</div>
                     <div class="ed-content">
@@ -103,7 +110,7 @@
                 </div>
 
                 <!-- Vocab Flashcards -->
-                <div class="editorial-item">
+                <div class="editorial-item" data-glyph="語">
                     <div class="ed-num">06</div>
                     <div class="ed-content">
                         <h3 class="display-huge">Vocabulary</h3>

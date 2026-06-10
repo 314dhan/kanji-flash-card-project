@@ -170,6 +170,26 @@ body {
 /* Hide old decorative circles */
 .bg-circle { display: none; }
 
+/* Drifting kana, position and timing set per element via CSS vars */
+.float-kana {
+  position: absolute;
+  top: var(--fk-top, 20%);
+  left: var(--fk-left, 10%);
+  font-family: var(--font-jp);
+  font-size: var(--fk-size, 3rem);
+  font-weight: 300;
+  line-height: 1;
+  color: var(--ink);
+  opacity: 0.04;
+  user-select: none;
+  animation: kana-drift var(--fk-dur, 24s) var(--fk-delay, 0s) ease-in-out infinite alternate;
+}
+
+@keyframes kana-drift {
+  from { transform: translateY(-2vh) rotate(-5deg); }
+  to   { transform: translateY(2.5vh) rotate(6deg); }
+}
+
 /* ==========================================================
    SCREEN & LAYOUT
    ========================================================== */
@@ -229,6 +249,11 @@ body {
   background: var(--accent);
   margin: var(--sp-3) auto 0;
   border-radius: 2px;
+  animation: rule-draw 0.9s 0.25s var(--ease-out-expo) backwards;
+}
+
+@keyframes rule-draw {
+  from { transform: scaleX(0); }
 }
 
 .subtitle {
@@ -270,10 +295,60 @@ body {
   border-bottom: 1.5px solid oklch(12% 0.015 260 / 0.08);
   position: relative;
   transition: transform 0.4s var(--ease-out-quart);
+  animation: item-rise 0.7s var(--ease-out-expo) backwards;
+}
+
+.editorial-item:nth-child(1) { animation-delay: 0.05s; }
+.editorial-item:nth-child(2) { animation-delay: 0.12s; }
+.editorial-item:nth-child(3) { animation-delay: 0.19s; }
+.editorial-item:nth-child(4) { animation-delay: 0.26s; }
+.editorial-item:nth-child(5) { animation-delay: 0.33s; }
+.editorial-item:nth-child(6) { animation-delay: 0.40s; }
+
+@keyframes item-rise {
+  from { opacity: 0; transform: translateY(24px); }
 }
 
 .editorial-item:hover {
   transform: translateX(6px);
+}
+
+/* Giant watermark glyph behind each step (set via data-glyph in HTML) */
+.editorial-item::before {
+  content: attr(data-glyph);
+  position: absolute;
+  top: 50%;
+  right: clamp(2rem, 18vw, 14rem);
+  transform: translateY(-50%) rotate(-8deg);
+  font-family: var(--font-jp);
+  font-size: clamp(5rem, 10vw, 9.5rem);
+  font-weight: 700;
+  line-height: 1;
+  color: var(--ink);
+  opacity: 0.045;
+  pointer-events: none;
+  user-select: none;
+  z-index: 0;
+  transition:
+    transform 0.6s var(--ease-out-expo),
+    color     0.5s var(--ease-out-quart),
+    opacity   0.5s var(--ease-out-quart);
+}
+
+@media (hover: hover) {
+  .editorial-item:hover::before {
+    transform: translateY(-53%) rotate(-2deg) scale(1.1);
+    color: var(--accent);
+    opacity: 0.13;
+  }
+}
+
+.ed-num,
+.ed-content,
+.ed-actions,
+.ed-badge {
+  position: relative;
+  z-index: 1;
 }
 
 .editorial-item:last-child {
@@ -342,6 +417,10 @@ body {
     flex-direction: column;
     align-items: flex-start;
     gap: var(--sp-4);
+  }
+  .editorial-item::before {
+    right: 0;
+    font-size: clamp(4rem, 18vw, 6rem);
   }
   .ed-actions {
     margin-top: var(--sp-2);
@@ -863,6 +942,8 @@ small { font-size: var(--text-xs); color: var(--muted-light); }
   display: flex;
   flex-direction: column;
   align-items: center;
+  /* Gives the pointer-tilted flashcard wrapper real 3D foreshortening */
+  perspective: 1400px;
 }
 
 /* ==========================================================
@@ -917,7 +998,16 @@ small { font-size: var(--text-xs); color: var(--muted-light); }
   position: relative;
   margin-bottom: var(--sp-10);
   perspective: 1200px;
-  animation: card-enter 0.5s var(--ease-out-expo) both;
+  /* No fill-mode: a held final keyframe would override the JS pointer tilt */
+  animation: card-enter 0.5s var(--ease-out-expo);
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .flashcard-wrapper,
+  .fc-card {
+    will-change: transform;
+    transform-style: preserve-3d;
+  }
 }
 
 @keyframes card-enter {
@@ -1020,6 +1110,7 @@ small { font-size: var(--text-xs); color: var(--muted-light); }
   filter: blur(28px);
   z-index: 1;
   pointer-events: none;
+  transition: opacity 0.3s var(--ease-out-quart);
 }
 
 /* ==========================================================
