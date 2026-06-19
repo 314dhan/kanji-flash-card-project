@@ -170,6 +170,14 @@ document.addEventListener('DOMContentLoaded', () => {
                 startScreenSubtitle.textContent = `JLPT ${currentLevel.toUpperCase()} Kanji Challenge · ${kanjiData.length} kanji`;
             }
 
+            // Annotate the "Most Likely" learning mode with its ranked count
+            const rankedCount = kanjiData.filter(k => k.freq).length;
+            const mlRadio = document.querySelector('input[name="learning-mode"][value="most-likely"]');
+            const mlText = mlRadio && mlRadio.parentElement.querySelector('.option-text');
+            if (mlText) {
+                mlText.textContent = `🔥 Most Likely (JLPT) — high-frequency first · ${rankedCount} ranked`;
+            }
+
             quizLengthInput.max = kanjiData.length;
             maxKanjiNumberEl.textContent = kanjiData.length;
             maxKanjiRangeEl.textContent = kanjiData.length;
