@@ -153,6 +153,7 @@ document.addEventListener('DOMContentLoaded', () => {
                         contoh_kata: item.contoh_kata || '-',
                         contoh_kata_huruf: item.contoh_kata_huruf || '',
                         arti_contoh_kata: item.arti_contoh_kata || [],
+                        freq: item.freq || null,
                         // Combine all for checking
                         reading: [...romajiAnswers, ...kanaAnswers].join(', ')
                     };
@@ -282,6 +283,12 @@ document.addEventListener('DOMContentLoaded', () => {
                         [availableKanji[i], availableKanji[j]] = [availableKanji[j], availableKanji[i]];
                     }
                 }
+                break;
+            case "most-likely":
+                // Order by JLPT likelihood: lowest freq rank first, null (rare) last
+                availableKanji = baseKanji
+                    .filter(k => !seenKanjiIds.includes(k.id))
+                    .sort((a, b) => (a.freq || Infinity) - (b.freq || Infinity));
                 break;
             case "sequential":
             case "specific":
