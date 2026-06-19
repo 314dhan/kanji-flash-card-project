@@ -14,21 +14,19 @@ document.addEventListener('DOMContentLoaded', () => {
     Promise.all([
         fetch('assets/data/hiragana.json').then(r => r.json()).catch(() => []),
         fetch('assets/data/katakana.json').then(r => r.json()).catch(() => []),
-        fetch('assets/data/kanji.json').then(r => r.json()).catch(() => []),
         fetch('assets/data/kanjin5.json').then(r => r.json()).catch(() => []),
         fetch('assets/data/kanjin4.json').then(r => r.json()).catch(() => []),
         fetch('assets/data/kanjin3.json').then(r => r.json()).catch(() => []),
         fetch('assets/data/kanjin2.json').then(r => r.json()).catch(() => [])
-    ]).then(([hiragana, katakana, kanji, n5, n4, n3, n2]) => {
+    ]).then(([hiragana, katakana, n5, n4, n3, n2]) => {
         const mapData = (list, type, source) => list.map(item => ({...item, _type: type, _source: source}));
         const h = mapData(Array.isArray(hiragana) ? hiragana : [], 'hiragana', 'Hiragana');
         const k = mapData(Array.isArray(katakana) ? katakana : [], 'katakana', 'Katakana');
-        const kj = mapData(Array.isArray(kanji) ? kanji : [], 'kanji', 'Base Kanji');
         const kj5 = mapData(Array.isArray(n5) ? n5 : [], 'kanji', 'JLPT N5');
         const kj4 = mapData(Array.isArray(n4) ? n4 : [], 'kanji', 'JLPT N4');
         const kj3 = mapData(Array.isArray(n3) ? n3 : [], 'kanji', 'JLPT N3');
         const kj2 = mapData(Array.isArray(n2) ? n2 : [], 'kanji', 'JLPT N2');
-        allData = [...h, ...k, ...kj, ...kj5, ...kj4, ...kj3, ...kj2];
+        allData = [...h, ...k, ...kj5, ...kj4, ...kj3, ...kj2];
     }).catch(e => console.error("Error loading global search data", e));
 
     const renderResults = (query) => {

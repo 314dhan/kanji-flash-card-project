@@ -8,20 +8,21 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const urlParams = new URLSearchParams(window.location.search);
     const level = urlParams.get('level');
-    let dataUrl = 'assets/data/kanji.json';
-    let titleText = 'Kanji List';
-    let isJlpt = false;
 
-    if (level && ['n2', 'n3', 'n4', 'n5'].includes(level.toLowerCase())) {
-        dataUrl = `assets/data/kanji${level.toLowerCase()}.json`;
-        titleText = `JLPT ${level.toUpperCase()} Kanji List`;
-        isJlpt = true;
-        
-        const titleEl = document.querySelector('.title');
-        if (titleEl) titleEl.textContent = titleText;
-        const backBtn = document.querySelector('.back-button');
-        if (backBtn) backBtn.href = 'jlpt-kanji.html';
+    // Only JLPT levels are supported. Redirect any non-JLPT visit to the level picker.
+    if (!level || !['n2', 'n3', 'n4', 'n5'].includes(level.toLowerCase())) {
+        window.location.replace('jlpt-kanji.html');
+        return;
     }
+
+    const isJlpt = true;
+    const dataUrl = `assets/data/kanji${level.toLowerCase()}.json`;
+    const titleText = `JLPT ${level.toUpperCase()} Kanji List`;
+
+    const titleEl = document.querySelector('.title');
+    if (titleEl) titleEl.textContent = titleText;
+    const backBtn = document.querySelector('.back-button');
+    if (backBtn) backBtn.href = 'jlpt-kanji.html';
 
     fetch(dataUrl)
         .then(response => {
@@ -40,7 +41,14 @@ document.addEventListener('DOMContentLoaded', () => {
 
             data.forEach((kanji, index) => {
                 const kanjiItem = document.createElement('div');
-                kanjiItem.classList.add('kanji-item');
+                kanjiItem.classList.add('kanji-item', 'flip-card');
+
+                const flipInner = document.createElement('div');
+                flipInner.classList.add('flip-inner');
+
+                // ----- Front face: kanji + readings -----
+                const front = document.createElement('div');
+                front.classList.add('flip-face', 'flip-front');
 
                 const kanjiId = document.createElement('div');
                 kanjiId.classList.add('kanji-id');
@@ -52,36 +60,81 @@ document.addEventListener('DOMContentLoaded', () => {
 
                 const kanjiMeaning = document.createElement('div');
                 kanjiMeaning.classList.add('kanji-meaning');
-                kanjiMeaning.textContent = isJlpt ? kanji.arti : kanji.meaning;
+                kanjiMeaning.textContent = kanji.arti;
 
                 const onyomiReading = document.createElement('div');
                 onyomiReading.classList.add('kanji-reading');
-                const onyomiRomaji = isJlpt ? kanaToRomaji(kanji.onyomi) : '';
+                const onyomiRomaji = kanaToRomaji(kanji.onyomi);
                 onyomiReading.innerHTML = `<span style="font-weight: bold;">On:</span> ${kanji.onyomi || '-'} ${onyomiRomaji ? `(${onyomiRomaji})` : ''}`;
 
                 const kunyomiReading = document.createElement('div');
                 kunyomiReading.classList.add('kanji-reading');
-                const kunyomiRomaji = isJlpt ? kanaToRomaji(kanji.kunyomi) : '';
+                const kunyomiRomaji = kanaToRomaji(kanji.kunyomi);
                 kunyomiReading.innerHTML = `<span style="font-weight: bold;">Kun:</span> ${kanji.kunyomi || '-'} ${kunyomiRomaji ? `(${kunyomiRomaji})` : ''}`;
 
-                const readings = [];
-                if (isJlpt) {
-                    if (kanji.onyomi && kanji.onyomi !== '-') readings.push(kanji.onyomi);
-                    if (kanji.kunyomi && kanji.kunyomi !== '-') readings.push(kanji.kunyomi);
+                const flipHint = document.createElement('div');
+                flipHint.classList.add('flip-hint');
+                flipHint.textContent = 'Tap for example words ↻';
+
+                front.appendChild(kanjiId);
+                front.appendChild(kanjiChar);
+                front.appendChild(kanjiMeaning);
+                front.appendChild(onyomiReading);
+                front.appendChild(kunyomiReading);
+                front.appendChild(flipHint);
+
+                // ----- Back face: contoh kata (example words) -----
+                const back = document.createElement('div');
+                back.classList.add('flip-face', 'flip-back');
+
+                const backTitle = document.createElement('div');
+                backTitle.classList.add('ck-title');
+                backTitle.textContent = `例 Contoh Kata — ${kanji.kanji}`;
+                back.appendChild(backTitle);
+
+                const words = (kanji.contoh_kata || '').split(',').map(w => w.trim()).filter(Boolean);
+                const readingsList = (kanji.contoh_kata_huruf || '').split(',').map(r => r.trim()).filter(Boolean);
+                const artiRaw = kanji.arti_contoh_kata;
+                const meanings = (Array.isArray(artiRaw) ? artiRaw : String(artiRaw || '').split(','))
+                    .map(m => String(m).trim());
+
+                if (words.length === 0) {
+                    const empty = document.createElement('div');
+                    empty.classList.add('ck-empty');
+                    empty.textContent = 'No example words available.';
+                    back.appendChild(empty);
+                } else {
+                    const list = document.createElement('div');
+                    list.classList.add('ck-list');
+                    words.forEach((word, i) => {
+                        const row = document.createElement('div');
+                        row.classList.add('ck-row');
+
+                        const reading = readingsList[i] || '';
+                        const romaji = kanaToRomaji(reading);
+                        const meaning = meanings[i] || '';
+
+                        row.innerHTML =
+                            `<span class="ck-word">${word}</span>` +
+                            `<span class="ck-reading">${reading}${romaji ? ` (${romaji})` : ''}</span>` +
+                            `<span class="ck-meaning">${meaning}</span>`;
+                        list.appendChild(row);
+                    });
+                    back.appendChild(list);
                 }
 
-                const generalReading = document.createElement('div');
-                generalReading.classList.add('kanji-reading');
-                const combinedReading = readings.join(', ') || '-';
-                const combinedRomaji = isJlpt ? kanaToRomaji(combinedReading) : '';
-                generalReading.innerHTML = `<span style="font-weight: bold;">Reading:</span> ${isJlpt ? combinedReading : (kanji.reading || '-')} ${isJlpt && combinedRomaji ? `(${combinedRomaji})` : ''}`;
+                const backHint = document.createElement('div');
+                backHint.classList.add('flip-hint');
+                backHint.textContent = 'Tap to flip back ↺';
+                back.appendChild(backHint);
 
-                kanjiItem.appendChild(kanjiId);
-                kanjiItem.appendChild(kanjiChar);
-                kanjiItem.appendChild(kanjiMeaning);
-                kanjiItem.appendChild(onyomiReading);
-                kanjiItem.appendChild(kunyomiReading);
-                kanjiItem.appendChild(generalReading);
+                flipInner.appendChild(front);
+                flipInner.appendChild(back);
+                kanjiItem.appendChild(flipInner);
+
+                kanjiItem.addEventListener('click', () => {
+                    kanjiItem.classList.toggle('flipped');
+                });
 
                 kanjiListContainer.appendChild(kanjiItem);
             });

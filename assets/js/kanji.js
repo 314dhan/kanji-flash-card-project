@@ -97,13 +97,18 @@ document.addEventListener('DOMContentLoaded', () => {
         try {
             const urlParams = new URLSearchParams(window.location.search);
             const level = urlParams.get('level');
-            let dataUrl = 'assets/data/kanji.json';
-            let isJlpt = false;
-            currentLevel = level ? level.toLowerCase() : 'general';
 
-            if (level && ['n2', 'n3', 'n4', 'n5'].includes(level.toLowerCase())) {
-                dataUrl = `assets/data/kanji${level.toLowerCase()}.json`;
-                isJlpt = true;
+            // Only JLPT levels are supported. Redirect any non-JLPT visit to the level picker.
+            if (!level || !['n2', 'n3', 'n4', 'n5'].includes(level.toLowerCase())) {
+                window.location.replace('jlpt-kanji.html');
+                return;
+            }
+
+            const dataUrl = `assets/data/kanji${level.toLowerCase()}.json`;
+            const isJlpt = true;
+            currentLevel = level.toLowerCase();
+
+            {
                 console.log(`Loading JLPT data from: ${dataUrl}`);
                 startScreenSubtitle.textContent = `JLPT ${level.toUpperCase()} Kanji Challenge`;
                 answerInputEl.placeholder = "Enter reading (romaji)";
