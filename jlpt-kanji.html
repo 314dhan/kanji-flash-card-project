@@ -50,6 +50,13 @@
             color: var(--accent);
             margin: 0;
         }
+        .level-count {
+            font-size: 0.85rem;
+            font-weight: 600;
+            color: var(--muted);
+            margin-left: 10px;
+            white-space: nowrap;
+        }
         .level-desc {
             color: var(--muted);
             font-size: 0.9rem;
@@ -234,6 +241,28 @@
             <p>Made with <span class="heart">♥</span> by <span class="author">Ramadhan</span></p>
         </div>
     </footer>
+
+    <script>
+        // Show kanji count per level (derived from each row's link)
+        document.querySelectorAll('.jlpt-row').forEach(row => {
+            const link = row.querySelector('a[href*="level="]');
+            const name = row.querySelector('.level-name');
+            if (!link || !name) return;
+            const level = (link.getAttribute('href').match(/level=(n[1-5])/) || [])[1];
+            if (!level) return;
+            fetch(`assets/data/kanji${level}.json`)
+                .then(r => r.json())
+                .then(d => {
+                    if (Array.isArray(d)) {
+                        const span = document.createElement('span');
+                        span.className = 'level-count';
+                        span.textContent = `${d.length} kanji`;
+                        name.appendChild(span);
+                    }
+                })
+                .catch(() => {});
+        });
+    </script>
 </body>
 
 </html>
