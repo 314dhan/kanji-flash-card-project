@@ -165,6 +165,11 @@ document.addEventListener('DOMContentLoaded', () => {
                 }));
             }
             
+            // Show total kanji available for this level on the start screen
+            if (startScreenSubtitle && currentLevel) {
+                startScreenSubtitle.textContent = `JLPT ${currentLevel.toUpperCase()} Kanji Challenge · ${kanjiData.length} kanji`;
+            }
+
             quizLengthInput.max = kanjiData.length;
             maxKanjiNumberEl.textContent = kanjiData.length;
             maxKanjiRangeEl.textContent = kanjiData.length;
