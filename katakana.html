@@ -101,6 +101,13 @@
                                 <span class="option-text" style="font-weight: 600;"> Repetition Mode (Repeat Same Katakana) 🔁</span>
                             </label>
                         </div>
+
+                        <div class="multiple-choice-mode-container">
+                            <label class="option-label" style="cursor: pointer;">
+                                <input type="checkbox" id="multiple-choice-toggle" style="width: 20px; height: 20px;">
+                                <span class="option-text" style="font-weight: 600;"> Multiple Choice Mode (Pick the Answer) 🔘</span>
+                            </label>
+                        </div>
                     </div>
                 </details>
 
@@ -152,6 +159,8 @@
                     <span>Check Answer</span>
                 </button>
             </div>
+
+            <div id="choices-container" class="choices-container" style="display: none;"></div>
 
             <div id="result" class="result-message"></div>
 

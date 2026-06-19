@@ -25,6 +25,9 @@ document.addEventListener('DOMContentLoaded', () => {
     const timerValueEl = document.getElementById('timer-value');
     const idDisplayEl = document.getElementById('id-display');
     const repetitionToggle = document.getElementById('repetition-toggle');
+    const multipleChoiceToggle = document.getElementById('multiple-choice-toggle');
+    const inputContainer = document.getElementById('input-container');
+    const choicesContainer = document.getElementById('choices-container');
     const muteBtn = document.getElementById('mute-btn');
     const startScreenTitle = startScreen.querySelector('.title');
     const startScreenSubtitle = startScreen.querySelector('.subtitle');
@@ -40,6 +43,7 @@ document.addEventListener('DOMContentLoaded', () => {
     let timeLeft = 0;
     let isCountdownActive = false;
     let isRepetitionMode = false;
+    let isMultipleChoiceMode = false;
     let isMuted = localStorage.getItem('isMuted') === 'true';
     let userProgress = { mastered: [], weak: [], lastStudy: null };
 
@@ -223,6 +227,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
 
         isRepetitionMode = repetitionToggle.checked;
+        isMultipleChoiceMode = multipleChoiceToggle ? multipleChoiceToggle.checked : false;
 
         if (isRepetitionMode) {
             currentKana = kanaData[quizIndices[0]];
@@ -258,14 +263,17 @@ document.addEventListener('DOMContentLoaded', () => {
         answerInputEl.disabled = false;
         submitBtn.disabled = false;
         nextBtn.disabled = true;
-        answerInputEl.focus();
+
+        setupAnswerMode();
     }
 
-    function checkAnswer() {
-        const userAnswer = answerInputEl.value.trim().toLowerCase();
-        if (!userAnswer || !currentKana) return;
+    function isAnswerCorrect(answer) {
+        const userAnswer = (answer || '').trim().toLowerCase().replace(/-/g, '');
+        if (!userAnswer || !currentKana) return false;
+        return userAnswer === currentKana.romaji.toLowerCase().replace(/-/g, '');
+    }
 
-        const isCorrect = userAnswer === currentKana.romaji.toLowerCase();
+    function recordAnswer(isCorrect) {
         updateProgress(isCorrect);
 
         if (!isCorrect) {
@@ -287,10 +295,83 @@ document.addEventListener('DOMContentLoaded', () => {
         }
 
         questionsAnswered++;
-        answerInputEl.disabled = true;
-        submitBtn.disabled = true;
         nextBtn.disabled = false;
         nextBtn.focus();
+    }
+
+    function checkAnswer() {
+        if (!answerInputEl.value.trim() || !currentKana) return;
+        recordAnswer(isAnswerCorrect(answerInputEl.value));
+        answerInputEl.disabled = true;
+        submitBtn.disabled = true;
+    }
+
+    // --- Multiple Choice Mode ---
+    function shuffleArray(arr) {
+        const copy = arr.slice();
+        for (let i = copy.length - 1; i > 0; i--) {
+            const j = Math.floor(Math.random() * (i + 1));
+            [copy[i], copy[j]] = [copy[j], copy[i]];
+        }
+        return copy;
+    }
+
+    function buildChoiceOptions() {
+        const correct = currentKana.romaji;
+        const used = new Set([correct.toLowerCase().replace(/-/g, '')]);
+        const distractors = [];
+
+        for (const k of shuffleArray(kanaData)) {
+            if (k === currentKana) continue;
+            const option = k.romaji;
+            const norm = option.toLowerCase().replace(/-/g, '');
+            if (!norm || used.has(norm)) continue;
+            used.add(norm);
+            distractors.push(option);
+            if (distractors.length === 3) break;
+        }
+
+        return shuffleArray([correct, ...distractors]);
+    }
+
+    function renderChoices() {
+        choicesContainer.innerHTML = '';
+        choicesContainer.classList.remove('answered');
+        buildChoiceOptions().forEach(option => {
+            const btn = document.createElement('button');
+            btn.className = 'choice-btn';
+            btn.textContent = option;
+            btn.addEventListener('click', () => handleChoice(option, btn));
+            choicesContainer.appendChild(btn);
+        });
+    }
+
+    function handleChoice(selected, btn) {
+        if (choicesContainer.classList.contains('answered')) return;
+        choicesContainer.classList.add('answered');
+
+        const isCorrect = isAnswerCorrect(selected);
+
+        choicesContainer.querySelectorAll('.choice-btn').forEach(b => {
+            b.disabled = true;
+            if (isAnswerCorrect(b.textContent)) b.classList.add('correct');
+        });
+        if (!isCorrect) btn.classList.add('incorrect');
+
+        recordAnswer(isCorrect);
+    }
+
+    function setupAnswerMode() {
+        if (isMultipleChoiceMode) {
+            inputContainer.style.display = 'none';
+            choicesContainer.style.display = 'grid';
+            renderChoices();
+        } else {
+            choicesContainer.style.display = 'none';
+            choicesContainer.innerHTML = '';
+            inputContainer.style.display = 'flex';
+            answerInputEl.focus();
+        }
     }
 
     function endGame(message = 'Quiz Complete!') {

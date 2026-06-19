@@ -1160,6 +1160,58 @@ small { font-size: var(--text-xs); color: var(--muted-light); }
 #answer-input::placeholder { color: var(--muted-light); }
 
 /* ==========================================================
+   MULTIPLE CHOICE
+   ========================================================== */
+.choices-container {
+  width: 100%;
+  max-width: 380px;
+  margin: 0 auto var(--sp-5);
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--sp-3);
+}
+
+.choice-btn {
+  padding: var(--sp-4) var(--sp-3);
+  border: 1.5px solid oklch(12% 0.015 260 / 0.12);
+  border-radius: 10px;
+  font-size: var(--text-base);
+  font-family: var(--font-body);
+  font-weight: 500;
+  color: var(--ink);
+  background: var(--surface-pure);
+  cursor: pointer;
+  transition: border-color 0.2s, box-shadow 0.2s, background 0.2s, transform 0.1s;
+  text-align: center;
+  word-break: break-word;
+}
+
+.choice-btn:hover:not(:disabled) {
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px var(--accent-dim);
+}
+
+.choice-btn:active:not(:disabled) { transform: scale(0.98); }
+
+.choice-btn:disabled { cursor: default; }
+
+.choice-btn.correct {
+  border-color: var(--success);
+  background: var(--success-dim);
+  color: var(--success);
+}
+
+.choice-btn.incorrect {
+  border-color: var(--error);
+  background: var(--error-dim);
+  color: var(--error);
+}
+
+@media (max-width: 380px) {
+  .choices-container { grid-template-columns: 1fr; }
+}
+
+/* ==========================================================
    RESULT MESSAGE
    ========================================================== */
 .result-message {

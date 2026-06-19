@@ -38,6 +38,9 @@ document.addEventListener('DOMContentLoaded', () => {
     const idDisplayEl = document.getElementById('id-display');
     const repetitionToggle = document.getElementById('repetition-toggle');
     const contohKataToggle = document.getElementById('contoh-kata-toggle');
+    const multipleChoiceToggle = document.getElementById('multiple-choice-toggle');
+    const inputContainer = document.getElementById('input-container');
+    const choicesContainer = document.getElementById('choices-container');
     const muteBtn = document.getElementById('mute-btn');
 
     // --- Game State ---
@@ -52,6 +55,7 @@ document.addEventListener('DOMContentLoaded', () => {
     let isCountdownActive = false;
     let isRepetitionMode = false;
     let isContohKataMode = false;
+    let isMultipleChoiceMode = false;
     let isMuted = localStorage.getItem('isMuted') === 'true';
     let userProgress = {
         mastered: [],
@@ -458,6 +462,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         isRepetitionMode = repetitionToggle.checked;
         isContohKataMode = contohKataToggle ? contohKataToggle.checked : false;
+        isMultipleChoiceMode = multipleChoiceToggle ? multipleChoiceToggle.checked : false;
         
         if (isRepetitionMode) {
             // Pick the first available kanji to repeat
@@ -590,23 +595,25 @@ document.addEventListener('DOMContentLoaded', () => {
             void cardInner.offsetWidth; // Trigger reflow
             cardInner.style.animation = 'flipIn 0.6s ease-out';
         }
+
+        setupAnswerMode();
     }
 
-    function checkAnswer() {
-        const userAnswer = answerInputEl.value.trim().toLowerCase();
-        if (!userAnswer || !currentKanji) return;
+    function isAnswerCorrect(answer) {
+        const userAnswer = (answer || '').trim().toLowerCase().replace(/-/g, '');
+        if (!userAnswer || !currentKanji) return false;
 
-        const correctReadings = currentKanji.reading.split(',').map(r => r.trim().toLowerCase());
-        
+        const correctReadings = currentKanji.reading.split(',').map(r => r.trim().toLowerCase().replace(/-/g, ''));
+
         // Check for direct match (romaji to romaji or kana to kana)
-        let isCorrect = correctReadings.includes(userAnswer);
+        if (correctReadings.includes(userAnswer)) return true;
 
-        // If not correct, try converting correct readings from kana to romaji for comparison
-        if (!isCorrect) {
-            const romajiReadings = correctReadings.map(r => kanaToRomaji(r));
-            isCorrect = romajiReadings.includes(userAnswer);
-        }
+        // Try converting correct readings from kana to romaji for comparison
+        const romajiReadings = correctReadings.map(r => kanaToRomaji(r).replace(/-/g, ''));
+        return romajiReadings.includes(userAnswer);
+    }
 
+    function recordAnswer(isCorrect) {
         updateProgress(isCorrect);
         showResult(isCorrect);
 
@@ -618,11 +625,90 @@ document.addEventListener('DOMContentLoaded', () => {
                 wrongKanji.push(currentKanji);
             }
         }
+    }
+
+    function checkAnswer() {
+        if (!answerInputEl.value.trim() || !currentKanji) return;
+        recordAnswer(isAnswerCorrect(answerInputEl.value));
 
         answerInputEl.disabled = true;
         submitBtn.disabled = true;
         nextBtn.disabled = false;
         nextBtn.focus();
+    }
+
+    // --- Multiple Choice Mode ---
+    function shuffleArray(arr) {
+        const copy = arr.slice();
+        for (let i = copy.length - 1; i > 0; i--) {
+            const j = Math.floor(Math.random() * (i + 1));
+            [copy[i], copy[j]] = [copy[j], copy[i]];
+        }
+        return copy;
+    }
+
+    function firstRomaji(kanji) {
+        return kanji.reading.split(',')[0].trim();
+    }
+
+    function buildChoiceOptions() {
+        const correct = firstRomaji(currentKanji);
+        const used = new Set([correct.toLowerCase().replace(/-/g, '')]);
+        const distractors = [];
+
+        for (const k of shuffleArray(kanjiData)) {
+            if (k.id === currentKanji.id) continue;
+            const option = firstRomaji(k);
+            const norm = option.toLowerCase().replace(/-/g, '');
+            if (!norm || used.has(norm)) continue;
+            used.add(norm);
+            distractors.push(option);
+            if (distractors.length === 3) break;
+        }
+
+        return shuffleArray([correct, ...distractors]);
+    }
+
+    function renderChoices() {
+        choicesContainer.innerHTML = '';
+        choicesContainer.classList.remove('answered');
+        buildChoiceOptions().forEach(option => {
+            const btn = document.createElement('button');
+            btn.className = 'choice-btn';
+            btn.textContent = option;
+            btn.addEventListener('click', () => handleChoice(option, btn));
+            choicesContainer.appendChild(btn);
+        });
+    }
+
+    function handleChoice(selected, btn) {
+        if (choicesContainer.classList.contains('answered')) return;
+        choicesContainer.classList.add('answered');
+
+        const isCorrect = isAnswerCorrect(selected);
+
+        choicesContainer.querySelectorAll('.choice-btn').forEach(b => {
+            b.disabled = true;
+            if (isAnswerCorrect(b.textContent)) b.classList.add('correct');
+        });
+        if (!isCorrect) btn.classList.add('incorrect');
+
+        recordAnswer(isCorrect);
+        nextBtn.disabled = false;
+        nextBtn.focus();
+    }
+
+    function setupAnswerMode() {
+        if (isMultipleChoiceMode) {
+            inputContainer.style.display = 'none';
+            choicesContainer.style.display = 'grid';
+            renderChoices();
+        } else {
+            choicesContainer.style.display = 'none';
+            choicesContainer.innerHTML = '';
+            inputContainer.style.display = 'flex';
+            answerInputEl.focus();
+        }
     }
 
     function endGame(message = 'Quiz Complete!') {
@@ -780,7 +866,6 @@ document.addEventListener('DOMContentLoaded', () => {
         answerInputEl.disabled = false;
         submitBtn.disabled = false;
         nextBtn.disabled = true;
-        answerInputEl.focus();
     }
 
     function showResult(isCorrect) {
