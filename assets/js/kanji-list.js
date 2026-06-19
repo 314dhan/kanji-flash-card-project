@@ -69,15 +69,14 @@ document.addEventListener('DOMContentLoaded', () => {
                 kanjiMeaning.classList.add('kanji-meaning');
                 kanjiMeaning.textContent = kanji.arti;
 
+                // onyomi/kunyomi already contain romaji inline (e.g. "カイ (kai)")
                 const onyomiReading = document.createElement('div');
                 onyomiReading.classList.add('kanji-reading');
-                const onyomiRomaji = kanaToRomaji(kanji.onyomi);
-                onyomiReading.innerHTML = `<span style="font-weight: bold;">On:</span> ${kanji.onyomi || '-'} ${onyomiRomaji ? `(${onyomiRomaji})` : ''}`;
+                onyomiReading.innerHTML = `<span style="font-weight: bold;">On:</span> ${kanji.onyomi || '-'}`;
 
                 const kunyomiReading = document.createElement('div');
                 kunyomiReading.classList.add('kanji-reading');
-                const kunyomiRomaji = kanaToRomaji(kanji.kunyomi);
-                kunyomiReading.innerHTML = `<span style="font-weight: bold;">Kun:</span> ${kanji.kunyomi || '-'} ${kunyomiRomaji ? `(${kunyomiRomaji})` : ''}`;
+                kunyomiReading.innerHTML = `<span style="font-weight: bold;">Kun:</span> ${kanji.kunyomi || '-'}`;
 
                 const flipHint = document.createElement('div');
                 flipHint.classList.add('flip-hint');
