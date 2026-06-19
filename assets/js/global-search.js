@@ -17,8 +17,9 @@ document.addEventListener('DOMContentLoaded', () => {
         fetch('assets/data/kanjin5.json').then(r => r.json()).catch(() => []),
         fetch('assets/data/kanjin4.json').then(r => r.json()).catch(() => []),
         fetch('assets/data/kanjin3.json').then(r => r.json()).catch(() => []),
-        fetch('assets/data/kanjin2.json').then(r => r.json()).catch(() => [])
-    ]).then(([hiragana, katakana, n5, n4, n3, n2]) => {
+        fetch('assets/data/kanjin2.json').then(r => r.json()).catch(() => []),
+        fetch('assets/data/kanjin1.json').then(r => r.json()).catch(() => [])
+    ]).then(([hiragana, katakana, n5, n4, n3, n2, n1]) => {
         const mapData = (list, type, source) => list.map(item => ({...item, _type: type, _source: source}));
         const h = mapData(Array.isArray(hiragana) ? hiragana : [], 'hiragana', 'Hiragana');
         const k = mapData(Array.isArray(katakana) ? katakana : [], 'katakana', 'Katakana');
@@ -26,7 +27,8 @@ document.addEventListener('DOMContentLoaded', () => {
         const kj4 = mapData(Array.isArray(n4) ? n4 : [], 'kanji', 'JLPT N4');
         const kj3 = mapData(Array.isArray(n3) ? n3 : [], 'kanji', 'JLPT N3');
         const kj2 = mapData(Array.isArray(n2) ? n2 : [], 'kanji', 'JLPT N2');
-        allData = [...h, ...k, ...kj5, ...kj4, ...kj3, ...kj2];
+        const kj1 = mapData(Array.isArray(n1) ? n1 : [], 'kanji', 'JLPT N1');
+        allData = [...h, ...k, ...kj5, ...kj4, ...kj3, ...kj2, ...kj1];
     }).catch(e => console.error("Error loading global search data", e));
 
     const renderResults = (query) => {
@@ -90,6 +92,7 @@ document.addEventListener('DOMContentLoaded', () => {
             else if(item._source.includes('N4')) color = '#f1c40f';
             else if(item._source.includes('N3')) color = '#e67e22';
             else if(item._source.includes('N2')) color = '#e74c3c';
+            else if(item._source.includes('N1')) color = '#c0392b';
             else color = 'var(--accent)';
             sourceBadge.innerHTML = `<span style="font-weight: bold; color: ${color};">Source:</span> ${item._source}`;
             el.appendChild(sourceBadge);

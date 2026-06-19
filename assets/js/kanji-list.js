@@ -10,7 +10,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const level = urlParams.get('level');
 
     // Only JLPT levels are supported. Redirect any non-JLPT visit to the level picker.
-    if (!level || !['n2', 'n3', 'n4', 'n5'].includes(level.toLowerCase())) {
+    if (!level || !['n1', 'n2', 'n3', 'n4', 'n5'].includes(level.toLowerCase())) {
         window.location.replace('jlpt-kanji.html');
         return;
     }
@@ -38,6 +38,13 @@ document.addEventListener('DOMContentLoaded', () => {
             
             // Sort data by id
             data.sort((a, b) => a.id - b.id);
+
+            // Show total kanji count in the subtitle
+            const subtitleEl = document.querySelector('.subtitle');
+            if (subtitleEl) {
+                const levelLabel = level ? `JLPT ${level.toUpperCase()} — ` : '';
+                subtitleEl.textContent = `${levelLabel}${data.length} kanji`;
+            }
 
             data.forEach((kanji, index) => {
                 const kanjiItem = document.createElement('div');

@@ -99,7 +99,7 @@ document.addEventListener('DOMContentLoaded', () => {
             const level = urlParams.get('level');
 
             // Only JLPT levels are supported. Redirect any non-JLPT visit to the level picker.
-            if (!level || !['n2', 'n3', 'n4', 'n5'].includes(level.toLowerCase())) {
+            if (!level || !['n1', 'n2', 'n3', 'n4', 'n5'].includes(level.toLowerCase())) {
                 window.location.replace('jlpt-kanji.html');
                 return;
             }

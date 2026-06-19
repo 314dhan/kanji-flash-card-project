@@ -9,6 +9,7 @@ const VocabData = (() => {
     n4: { url: 'assets/data/kanjin4.json', label: 'N4', color: '#4db8ff' },
     n3: { url: 'assets/data/kanjin3.json', label: 'N3', color: '#667eea' },
     n2: { url: 'assets/data/kanjin2.json', label: 'N2', color: '#764ba2' },
+    n1: { url: 'assets/data/kanjin1.json', label: 'N1', color: '#c0392b' },
   });
 
   const _raw    = {};
