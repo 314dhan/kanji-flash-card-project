@@ -193,6 +193,60 @@ body.kanji-list-page .subtitle {
     margin-top: 5px;
 }
 
+/* ===== Most Likely (JLPT) toggle ===== */
+.likely-toggle {
+    margin: 14px auto 0;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 9px 18px;
+    border-radius: 999px;
+    border: 1.5px solid var(--accent);
+    background: var(--surface-pure);
+    color: var(--accent);
+    font-family: inherit;
+    font-size: 0.9rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    box-shadow: var(--shadow);
+}
+
+.likely-toggle:hover {
+    transform: translateY(-1px);
+    box-shadow: var(--shadow-lg);
+}
+
+.likely-toggle.active {
+    background: var(--accent);
+    color: var(--surface-pure);
+}
+
+/* freq badge: hidden by default, revealed in "Most Likely" mode */
+.freq-badge {
+    display: none;
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    z-index: 2;
+    font-size: 0.6rem;
+    font-weight: 800;
+    padding: 2px 6px;
+    border-radius: 999px;
+    line-height: 1.2;
+    color: #fff;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.12);
+}
+
+#kanji-list-container.likely-mode .freq-badge {
+    display: block;
+}
+
+.freq-badge.tier-high { background: #e74c3c; }
+.freq-badge.tier-med  { background: #e67e22; }
+.freq-badge.tier-low  { background: #7f8c8d; }
+.freq-badge.tier-rare { background: #b0b6bd; }
+
 /* ===== Flip Card (JLPT kanji -> contoh kata) ===== */
 .kanji-item.flip-card {
     cursor: pointer;

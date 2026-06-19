@@ -46,9 +46,18 @@ document.addEventListener('DOMContentLoaded', () => {
                 subtitleEl.textContent = `${levelLabel}${data.length} kanji`;
             }
 
+            const freqTier = (f) => {
+                if (!f) return { label: 'Rare', cls: 'tier-rare' };
+                if (f <= 500) return { label: 'High', cls: 'tier-high' };
+                if (f <= 1500) return { label: 'Med', cls: 'tier-med' };
+                return { label: 'Low', cls: 'tier-low' };
+            };
+
             data.forEach((kanji, index) => {
                 const kanjiItem = document.createElement('div');
                 kanjiItem.classList.add('kanji-item', 'flip-card');
+                // store frequency for "Most Likely" sort (null -> Infinity = last)
+                kanjiItem.dataset.freq = kanji.freq || '';
 
                 const flipInner = document.createElement('div');
                 flipInner.classList.add('flip-inner');
@@ -78,11 +87,18 @@ document.addEventListener('DOMContentLoaded', () => {
                 kunyomiReading.classList.add('kanji-reading');
                 kunyomiReading.innerHTML = `<span style="font-weight: bold;">Kun:</span> ${kanji.kunyomi || '-'}`;
 
+                // freq/likelihood badge (shown only in "Most Likely" mode via CSS)
+                const tier = freqTier(kanji.freq);
+                const freqBadge = document.createElement('div');
+                freqBadge.classList.add('freq-badge', tier.cls);
+                freqBadge.textContent = kanji.freq ? `🔥 ${tier.label} · #${kanji.freq}` : 'Rare';
+
                 const flipHint = document.createElement('div');
                 flipHint.classList.add('flip-hint');
                 flipHint.textContent = 'Tap for example words ↻';
 
                 front.appendChild(kanjiId);
+                front.appendChild(freqBadge);
                 front.appendChild(kanjiChar);
                 front.appendChild(kanjiMeaning);
                 front.appendChild(onyomiReading);
@@ -144,6 +160,29 @@ document.addEventListener('DOMContentLoaded', () => {
 
                 kanjiListContainer.appendChild(kanjiItem);
             });
+
+            // ----- "Most Likely (JLPT)" sort mode -----
+            const likelyToggle = document.getElementById('likelyToggle');
+            if (likelyToggle) {
+                const originalOrder = Array.from(kanjiListContainer.children);
+                let likelyOn = false;
+                likelyToggle.addEventListener('click', () => {
+                    likelyOn = !likelyOn;
+                    likelyToggle.classList.toggle('active', likelyOn);
+                    likelyToggle.setAttribute('aria-pressed', String(likelyOn));
+                    kanjiListContainer.classList.toggle('likely-mode', likelyOn);
+
+                    let order = originalOrder;
+                    if (likelyOn) {
+                        order = [...originalOrder].sort((a, b) => {
+                            const fa = parseInt(a.dataset.freq, 10) || Infinity;
+                            const fb = parseInt(b.dataset.freq, 10) || Infinity;
+                            return fa - fb;
+                        });
+                    }
+                    order.forEach(el => kanjiListContainer.appendChild(el));
+                });
+            }
         })
         .catch(error => {
             console.error('Error fetching or processing kanji data:', error);
