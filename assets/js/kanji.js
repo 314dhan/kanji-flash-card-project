@@ -56,6 +56,7 @@ document.addEventListener('DOMContentLoaded', () => {
     let isRepetitionMode = false;
     let isContohKataMode = false;
     let isMultipleChoiceMode = false;
+    let mcCorrect = '';
     let isMuted = localStorage.getItem('isMuted') === 'true';
     let userProgress = {
         mastered: [],
@@ -647,18 +648,32 @@ document.addEventListener('DOMContentLoaded', () => {
         return copy;
     }
 
-    function firstRomaji(kanji) {
-        return kanji.reading.split(',')[0].trim();
+    // Combined readings label for a choice, e.g. 朝 -> "chou / asa".
+    // Shows the unique romaji readings, capped at 4 so kanji with many
+    // pronunciations (e.g. 掛) stay readable on the button.
+    function readingLabel(kanji) {
+        const seen = new Set();
+        const uniq = [];
+        kanji.reading.split(/[,;]/).forEach(t => {
+            const s = t.trim();
+            if (!s) return;
+            const norm = s.toLowerCase().replace(/-/g, '');
+            if (seen.has(norm)) return;
+            seen.add(norm);
+            uniq.push(s);
+        });
+        if (uniq.length === 0) return kanji.reading.trim();
+        return uniq.slice(0, 4).join(' / ');
     }
 
     function buildChoiceOptions() {
-        const correct = firstRomaji(currentKanji);
+        const correct = readingLabel(currentKanji);
         const used = new Set([correct.toLowerCase().replace(/-/g, '')]);
         const distractors = [];
 
         for (const k of shuffleArray(kanjiData)) {
             if (k.id === currentKanji.id) continue;
-            const option = firstRomaji(k);
+            const option = readingLabel(k);
             const norm = option.toLowerCase().replace(/-/g, '');
             if (!norm || used.has(norm)) continue;
             used.add(norm);
@@ -672,6 +687,7 @@ document.addEventListener('DOMContentLoaded', () => {
     function renderChoices() {
         choicesContainer.innerHTML = '';
         choicesContainer.classList.remove('answered');
+        mcCorrect = readingLabel(currentKanji);
         buildChoiceOptions().forEach(option => {
             const btn = document.createElement('button');
             btn.className = 'choice-btn';
@@ -685,11 +701,11 @@ document.addEventListener('DOMContentLoaded', () => {
         if (choicesContainer.classList.contains('answered')) return;
         choicesContainer.classList.add('answered');
 
-        const isCorrect = isAnswerCorrect(selected);
+        const isCorrect = selected === mcCorrect;
 
         choicesContainer.querySelectorAll('.choice-btn').forEach(b => {
             b.disabled = true;
-            if (isAnswerCorrect(b.textContent)) b.classList.add('correct');
+            if (b.textContent === mcCorrect) b.classList.add('correct');
         });
         if (!isCorrect) btn.classList.add('incorrect');
 
