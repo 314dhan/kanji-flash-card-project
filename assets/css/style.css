@@ -1211,6 +1211,22 @@ small { font-size: var(--text-xs); color: var(--muted-light); }
   .choices-container { grid-template-columns: 1fr; }
 }
 
+/* Pin the Next button to the bottom of the viewport after answering in
+   multiple choice mode, so it is reachable without scrolling. */
+.btn-secondary.mc-pinned {
+  position: fixed;
+  left: 50%;
+  bottom: 16px;
+  transform: translateX(-50%);
+  width: calc(100% - 48px);
+  max-width: 380px;
+  z-index: 100;
+  background: var(--accent);
+  color: #fff;
+  border-color: var(--accent);
+  box-shadow: 0 8px 24px var(--accent-glow);
+}
+
 /* ==========================================================
    RESULT MESSAGE
    ========================================================== */

@@ -263,6 +263,7 @@ document.addEventListener('DOMContentLoaded', () => {
         answerInputEl.disabled = false;
         submitBtn.disabled = false;
         nextBtn.disabled = true;
+        nextBtn.classList.remove('mc-pinned');
 
         setupAnswerMode();
     }
@@ -359,6 +360,7 @@ document.addEventListener('DOMContentLoaded', () => {
         if (!isCorrect) btn.classList.add('incorrect');
 
         recordAnswer(isCorrect);
+        nextBtn.classList.add('mc-pinned');
     }
 
     function setupAnswerMode() {
@@ -376,6 +378,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     function endGame(message = 'Quiz Complete!') {
         stopTimer();
+        nextBtn.classList.remove('mc-pinned');
         progressFillEl.style.width = `${(questionsAnswered / quizLength) * 100}%`;
         showResultsModal(score, quizLength, [...wrongIndices], message);
     }

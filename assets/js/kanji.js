@@ -711,6 +711,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         recordAnswer(isCorrect);
         nextBtn.disabled = false;
+        nextBtn.classList.add('mc-pinned');
         nextBtn.focus();
     }
 
@@ -729,6 +730,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     function endGame(message = 'Quiz Complete!') {
         stopTimer();
+        nextBtn.classList.remove('mc-pinned');
         updateGameHeader();
         const wrongSnapshot = [...wrongKanji];
         showResultsModal(score, quizLength, wrongSnapshot, message);
@@ -882,6 +884,7 @@ document.addEventListener('DOMContentLoaded', () => {
         answerInputEl.disabled = false;
         submitBtn.disabled = false;
         nextBtn.disabled = true;
+        nextBtn.classList.remove('mc-pinned');
     }
 
     function showResult(isCorrect) {
