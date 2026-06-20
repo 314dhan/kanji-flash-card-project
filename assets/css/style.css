@@ -1227,6 +1227,11 @@ small { font-size: var(--text-xs); color: var(--muted-light); }
   box-shadow: 0 8px 24px var(--accent-glow);
 }
 
+/* Keep horizontal centering on hover/active so the pinned button does not
+   shift right (the base .btn-secondary:hover transform would drop translateX). */
+.btn-secondary.mc-pinned:hover { transform: translateX(-50%) translateY(-1px); color: #fff; }
+.btn-secondary.mc-pinned:active { transform: translateX(-50%); }
+
 /* ==========================================================
    RESULT MESSAGE
    ========================================================== */
